@@ -2,7 +2,7 @@
 
 ## Notice
 
-> As of **December 13, 2023**, Netflix has discontinued maintenance of the Netflix Conductor OSS on GitHub. This is a fork of the [original](https://github.com/Netflix/conductor) project maintained by [Swift Software Group](https://www.swiftsoftwaregroup.com).
+> As of **December 13, 2023**, Netflix has discontinued maintenance of Netflix Conductor OSS on GitHub. This is a fork of the [original](https://github.com/Netflix/conductor) project maintained by [Swift Software Group](https://www.swiftsoftwaregroup.com).
 
 > We (Swift Software Group) are working on getting everything up and running again. Things may be broken here and there while we are in the middle of this transition.   
 
