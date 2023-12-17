@@ -13,10 +13,10 @@ features.
 ### Steps to build Conductor Server
 
 #### 1. Checkout the code
-Clone conductor code from the repo: https://github.com/Netflix/conductor
+Clone conductor code from the repo: https://github.com/swift-conductor/conductor
 
 ```shell
-$ git clone https://github.com/Netflix/conductor.git
+$ git clone https://github.com/swift-conductor/conductor.git
 ```
 #### 2. Build and run Server
 

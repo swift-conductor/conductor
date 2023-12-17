@@ -116,7 +116,7 @@ Input for starting a workflow and output when completing / failing task follows 
 
 ## Extending
 
-Provide the implementation of [EventQueueProvider](https://github.com/Netflix/conductor/blob/master/core/src/main/java/com/netflix/conductor/core/events/EventQueueProvider.java).
+Provide the implementation of [EventQueueProvider](https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/netflix/conductor/core/events/EventQueueProvider.java).
 
 SQS Queue Provider: 
-[SQSEventQueueProvider.java ](https://github.com/Netflix/conductor/blob/master/contribs/src/main/java/com/netflix/conductor/core/events/sqs/SQSEventQueueProvider.java)
+[SQSEventQueueProvider.java ](https://github.com/swift-conductor/conductor/blob/master/contribs/src/main/java/com/netflix/conductor/core/events/sqs/SQSEventQueueProvider.java)

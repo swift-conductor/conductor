@@ -78,7 +78,7 @@ When producing an event with Conductor as sink, the event name follows the struc
 For SQS, use the **name** of the queue and NOT the URI.  Conductor looks up the URI based on the name.
 
 !!!warning
-	When using SQS add the [ContribsModule](https://github.com/Netflix/conductor/blob/master/contribs/src/main/java/com/netflix/conductor/contribs/ContribsModule.java) to the deployment.  The module needs to be configured with AWSCredentialsProvider for Conductor to be able to use AWS APIs.
+	When using SQS add the [ContribsModule](https://github.com/swift-conductor/conductor/blob/master/contribs/src/main/java/com/netflix/conductor/contribs/ContribsModule.java) to the deployment.  The module needs to be configured with AWSCredentialsProvider for Conductor to be able to use AWS APIs.
 
 
 !!!warning
@@ -89,7 +89,7 @@ For SQS, use the **name** of the queue and NOT the URI.  Conductor looks up the 
 Conductor has support for the following external event queueing systems as part of the OSS build
 
 1. SQS (prefix: sqs)
-2. [NATS](https://github.com/Netflix/conductor/tree/main/contribs/src/main/java/com/netflix/conductor/contribs/queue/nats) (prefix: nats)
-3. [AMQP](https://github.com/Netflix/conductor/tree/main/contribs/src/main/java/com/netflix/conductor/contribs/queue/amqp) (prefix: amqp_queue or amqp_exchange)
+2. [NATS](https://github.com/swift-conductor/conductor/tree/main/contribs/src/main/java/com/netflix/conductor/contribs/queue/nats) (prefix: nats)
+3. [AMQP](https://github.com/swift-conductor/conductor/tree/main/contribs/src/main/java/com/netflix/conductor/contribs/queue/amqp) (prefix: amqp_queue or amqp_exchange)
 4. Internal Conductor (prefix: conductor) 
 To add support for other 

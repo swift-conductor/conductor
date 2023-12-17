@@ -71,4 +71,4 @@ Docker image published to [Docker Hub](https://hub.docker.com/repository/docker/
 	* We should have a central dedicate service that can do scheduling for us and provide a trigger to a microservices at expected time.
 * It offers an additional module `io.github.jas34.scheduledwf.config.ScheduledWfServerModule` built on the existing core 
 of conductor and does not require deployment of any additional service.
-For more details refer: [Schedule Conductor Workflows](https://jas34.github.io/scheduledwf) and [Capability In Conductor To Schedule Workflows](https://github.com/Netflix/conductor/discussions/2256)
+For more details refer: [Schedule Conductor Workflows](https://jas34.github.io/scheduledwf) and [Capability In Conductor To Schedule Workflows](https://github.com/swift-conductor/conductor/discussions/2256)

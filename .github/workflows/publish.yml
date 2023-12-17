@@ -57,7 +57,7 @@ jobs:
           curl \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: Bearer ${{ secrets.COMMUNITY_REPO_TRIGGER }}" \
-            -X POST https://api.github.com/repos/Netflix/conductor-community/dispatches \
+            -X POST https://api.github.com/repos/swift-conductor/conductor-community/dispatches \
             -d '{"event_type": "publish_build","client_payload": {"tag":"'"$TAG"'"}}'
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v3

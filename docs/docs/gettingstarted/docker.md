@@ -17,7 +17,7 @@ The docker compose will bring up the following:
 ### 1. Clone the Conductor Code
 
 ```shell
-$ git clone https://github.com/Netflix/conductor.git
+$ git clone https://github.com/swift-conductor/conductor.git
 ```
 
 ### 2. Build the Docker Compose
@@ -172,4 +172,4 @@ Elasticsearch is optional, please be aware that disable it will make most of the
 * Comment out all the config related to elasticsearch
 E.g.: `conductor.elasticsearch.url=http://es:9200`
 
-[issue2262]: https://github.com/Netflix/conductor/issues/2262
+[issue2262]: https://github.com/swift-conductor/conductor/issues/2262
