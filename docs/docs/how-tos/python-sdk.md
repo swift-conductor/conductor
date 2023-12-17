@@ -71,9 +71,9 @@ The code for the Python SDk is available on [Github](https://github.com/conducto
     * This example contains two workers, each with a different execution method, capable of running the same `task_definition_name`
 
 5. Now that you have implemented the example, you can start the Conductor server locally:
-      1. Clone [Netflix Conductor repository](https://github.com/Netflix/conductor):
+      1. Clone [Netflix Conductor repository](https://github.com/swift-conductor/conductor):
 
-            $ git clone https://github.com/Netflix/conductor.git
+            $ git clone https://github.com/swift-conductor/conductor.git
             $ cd conductor/
 
       2. Start the Conductor server:

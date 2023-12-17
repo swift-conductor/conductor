@@ -32,7 +32,7 @@ RUN mkdir server-build
 WORKDIR  server-build
 RUN ls -ltr
 
-RUN git clone https://github.com/Netflix/conductor-community.git
+RUN git clone https://github.com/swift-conductor/conductor-community.git
 
 # Copy the project directly onto the image
 WORKDIR conductor-community
