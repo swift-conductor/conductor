@@ -2,7 +2,7 @@
 # conductor:ui - Netflix Conductor UI
 #
 FROM node:20-alpine
-LABEL maintainer="Netflix OSS <conductor@netflix.com>"
+LABEL maintainer="Swift Software Group <hello@swiftsoftwaregroup.com>"
 
 # Install the required packages for the node build
 # to run on alpine

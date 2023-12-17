@@ -10,4 +10,4 @@
 
 ## Reporting a Vulnerability
 
-Please email conductor@netflix.com to report vulnerabilities.
+Please email hello@swiftsoftwaregroup.com to report vulnerabilities.
