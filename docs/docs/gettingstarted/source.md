@@ -1,7 +1,7 @@
 # Building Conductor From Source
 ## Build and Run
 
-In this article we will explore how you can set up Netflix Conductor on your local machine for trying out some of its
+In this article we will explore how you can set up Conductor on your local machine for trying out some of its
 features.
 
 ### Prerequisites

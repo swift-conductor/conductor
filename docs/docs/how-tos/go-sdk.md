@@ -1,6 +1,6 @@
-# Netflix Conductor Go SDK
+# Conductor Go SDK
 
-The code for the Golang SDk is available on [Github](https://github.com/conductor-sdk/conductor-go). Please feel free to file PRs, issues, etc. there.
+The code for the Golang SDK is available on [Github](https://github.com/conductor-sdk/conductor-go). Please feel free to file PRs, issues, etc. there.
 
 
 ## Quick Start

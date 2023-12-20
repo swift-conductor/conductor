@@ -1,5 +1,5 @@
 # Why Conductor?
-## Conductor was built to help Netflix orchestrate microservices based process flows with the following features:
+## Conductor was built to help teams orchestrate microservices based process flows with the following features:
 
 * A distributed server ecosystem, which stores workflow state information efficiently.
 * Allow creation of process / business flows in which each individual task can be implemented by the same / different microservices.

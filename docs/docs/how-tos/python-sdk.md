@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Python SDK
 
-Software Development Kit for Netflix Conductor, written on and providing support for Python.
+Software Development Kit for Conductor, written on and providing support for Python.
 
-The code for the Python SDk is available on [Github](https://github.com/conductor-sdk/conductor-python). Please feel free to file PRs, issues, etc. there.
+The code for the Python SDK is available on [Github](https://github.com/conductor-sdk/conductor-python). Please feel free to file PRs, issues, etc. there.
 
 ## Quick Guide
 
@@ -71,7 +71,7 @@ The code for the Python SDk is available on [Github](https://github.com/conducto
     * This example contains two workers, each with a different execution method, capable of running the same `task_definition_name`
 
 5. Now that you have implemented the example, you can start the Conductor server locally:
-      1. Clone [Netflix Conductor repository](https://github.com/swift-conductor/conductor):
+      1. Clone [Conductor repository](https://github.com/swift-conductor/conductor):
 
             $ git clone https://github.com/swift-conductor/conductor.git
             $ cd conductor/

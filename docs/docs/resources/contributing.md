@@ -59,7 +59,7 @@ All files are released with the Apache 2.0 license, and the following license he
 
 ```
 /**
- * Copyright $YEAR Netflix, Inc.
+ * Copyright $YEAR Swift Software Group, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at

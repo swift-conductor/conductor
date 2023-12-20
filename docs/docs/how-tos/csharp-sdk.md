@@ -1,8 +1,8 @@
-# Netflix Conductor Client C# SDK
+# C# SDK
 
 `conductor-csharp` repository provides the client SDKs to build Task Workers and Clients in C#
 
-The code for the C# SDk is available on [Github](https://github.com/conductor-sdk/conductor-csharp). Please feel free to file PRs, issues, etc. there.
+The code for the C# SDK is available on [Github](https://github.com/conductor-sdk/conductor-csharp). Please feel free to file PRs, issues, etc. there.
 
 
 ## Quick Start

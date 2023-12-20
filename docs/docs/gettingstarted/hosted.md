@@ -11,7 +11,7 @@ Orkes also operates a Slack community featuring discussion and guidance for thei
 ### Cloud Hosted Conductor
 Orkes provides multiple options of hosted Conductor clusters in the cloud (AWS, Azure, and GCP, in addition to private clouds) with enterprise support provided by the Orkes team.
 
-Beyond full compatibility with the open source Netflix Conductor, the Orkes product provides additional features, such as in the area of security and analytics, not present in the open source release.
+Beyond full compatibility with the open source Conductor, the Orkes product provides additional features, such as in the area of security and analytics, not present in the open source release.
 
 
 

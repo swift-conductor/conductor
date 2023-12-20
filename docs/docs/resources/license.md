@@ -1,6 +1,7 @@
 # License
 
-Copyright 2022 Netflix, Inc.
+Copyright 2023 Swift Software Group, Inc.
+(Code and content before December 13, 2023, Copyright Netflix, Inc.)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
