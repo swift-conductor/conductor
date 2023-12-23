@@ -11,22 +11,22 @@
  *  specific language governing permissions and limitations under the License.
  */
 
-// disable buildScan
-// plugins {
-//     id "com.gradle.enterprise" version "3.11.1"
-// }
+plugins {
+    id "com.gradle.enterprise" version "3.16.1"
+}
 
-// gradleEnterprise {
-//     buildScan {
-//         termsOfServiceUrl = "https://gradle.com/terms-of-service"
-//         termsOfServiceAgree = "yes"
-//         publishAlways()
+gradleEnterprise {
+    buildScan {
+        termsOfServiceUrl = "https://gradle.com/terms-of-service"
+        termsOfServiceAgree = "yes"
 
-//         buildScanPublished { scan ->
-//             file("buildscan.log") << "${new Date()} - ${scan.buildScanUri}\n"
-//         }
-//     }
-// }
+        // publishAlwaysIf(System.getenv("GITHUB_ACTIONS"))
+
+        // buildScanPublished { scan ->
+        //     file("buildscan.log") << "${new Date()} - ${scan.buildScanUri}\n"
+        // }
+    }
+}
 
 rootProject.name = 'conductor'
 
