@@ -11,23 +11,9 @@
  *  an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  *  specific language governing permissions and limitations under the License.
  */
-if (System.getenv("GITHUB_ACTIONS")) {
-    plugins {
-        id "com.gradle.enterprise" version "3.16.1"
-    }
 
-    gradleEnterprise {
-        buildScan {
-            termsOfServiceUrl = "https://gradle.com/terms-of-service"
-            termsOfServiceAgree = "yes"
-
-            publishAlways()
-
-            buildScanPublished { scan ->
-                file("buildscan.log") << "${new Date()} - ${scan.buildScanUri}\n"
-            }
-        }
-    }
+plugins {
+    id "com.gradle.enterprise" version "3.16.1"
 }
 
 rootProject.name = 'conductor'
@@ -66,3 +52,18 @@ include 'java-sdk'
 include 'test-harness'
 
 rootProject.children.each {it.name="conductor-${it.name}"}
+
+if (System.getenv("GITHUB_ACTIONS")) {
+    gradleEnterprise {
+        buildScan {
+            termsOfServiceUrl = "https://gradle.com/terms-of-service"
+            termsOfServiceAgree = "yes"
+
+            publishAlways()
+
+            buildScanPublished { scan ->
+                file("buildscan.log") << "${new Date()} - ${scan.buildScanUri}\n"
+            }
+        }
+    }
+}
