@@ -11,5 +11,5 @@ sdk install gradle 7.5.1
 
 sdk env
 
-# Build
+# Download packages
 gradle wrapper
