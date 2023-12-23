@@ -32,8 +32,11 @@ plugins {
     id 'java'
     id 'application'
     id 'jacoco'
-    id 'com.netflix.nebula.netflixoss' version '11.3.2'
+
     id 'org.sonarqube' version '3.4.0.2513'
+
+    id 'com.netflix.nebula.contacts' version '7.0.1'
+    id 'com.netflix.nebula.netflixoss' version '11.3.2'
 }
 
 // Establish version and status
@@ -306,6 +309,20 @@ configure(allprojects - project(':conductor-grpc')) {
                 importOrder('java', 'javax', 'org', 'com.netflix', '', '\\#com.netflix', '\\#')
                 licenseHeaderFile("$rootDir/licenseheader.txt")
             }
+        }
+    }
+}
+
+configure(allprojects) {
+    // see: 
+    // https://plugins.gradle.org/plugin/com.netflix.nebula.contacts
+    // https://github.com/nebula-plugins/gradle-contacts-plugin
+    apply plugin: 'com.netflix.nebula.contacts'
+
+    contacts {
+        'hello@swiftsoftwaregroup.com' {
+            github 'swift-conductor'
+            moniker 'Swift Software Group'
         }
     }
 }
