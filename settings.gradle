@@ -20,11 +20,13 @@ gradleEnterprise {
         termsOfServiceUrl = "https://gradle.com/terms-of-service"
         termsOfServiceAgree = "yes"
 
-        // publishAlwaysIf(System.getenv("GITHUB_ACTIONS"))
+        if (System.getenv("GITHUB_ACTIONS")) {
+            publishAlways()
+        }
 
-        // buildScanPublished { scan ->
-        //     file("buildscan.log") << "${new Date()} - ${scan.buildScanUri}\n"
-        // }
+        buildScanPublished { scan ->
+            file("buildscan.log") << "${new Date()} - ${scan.buildScanUri}\n"
+        }
     }
 }
 
