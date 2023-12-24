@@ -1,5 +1,5 @@
 site_name: Conductor Documentation
-site_description: Conductor is a platform created by Netflix to orchestrate workflows that span across microservices.
+site_description: Conductor is a platform for orchestrating workflows that span across microservices.
 repo_url: https://github.com/swift-conductor/conductor
 edit_uri: ''
 strict: true
@@ -10,7 +10,6 @@ nav:
     - Running Conductor:
       - From Source: gettingstarted/source.md
       - Using Docker: gettingstarted/docker.md
-      - Hosted Solutions: gettingstarted/hosted.md
     - Basic Concepts: gettingstarted/basicconcepts.md
     - High Level Steps: gettingstarted/steps.md
     - Using the Client: gettingstarted/client.md

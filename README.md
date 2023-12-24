@@ -83,8 +83,7 @@ The final binaries built by Netflix are available from the [Maven Central Reposi
 
 ## Get Support
 
-There are several ways to get in touch with us:
-* [Slack Community](https://join.slack.com/t/orkes-conductor/shared_invite/zt-xyxqyseb-YZ3hwwAgHJH97bsrYRnSZg)
+Get in touch with us:
 * [GitHub Discussion Forum](https://github.com/swift-conductor/conductor/discussions)
 
 ## Contributions
