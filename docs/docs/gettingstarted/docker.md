@@ -23,15 +23,15 @@ $ git clone https://github.com/swift-conductor/conductor.git
 ### 2. Build the Docker Compose
 
 ```shell
-$ cd conductor
-conductor $ cd docker
-docker $ docker-compose build
+cd conductor
+cd docker
+docker-compose build
 ```
 
 ### 3. Run Docker Compose
 
 ```shell
-docker $ docker-compose up
+docker-compose up
 ```
 
 Once up and running, you will see the following in your Docker dashboard:
@@ -43,22 +43,26 @@ Once up and running, you will see the following in your Docker dashboard:
 You can access the UI & Server on your browser to verify that they are running correctly:
 
 #### Conductor Server URL
+
 [http://localhost:8080](http://localhost:8080)
 
 <img src="/img/tutorial/swagger.png" style="width: 100%"/>
 
 #### Conductor UI URL
+
 [http://localhost:5000/](http://localhost:5000)
 
 <img src="/img/tutorial/conductorUI.png" style="width: 100%" />
 
 
 ### 4. Exiting Compose
-`Ctrl+c` will exit docker compose.
+
+`Ctrl + C` will exit docker compose.
 
 To ensure images are stopped execute: `docker-compose down`.
 
 ## Alternative Persistence Engines
+
 By default `docker-compose.yaml` uses `config-local.properties`. This configures the `memory` database, where data is lost when the server terminates. This configuration is useful for testing or demo only.
 
 A selection of `docker-compose-*.yaml` and `config-*.properties` files are provided demonstrating the use of alternative persistence engines.
@@ -97,44 +101,33 @@ docker run -p 5000:5000 -d --name conductor_ui conductor:ui
 This builds the image `conductor:ui` and runs it in a container named `conductor_ui`. The UI should now be accessible at `localhost:5000`.
 
 ### Note
+
 * In order for the UI to do anything useful the Conductor Server must already be running on port 8080, either in a Docker container (see above), or running directly in the local JRE.
-* Additionally, significant parts of the UI will not be functional without Elastisearch being available. Using the `docker-compose` approach alleviates these considerations.
+
+* Additionally, significant parts of the UI will not be functional without ElasticSearch being available. Using the `docker-compose` approach alleviates these considerations.
 
 ## Monitoring with Prometheus
 
 Start Prometheus with:
+
 `docker-compose -f docker-compose-prometheus.yaml up -d`
 
 Go to [http://127.0.0.1:9090](http://127.0.0.1:9090).
-
-## Combined Server & UI Docker Image
-This image at `/docker/serverAndUI` is provided to illustrate starting both the server & UI within the same container. The UI is hosted using nginx.
-
-### Building the combined image
-From the `docker` directory,
-```
-docker build -t conductor:serverAndUI -f serverAndUI/Dockerfile ../
-```
-
-### Running the combined image
- - With interal DB: `docker run -p 8080:8080 -p 80:5000 -d -t conductor:serverAndUI`
- - With external DB: `docker run -p 8080:8080 -p 80:5000 -d -t -e "CONFIG_PROP=config.properties" conductor:serverAndUI`
-
-
 
 ## Potential problem when using Docker Images
 
 #### Not enough memory
 
-    1. You will need at least 16 GB of memory to run everything. You can modify the docker compose to skip using
-       Elasticsearch if you have no option to run this with your memory options.
-    2. To disable Elasticsearch using Docker Compose - follow the steps listed here: **TODO LINK**
+1. You will need at least 16 GB of memory to run everything. You can modify the docker compose to skip using
+   Elasticsearch if you have no option to run this with your memory options.
+
+2. To disable Elasticsearch using Docker Compose - follow the steps listed here: **TODO LINK**
 
 #### Elasticsearch fails to come up in arm64 based CPU machines
 
-    1. As of writing this article, Conductor relies on 6.8.x version of Elasticsearch. This version doesn't have an
-       arm64 based Docker image. You will need to use Elasticsearch 7.x which requires a bit of customization to get up
-       and running
+1. As of writing this article, Conductor relies on 6.8.x version of Elasticsearch. This version doesn't have an
+   arm64 based Docker image. You will need to use Elasticsearch 7.x which requires a bit of customization to get up
+   and running
 
 #### Elasticsearch remains in yellow health state
 
@@ -154,21 +147,28 @@ Reference: [Issue 2262][issue2262]
 Config is copy into image during docker build. You have to rebuild the image or better, link a volume to it to reflect new changes.
 
 #### To troubleshoot a failed startup
+
 Check the log of the server, which is located at `/app/logs` (default directory in dockerfile)
 
 #### Unable to access to conductor:server API on port 8080
+
 It may takes some time for conductor server to start. Please check server log for potential error.
 
 #### Elasticsearch
+
 Elasticsearch is optional, please be aware that disable it will make most of the conductor UI not functional.
 
 ##### How to enable Elasticsearch
+
 * Set `conductor.indexing.enabled=true` in your_config.properties
+
 * Add config related to elasticsearch
   E.g.: `conductor.elasticsearch.url=http://es:9200`
 
 ##### How to disable Elasticsearch
+
 * Set `conductor.indexing.enabled=false` in your_config.properties
+
 * Comment out all the config related to elasticsearch
 E.g.: `conductor.elasticsearch.url=http://es:9200`
 
