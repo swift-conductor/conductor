@@ -32,7 +32,7 @@ The modules contributed by the community are housed at [conductor-community](htt
 
 [Discussion Forum](https://github.com/swift-conductor/conductor/discussions): Please use the forum for questions and discussing ideas and join the community.
 
-[List of Conductor community projects](/docs/docs/resources/related.md): Backup tool, Cron like workflow starter, Docker containers and more.
+[List of Conductor community projects](https://github.com/swift-conductor/conductor-docs/blob/main/docs/resources/related.md): Backup tool, Cron like workflow starter, Docker containers and more.
 
 ## Getting Started - Building & Running Conductor
 
