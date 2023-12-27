@@ -5,9 +5,10 @@ updates:
     schedule:
       interval: "weekly"
     reviewers:
-      - "aravindanr"
-      - "jxu-nflx"
-      - "apanicker-nflx"
+      - "vkantchev"
+      # - "aravindanr"
+      # - "jxu-nflx"
+      # - "apanicker-nflx"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
