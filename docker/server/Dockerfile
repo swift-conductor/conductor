@@ -6,7 +6,7 @@
 # ===========================================================================================================
 FROM alpine:3.18 AS builder
 
-LABEL maintainer="Netflix OSS <conductor@netflix.com>"
+LABEL maintainer="Swift Software Group <hello@swiftsoftwaregroup.com>"
 
 # ===========================================================================================================
 # 0. Build Conductor Server
@@ -32,7 +32,7 @@ RUN mkdir server-build
 WORKDIR  server-build
 RUN ls -ltr
 
-RUN git clone https://github.com/Netflix/conductor-community.git
+RUN git clone https://github.com/swift-conductor/conductor-community.git
 
 # Copy the project directly onto the image
 WORKDIR conductor-community
@@ -50,7 +50,7 @@ RUN pwd
 # ===========================================================================================================
 FROM alpine:3.18
 
-LABEL maintainer="Netflix OSS <conductor@netflix.com>"
+LABEL maintainer="Swift Software Group <hello@swiftsoftwaregroup.com>"
 
 RUN apk add openjdk17
 RUN apk add nginx
