@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.rest.controllers;
+package com.swiftconductor.rest.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +20,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.service.EventService;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.service.EventService;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;

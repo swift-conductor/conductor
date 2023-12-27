@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.common.config;
+package com.swiftconductor.common.config;
 
 import java.io.IOException;
 import java.io.StringWriter;
@@ -25,14 +25,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.run.Workflow;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.protobuf.Any;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.run.Workflow;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -40,7 +39,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Tests the customized {@link ObjectMapper} that is used by {@link com.netflix.conductor.Conductor}
+ * Tests the customized {@link ObjectMapper} that is used by {@link com.swiftconductor.Conductor}
  * application.
  */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)

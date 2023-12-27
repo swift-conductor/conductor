@@ -40,16 +40,16 @@ dependencies {
 
 task protogen(dependsOn: jar, type: JavaExec) {
     classpath configurations.annotationsProcessorCodegen
-    mainClass = "com.netflix.conductor.annotationsprocessor.protogen.ProtoGenTask"
+    mainClass = "com.swiftconductor.annotationsprocessor.protogen.ProtoGenTask"
     args(
             "conductor.proto",
-            "com.netflix.conductor.proto",
-            "github.com/netflix/conductor/client/gogrpc/conductor/model",
+            "com.swiftconductor.proto",
+            "github.com/swift-conductor/conductor/client/gogrpc/conductor/model",
             "${rootDir}/grpc/src/main/proto",
-            "${rootDir}/grpc/src/main/java/com/netflix/conductor/grpc",
-            "com.netflix.conductor.grpc",
+            "${rootDir}/grpc/src/main/java/com/swiftconductor/conductor/grpc",
+            "com.swiftconductor.grpc",
             jar.archivePath,
-            "com.netflix.conductor.common",
+            "com.swiftconductor.common",
     )
 }
 

@@ -61,7 +61,7 @@ allprojects {
         }
     }
 
-    group = 'com.netflix.conductor'
+    group = 'com.swiftconductor'
 
     configurations.all {
         exclude group: 'ch.qos.logback', module: 'logback-classic'

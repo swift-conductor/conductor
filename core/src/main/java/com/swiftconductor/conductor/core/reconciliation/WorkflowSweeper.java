@@ -1,0 +1,184 @@
+/*
+ * Copyright 2023 Swift Software Group, Inc.
+ * (Code and content before December 13, 2023, Copyright Netflix, Inc.)
+ * <p>
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+ * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations under the License.
+ */
+package com.swiftconductor.core.reconciliation;
+
+import java.time.Instant;
+import java.util.Optional;
+import java.util.Random;
+import java.util.concurrent.CompletableFuture;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
+
+import com.swiftconductor.annotations.VisibleForTesting;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.core.WorkflowContext;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.core.exception.NotFoundException;
+import com.swiftconductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.dao.QueueDAO;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.TaskModel.Status;
+import com.swiftconductor.model.WorkflowModel;
+
+import static com.swiftconductor.core.config.SchedulerConfiguration.SWEEPER_EXECUTOR_NAME;
+import static com.swiftconductor.core.utils.Utils.DECIDER_QUEUE;
+
+@Component
+public class WorkflowSweeper {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(WorkflowSweeper.class);
+
+    private final ConductorProperties properties;
+    private final WorkflowExecutor workflowExecutor;
+    private final WorkflowRepairService workflowRepairService;
+    private final QueueDAO queueDAO;
+    private final ExecutionDAOFacade executionDAOFacade;
+
+    private static final String CLASS_NAME = WorkflowSweeper.class.getSimpleName();
+
+    @Autowired
+    public WorkflowSweeper(
+            WorkflowExecutor workflowExecutor,
+            Optional<WorkflowRepairService> workflowRepairService,
+            ConductorProperties properties,
+            QueueDAO queueDAO,
+            ExecutionDAOFacade executionDAOFacade) {
+        this.properties = properties;
+        this.queueDAO = queueDAO;
+        this.workflowExecutor = workflowExecutor;
+        this.executionDAOFacade = executionDAOFacade;
+        this.workflowRepairService = workflowRepairService.orElse(null);
+        LOGGER.info("WorkflowSweeper initialized.");
+    }
+
+    @Async(SWEEPER_EXECUTOR_NAME)
+    public CompletableFuture<Void> sweepAsync(String workflowId) {
+        sweep(workflowId);
+        return CompletableFuture.completedFuture(null);
+    }
+
+    public void sweep(String workflowId) {
+        WorkflowModel workflow = null;
+        try {
+            WorkflowContext workflowContext = new WorkflowContext(properties.getAppId());
+            WorkflowContext.set(workflowContext);
+            LOGGER.debug("Running sweeper for workflow {}", workflowId);
+
+            workflow = executionDAOFacade.getWorkflowModel(workflowId, true);
+
+            if (workflowRepairService != null) {
+                // Verify and repair tasks in the workflow.
+                workflowRepairService.verifyAndRepairWorkflowTasks(workflow);
+            }
+
+            workflow = workflowExecutor.decideWithLock(workflow);
+            if (workflow != null && workflow.getStatus().isTerminal()) {
+                queueDAO.remove(DECIDER_QUEUE, workflowId);
+                return;
+            }
+
+        } catch (NotFoundException nfe) {
+            queueDAO.remove(DECIDER_QUEUE, workflowId);
+            LOGGER.info(
+                    "Workflow NOT found for id:{}. Removed it from decider queue", workflowId, nfe);
+            return;
+        } catch (Exception e) {
+            Monitors.error(CLASS_NAME, "sweep");
+            LOGGER.error("Error running sweep for " + workflowId, e);
+        }
+        long workflowOffsetTimeout =
+                workflowOffsetWithJitter(properties.getWorkflowOffsetTimeout().getSeconds());
+        if (workflow != null) {
+            long startTime = Instant.now().toEpochMilli();
+            unack(workflow, workflowOffsetTimeout);
+            long endTime = Instant.now().toEpochMilli();
+            Monitors.recordUnackTime(workflow.getWorkflowName(), endTime - startTime);
+        } else {
+            LOGGER.warn(
+                    "Workflow with {} id can not be found. Attempting to unack using the id",
+                    workflowId);
+            queueDAO.setUnackTimeout(DECIDER_QUEUE, workflowId, workflowOffsetTimeout * 1000);
+        }
+    }
+
+    @VisibleForTesting
+    void unack(WorkflowModel workflowModel, long workflowOffsetTimeout) {
+        long postponeDurationSeconds = 0;
+        for (TaskModel taskModel : workflowModel.getTasks()) {
+            if (taskModel.getStatus() == Status.IN_PROGRESS) {
+                if (taskModel.getTaskType().equals(TaskType.TASK_TYPE_WAIT)) {
+                    if (taskModel.getWaitTimeout() == 0) {
+                        postponeDurationSeconds = workflowOffsetTimeout;
+                    } else {
+                        long deltaInSeconds =
+                                (taskModel.getWaitTimeout() - System.currentTimeMillis()) / 1000;
+                        postponeDurationSeconds = (deltaInSeconds > 0) ? deltaInSeconds : 0;
+                    }
+                } else if (taskModel.getTaskType().equals(TaskType.TASK_TYPE_HUMAN)) {
+                    postponeDurationSeconds = workflowOffsetTimeout;
+                } else {
+                    postponeDurationSeconds =
+                            (taskModel.getResponseTimeoutSeconds() != 0)
+                                    ? taskModel.getResponseTimeoutSeconds() + 1
+                                    : workflowOffsetTimeout;
+                }
+                break;
+            } else if (taskModel.getStatus() == Status.SCHEDULED) {
+                Optional<TaskDef> taskDefinition = taskModel.getTaskDefinition();
+                if (taskDefinition.isPresent()) {
+                    TaskDef taskDef = taskDefinition.get();
+                    if (taskDef.getPollTimeoutSeconds() != null
+                            && taskDef.getPollTimeoutSeconds() != 0) {
+                        postponeDurationSeconds = taskDef.getPollTimeoutSeconds() + 1;
+                    } else {
+                        postponeDurationSeconds =
+                                (workflowModel.getWorkflowDefinition().getTimeoutSeconds() != 0)
+                                        ? workflowModel.getWorkflowDefinition().getTimeoutSeconds()
+                                                + 1
+                                        : workflowOffsetTimeout;
+                    }
+                } else {
+                    postponeDurationSeconds =
+                            (workflowModel.getWorkflowDefinition().getTimeoutSeconds() != 0)
+                                    ? workflowModel.getWorkflowDefinition().getTimeoutSeconds() + 1
+                                    : workflowOffsetTimeout;
+                }
+                break;
+            }
+        }
+        queueDAO.setUnackTimeout(
+                DECIDER_QUEUE, workflowModel.getWorkflowId(), postponeDurationSeconds * 1000);
+    }
+
+    /**
+     * jitter will be +- (1/3) workflowOffsetTimeout for example, if workflowOffsetTimeout is 45
+     * seconds, this function returns values between [30-60] seconds
+     *
+     * @param workflowOffsetTimeout
+     * @return
+     */
+    @VisibleForTesting
+    long workflowOffsetWithJitter(long workflowOffsetTimeout) {
+        long range = workflowOffsetTimeout / 3;
+        long jitter = new Random().nextInt((int) (2 * range + 1)) - range;
+        return workflowOffsetTimeout + jitter;
+    }
+}

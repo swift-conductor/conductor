@@ -42,11 +42,13 @@ The easiest way to get started is with Docker containers. Please follow the inst
 
 ###  From Source:
 
-Conductor Server is a [Spring Boot](https://spring.io/projects/spring-boot) project and follows all applicable conventions. See instructions [here](https://swiftconductor.com/devguide/running/source.html).
+Conductor Server is a [Spring Boot](https://spring.io/projects/spring-boot) project and follows all applicable conventions. See instructions [here](https://swiftconductor.com/getting-started/running/source.html).
 
 ## Published Artifacts
 
-The final binaries built by Netflix are available from the [Maven Central Repository](https://search.maven.org/search?q=g:com.netflix.conductor).
+Current binaries are available from the [Maven Central Repository](https://search.maven.org/search?q=g:com.swiftconductor).
+
+The final binaries built by Netflix are available from the [Maven Central Repository](https://search.maven.org/search?q=g:com.swiftconductor).
 
 | Artifact                        | Description                                                                                     |
 |---------------------------------|-------------------------------------------------------------------------------------------------|
