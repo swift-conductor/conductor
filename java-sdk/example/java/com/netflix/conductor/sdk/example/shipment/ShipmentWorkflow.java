@@ -11,17 +11,17 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.sdk.example.shipment;
+package com.swiftconductor.sdk.example.shipment;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.sdk.workflow.def.ConductorWorkflow;
-import com.netflix.conductor.sdk.workflow.def.WorkflowBuilder;
-import com.netflix.conductor.sdk.workflow.def.tasks.*;
-import com.netflix.conductor.sdk.workflow.executor.WorkflowExecutor;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.sdk.workflow.def.ConductorWorkflow;
+import com.swiftconductor.sdk.workflow.def.WorkflowBuilder;
+import com.swiftconductor.sdk.workflow.def.tasks.*;
+import com.swiftconductor.sdk.workflow.executor.WorkflowExecutor;
 
 public class ShipmentWorkflow {
 

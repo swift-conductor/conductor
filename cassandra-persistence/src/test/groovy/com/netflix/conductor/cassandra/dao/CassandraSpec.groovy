@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.cassandra.dao
+package com.swiftconductor.cassandra.dao
 
 import java.time.Duration
 
@@ -20,9 +20,9 @@ import org.springframework.test.context.ContextConfiguration
 import org.testcontainers.containers.CassandraContainer
 import org.testcontainers.spock.Testcontainers
 
-import com.netflix.conductor.cassandra.config.CassandraProperties
-import com.netflix.conductor.cassandra.util.Statements
-import com.netflix.conductor.common.config.TestObjectMapperConfiguration
+import com.swiftconductor.cassandra.config.CassandraProperties
+import com.swiftconductor.cassandra.util.Statements
+import com.swiftconductor.common.config.TestObjectMapperConfiguration
 
 import com.datastax.driver.core.ConsistencyLevel
 import com.datastax.driver.core.Session

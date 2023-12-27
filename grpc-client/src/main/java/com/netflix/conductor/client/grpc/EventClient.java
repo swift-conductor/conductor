@@ -11,16 +11,16 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.grpc;
+package com.swiftconductor.client.grpc;
 
 import java.util.Iterator;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.grpc.EventServiceGrpc;
-import com.netflix.conductor.grpc.EventServicePb;
-import com.netflix.conductor.proto.EventHandlerPb;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.grpc.EventServiceGrpc;
+import com.swiftconductor.grpc.EventServicePb;
+import com.swiftconductor.proto.EventHandlerPb;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Iterators;

@@ -46,7 +46,9 @@ Conductor Server is a [Spring Boot](https://spring.io/projects/spring-boot) proj
 
 ## Published Artifacts
 
-The final binaries built by Netflix are available from the [Maven Central Repository](https://search.maven.org/search?q=g:com.netflix.conductor).
+Current binaries are available from the [Maven Central Repository](https://search.maven.org/search?q=g:com.swiftconductor).
+
+The final binaries built by Netflix are available from the [Maven Central Repository](https://search.maven.org/search?q=g:com.swiftconductor).
 
 | Artifact                        | Description                                                                                     |
 |---------------------------------|-------------------------------------------------------------------------------------------------|

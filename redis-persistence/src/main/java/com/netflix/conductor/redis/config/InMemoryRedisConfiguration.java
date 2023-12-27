@@ -11,18 +11,18 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.config;
+package com.swiftconductor.redis.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.netflix.conductor.redis.dynoqueue.LocalhostHostSupplier;
-import com.netflix.conductor.redis.jedis.JedisMock;
+import com.swiftconductor.redis.dynoqueue.LocalhostHostSupplier;
+import com.swiftconductor.redis.jedis.JedisMock;
 import com.netflix.dyno.connectionpool.HostSupplier;
 
-import static com.netflix.conductor.redis.config.RedisCommonConfiguration.DEFAULT_CLIENT_INJECTION_NAME;
-import static com.netflix.conductor.redis.config.RedisCommonConfiguration.READ_CLIENT_INJECTION_NAME;
+import static com.swiftconductor.redis.config.RedisCommonConfiguration.DEFAULT_CLIENT_INJECTION_NAME;
+import static com.swiftconductor.redis.config.RedisCommonConfiguration.READ_CLIENT_INJECTION_NAME;
 
 @Configuration(proxyBeanMethods = false)
 @ConditionalOnProperty(name = "conductor.db.type", havingValue = "memory")

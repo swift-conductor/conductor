@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution.tasks;
+package com.swiftconductor.core.execution.tasks;
 
 import java.util.HashMap;
 import java.util.List;
@@ -21,20 +21,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.annotations.VisibleForTesting;
-import com.netflix.conductor.core.events.EventQueues;
-import com.netflix.conductor.core.events.queue.Message;
-import com.netflix.conductor.core.events.queue.ObservableQueue;
-import com.netflix.conductor.core.exception.NonTransientException;
-import com.netflix.conductor.core.execution.WorkflowExecutor;
-import com.netflix.conductor.core.utils.ParametersUtils;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.annotations.VisibleForTesting;
+import com.swiftconductor.core.events.EventQueues;
+import com.swiftconductor.core.events.queue.Message;
+import com.swiftconductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.core.exception.NonTransientException;
+import com.swiftconductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.core.utils.ParametersUtils;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import static com.netflix.conductor.common.metadata.tasks.TaskType.TASK_TYPE_EVENT;
+import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_EVENT;
 
 @Component(TASK_TYPE_EVENT)
 public class Event extends WorkflowSystemTask {

@@ -1,45 +1,45 @@
-package com.netflix.conductor.grpc;
+package com.swiftconductor.grpc;
 
 import com.google.protobuf.Any;
 import com.google.protobuf.Value;
-import com.netflix.conductor.common.metadata.events.EventExecution;
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.common.metadata.tasks.PollData;
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.tasks.TaskExecLog;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
-import com.netflix.conductor.common.metadata.workflow.DynamicForkJoinTask;
-import com.netflix.conductor.common.metadata.workflow.DynamicForkJoinTaskList;
-import com.netflix.conductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.netflix.conductor.common.metadata.workflow.SkipTaskRequest;
-import com.netflix.conductor.common.metadata.workflow.StartWorkflowRequest;
-import com.netflix.conductor.common.metadata.workflow.SubWorkflowParams;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDefSummary;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
-import com.netflix.conductor.common.run.TaskSummary;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.common.run.WorkflowSummary;
-import com.netflix.conductor.proto.DynamicForkJoinTaskListPb;
-import com.netflix.conductor.proto.DynamicForkJoinTaskPb;
-import com.netflix.conductor.proto.EventExecutionPb;
-import com.netflix.conductor.proto.EventHandlerPb;
-import com.netflix.conductor.proto.PollDataPb;
-import com.netflix.conductor.proto.RerunWorkflowRequestPb;
-import com.netflix.conductor.proto.SkipTaskRequestPb;
-import com.netflix.conductor.proto.StartWorkflowRequestPb;
-import com.netflix.conductor.proto.SubWorkflowParamsPb;
-import com.netflix.conductor.proto.TaskDefPb;
-import com.netflix.conductor.proto.TaskExecLogPb;
-import com.netflix.conductor.proto.TaskPb;
-import com.netflix.conductor.proto.TaskResultPb;
-import com.netflix.conductor.proto.TaskSummaryPb;
-import com.netflix.conductor.proto.WorkflowDefPb;
-import com.netflix.conductor.proto.WorkflowDefSummaryPb;
-import com.netflix.conductor.proto.WorkflowPb;
-import com.netflix.conductor.proto.WorkflowSummaryPb;
-import com.netflix.conductor.proto.WorkflowTaskPb;
+import com.swiftconductor.common.metadata.events.EventExecution;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.common.metadata.tasks.PollData;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.common.metadata.workflow.DynamicForkJoinTask;
+import com.swiftconductor.common.metadata.workflow.DynamicForkJoinTaskList;
+import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.common.metadata.workflow.SkipTaskRequest;
+import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.common.metadata.workflow.SubWorkflowParams;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowDefSummary;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.common.run.TaskSummary;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.common.run.WorkflowSummary;
+import com.swiftconductor.proto.DynamicForkJoinTaskListPb;
+import com.swiftconductor.proto.DynamicForkJoinTaskPb;
+import com.swiftconductor.proto.EventExecutionPb;
+import com.swiftconductor.proto.EventHandlerPb;
+import com.swiftconductor.proto.PollDataPb;
+import com.swiftconductor.proto.RerunWorkflowRequestPb;
+import com.swiftconductor.proto.SkipTaskRequestPb;
+import com.swiftconductor.proto.StartWorkflowRequestPb;
+import com.swiftconductor.proto.SubWorkflowParamsPb;
+import com.swiftconductor.proto.TaskDefPb;
+import com.swiftconductor.proto.TaskExecLogPb;
+import com.swiftconductor.proto.TaskPb;
+import com.swiftconductor.proto.TaskResultPb;
+import com.swiftconductor.proto.TaskSummaryPb;
+import com.swiftconductor.proto.WorkflowDefPb;
+import com.swiftconductor.proto.WorkflowDefSummaryPb;
+import com.swiftconductor.proto.WorkflowPb;
+import com.swiftconductor.proto.WorkflowSummaryPb;
+import com.swiftconductor.proto.WorkflowTaskPb;
 import java.lang.IllegalArgumentException;
 import java.lang.Object;
 import java.lang.String;
@@ -51,7 +51,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import javax.annotation.Generated;
 
-@Generated("com.netflix.conductor.annotationsprocessor.protogen")
+@Generated("com.swiftconductor.annotationsprocessor.protogen")
 public abstract class AbstractProtoMapper {
     public DynamicForkJoinTaskPb.DynamicForkJoinTask toProto(DynamicForkJoinTask from) {
         DynamicForkJoinTaskPb.DynamicForkJoinTask.Builder to = DynamicForkJoinTaskPb.DynamicForkJoinTask.newBuilder();
@@ -1399,8 +1399,6 @@ public abstract class AbstractProtoMapper {
         return to;
     }
 
-    public abstract WorkflowTaskPb.WorkflowTask.WorkflowTaskList toProto(List<WorkflowTask> in);
-
     public abstract List<WorkflowTask> fromProto(WorkflowTaskPb.WorkflowTask.WorkflowTaskList in);
 
     public abstract Value toProto(Object in);
@@ -1410,4 +1408,6 @@ public abstract class AbstractProtoMapper {
     public abstract Any toProto(Any in);
 
     public abstract Any fromProto(Any in);
+
+    public abstract WorkflowTaskPb.WorkflowTask.WorkflowTaskList toProto(List<WorkflowTask> in);
 }

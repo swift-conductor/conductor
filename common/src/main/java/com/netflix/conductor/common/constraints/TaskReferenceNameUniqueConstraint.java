@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.common.constraints;
+package com.swiftconductor.common.constraints;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -27,9 +27,9 @@ import javax.validation.Payload;
 
 import org.apache.commons.lang3.mutable.MutableBoolean;
 
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
-import com.netflix.conductor.common.utils.ConstraintParamUtil;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.common.utils.ConstraintParamUtil;
 
 import static java.lang.annotation.ElementType.TYPE;
 

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.common.utils;
+package com.swiftconductor.common.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,7 +28,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.netflix.conductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.common.config.TestObjectMapperConfiguration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

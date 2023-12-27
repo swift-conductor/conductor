@@ -78,7 +78,7 @@ Changes to configurations:
 | workflowstatuslistener.publisher.success.queue | conductor.workflow-status-listener.queue-publisher.successQueue | _callbackSuccessQueue |
 | workflowstatuslistener.publisher.failure.queue | conductor.workflow-status-listener.queue-publisher.failureQueue | _callbackFailureQueue |
 |  |  |  |
-| com.netflix.conductor.contribs.metrics.LoggingMetricsModule.reportPeriodSeconds | conductor.metrics-logger.reportInterval | 30s |
+| com.swiftconductor.contribs.metrics.LoggingMetricsModule.reportPeriodSeconds | conductor.metrics-logger.reportInterval | 30s |
 |  |  |  |
 | workflow.event.queues.amqp.batchSize | conductor.event-queues.amqp.batchSize | 1 |
 | workflow.event.queues.amqp.pollTimeInMs | conductor.event-queues.amqp.pollTimeDuration | 100ms |

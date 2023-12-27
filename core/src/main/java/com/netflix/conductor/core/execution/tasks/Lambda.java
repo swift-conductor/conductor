@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution.tasks;
+package com.swiftconductor.core.execution.tasks;
 
 import java.util.Map;
 
@@ -20,12 +20,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.core.events.ScriptEvaluator;
-import com.netflix.conductor.core.execution.WorkflowExecutor;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.core.events.ScriptEvaluator;
+import com.swiftconductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
-import static com.netflix.conductor.common.metadata.tasks.TaskType.TASK_TYPE_LAMBDA;
+import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_LAMBDA;
 
 /**
  * @author X-Ultra
@@ -49,7 +49,7 @@ import static com.netflix.conductor.common.metadata.tasks.TaskType.TASK_TYPE_LAM
  * </pre>
  *     then to use task output, e.g. <code>script_test.output.testvalue</code>
  * @deprecated {@link Lambda} is deprecated. Use {@link Inline} task for inline expression
- *     evaluation. Also see ${@link com.netflix.conductor.common.metadata.workflow.WorkflowTask})
+ *     evaluation. Also see ${@link com.swiftconductor.common.metadata.workflow.WorkflowTask})
  */
 @Deprecated
 @Component(TASK_TYPE_LAMBDA)

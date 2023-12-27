@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.metrics;
+package com.swiftconductor.metrics;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -30,15 +30,15 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.annotations.VisibleForTesting;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.core.dal.ExecutionDAOFacade;
-import com.netflix.conductor.core.execution.tasks.WorkflowSystemTask;
-import com.netflix.conductor.dao.QueueDAO;
-import com.netflix.conductor.service.MetadataService;
+import com.swiftconductor.annotations.VisibleForTesting;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.dao.QueueDAO;
+import com.swiftconductor.service.MetadataService;
 
-import static com.netflix.conductor.core.execution.tasks.SystemTaskRegistry.ASYNC_SYSTEM_TASKS_QUALIFIER;
+import static com.swiftconductor.core.execution.tasks.SystemTaskRegistry.ASYNC_SYSTEM_TASKS_QUALIFIER;
 
 @Component
 @ConditionalOnProperty(

@@ -11,17 +11,17 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.common.metadata;
+package com.swiftconductor.common.metadata;
 
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
 
-import com.netflix.conductor.common.metadata.acl.Permission;
+import com.swiftconductor.common.metadata.acl.Permission;
 
 /**
- * A base class for {@link com.netflix.conductor.common.metadata.workflow.WorkflowDef} and {@link
- * com.netflix.conductor.common.metadata.tasks.TaskDef}.
+ * A base class for {@link com.swiftconductor.common.metadata.workflow.WorkflowDef} and {@link
+ * com.swiftconductor.common.metadata.tasks.TaskDef}.
  */
 public abstract class BaseDef extends Auditable {
 

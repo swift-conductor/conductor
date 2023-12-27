@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution.mapper;
+package com.swiftconductor.core.execution.mapper;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -25,14 +25,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.annotations.VisibleForTesting;
-import com.netflix.conductor.common.metadata.tasks.TaskType;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
-import com.netflix.conductor.core.events.ScriptEvaluator;
-import com.netflix.conductor.core.exception.TerminateWorkflowException;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.annotations.VisibleForTesting;
+import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.core.events.ScriptEvaluator;
+import com.swiftconductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
 /**
  * An implementation of {@link TaskMapper} to map a {@link WorkflowTask} of type {@link
@@ -40,8 +40,8 @@ import com.netflix.conductor.model.WorkflowModel;
  * TaskType#DECISION} which is marked as IN_PROGRESS, followed by the list of {@link TaskModel}
  * based on the case expression evaluation in the Decision task.
  *
- * @deprecated {@link com.netflix.conductor.core.execution.tasks.Decision} is also deprecated. Use
- *     {@link com.netflix.conductor.core.execution.tasks.Switch} and so ${@link SwitchTaskMapper}
+ * @deprecated {@link com.swiftconductor.core.execution.tasks.Decision} is also deprecated. Use
+ *     {@link com.swiftconductor.core.execution.tasks.Switch} and so ${@link SwitchTaskMapper}
  *     will be used as a result.
  */
 @Deprecated

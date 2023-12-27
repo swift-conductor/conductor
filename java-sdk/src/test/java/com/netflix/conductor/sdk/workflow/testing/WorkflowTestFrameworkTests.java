@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.sdk.workflow.testing;
+package com.swiftconductor.sdk.workflow.testing;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -24,14 +24,14 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.sdk.testing.WorkflowTestRunner;
-import com.netflix.conductor.sdk.workflow.executor.WorkflowExecutor;
-import com.netflix.conductor.sdk.workflow.task.InputParam;
-import com.netflix.conductor.sdk.workflow.task.OutputParam;
-import com.netflix.conductor.sdk.workflow.task.WorkerTask;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.sdk.testing.WorkflowTestRunner;
+import com.swiftconductor.sdk.workflow.executor.WorkflowExecutor;
+import com.swiftconductor.sdk.workflow.task.InputParam;
+import com.swiftconductor.sdk.workflow.task.OutputParam;
+import com.swiftconductor.sdk.workflow.task.WorkerTask;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,7 +44,7 @@ public class WorkflowTestFrameworkTests {
     @BeforeAll
     public static void init() throws IOException {
         testRunner = new WorkflowTestRunner(8080, "3.7.3");
-        testRunner.init("com.netflix.conductor.sdk.workflow.testing");
+        testRunner.init("com.swiftconductor.sdk.workflow.testing");
 
         executor = testRunner.getWorkflowExecutor();
         executor.loadTaskDefs("/tasks.json");

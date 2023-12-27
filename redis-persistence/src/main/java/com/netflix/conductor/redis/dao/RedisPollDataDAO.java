@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.dao;
+package com.swiftconductor.redis.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +21,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.common.metadata.tasks.PollData;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.dao.PollDataDAO;
-import com.netflix.conductor.redis.config.AnyRedisCondition;
-import com.netflix.conductor.redis.config.RedisProperties;
-import com.netflix.conductor.redis.jedis.JedisProxy;
+import com.swiftconductor.common.metadata.tasks.PollData;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.dao.PollDataDAO;
+import com.swiftconductor.redis.config.AnyRedisCondition;
+import com.swiftconductor.redis.config.RedisProperties;
+import com.swiftconductor.redis.jedis.JedisProxy;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Preconditions;

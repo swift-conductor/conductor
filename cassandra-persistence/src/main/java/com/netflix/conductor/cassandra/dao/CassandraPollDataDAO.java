@@ -11,12 +11,12 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.cassandra.dao;
+package com.swiftconductor.cassandra.dao;
 
 import java.util.List;
 
-import com.netflix.conductor.common.metadata.tasks.PollData;
-import com.netflix.conductor.dao.PollDataDAO;
+import com.swiftconductor.common.metadata.tasks.PollData;
+import com.swiftconductor.dao.PollDataDAO;
 
 /**
  * This is a dummy implementation and this feature is not implemented for Cassandra backed

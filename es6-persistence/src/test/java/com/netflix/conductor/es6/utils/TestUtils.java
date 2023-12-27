@@ -11,16 +11,16 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.es6.utils;
+package com.swiftconductor.es6.utils;
 
 import java.nio.charset.StandardCharsets;
 
 import org.apache.commons.io.FileUtils;
 import org.springframework.util.ResourceUtils;
 
-import com.netflix.conductor.common.run.TaskSummary;
-import com.netflix.conductor.common.run.WorkflowSummary;
-import com.netflix.conductor.core.utils.IDGenerator;
+import com.swiftconductor.common.run.TaskSummary;
+import com.swiftconductor.common.run.WorkflowSummary;
+import com.swiftconductor.core.utils.IDGenerator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

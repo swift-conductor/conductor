@@ -11,11 +11,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution.tasks;
+package com.swiftconductor.core.execution.tasks;
 
 import org.springframework.stereotype.Component;
 
-import static com.netflix.conductor.common.metadata.tasks.TaskType.TASK_TYPE_FORK;
+import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_FORK;
 
 @Component(TASK_TYPE_FORK)
 public class Fork extends WorkflowSystemTask {

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.s3.storage;
+package com.swiftconductor.s3.storage;
 
 import java.io.InputStream;
 import java.net.URISyntaxException;
@@ -21,12 +21,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.netflix.conductor.common.run.ExternalStorageLocation;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage;
-import com.netflix.conductor.core.exception.NonTransientException;
-import com.netflix.conductor.core.exception.TransientException;
-import com.netflix.conductor.core.utils.IDGenerator;
-import com.netflix.conductor.s3.config.S3Properties;
+import com.swiftconductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.core.exception.NonTransientException;
+import com.swiftconductor.core.exception.TransientException;
+import com.swiftconductor.core.utils.IDGenerator;
+import com.swiftconductor.s3.config.S3Properties;
 
 import com.amazonaws.HttpMethod;
 import com.amazonaws.SdkClientException;

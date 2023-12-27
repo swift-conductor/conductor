@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.events;
+package com.swiftconductor.core.events;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,24 +32,24 @@ import org.springframework.retry.support.RetryTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import com.netflix.conductor.common.metadata.events.EventExecution;
-import com.netflix.conductor.common.metadata.events.EventExecution.Status;
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.common.metadata.events.EventHandler.Action;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.events.queue.Message;
-import com.netflix.conductor.core.events.queue.ObservableQueue;
-import com.netflix.conductor.core.exception.TransientException;
-import com.netflix.conductor.core.execution.evaluators.Evaluator;
-import com.netflix.conductor.core.utils.JsonUtils;
-import com.netflix.conductor.metrics.Monitors;
-import com.netflix.conductor.service.ExecutionService;
-import com.netflix.conductor.service.MetadataService;
+import com.swiftconductor.common.metadata.events.EventExecution;
+import com.swiftconductor.common.metadata.events.EventExecution.Status;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.common.metadata.events.EventHandler.Action;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.events.queue.Message;
+import com.swiftconductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.core.exception.TransientException;
+import com.swiftconductor.core.execution.evaluators.Evaluator;
+import com.swiftconductor.core.utils.JsonUtils;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.service.ExecutionService;
+import com.swiftconductor.service.MetadataService;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spotify.futures.CompletableFutures;
 
-import static com.netflix.conductor.core.utils.Utils.isTransientException;
+import static com.swiftconductor.core.utils.Utils.isTransientException;
 
 /**
  * Event Processor is used to dispatch actions configured in the event handlers, based on incoming

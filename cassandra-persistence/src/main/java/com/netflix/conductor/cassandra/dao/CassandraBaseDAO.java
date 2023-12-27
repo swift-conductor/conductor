@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.cassandra.dao;
+package com.swiftconductor.cassandra.dao;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -19,9 +19,9 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.netflix.conductor.cassandra.config.CassandraProperties;
-import com.netflix.conductor.core.exception.NonTransientException;
-import com.netflix.conductor.metrics.Monitors;
+import com.swiftconductor.cassandra.config.CassandraProperties;
+import com.swiftconductor.core.exception.NonTransientException;
+import com.swiftconductor.metrics.Monitors;
 
 import com.datastax.driver.core.DataType;
 import com.datastax.driver.core.Session;
@@ -30,36 +30,36 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
 
-import static com.netflix.conductor.cassandra.util.Constants.DAO_NAME;
-import static com.netflix.conductor.cassandra.util.Constants.ENTITY_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.EVENT_EXECUTION_ID_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.EVENT_HANDLER_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.EVENT_HANDLER_NAME_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.HANDLERS_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.MESSAGE_ID_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.PAYLOAD_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.SHARD_ID_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.TABLE_EVENT_EXECUTIONS;
-import static com.netflix.conductor.cassandra.util.Constants.TABLE_EVENT_HANDLERS;
-import static com.netflix.conductor.cassandra.util.Constants.TABLE_TASK_DEFS;
-import static com.netflix.conductor.cassandra.util.Constants.TABLE_TASK_DEF_LIMIT;
-import static com.netflix.conductor.cassandra.util.Constants.TABLE_TASK_LOOKUP;
-import static com.netflix.conductor.cassandra.util.Constants.TABLE_WORKFLOWS;
-import static com.netflix.conductor.cassandra.util.Constants.TABLE_WORKFLOW_DEFS;
-import static com.netflix.conductor.cassandra.util.Constants.TABLE_WORKFLOW_DEFS_INDEX;
-import static com.netflix.conductor.cassandra.util.Constants.TASK_DEFINITION_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.TASK_DEFS_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.TASK_DEF_NAME_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.TASK_ID_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.TOTAL_PARTITIONS_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.TOTAL_TASKS_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.WORKFLOW_DEFINITION_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.WORKFLOW_DEF_INDEX_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.WORKFLOW_DEF_INDEX_VALUE;
-import static com.netflix.conductor.cassandra.util.Constants.WORKFLOW_DEF_NAME_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.WORKFLOW_DEF_NAME_VERSION_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.WORKFLOW_ID_KEY;
-import static com.netflix.conductor.cassandra.util.Constants.WORKFLOW_VERSION_KEY;
+import static com.swiftconductor.cassandra.util.Constants.DAO_NAME;
+import static com.swiftconductor.cassandra.util.Constants.ENTITY_KEY;
+import static com.swiftconductor.cassandra.util.Constants.EVENT_EXECUTION_ID_KEY;
+import static com.swiftconductor.cassandra.util.Constants.EVENT_HANDLER_KEY;
+import static com.swiftconductor.cassandra.util.Constants.EVENT_HANDLER_NAME_KEY;
+import static com.swiftconductor.cassandra.util.Constants.HANDLERS_KEY;
+import static com.swiftconductor.cassandra.util.Constants.MESSAGE_ID_KEY;
+import static com.swiftconductor.cassandra.util.Constants.PAYLOAD_KEY;
+import static com.swiftconductor.cassandra.util.Constants.SHARD_ID_KEY;
+import static com.swiftconductor.cassandra.util.Constants.TABLE_EVENT_EXECUTIONS;
+import static com.swiftconductor.cassandra.util.Constants.TABLE_EVENT_HANDLERS;
+import static com.swiftconductor.cassandra.util.Constants.TABLE_TASK_DEFS;
+import static com.swiftconductor.cassandra.util.Constants.TABLE_TASK_DEF_LIMIT;
+import static com.swiftconductor.cassandra.util.Constants.TABLE_TASK_LOOKUP;
+import static com.swiftconductor.cassandra.util.Constants.TABLE_WORKFLOWS;
+import static com.swiftconductor.cassandra.util.Constants.TABLE_WORKFLOW_DEFS;
+import static com.swiftconductor.cassandra.util.Constants.TABLE_WORKFLOW_DEFS_INDEX;
+import static com.swiftconductor.cassandra.util.Constants.TASK_DEFINITION_KEY;
+import static com.swiftconductor.cassandra.util.Constants.TASK_DEFS_KEY;
+import static com.swiftconductor.cassandra.util.Constants.TASK_DEF_NAME_KEY;
+import static com.swiftconductor.cassandra.util.Constants.TASK_ID_KEY;
+import static com.swiftconductor.cassandra.util.Constants.TOTAL_PARTITIONS_KEY;
+import static com.swiftconductor.cassandra.util.Constants.TOTAL_TASKS_KEY;
+import static com.swiftconductor.cassandra.util.Constants.WORKFLOW_DEFINITION_KEY;
+import static com.swiftconductor.cassandra.util.Constants.WORKFLOW_DEF_INDEX_KEY;
+import static com.swiftconductor.cassandra.util.Constants.WORKFLOW_DEF_INDEX_VALUE;
+import static com.swiftconductor.cassandra.util.Constants.WORKFLOW_DEF_NAME_KEY;
+import static com.swiftconductor.cassandra.util.Constants.WORKFLOW_DEF_NAME_VERSION_KEY;
+import static com.swiftconductor.cassandra.util.Constants.WORKFLOW_ID_KEY;
+import static com.swiftconductor.cassandra.util.Constants.WORKFLOW_VERSION_KEY;
 
 /**
  * Creates the keyspace and tables.

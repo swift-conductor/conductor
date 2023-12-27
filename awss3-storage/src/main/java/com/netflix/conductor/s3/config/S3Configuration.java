@@ -11,16 +11,16 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.s3.config;
+package com.swiftconductor.s3.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.netflix.conductor.common.utils.ExternalPayloadStorage;
-import com.netflix.conductor.core.utils.IDGenerator;
-import com.netflix.conductor.s3.storage.S3PayloadStorage;
+import com.swiftconductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.core.utils.IDGenerator;
+import com.swiftconductor.s3.storage.S3PayloadStorage;
 
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;

@@ -11,15 +11,15 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.http;
+package com.swiftconductor.client.http;
 
 import java.util.List;
 
 import org.apache.commons.lang3.Validate;
 
-import com.netflix.conductor.client.config.ConductorClientConfiguration;
-import com.netflix.conductor.client.config.DefaultConductorClientConfiguration;
-import com.netflix.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.client.config.ConductorClientConfiguration;
+import com.swiftconductor.client.config.DefaultConductorClientConfiguration;
+import com.swiftconductor.common.metadata.events.EventHandler;
 
 import com.sun.jersey.api.client.ClientHandler;
 import com.sun.jersey.api.client.GenericType;

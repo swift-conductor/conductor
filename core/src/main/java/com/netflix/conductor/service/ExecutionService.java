@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.service;
+package com.swiftconductor.service;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -21,24 +21,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.netflix.conductor.annotations.Trace;
-import com.netflix.conductor.common.metadata.events.EventExecution;
-import com.netflix.conductor.common.metadata.tasks.*;
-import com.netflix.conductor.common.run.*;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage.Operation;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage.PayloadType;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.dal.ExecutionDAOFacade;
-import com.netflix.conductor.core.events.queue.Message;
-import com.netflix.conductor.core.exception.NotFoundException;
-import com.netflix.conductor.core.execution.WorkflowExecutor;
-import com.netflix.conductor.core.execution.tasks.SystemTaskRegistry;
-import com.netflix.conductor.core.utils.QueueUtils;
-import com.netflix.conductor.core.utils.Utils;
-import com.netflix.conductor.dao.QueueDAO;
-import com.netflix.conductor.metrics.Monitors;
-import com.netflix.conductor.model.TaskModel;
+import com.swiftconductor.annotations.Trace;
+import com.swiftconductor.common.metadata.events.EventExecution;
+import com.swiftconductor.common.metadata.tasks.*;
+import com.swiftconductor.common.run.*;
+import com.swiftconductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.common.utils.ExternalPayloadStorage.Operation;
+import com.swiftconductor.common.utils.ExternalPayloadStorage.PayloadType;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.core.events.queue.Message;
+import com.swiftconductor.core.exception.NotFoundException;
+import com.swiftconductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.core.execution.tasks.SystemTaskRegistry;
+import com.swiftconductor.core.utils.QueueUtils;
+import com.swiftconductor.core.utils.Utils;
+import com.swiftconductor.dao.QueueDAO;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.model.TaskModel;
 
 @Trace
 @Service

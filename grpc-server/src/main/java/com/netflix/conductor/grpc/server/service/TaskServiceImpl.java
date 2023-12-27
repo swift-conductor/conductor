@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.grpc.server.service;
+package com.swiftconductor.grpc.server.service;
 
 import java.util.List;
 import java.util.Map;
@@ -21,18 +21,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.TaskExecLog;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
-import com.netflix.conductor.common.run.SearchResult;
-import com.netflix.conductor.common.run.TaskSummary;
-import com.netflix.conductor.grpc.ProtoMapper;
-import com.netflix.conductor.grpc.SearchPb;
-import com.netflix.conductor.grpc.TaskServiceGrpc;
-import com.netflix.conductor.grpc.TaskServicePb;
-import com.netflix.conductor.proto.TaskPb;
-import com.netflix.conductor.service.ExecutionService;
-import com.netflix.conductor.service.TaskService;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.common.run.SearchResult;
+import com.swiftconductor.common.run.TaskSummary;
+import com.swiftconductor.grpc.ProtoMapper;
+import com.swiftconductor.grpc.SearchPb;
+import com.swiftconductor.grpc.TaskServiceGrpc;
+import com.swiftconductor.grpc.TaskServicePb;
+import com.swiftconductor.proto.TaskPb;
+import com.swiftconductor.service.ExecutionService;
+import com.swiftconductor.service.TaskService;
 
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.cassandra.config.cache;
+package com.swiftconductor.cassandra.config.cache;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,14 +30,14 @@ import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 
-import com.netflix.conductor.annotations.Trace;
-import com.netflix.conductor.cassandra.config.CassandraProperties;
-import com.netflix.conductor.cassandra.dao.CassandraEventHandlerDAO;
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.dao.EventHandlerDAO;
-import com.netflix.conductor.metrics.Monitors;
+import com.swiftconductor.annotations.Trace;
+import com.swiftconductor.cassandra.config.CassandraProperties;
+import com.swiftconductor.cassandra.dao.CassandraEventHandlerDAO;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.dao.EventHandlerDAO;
+import com.swiftconductor.metrics.Monitors;
 
-import static com.netflix.conductor.cassandra.config.cache.CachingConfig.EVENT_HANDLER_CACHE;
+import static com.swiftconductor.cassandra.config.cache.CachingConfig.EVENT_HANDLER_CACHE;
 
 @Trace
 public class CacheableEventHandlerDAO implements EventHandlerDAO {

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.dao;
+package com.swiftconductor.redis.dao;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -23,15 +23,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.exception.ConflictException;
-import com.netflix.conductor.core.exception.NotFoundException;
-import com.netflix.conductor.core.exception.TransientException;
-import com.netflix.conductor.dao.EventHandlerDAO;
-import com.netflix.conductor.redis.config.AnyRedisCondition;
-import com.netflix.conductor.redis.config.RedisProperties;
-import com.netflix.conductor.redis.jedis.JedisProxy;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.exception.ConflictException;
+import com.swiftconductor.core.exception.NotFoundException;
+import com.swiftconductor.core.exception.TransientException;
+import com.swiftconductor.dao.EventHandlerDAO;
+import com.swiftconductor.redis.config.AnyRedisCondition;
+import com.swiftconductor.redis.config.RedisProperties;
+import com.swiftconductor.redis.jedis.JedisProxy;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Preconditions;

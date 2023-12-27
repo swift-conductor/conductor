@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.automator;
+package com.swiftconductor.client.automator;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -28,9 +28,9 @@ import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.netflix.conductor.client.exception.ConductorClientException;
-import com.netflix.conductor.client.http.TaskClient;
-import com.netflix.conductor.client.worker.Worker;
+import com.swiftconductor.client.exception.ConductorClientException;
+import com.swiftconductor.client.http.TaskClient;
+import com.swiftconductor.client.worker.Worker;
 import com.netflix.discovery.EurekaClient;
 
 /** Configures automated polling of tasks and execution via the registered {@link Worker}s. */

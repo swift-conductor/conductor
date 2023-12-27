@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.jedis;
+package com.swiftconductor.redis.jedis;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -27,7 +27,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.redis.config.AnyRedisCondition;
+import com.swiftconductor.redis.config.AnyRedisCondition;
 
 import redis.clients.jedis.ScanParams;
 import redis.clients.jedis.ScanResult;
@@ -35,7 +35,7 @@ import redis.clients.jedis.Tuple;
 import redis.clients.jedis.commands.JedisCommands;
 import redis.clients.jedis.params.ZAddParams;
 
-import static com.netflix.conductor.redis.config.RedisCommonConfiguration.DEFAULT_CLIENT_INJECTION_NAME;
+import static com.swiftconductor.redis.config.RedisCommonConfiguration.DEFAULT_CLIENT_INJECTION_NAME;
 
 /** Proxy for the {@link JedisCommands} object. */
 @Component

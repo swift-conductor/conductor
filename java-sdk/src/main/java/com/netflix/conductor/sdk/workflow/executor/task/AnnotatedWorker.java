@@ -11,21 +11,21 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.sdk.workflow.executor.task;
+package com.swiftconductor.sdk.workflow.executor.task;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.*;
 import java.util.*;
 
-import com.netflix.conductor.client.worker.Worker;
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
-import com.netflix.conductor.sdk.workflow.def.tasks.DynamicFork;
-import com.netflix.conductor.sdk.workflow.def.tasks.DynamicForkInput;
-import com.netflix.conductor.sdk.workflow.task.InputParam;
-import com.netflix.conductor.sdk.workflow.task.OutputParam;
-import com.netflix.conductor.sdk.workflow.utils.ObjectMapperProvider;
+import com.swiftconductor.client.worker.Worker;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.sdk.workflow.def.tasks.DynamicFork;
+import com.swiftconductor.sdk.workflow.def.tasks.DynamicForkInput;
+import com.swiftconductor.sdk.workflow.task.InputParam;
+import com.swiftconductor.sdk.workflow.task.OutputParam;
+import com.swiftconductor.sdk.workflow.utils.ObjectMapperProvider;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -211,9 +211,9 @@ public class AnnotatedWorker implements Worker {
 
         } else if (invocationResult instanceof DynamicForkInput) {
             DynamicForkInput forkInput = (DynamicForkInput) invocationResult;
-            List<com.netflix.conductor.sdk.workflow.def.tasks.Task<?>> tasks = forkInput.getTasks();
+            List<com.swiftconductor.sdk.workflow.def.tasks.Task<?>> tasks = forkInput.getTasks();
             List<WorkflowTask> workflowTasks = new ArrayList<>();
-            for (com.netflix.conductor.sdk.workflow.def.tasks.Task<?> sdkTask : tasks) {
+            for (com.swiftconductor.sdk.workflow.def.tasks.Task<?> sdkTask : tasks) {
                 workflowTasks.addAll(sdkTask.getWorkflowDefTasks());
             }
             result.getOutputData().put(DynamicFork.FORK_TASK_PARAM, workflowTasks);

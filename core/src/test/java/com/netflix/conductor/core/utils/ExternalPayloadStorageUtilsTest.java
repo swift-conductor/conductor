@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.utils;
+package com.swiftconductor.core.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -31,18 +31,18 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.unit.DataSize;
 
-import com.netflix.conductor.common.config.TestObjectMapperConfiguration;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.run.ExternalStorageLocation;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.exception.TerminateWorkflowException;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import static com.netflix.conductor.model.TaskModel.Status.FAILED_WITH_TERMINAL_ERROR;
+import static com.swiftconductor.model.TaskModel.Status.FAILED_WITH_TERMINAL_ERROR;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;
@@ -110,7 +110,7 @@ public class ExternalPayloadStorageUtilsTest {
         AtomicInteger uploadCount = new AtomicInteger(0);
 
         InputStream stream =
-                com.netflix.conductor.core.utils.ExternalPayloadStorageUtilsTest.class
+                com.swiftconductor.core.utils.ExternalPayloadStorageUtilsTest.class
                         .getResourceAsStream("/payload.json");
         Map<String, Object> payload = objectMapper.readValue(stream, Map.class);
 
@@ -145,7 +145,7 @@ public class ExternalPayloadStorageUtilsTest {
         AtomicInteger uploadCount = new AtomicInteger(0);
 
         InputStream stream =
-                com.netflix.conductor.core.utils.ExternalPayloadStorageUtilsTest.class
+                com.swiftconductor.core.utils.ExternalPayloadStorageUtilsTest.class
                         .getResourceAsStream("/payload.json");
         Map<String, Object> payload = objectMapper.readValue(stream, Map.class);
 

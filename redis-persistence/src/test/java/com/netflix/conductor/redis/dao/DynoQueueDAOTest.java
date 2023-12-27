@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.dao;
+package com.swiftconductor.redis.dao;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -24,10 +24,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import com.netflix.conductor.dao.QueueDAO;
-import com.netflix.conductor.redis.config.RedisProperties;
-import com.netflix.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
-import com.netflix.conductor.redis.jedis.JedisMock;
+import com.swiftconductor.dao.QueueDAO;
+import com.swiftconductor.redis.config.RedisProperties;
+import com.swiftconductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
+import com.swiftconductor.redis.jedis.JedisMock;
 import com.netflix.dyno.connectionpool.Host;
 import com.netflix.dyno.queues.ShardSupplier;
 import com.netflix.dyno.queues.redis.RedisQueues;
@@ -35,7 +35,7 @@ import com.netflix.dyno.queues.redis.sharding.ShardingStrategy;
 
 import redis.clients.jedis.commands.JedisCommands;
 
-import static com.netflix.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider.LOCAL_ONLY_STRATEGY;
+import static com.swiftconductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider.LOCAL_ONLY_STRATEGY;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

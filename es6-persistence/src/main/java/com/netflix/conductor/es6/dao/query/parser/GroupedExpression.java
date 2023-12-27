@@ -11,14 +11,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.es6.dao.query.parser;
+package com.swiftconductor.es6.dao.query.parser;
 
 import java.io.InputStream;
 
 import org.elasticsearch.index.query.QueryBuilder;
 
-import com.netflix.conductor.es6.dao.query.parser.internal.AbstractNode;
-import com.netflix.conductor.es6.dao.query.parser.internal.ParserException;
+import com.swiftconductor.es6.dao.query.parser.internal.AbstractNode;
+import com.swiftconductor.es6.dao.query.parser.internal.ParserException;
 
 public class GroupedExpression extends AbstractNode implements FilterProvider {
 

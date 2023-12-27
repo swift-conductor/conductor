@@ -11,14 +11,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.testing;
+package com.swiftconductor.client.testing;
 
 import java.io.IOException;
 import java.util.List;
 
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.common.run.WorkflowTestRequest;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.common.run.WorkflowTestRequest;
 
 import static org.junit.jupiter.api.Assertions.*;
 

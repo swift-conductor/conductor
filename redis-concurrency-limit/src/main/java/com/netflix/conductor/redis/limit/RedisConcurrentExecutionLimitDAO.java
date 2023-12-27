@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.limit;
+package com.swiftconductor.redis.limit;
 
 import java.util.Optional;
 
@@ -23,13 +23,13 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.annotations.Trace;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.core.exception.TransientException;
-import com.netflix.conductor.dao.ConcurrentExecutionLimitDAO;
-import com.netflix.conductor.metrics.Monitors;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.redis.limit.config.RedisConcurrentExecutionLimitProperties;
+import com.swiftconductor.annotations.Trace;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.core.exception.TransientException;
+import com.swiftconductor.dao.ConcurrentExecutionLimitDAO;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.redis.limit.config.RedisConcurrentExecutionLimitProperties;
 
 @Trace
 @Component

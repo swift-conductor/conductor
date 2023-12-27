@@ -11,11 +11,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.annotationsprocessor.protogen;
+package com.swiftconductor.annotationsprocessor.protogen;
 
 import javax.lang.model.element.Modifier;
 
-import com.netflix.conductor.annotationsprocessor.protogen.types.MessageType;
+import com.swiftconductor.annotationsprocessor.protogen.types.MessageType;
 
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeName;

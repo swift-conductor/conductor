@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.dao;
+package com.swiftconductor.redis.dao;
 
 import java.util.Collections;
 import java.util.List;
@@ -23,8 +23,8 @@ import java.util.stream.Collectors;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.dao.QueueDAO;
-import com.netflix.conductor.redis.config.AnyRedisCondition;
+import com.swiftconductor.dao.QueueDAO;
+import com.swiftconductor.redis.config.AnyRedisCondition;
 import com.netflix.dyno.queues.DynoQueue;
 import com.netflix.dyno.queues.Message;
 import com.netflix.dyno.queues.redis.RedisQueues;
@@ -56,7 +56,7 @@ public class DynoQueueDAO implements QueueDAO {
 
     @Override
     public void push(
-            String queueName, List<com.netflix.conductor.core.events.queue.Message> messages) {
+            String queueName, List<com.swiftconductor.core.events.queue.Message> messages) {
         List<Message> msgs =
                 messages.stream()
                         .map(
@@ -99,13 +99,13 @@ public class DynoQueueDAO implements QueueDAO {
     }
 
     @Override
-    public List<com.netflix.conductor.core.events.queue.Message> pollMessages(
+    public List<com.swiftconductor.core.events.queue.Message> pollMessages(
             String queueName, int count, int timeout) {
         List<Message> msgs = queues.get(queueName).pop(count, timeout, TimeUnit.MILLISECONDS);
         return msgs.stream()
                 .map(
                         msg ->
-                                new com.netflix.conductor.core.events.queue.Message(
+                                new com.swiftconductor.core.events.queue.Message(
                                         msg.getId(), msg.getPayload(), null, msg.getPriority()))
                 .collect(Collectors.toList());
     }

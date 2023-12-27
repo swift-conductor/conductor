@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.worker;
+package com.swiftconductor.client.worker;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -20,9 +20,9 @@ import java.util.function.Function;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.netflix.conductor.client.config.PropertyFactory;
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.client.config.PropertyFactory;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
 
 import com.amazonaws.util.EC2MetadataUtils;
 

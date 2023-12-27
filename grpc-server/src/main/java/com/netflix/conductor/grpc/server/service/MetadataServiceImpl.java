@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.grpc.server.service;
+package com.swiftconductor.grpc.server.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,15 +20,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.core.exception.NotFoundException;
-import com.netflix.conductor.grpc.MetadataServiceGrpc;
-import com.netflix.conductor.grpc.MetadataServicePb;
-import com.netflix.conductor.grpc.ProtoMapper;
-import com.netflix.conductor.proto.TaskDefPb;
-import com.netflix.conductor.proto.WorkflowDefPb;
-import com.netflix.conductor.service.MetadataService;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.core.exception.NotFoundException;
+import com.swiftconductor.grpc.MetadataServiceGrpc;
+import com.swiftconductor.grpc.MetadataServicePb;
+import com.swiftconductor.grpc.ProtoMapper;
+import com.swiftconductor.proto.TaskDefPb;
+import com.swiftconductor.proto.WorkflowDefPb;
+import com.swiftconductor.service.MetadataService;
 
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;

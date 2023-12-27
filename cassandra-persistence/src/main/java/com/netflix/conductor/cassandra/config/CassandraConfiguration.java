@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.cassandra.config;
+package com.swiftconductor.cassandra.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,16 +21,16 @@ import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.netflix.conductor.cassandra.config.cache.CacheableEventHandlerDAO;
-import com.netflix.conductor.cassandra.config.cache.CacheableMetadataDAO;
-import com.netflix.conductor.cassandra.dao.CassandraEventHandlerDAO;
-import com.netflix.conductor.cassandra.dao.CassandraExecutionDAO;
-import com.netflix.conductor.cassandra.dao.CassandraMetadataDAO;
-import com.netflix.conductor.cassandra.dao.CassandraPollDataDAO;
-import com.netflix.conductor.cassandra.util.Statements;
-import com.netflix.conductor.dao.EventHandlerDAO;
-import com.netflix.conductor.dao.ExecutionDAO;
-import com.netflix.conductor.dao.MetadataDAO;
+import com.swiftconductor.cassandra.config.cache.CacheableEventHandlerDAO;
+import com.swiftconductor.cassandra.config.cache.CacheableMetadataDAO;
+import com.swiftconductor.cassandra.dao.CassandraEventHandlerDAO;
+import com.swiftconductor.cassandra.dao.CassandraExecutionDAO;
+import com.swiftconductor.cassandra.dao.CassandraMetadataDAO;
+import com.swiftconductor.cassandra.dao.CassandraPollDataDAO;
+import com.swiftconductor.cassandra.util.Statements;
+import com.swiftconductor.dao.EventHandlerDAO;
+import com.swiftconductor.dao.ExecutionDAO;
+import com.swiftconductor.dao.MetadataDAO;
 
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Metadata;

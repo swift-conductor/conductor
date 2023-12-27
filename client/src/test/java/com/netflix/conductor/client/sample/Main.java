@@ -11,13 +11,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.sample;
+package com.swiftconductor.client.sample;
 
 import java.util.Arrays;
 
-import com.netflix.conductor.client.automator.TaskRunnerConfigurer;
-import com.netflix.conductor.client.http.TaskClient;
-import com.netflix.conductor.client.worker.Worker;
+import com.swiftconductor.client.automator.TaskRunnerConfigurer;
+import com.swiftconductor.client.http.TaskClient;
+import com.swiftconductor.client.worker.Worker;
 
 public class Main {
 

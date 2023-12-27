@@ -10,15 +10,15 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.grpc;
+package com.swiftconductor.grpc;
 
 import com.google.protobuf.Any;
 import com.google.protobuf.ListValue;
 import com.google.protobuf.NullValue;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
-import com.netflix.conductor.proto.WorkflowTaskPb;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.proto.WorkflowTaskPb;
 
 import java.util.ArrayList;
 import java.util.HashMap;

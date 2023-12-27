@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution;
+package com.swiftconductor.core.execution;
 
 import java.time.Duration;
 import java.util.*;
@@ -24,30 +24,30 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.netflix.conductor.annotations.Trace;
-import com.netflix.conductor.annotations.VisibleForTesting;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.tasks.TaskType;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage.Operation;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage.PayloadType;
-import com.netflix.conductor.common.utils.TaskUtils;
-import com.netflix.conductor.core.exception.TerminateWorkflowException;
-import com.netflix.conductor.core.execution.mapper.TaskMapper;
-import com.netflix.conductor.core.execution.mapper.TaskMapperContext;
-import com.netflix.conductor.core.execution.tasks.SystemTaskRegistry;
-import com.netflix.conductor.core.utils.ExternalPayloadStorageUtils;
-import com.netflix.conductor.core.utils.IDGenerator;
-import com.netflix.conductor.core.utils.ParametersUtils;
-import com.netflix.conductor.dao.MetadataDAO;
-import com.netflix.conductor.metrics.Monitors;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.annotations.Trace;
+import com.swiftconductor.annotations.VisibleForTesting;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.common.utils.ExternalPayloadStorage.Operation;
+import com.swiftconductor.common.utils.ExternalPayloadStorage.PayloadType;
+import com.swiftconductor.common.utils.TaskUtils;
+import com.swiftconductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.core.execution.mapper.TaskMapper;
+import com.swiftconductor.core.execution.mapper.TaskMapperContext;
+import com.swiftconductor.core.execution.tasks.SystemTaskRegistry;
+import com.swiftconductor.core.utils.ExternalPayloadStorageUtils;
+import com.swiftconductor.core.utils.IDGenerator;
+import com.swiftconductor.core.utils.ParametersUtils;
+import com.swiftconductor.dao.MetadataDAO;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
-import static com.netflix.conductor.common.metadata.tasks.TaskType.TERMINATE;
-import static com.netflix.conductor.common.metadata.tasks.TaskType.USER_DEFINED;
-import static com.netflix.conductor.model.TaskModel.Status.*;
+import static com.swiftconductor.common.metadata.tasks.TaskType.TERMINATE;
+import static com.swiftconductor.common.metadata.tasks.TaskType.USER_DEFINED;
+import static com.swiftconductor.model.TaskModel.Status.*;
 
 /**
  * Decider evaluates the state of the workflow by inspecting the current state along with the

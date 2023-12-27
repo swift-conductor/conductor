@@ -11,17 +11,17 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.sdk.example.shipment;
+package com.swiftconductor.sdk.example.shipment;
 
 import java.math.BigDecimal;
 import java.util.*;
 
-import com.netflix.conductor.sdk.workflow.def.tasks.DynamicForkInput;
-import com.netflix.conductor.sdk.workflow.def.tasks.SubWorkflow;
-import com.netflix.conductor.sdk.workflow.def.tasks.Task;
-import com.netflix.conductor.sdk.workflow.task.InputParam;
-import com.netflix.conductor.sdk.workflow.task.OutputParam;
-import com.netflix.conductor.sdk.workflow.task.WorkerTask;
+import com.swiftconductor.sdk.workflow.def.tasks.DynamicForkInput;
+import com.swiftconductor.sdk.workflow.def.tasks.SubWorkflow;
+import com.swiftconductor.sdk.workflow.def.tasks.Task;
+import com.swiftconductor.sdk.workflow.task.InputParam;
+import com.swiftconductor.sdk.workflow.task.OutputParam;
+import com.swiftconductor.sdk.workflow.task.WorkerTask;
 
 public class ShipmentWorkers {
 

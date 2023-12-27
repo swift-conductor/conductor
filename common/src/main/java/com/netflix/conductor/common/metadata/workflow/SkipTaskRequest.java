@@ -11,12 +11,12 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.common.metadata.workflow;
+package com.swiftconductor.common.metadata.workflow;
 
 import java.util.Map;
 
-import com.netflix.conductor.annotations.protogen.ProtoField;
-import com.netflix.conductor.annotations.protogen.ProtoMessage;
+import com.swiftconductor.annotations.protogen.ProtoField;
+import com.swiftconductor.annotations.protogen.ProtoMessage;
 
 import com.google.protobuf.Any;
 import io.swagger.v3.oas.annotations.Hidden;

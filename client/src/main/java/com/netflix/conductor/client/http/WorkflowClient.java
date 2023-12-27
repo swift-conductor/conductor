@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.http;
+package com.swiftconductor.client.http;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -22,18 +22,18 @@ import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.netflix.conductor.client.config.ConductorClientConfiguration;
-import com.netflix.conductor.client.config.DefaultConductorClientConfiguration;
-import com.netflix.conductor.client.exception.ConductorClientException;
-import com.netflix.conductor.client.telemetry.MetricsContainer;
-import com.netflix.conductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.netflix.conductor.common.metadata.workflow.StartWorkflowRequest;
-import com.netflix.conductor.common.model.BulkResponse;
-import com.netflix.conductor.common.run.SearchResult;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.common.run.WorkflowSummary;
-import com.netflix.conductor.common.run.WorkflowTestRequest;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.client.config.ConductorClientConfiguration;
+import com.swiftconductor.client.config.DefaultConductorClientConfiguration;
+import com.swiftconductor.client.exception.ConductorClientException;
+import com.swiftconductor.client.telemetry.MetricsContainer;
+import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.common.model.BulkResponse;
+import com.swiftconductor.common.run.SearchResult;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.common.run.WorkflowSummary;
+import com.swiftconductor.common.run.WorkflowTestRequest;
+import com.swiftconductor.common.utils.ExternalPayloadStorage;
 
 import com.sun.jersey.api.client.ClientHandler;
 import com.sun.jersey.api.client.GenericType;

@@ -11,18 +11,18 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.test.integration
+package com.swiftconductor.test.integration
 
-import com.netflix.conductor.common.metadata.tasks.Task
-import com.netflix.conductor.common.metadata.tasks.TaskResult
-import com.netflix.conductor.common.metadata.tasks.TaskType
-import com.netflix.conductor.common.run.Workflow
-import com.netflix.conductor.test.base.AbstractSpecification
+import com.swiftconductor.common.metadata.tasks.Task
+import com.swiftconductor.common.metadata.tasks.TaskResult
+import com.swiftconductor.common.metadata.tasks.TaskType
+import com.swiftconductor.common.run.Workflow
+import com.swiftconductor.test.base.AbstractSpecification
 
 import spock.lang.Shared
 
-import static com.netflix.conductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedLargePayloadTask
-import static com.netflix.conductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedTask
+import static com.swiftconductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedLargePayloadTask
+import static com.swiftconductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedTask
 
 class WaitTaskSpec extends AbstractSpecification {
 

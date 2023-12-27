@@ -44,10 +44,10 @@
         "com.google.protobuf:protobuf-java": {
             "locked": "3.24.3"
         },
-        "com.netflix.conductor:conductor-common": {
+        "com.swiftconductor:conductor-common": {
             "project": true
         },
-        "com.netflix.conductor:conductor-grpc": {
+        "com.swiftconductor:conductor-grpc": {
             "project": true
         },
         "io.grpc:grpc-netty": {
@@ -87,89 +87,89 @@
     "runtimeClasspath": {
         "com.fasterxml.jackson.core:jackson-annotations": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.core:jackson-core": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.core:jackson-databind": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-smile": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-jdk8": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-joda": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-jsr310": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.module:jackson-module-afterburner": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
@@ -178,24 +178,24 @@
         },
         "com.google.protobuf:protobuf-java": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "3.24.3"
         },
-        "com.netflix.conductor:conductor-annotations": {
+        "com.swiftconductor:conductor-annotations": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-common"
+                "com.swiftconductor:conductor-common"
             ],
             "project": true
         },
-        "com.netflix.conductor:conductor-common": {
+        "com.swiftconductor:conductor-common": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-grpc"
             ],
             "project": true
         },
-        "com.netflix.conductor:conductor-grpc": {
+        "com.swiftconductor:conductor-grpc": {
             "project": true
         },
         "io.grpc:grpc-netty": {
@@ -203,71 +203,71 @@
         },
         "io.grpc:grpc-protobuf": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "1.57.2"
         },
         "io.grpc:grpc-stub": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "1.57.2"
         },
         "javax.annotation:javax.annotation-api": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "1.3.2"
         },
         "org.apache.bval:bval-jsr": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-common"
+                "com.swiftconductor:conductor-common"
             ],
             "locked": "2.0.6"
         },
         "org.apache.commons:commons-lang3": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-common"
+                "com.swiftconductor:conductor-common"
             ],
             "locked": "3.12.0"
         },
         "org.apache.logging.log4j:log4j-api": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-core": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-jul": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-slf4j-impl": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-web": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.17.2"
         },
@@ -276,9 +276,9 @@
         },
         "org.yaml:snakeyaml": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.0"
         }
@@ -323,10 +323,10 @@
         "com.google.protobuf:protobuf-java": {
             "locked": "3.24.3"
         },
-        "com.netflix.conductor:conductor-common": {
+        "com.swiftconductor:conductor-common": {
             "project": true
         },
-        "com.netflix.conductor:conductor-grpc": {
+        "com.swiftconductor:conductor-grpc": {
             "project": true
         },
         "io.grpc:grpc-netty": {
@@ -381,89 +381,89 @@
     "testRuntimeClasspath": {
         "com.fasterxml.jackson.core:jackson-annotations": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.core:jackson-core": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.core:jackson-databind": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-smile": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-jdk8": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-joda": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-jsr310": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.module:jackson-module-afterburner": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.15.0"
         },
@@ -472,24 +472,24 @@
         },
         "com.google.protobuf:protobuf-java": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "3.24.3"
         },
-        "com.netflix.conductor:conductor-annotations": {
+        "com.swiftconductor:conductor-annotations": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-common"
+                "com.swiftconductor:conductor-common"
             ],
             "project": true
         },
-        "com.netflix.conductor:conductor-common": {
+        "com.swiftconductor:conductor-common": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-grpc"
             ],
             "project": true
         },
-        "com.netflix.conductor:conductor-grpc": {
+        "com.swiftconductor:conductor-grpc": {
             "project": true
         },
         "io.grpc:grpc-netty": {
@@ -497,19 +497,19 @@
         },
         "io.grpc:grpc-protobuf": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "1.57.2"
         },
         "io.grpc:grpc-stub": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "1.57.2"
         },
         "javax.annotation:javax.annotation-api": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "1.3.2"
         },
@@ -521,53 +521,53 @@
         },
         "org.apache.bval:bval-jsr": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-common"
+                "com.swiftconductor:conductor-common"
             ],
             "locked": "2.0.6"
         },
         "org.apache.commons:commons-lang3": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-common"
+                "com.swiftconductor:conductor-common"
             ],
             "locked": "3.12.0"
         },
         "org.apache.logging.log4j:log4j-api": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-core": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-jul": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-slf4j-impl": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-web": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.17.2"
         },
@@ -585,9 +585,9 @@
         },
         "org.yaml:snakeyaml": {
             "firstLevelTransitive": [
-                "com.netflix.conductor:conductor-annotations",
-                "com.netflix.conductor:conductor-common",
-                "com.netflix.conductor:conductor-grpc"
+                "com.swiftconductor:conductor-annotations",
+                "com.swiftconductor:conductor-common",
+                "com.swiftconductor:conductor-grpc"
             ],
             "locked": "2.0"
         }

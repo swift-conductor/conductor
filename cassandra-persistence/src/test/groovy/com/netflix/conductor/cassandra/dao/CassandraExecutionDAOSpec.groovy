@@ -11,21 +11,21 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.cassandra.dao
+package com.swiftconductor.cassandra.dao
 
-import com.netflix.conductor.common.metadata.events.EventExecution
-import com.netflix.conductor.common.metadata.tasks.TaskDef
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask
-import com.netflix.conductor.core.exception.NonTransientException
-import com.netflix.conductor.core.utils.IDGenerator
-import com.netflix.conductor.model.TaskModel
-import com.netflix.conductor.model.WorkflowModel
+import com.swiftconductor.common.metadata.events.EventExecution
+import com.swiftconductor.common.metadata.tasks.TaskDef
+import com.swiftconductor.common.metadata.workflow.WorkflowDef
+import com.swiftconductor.common.metadata.workflow.WorkflowTask
+import com.swiftconductor.core.exception.NonTransientException
+import com.swiftconductor.core.utils.IDGenerator
+import com.swiftconductor.model.TaskModel
+import com.swiftconductor.model.WorkflowModel
 
 import spock.lang.Subject
 
-import static com.netflix.conductor.common.metadata.events.EventExecution.Status.COMPLETED
-import static com.netflix.conductor.common.metadata.events.EventExecution.Status.IN_PROGRESS
+import static com.swiftconductor.common.metadata.events.EventExecution.Status.COMPLETED
+import static com.swiftconductor.common.metadata.events.EventExecution.Status.IN_PROGRESS
 
 class CassandraExecutionDAOSpec extends CassandraSpec {
 

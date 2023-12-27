@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.sdk.testing;
+package com.swiftconductor.sdk.testing;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +31,7 @@ import java.util.concurrent.TimeUnit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.netflix.conductor.sdk.healthcheck.HealthCheckClient;
+import com.swiftconductor.sdk.healthcheck.HealthCheckClient;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 

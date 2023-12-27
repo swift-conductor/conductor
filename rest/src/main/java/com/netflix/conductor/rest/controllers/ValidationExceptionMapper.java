@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.rest.controllers;
+package com.swiftconductor.rest.controllers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,10 +31,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.netflix.conductor.common.validation.ErrorResponse;
-import com.netflix.conductor.common.validation.ValidationError;
-import com.netflix.conductor.core.utils.Utils;
-import com.netflix.conductor.metrics.Monitors;
+import com.swiftconductor.common.validation.ErrorResponse;
+import com.swiftconductor.common.validation.ValidationError;
+import com.swiftconductor.core.utils.Utils;
+import com.swiftconductor.metrics.Monitors;
 
 /** This class converts Hibernate {@link ValidationException} into http response. */
 @RestControllerAdvice

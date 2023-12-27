@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.worker;
+package com.swiftconductor.client.worker;
 
 import java.io.InputStream;
 import java.util.List;
@@ -19,10 +19,10 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.netflix.conductor.common.config.ObjectMapperProvider;
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.TaskType;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.common.config.ObjectMapperProvider;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.dao;
+package com.swiftconductor.redis.dao;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -24,15 +24,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.netflix.conductor.common.config.TestObjectMapperConfiguration;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.dao.ExecutionDAO;
-import com.netflix.conductor.dao.ExecutionDAOTest;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.redis.config.RedisProperties;
-import com.netflix.conductor.redis.jedis.JedisMock;
-import com.netflix.conductor.redis.jedis.JedisProxy;
+import com.swiftconductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.dao.ExecutionDAO;
+import com.swiftconductor.dao.ExecutionDAOTest;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.redis.config.RedisProperties;
+import com.swiftconductor.redis.jedis.JedisMock;
+import com.swiftconductor.redis.jedis.JedisProxy;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import redis.clients.jedis.commands.JedisCommands;

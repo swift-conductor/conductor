@@ -11,21 +11,21 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution;
+package com.swiftconductor.core.execution;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.dal.ExecutionDAOFacade;
-import com.netflix.conductor.core.execution.tasks.WorkflowSystemTask;
-import com.netflix.conductor.core.utils.QueueUtils;
-import com.netflix.conductor.dao.MetadataDAO;
-import com.netflix.conductor.dao.QueueDAO;
-import com.netflix.conductor.metrics.Monitors;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.core.utils.QueueUtils;
+import com.swiftconductor.dao.MetadataDAO;
+import com.swiftconductor.dao.QueueDAO;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
 @Component
 public class AsyncSystemTaskExecutor {

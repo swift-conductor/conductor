@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.config;
+package com.swiftconductor.redis.config;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
@@ -20,8 +20,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.convert.DurationUnit;
 
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
 import com.netflix.dyno.connectionpool.RetryPolicy.RetryPolicyFactory;
 import com.netflix.dyno.connectionpool.impl.RetryNTimes;
 import com.netflix.dyno.connectionpool.impl.RunOnce;

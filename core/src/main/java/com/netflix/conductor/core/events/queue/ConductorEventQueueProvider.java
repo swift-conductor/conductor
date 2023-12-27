@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.events.queue;
+package com.swiftconductor.core.events.queue;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -22,14 +22,14 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.events.EventQueueProvider;
-import com.netflix.conductor.dao.QueueDAO;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.events.EventQueueProvider;
+import com.swiftconductor.dao.QueueDAO;
 
 import rx.Scheduler;
 
 /**
- * Default provider for {@link com.netflix.conductor.core.events.queue.ObservableQueue} that listens
+ * Default provider for {@link com.swiftconductor.core.events.queue.ObservableQueue} that listens
  * on the <i>conductor</i> queue prefix.
  *
  * <p><code>Set conductor.event-queues.default.enabled=false</code> to disable the default queue.

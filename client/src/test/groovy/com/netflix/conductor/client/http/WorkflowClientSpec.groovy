@@ -11,12 +11,12 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.http
+package com.swiftconductor.client.http
 
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef
-import com.netflix.conductor.common.run.SearchResult
-import com.netflix.conductor.common.run.Workflow
-import com.netflix.conductor.common.run.WorkflowSummary
+import com.swiftconductor.common.metadata.workflow.WorkflowDef
+import com.swiftconductor.common.run.SearchResult
+import com.swiftconductor.common.run.Workflow
+import com.swiftconductor.common.run.WorkflowSummary
 
 import com.sun.jersey.api.client.ClientResponse
 import spock.lang.Subject

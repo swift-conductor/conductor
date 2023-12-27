@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.service;
+package com.swiftconductor.service;
 
 import java.util.List;
 import java.util.Map;
@@ -24,11 +24,11 @@ import javax.validation.constraints.Size;
 
 import org.springframework.validation.annotation.Validated;
 
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDefSummary;
-import com.netflix.conductor.common.model.BulkResponse;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowDefSummary;
+import com.swiftconductor.common.model.BulkResponse;
 
 @Validated
 public interface MetadataService {

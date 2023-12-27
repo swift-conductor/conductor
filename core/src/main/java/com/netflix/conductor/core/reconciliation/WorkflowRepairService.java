@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.reconciliation;
+package com.swiftconductor.core.reconciliation;
 
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -23,19 +23,19 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
-import com.netflix.conductor.annotations.VisibleForTesting;
-import com.netflix.conductor.common.metadata.tasks.TaskType;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.exception.NotFoundException;
-import com.netflix.conductor.core.execution.tasks.SystemTaskRegistry;
-import com.netflix.conductor.core.execution.tasks.WorkflowSystemTask;
-import com.netflix.conductor.core.utils.QueueUtils;
-import com.netflix.conductor.core.utils.Utils;
-import com.netflix.conductor.dao.ExecutionDAO;
-import com.netflix.conductor.dao.QueueDAO;
-import com.netflix.conductor.metrics.Monitors;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.annotations.VisibleForTesting;
+import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.exception.NotFoundException;
+import com.swiftconductor.core.execution.tasks.SystemTaskRegistry;
+import com.swiftconductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.core.utils.QueueUtils;
+import com.swiftconductor.core.utils.Utils;
+import com.swiftconductor.dao.ExecutionDAO;
+import com.swiftconductor.dao.QueueDAO;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
 /**
  * A helper service that tries to keep ExecutionDAO and QueueDAO in sync, based on the task or

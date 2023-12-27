@@ -13,8 +13,8 @@
  */
 package com.example;
 
-import com.netflix.conductor.annotations.protogen.ProtoField;
-import com.netflix.conductor.annotations.protogen.ProtoMessage;
+import com.swiftconductor.annotations.protogen.ProtoField;
+import com.swiftconductor.annotations.protogen.ProtoMessage;
 
 @ProtoMessage
 public class Example {

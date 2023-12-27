@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.common.metadata.workflow;
+package com.swiftconductor.common.metadata.workflow;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -26,10 +26,10 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.PositiveOrZero;
 
-import com.netflix.conductor.annotations.protogen.ProtoField;
-import com.netflix.conductor.annotations.protogen.ProtoMessage;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.annotations.protogen.ProtoField;
+import com.swiftconductor.annotations.protogen.ProtoMessage;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.tasks.TaskType;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

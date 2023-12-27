@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.rest.controllers;
+package com.swiftconductor.rest.controllers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,11 +22,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-import com.netflix.conductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.netflix.conductor.common.metadata.workflow.StartWorkflowRequest;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.service.WorkflowService;
-import com.netflix.conductor.service.WorkflowTestService;
+import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.service.WorkflowService;
+import com.swiftconductor.service.WorkflowTestService;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;

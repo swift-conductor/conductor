@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.sdk.workflow.executor;
+package com.swiftconductor.sdk.workflow.executor;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,18 +23,18 @@ import java.util.concurrent.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.netflix.conductor.client.http.MetadataClient;
-import com.netflix.conductor.client.http.TaskClient;
-import com.netflix.conductor.client.http.WorkflowClient;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.tasks.TaskType;
-import com.netflix.conductor.common.metadata.workflow.StartWorkflowRequest;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.sdk.workflow.def.ConductorWorkflow;
-import com.netflix.conductor.sdk.workflow.def.tasks.*;
-import com.netflix.conductor.sdk.workflow.executor.task.AnnotatedWorkerExecutor;
-import com.netflix.conductor.sdk.workflow.utils.ObjectMapperProvider;
+import com.swiftconductor.client.http.MetadataClient;
+import com.swiftconductor.client.http.TaskClient;
+import com.swiftconductor.client.http.WorkflowClient;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.sdk.workflow.def.ConductorWorkflow;
+import com.swiftconductor.sdk.workflow.def.tasks.*;
+import com.swiftconductor.sdk.workflow.executor.task.AnnotatedWorkerExecutor;
+import com.swiftconductor.sdk.workflow.utils.ObjectMapperProvider;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

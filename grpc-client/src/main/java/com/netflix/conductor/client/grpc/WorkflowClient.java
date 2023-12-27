@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.grpc;
+package com.swiftconductor.client.grpc;
 
 import java.util.Collections;
 import java.util.List;
@@ -21,15 +21,15 @@ import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.netflix.conductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.netflix.conductor.common.metadata.workflow.StartWorkflowRequest;
-import com.netflix.conductor.common.run.SearchResult;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.common.run.WorkflowSummary;
-import com.netflix.conductor.grpc.SearchPb;
-import com.netflix.conductor.grpc.WorkflowServiceGrpc;
-import com.netflix.conductor.grpc.WorkflowServicePb;
-import com.netflix.conductor.proto.WorkflowPb;
+import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.common.run.SearchResult;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.common.run.WorkflowSummary;
+import com.swiftconductor.grpc.SearchPb;
+import com.swiftconductor.grpc.WorkflowServiceGrpc;
+import com.swiftconductor.grpc.WorkflowServicePb;
+import com.swiftconductor.proto.WorkflowPb;
 
 import com.google.common.base.Preconditions;
 import io.grpc.ManagedChannelBuilder;

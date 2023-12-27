@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.test.integration.http;
+package com.swiftconductor.test.integration.http;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,27 +27,27 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.netflix.conductor.client.exception.ConductorClientException;
-import com.netflix.conductor.client.http.EventClient;
-import com.netflix.conductor.client.http.MetadataClient;
-import com.netflix.conductor.client.http.TaskClient;
-import com.netflix.conductor.client.http.WorkflowClient;
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.Task.Status;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
-import com.netflix.conductor.common.metadata.tasks.TaskType;
-import com.netflix.conductor.common.metadata.workflow.StartWorkflowRequest;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
-import com.netflix.conductor.common.run.SearchResult;
-import com.netflix.conductor.common.run.TaskSummary;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.common.run.Workflow.WorkflowStatus;
-import com.netflix.conductor.common.run.WorkflowSummary;
-import com.netflix.conductor.common.validation.ValidationError;
-import com.netflix.conductor.test.integration.AbstractEndToEndTest;
+import com.swiftconductor.client.exception.ConductorClientException;
+import com.swiftconductor.client.http.EventClient;
+import com.swiftconductor.client.http.MetadataClient;
+import com.swiftconductor.client.http.TaskClient;
+import com.swiftconductor.client.http.WorkflowClient;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.Task.Status;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.common.run.SearchResult;
+import com.swiftconductor.common.run.TaskSummary;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.common.run.Workflow.WorkflowStatus;
+import com.swiftconductor.common.run.WorkflowSummary;
+import com.swiftconductor.common.validation.ValidationError;
+import com.swiftconductor.test.integration.AbstractEndToEndTest;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

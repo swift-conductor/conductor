@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution.tasks;
+package com.swiftconductor.core.execution.tasks;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -30,12 +30,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.annotations.VisibleForTesting;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.core.utils.QueueUtils;
-import com.netflix.conductor.service.MetadataService;
+import com.swiftconductor.annotations.VisibleForTesting;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.core.utils.QueueUtils;
+import com.swiftconductor.service.MetadataService;
 
-import static com.netflix.conductor.core.execution.tasks.SystemTaskRegistry.ASYNC_SYSTEM_TASKS_QUALIFIER;
+import static com.swiftconductor.core.execution.tasks.SystemTaskRegistry.ASYNC_SYSTEM_TASKS_QUALIFIER;
 
 @Component
 @ConditionalOnProperty(

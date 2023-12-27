@@ -11,11 +11,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.common.utils;
+package com.swiftconductor.common.utils;
 
 import java.io.InputStream;
 
-import com.netflix.conductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.common.run.ExternalStorageLocation;
 
 /**
  * Interface used to externalize the storage of large JSON payloads in workflow and task

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.service;
+package com.swiftconductor.service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -23,18 +23,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.netflix.conductor.common.constraints.OwnerEmailMandatoryConstraint;
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDefSummary;
-import com.netflix.conductor.common.model.BulkResponse;
-import com.netflix.conductor.core.WorkflowContext;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.exception.NotFoundException;
-import com.netflix.conductor.dao.EventHandlerDAO;
-import com.netflix.conductor.dao.MetadataDAO;
-import com.netflix.conductor.validations.ValidationContext;
+import com.swiftconductor.common.constraints.OwnerEmailMandatoryConstraint;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowDefSummary;
+import com.swiftconductor.common.model.BulkResponse;
+import com.swiftconductor.core.WorkflowContext;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.exception.NotFoundException;
+import com.swiftconductor.dao.EventHandlerDAO;
+import com.swiftconductor.dao.MetadataDAO;
+import com.swiftconductor.validations.ValidationContext;
 
 @Service
 public class MetadataServiceImpl implements MetadataService {

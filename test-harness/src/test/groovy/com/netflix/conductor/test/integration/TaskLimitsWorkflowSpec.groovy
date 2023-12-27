@@ -11,18 +11,18 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.test.integration
+package com.swiftconductor.test.integration
 
 import org.springframework.beans.factory.annotation.Autowired
 
-import com.netflix.conductor.common.metadata.tasks.Task
-import com.netflix.conductor.common.metadata.tasks.TaskResult
-import com.netflix.conductor.common.run.Workflow
-import com.netflix.conductor.dao.QueueDAO
-import com.netflix.conductor.test.base.AbstractSpecification
-import com.netflix.conductor.test.utils.UserTask
+import com.swiftconductor.common.metadata.tasks.Task
+import com.swiftconductor.common.metadata.tasks.TaskResult
+import com.swiftconductor.common.run.Workflow
+import com.swiftconductor.dao.QueueDAO
+import com.swiftconductor.test.base.AbstractSpecification
+import com.swiftconductor.test.utils.UserTask
 
-import static com.netflix.conductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedTask
+import static com.swiftconductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedTask
 
 class TaskLimitsWorkflowSpec extends AbstractSpecification {
 

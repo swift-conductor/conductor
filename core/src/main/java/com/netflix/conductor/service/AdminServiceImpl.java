@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.service;
+package com.swiftconductor.service;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -22,14 +22,14 @@ import java.util.Optional;
 import org.springframework.boot.info.BuildProperties;
 import org.springframework.stereotype.Service;
 
-import com.netflix.conductor.annotations.Audit;
-import com.netflix.conductor.annotations.Trace;
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.events.EventQueueManager;
-import com.netflix.conductor.core.reconciliation.WorkflowRepairService;
-import com.netflix.conductor.core.utils.Utils;
-import com.netflix.conductor.dao.QueueDAO;
+import com.swiftconductor.annotations.Audit;
+import com.swiftconductor.annotations.Trace;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.events.EventQueueManager;
+import com.swiftconductor.core.reconciliation.WorkflowRepairService;
+import com.swiftconductor.core.utils.Utils;
+import com.swiftconductor.dao.QueueDAO;
 
 @Audit
 @Trace

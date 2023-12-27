@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.grpc.server.service;
+package com.swiftconductor.grpc.server.service;
 
 import java.util.Collections;
 import java.util.concurrent.CountDownLatch;
@@ -22,14 +22,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-import com.netflix.conductor.common.run.SearchResult;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.common.run.WorkflowSummary;
-import com.netflix.conductor.grpc.SearchPb;
-import com.netflix.conductor.grpc.WorkflowServicePb;
-import com.netflix.conductor.proto.WorkflowPb;
-import com.netflix.conductor.proto.WorkflowSummaryPb;
-import com.netflix.conductor.service.WorkflowService;
+import com.swiftconductor.common.run.SearchResult;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.common.run.WorkflowSummary;
+import com.swiftconductor.grpc.SearchPb;
+import com.swiftconductor.grpc.WorkflowServicePb;
+import com.swiftconductor.proto.WorkflowPb;
+import com.swiftconductor.proto.WorkflowSummaryPb;
+import com.swiftconductor.service.WorkflowService;
 
 import io.grpc.stub.StreamObserver;
 

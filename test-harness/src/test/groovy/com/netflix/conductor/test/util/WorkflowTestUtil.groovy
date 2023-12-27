@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.test.util
+package com.swiftconductor.test.util
 
 import javax.annotation.PostConstruct
 
@@ -19,17 +19,17 @@ import org.apache.commons.lang3.StringUtils
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
-import com.netflix.conductor.common.metadata.tasks.Task
-import com.netflix.conductor.common.metadata.tasks.TaskDef
-import com.netflix.conductor.common.metadata.tasks.TaskResult
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef
-import com.netflix.conductor.core.WorkflowContext
-import com.netflix.conductor.core.exception.NotFoundException
-import com.netflix.conductor.core.execution.WorkflowExecutor
-import com.netflix.conductor.dao.QueueDAO
-import com.netflix.conductor.model.WorkflowModel
-import com.netflix.conductor.service.ExecutionService
-import com.netflix.conductor.service.MetadataService
+import com.swiftconductor.common.metadata.tasks.Task
+import com.swiftconductor.common.metadata.tasks.TaskDef
+import com.swiftconductor.common.metadata.tasks.TaskResult
+import com.swiftconductor.common.metadata.workflow.WorkflowDef
+import com.swiftconductor.core.WorkflowContext
+import com.swiftconductor.core.exception.NotFoundException
+import com.swiftconductor.core.execution.WorkflowExecutor
+import com.swiftconductor.dao.QueueDAO
+import com.swiftconductor.model.WorkflowModel
+import com.swiftconductor.service.ExecutionService
+import com.swiftconductor.service.MetadataService
 
 import com.fasterxml.jackson.databind.ObjectMapper
 

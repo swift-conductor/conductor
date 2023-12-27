@@ -11,14 +11,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.http;
+package com.swiftconductor.client.http;
 
 import java.net.URI;
 
 import javax.ws.rs.core.MediaType;
 
-import com.netflix.conductor.common.config.ObjectMapperProvider;
-import com.netflix.conductor.common.model.BulkResponse;
+import com.swiftconductor.common.config.ObjectMapperProvider;
+import com.swiftconductor.common.model.BulkResponse;
 
 import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.ObjectMapper;

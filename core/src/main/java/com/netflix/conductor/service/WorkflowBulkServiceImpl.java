@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.service;
+package com.swiftconductor.service;
 
 import java.util.List;
 
@@ -19,10 +19,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.netflix.conductor.annotations.Audit;
-import com.netflix.conductor.annotations.Trace;
-import com.netflix.conductor.common.model.BulkResponse;
-import com.netflix.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.annotations.Audit;
+import com.swiftconductor.annotations.Trace;
+import com.swiftconductor.common.model.BulkResponse;
+import com.swiftconductor.core.execution.WorkflowExecutor;
 
 @Audit
 @Trace

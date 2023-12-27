@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.metrics;
+package com.swiftconductor.metrics;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,8 +20,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 import com.netflix.spectator.api.Counter;
 import com.netflix.spectator.api.DistributionSummary;
 import com.netflix.spectator.api.Gauge;

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.automator;
+package com.swiftconductor.client.automator;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -30,12 +30,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.netflix.appinfo.InstanceInfo.InstanceStatus;
-import com.netflix.conductor.client.config.PropertyFactory;
-import com.netflix.conductor.client.http.TaskClient;
-import com.netflix.conductor.client.telemetry.MetricsContainer;
-import com.netflix.conductor.client.worker.Worker;
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.client.config.PropertyFactory;
+import com.swiftconductor.client.http.TaskClient;
+import com.swiftconductor.client.telemetry.MetricsContainer;
+import com.swiftconductor.client.worker.Worker;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
 import com.netflix.discovery.EurekaClient;
 import com.netflix.spectator.api.Registry;
 import com.netflix.spectator.api.Spectator;

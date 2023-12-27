@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution.tasks;
+package com.swiftconductor.core.execution.tasks;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,16 +23,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.netflix.conductor.common.config.TestObjectMapperConfiguration;
-import com.netflix.conductor.common.metadata.tasks.TaskType;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.core.events.EventQueueProvider;
-import com.netflix.conductor.core.events.EventQueues;
-import com.netflix.conductor.core.events.MockQueueProvider;
-import com.netflix.conductor.core.events.queue.ObservableQueue;
-import com.netflix.conductor.core.utils.ParametersUtils;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.core.events.EventQueueProvider;
+import com.swiftconductor.core.events.EventQueues;
+import com.swiftconductor.core.events.MockQueueProvider;
+import com.swiftconductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.core.utils.ParametersUtils;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

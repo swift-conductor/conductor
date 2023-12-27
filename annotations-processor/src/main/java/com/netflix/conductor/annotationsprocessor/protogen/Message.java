@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.annotationsprocessor.protogen;
+package com.swiftconductor.annotationsprocessor.protogen;
 
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -19,11 +19,11 @@ import java.util.regex.Pattern;
 
 import javax.lang.model.element.Modifier;
 
-import com.netflix.conductor.annotations.protogen.ProtoField;
-import com.netflix.conductor.annotations.protogen.ProtoMessage;
-import com.netflix.conductor.annotationsprocessor.protogen.types.AbstractType;
-import com.netflix.conductor.annotationsprocessor.protogen.types.MessageType;
-import com.netflix.conductor.annotationsprocessor.protogen.types.TypeMapper;
+import com.swiftconductor.annotations.protogen.ProtoField;
+import com.swiftconductor.annotations.protogen.ProtoMessage;
+import com.swiftconductor.annotationsprocessor.protogen.types.AbstractType;
+import com.swiftconductor.annotationsprocessor.protogen.types.MessageType;
+import com.swiftconductor.annotationsprocessor.protogen.types.TypeMapper;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.MethodSpec;

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution.tasks;
+package com.swiftconductor.core.execution.tasks;
 
 import java.util.Map;
 
@@ -20,18 +20,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.core.exception.NonTransientException;
-import com.netflix.conductor.core.exception.TransientException;
-import com.netflix.conductor.core.execution.StartWorkflowInput;
-import com.netflix.conductor.core.execution.WorkflowExecutor;
-import com.netflix.conductor.core.operation.StartWorkflowOperation;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.core.exception.NonTransientException;
+import com.swiftconductor.core.exception.TransientException;
+import com.swiftconductor.core.execution.StartWorkflowInput;
+import com.swiftconductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.core.operation.StartWorkflowOperation;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import static com.netflix.conductor.common.metadata.tasks.TaskType.TASK_TYPE_SUB_WORKFLOW;
+import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_SUB_WORKFLOW;
 
 @Component(TASK_TYPE_SUB_WORKFLOW)
 public class SubWorkflow extends WorkflowSystemTask {

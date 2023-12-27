@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.utils;
+package com.swiftconductor.core.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -25,17 +25,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.annotations.VisibleForTesting;
-import com.netflix.conductor.common.run.ExternalStorageLocation;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage.PayloadType;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.exception.NonTransientException;
-import com.netflix.conductor.core.exception.TerminateWorkflowException;
-import com.netflix.conductor.core.exception.TransientException;
-import com.netflix.conductor.metrics.Monitors;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.annotations.VisibleForTesting;
+import com.swiftconductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.common.utils.ExternalPayloadStorage.PayloadType;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.exception.NonTransientException;
+import com.swiftconductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.core.exception.TransientException;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

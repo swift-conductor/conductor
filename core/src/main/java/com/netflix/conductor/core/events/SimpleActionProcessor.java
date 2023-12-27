@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.events;
+package com.swiftconductor.core.events;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -21,19 +21,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.common.metadata.events.EventHandler.Action;
-import com.netflix.conductor.common.metadata.events.EventHandler.StartWorkflow;
-import com.netflix.conductor.common.metadata.events.EventHandler.TaskDetails;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
-import com.netflix.conductor.common.utils.TaskUtils;
-import com.netflix.conductor.core.execution.StartWorkflowInput;
-import com.netflix.conductor.core.execution.WorkflowExecutor;
-import com.netflix.conductor.core.operation.StartWorkflowOperation;
-import com.netflix.conductor.core.utils.JsonUtils;
-import com.netflix.conductor.core.utils.ParametersUtils;
-import com.netflix.conductor.metrics.Monitors;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.common.metadata.events.EventHandler.Action;
+import com.swiftconductor.common.metadata.events.EventHandler.StartWorkflow;
+import com.swiftconductor.common.metadata.events.EventHandler.TaskDetails;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.common.utils.TaskUtils;
+import com.swiftconductor.core.execution.StartWorkflowInput;
+import com.swiftconductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.core.operation.StartWorkflowOperation;
+import com.swiftconductor.core.utils.JsonUtils;
+import com.swiftconductor.core.utils.ParametersUtils;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
 /**
  * Action Processor subscribes to the Event Actions queue and processes the actions (e.g. start

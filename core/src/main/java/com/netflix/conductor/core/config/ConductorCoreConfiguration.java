@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.config;
+package com.swiftconductor.core.config;
 
 import java.util.List;
 import java.util.Map;
@@ -31,21 +31,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.retry.support.RetryTemplate;
 
-import com.netflix.conductor.common.utils.ExternalPayloadStorage;
-import com.netflix.conductor.core.events.EventQueueProvider;
-import com.netflix.conductor.core.exception.TransientException;
-import com.netflix.conductor.core.execution.mapper.TaskMapper;
-import com.netflix.conductor.core.execution.tasks.WorkflowSystemTask;
-import com.netflix.conductor.core.listener.TaskStatusListener;
-import com.netflix.conductor.core.listener.TaskStatusListenerStub;
-import com.netflix.conductor.core.listener.WorkflowStatusListener;
-import com.netflix.conductor.core.listener.WorkflowStatusListenerStub;
-import com.netflix.conductor.core.storage.DummyPayloadStorage;
-import com.netflix.conductor.core.sync.Lock;
-import com.netflix.conductor.core.sync.noop.NoopLock;
+import com.swiftconductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.core.events.EventQueueProvider;
+import com.swiftconductor.core.exception.TransientException;
+import com.swiftconductor.core.execution.mapper.TaskMapper;
+import com.swiftconductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.core.listener.TaskStatusListener;
+import com.swiftconductor.core.listener.TaskStatusListenerStub;
+import com.swiftconductor.core.listener.WorkflowStatusListener;
+import com.swiftconductor.core.listener.WorkflowStatusListenerStub;
+import com.swiftconductor.core.storage.DummyPayloadStorage;
+import com.swiftconductor.core.sync.Lock;
+import com.swiftconductor.core.sync.noop.NoopLock;
 
-import static com.netflix.conductor.core.events.EventQueues.EVENT_QUEUE_PROVIDERS_QUALIFIER;
-import static com.netflix.conductor.core.execution.tasks.SystemTaskRegistry.ASYNC_SYSTEM_TASKS_QUALIFIER;
+import static com.swiftconductor.core.events.EventQueues.EVENT_QUEUE_PROVIDERS_QUALIFIER;
+import static com.swiftconductor.core.execution.tasks.SystemTaskRegistry.ASYNC_SYSTEM_TASKS_QUALIFIER;
 
 import static java.util.function.Function.identity;
 

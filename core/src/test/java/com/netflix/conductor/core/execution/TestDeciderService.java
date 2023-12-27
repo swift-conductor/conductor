@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution;
+package com.swiftconductor.core.execution;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -38,27 +38,27 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.netflix.conductor.common.config.TestObjectMapperConfiguration;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.tasks.TaskDef.TimeoutPolicy;
-import com.netflix.conductor.common.metadata.tasks.TaskType;
-import com.netflix.conductor.common.metadata.workflow.SubWorkflowParams;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
-import com.netflix.conductor.common.utils.TaskUtils;
-import com.netflix.conductor.core.exception.TerminateWorkflowException;
-import com.netflix.conductor.core.execution.DeciderService.DeciderOutcome;
-import com.netflix.conductor.core.execution.mapper.TaskMapper;
-import com.netflix.conductor.core.execution.tasks.SubWorkflow;
-import com.netflix.conductor.core.execution.tasks.SystemTaskRegistry;
-import com.netflix.conductor.core.execution.tasks.WorkflowSystemTask;
-import com.netflix.conductor.core.operation.StartWorkflowOperation;
-import com.netflix.conductor.core.utils.ExternalPayloadStorageUtils;
-import com.netflix.conductor.core.utils.IDGenerator;
-import com.netflix.conductor.core.utils.ParametersUtils;
-import com.netflix.conductor.dao.MetadataDAO;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.tasks.TaskDef.TimeoutPolicy;
+import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.common.metadata.workflow.SubWorkflowParams;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.common.utils.TaskUtils;
+import com.swiftconductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.core.execution.DeciderService.DeciderOutcome;
+import com.swiftconductor.core.execution.mapper.TaskMapper;
+import com.swiftconductor.core.execution.tasks.SubWorkflow;
+import com.swiftconductor.core.execution.tasks.SystemTaskRegistry;
+import com.swiftconductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.core.operation.StartWorkflowOperation;
+import com.swiftconductor.core.utils.ExternalPayloadStorageUtils;
+import com.swiftconductor.core.utils.IDGenerator;
+import com.swiftconductor.core.utils.ParametersUtils;
+import com.swiftconductor.dao.MetadataDAO;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 import com.netflix.spectator.api.Counter;
 import com.netflix.spectator.api.DefaultRegistry;
 import com.netflix.spectator.api.Registry;
@@ -66,7 +66,7 @@ import com.netflix.spectator.api.Spectator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import static com.netflix.conductor.common.metadata.tasks.TaskType.*;
+import static com.swiftconductor.common.metadata.tasks.TaskType.*;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;

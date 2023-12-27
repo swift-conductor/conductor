@@ -27,7 +27,7 @@ JUnit, Spock and other testing frameworks being used.
 testRunner = new WorkflowTestRunner(8096, "3.5.2");
 
 //Scan the packages for task workers
-testRunner.init("com.netflix.conductor.testing.workflows");
+testRunner.init("com.swiftconductor.testing.workflows");
 
 //Get the executor instance used for  loading workflows 
 executor = testRunner.getWorkflowExecutor();

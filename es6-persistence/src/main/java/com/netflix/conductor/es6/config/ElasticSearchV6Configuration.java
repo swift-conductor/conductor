@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.es6.config;
+package com.swiftconductor.es6.config;
 
 import java.net.InetAddress;
 import java.net.URI;
@@ -43,9 +43,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.retry.backoff.FixedBackOffPolicy;
 import org.springframework.retry.support.RetryTemplate;
 
-import com.netflix.conductor.dao.IndexDAO;
-import com.netflix.conductor.es6.dao.index.ElasticSearchDAOV6;
-import com.netflix.conductor.es6.dao.index.ElasticSearchRestDAOV6;
+import com.swiftconductor.dao.IndexDAO;
+import com.swiftconductor.es6.dao.index.ElasticSearchDAOV6;
+import com.swiftconductor.es6.dao.index.ElasticSearchRestDAOV6;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

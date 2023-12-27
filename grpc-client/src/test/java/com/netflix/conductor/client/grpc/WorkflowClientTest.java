@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.grpc;
+package com.swiftconductor.client.grpc;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,15 +20,15 @@ import org.mockito.Mock;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import com.netflix.conductor.common.run.SearchResult;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.common.run.WorkflowSummary;
-import com.netflix.conductor.grpc.ProtoMapper;
-import com.netflix.conductor.grpc.SearchPb;
-import com.netflix.conductor.grpc.WorkflowServiceGrpc;
-import com.netflix.conductor.grpc.WorkflowServicePb;
-import com.netflix.conductor.proto.WorkflowPb;
-import com.netflix.conductor.proto.WorkflowSummaryPb;
+import com.swiftconductor.common.run.SearchResult;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.common.run.WorkflowSummary;
+import com.swiftconductor.grpc.ProtoMapper;
+import com.swiftconductor.grpc.SearchPb;
+import com.swiftconductor.grpc.WorkflowServiceGrpc;
+import com.swiftconductor.grpc.WorkflowServicePb;
+import com.swiftconductor.proto.WorkflowPb;
+import com.swiftconductor.proto.WorkflowSummaryPb;
 
 import io.grpc.ManagedChannelBuilder;
 

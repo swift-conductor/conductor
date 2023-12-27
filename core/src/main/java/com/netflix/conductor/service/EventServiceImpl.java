@@ -11,14 +11,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.service;
+package com.swiftconductor.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.core.events.EventQueues;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.core.events.EventQueues;
 
 @Service
 public class EventServiceImpl implements EventService {

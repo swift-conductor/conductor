@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.config;
+package com.swiftconductor.core.config;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -37,9 +37,9 @@ public class SchedulerConfiguration implements SchedulingConfigurer {
     public static final String SWEEPER_EXECUTOR_NAME = "WorkflowSweeperExecutor";
 
     /**
-     * Used by some {@link com.netflix.conductor.core.events.queue.ObservableQueue} implementations.
+     * Used by some {@link com.swiftconductor.core.events.queue.ObservableQueue} implementations.
      *
-     * @see com.netflix.conductor.core.events.queue.ConductorObservableQueue
+     * @see com.swiftconductor.core.events.queue.ConductorObservableQueue
      */
     @Bean
     public Scheduler scheduler(ConductorProperties properties) {

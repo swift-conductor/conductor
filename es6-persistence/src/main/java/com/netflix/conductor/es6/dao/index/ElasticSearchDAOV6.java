@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.es6.dao.index;
+package com.swiftconductor.es6.dao.index;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -57,18 +57,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.retry.support.RetryTemplate;
 
-import com.netflix.conductor.annotations.Trace;
-import com.netflix.conductor.common.metadata.events.EventExecution;
-import com.netflix.conductor.common.metadata.tasks.TaskExecLog;
-import com.netflix.conductor.common.run.SearchResult;
-import com.netflix.conductor.common.run.TaskSummary;
-import com.netflix.conductor.common.run.WorkflowSummary;
-import com.netflix.conductor.core.events.queue.Message;
-import com.netflix.conductor.core.exception.TransientException;
-import com.netflix.conductor.dao.IndexDAO;
-import com.netflix.conductor.es6.config.ElasticSearchProperties;
-import com.netflix.conductor.es6.dao.query.parser.internal.ParserException;
-import com.netflix.conductor.metrics.Monitors;
+import com.swiftconductor.annotations.Trace;
+import com.swiftconductor.common.metadata.events.EventExecution;
+import com.swiftconductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.common.run.SearchResult;
+import com.swiftconductor.common.run.TaskSummary;
+import com.swiftconductor.common.run.WorkflowSummary;
+import com.swiftconductor.core.events.queue.Message;
+import com.swiftconductor.core.exception.TransientException;
+import com.swiftconductor.dao.IndexDAO;
+import com.swiftconductor.es6.config.ElasticSearchProperties;
+import com.swiftconductor.es6.dao.query.parser.internal.ParserException;
+import com.swiftconductor.metrics.Monitors;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

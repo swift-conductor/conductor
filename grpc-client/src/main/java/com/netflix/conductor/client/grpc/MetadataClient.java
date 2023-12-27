@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.grpc;
+package com.swiftconductor.client.grpc;
 
 import java.util.List;
 
@@ -19,10 +19,10 @@ import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.grpc.MetadataServiceGrpc;
-import com.netflix.conductor.grpc.MetadataServicePb;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.grpc.MetadataServiceGrpc;
+import com.swiftconductor.grpc.MetadataServicePb;
 
 import com.google.common.base.Preconditions;
 import io.grpc.ManagedChannelBuilder;

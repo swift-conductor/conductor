@@ -11,13 +11,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.dao;
+package com.swiftconductor.dao;
 
 import java.util.List;
 
 import org.junit.Test;
 
-import com.netflix.conductor.common.metadata.tasks.PollData;
+import com.swiftconductor.common.metadata.tasks.PollData;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

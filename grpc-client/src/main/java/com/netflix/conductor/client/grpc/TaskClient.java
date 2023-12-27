@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.grpc;
+package com.swiftconductor.client.grpc;
 
 import java.util.Iterator;
 import java.util.List;
@@ -21,15 +21,15 @@ import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.TaskExecLog;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
-import com.netflix.conductor.common.run.SearchResult;
-import com.netflix.conductor.common.run.TaskSummary;
-import com.netflix.conductor.grpc.SearchPb;
-import com.netflix.conductor.grpc.TaskServiceGrpc;
-import com.netflix.conductor.grpc.TaskServicePb;
-import com.netflix.conductor.proto.TaskPb;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.common.run.SearchResult;
+import com.swiftconductor.common.run.TaskSummary;
+import com.swiftconductor.grpc.SearchPb;
+import com.swiftconductor.grpc.TaskServiceGrpc;
+import com.swiftconductor.grpc.TaskServicePb;
+import com.swiftconductor.proto.TaskPb;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Iterators;

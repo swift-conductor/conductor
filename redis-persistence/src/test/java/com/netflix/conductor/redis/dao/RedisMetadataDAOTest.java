@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.dao;
+package com.swiftconductor.redis.dao;
 
 import java.time.Duration;
 import java.util.Arrays;
@@ -30,17 +30,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.netflix.conductor.common.config.TestObjectMapperConfiguration;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.tasks.TaskDef.RetryLogic;
-import com.netflix.conductor.common.metadata.tasks.TaskDef.TimeoutPolicy;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.exception.ConflictException;
-import com.netflix.conductor.core.exception.NotFoundException;
-import com.netflix.conductor.redis.config.RedisProperties;
-import com.netflix.conductor.redis.jedis.JedisMock;
-import com.netflix.conductor.redis.jedis.JedisProxy;
+import com.swiftconductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.tasks.TaskDef.RetryLogic;
+import com.swiftconductor.common.metadata.tasks.TaskDef.TimeoutPolicy;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.exception.ConflictException;
+import com.swiftconductor.core.exception.NotFoundException;
+import com.swiftconductor.redis.config.RedisProperties;
+import com.swiftconductor.redis.jedis.JedisMock;
+import com.swiftconductor.redis.jedis.JedisProxy;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import redis.clients.jedis.commands.JedisCommands;

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.http;
+package com.swiftconductor.client.http;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -26,18 +26,18 @@ import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.netflix.conductor.client.config.ConductorClientConfiguration;
-import com.netflix.conductor.client.config.DefaultConductorClientConfiguration;
-import com.netflix.conductor.client.exception.ConductorClientException;
-import com.netflix.conductor.client.telemetry.MetricsContainer;
-import com.netflix.conductor.common.metadata.tasks.PollData;
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.TaskExecLog;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
-import com.netflix.conductor.common.run.SearchResult;
-import com.netflix.conductor.common.run.TaskSummary;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage.PayloadType;
+import com.swiftconductor.client.config.ConductorClientConfiguration;
+import com.swiftconductor.client.config.DefaultConductorClientConfiguration;
+import com.swiftconductor.client.exception.ConductorClientException;
+import com.swiftconductor.client.telemetry.MetricsContainer;
+import com.swiftconductor.common.metadata.tasks.PollData;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.common.run.SearchResult;
+import com.swiftconductor.common.run.TaskSummary;
+import com.swiftconductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.common.utils.ExternalPayloadStorage.PayloadType;
 
 import com.sun.jersey.api.client.ClientHandler;
 import com.sun.jersey.api.client.GenericType;

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution;
+package com.swiftconductor.core.execution;
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -25,40 +25,40 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.annotations.Trace;
-import com.netflix.conductor.annotations.VisibleForTesting;
-import com.netflix.conductor.common.metadata.tasks.*;
-import com.netflix.conductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.netflix.conductor.common.metadata.workflow.SkipTaskRequest;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.common.utils.TaskUtils;
-import com.netflix.conductor.core.WorkflowContext;
-import com.netflix.conductor.core.config.ConductorProperties;
-import com.netflix.conductor.core.dal.ExecutionDAOFacade;
-import com.netflix.conductor.core.event.WorkflowCreationEvent;
-import com.netflix.conductor.core.event.WorkflowEvaluationEvent;
-import com.netflix.conductor.core.exception.*;
-import com.netflix.conductor.core.execution.tasks.SystemTaskRegistry;
-import com.netflix.conductor.core.execution.tasks.Terminate;
-import com.netflix.conductor.core.execution.tasks.WorkflowSystemTask;
-import com.netflix.conductor.core.listener.TaskStatusListener;
-import com.netflix.conductor.core.listener.WorkflowStatusListener;
-import com.netflix.conductor.core.metadata.MetadataMapperService;
-import com.netflix.conductor.core.utils.IDGenerator;
-import com.netflix.conductor.core.utils.ParametersUtils;
-import com.netflix.conductor.core.utils.QueueUtils;
-import com.netflix.conductor.core.utils.Utils;
-import com.netflix.conductor.dao.MetadataDAO;
-import com.netflix.conductor.dao.QueueDAO;
-import com.netflix.conductor.metrics.Monitors;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
-import com.netflix.conductor.service.ExecutionLockService;
+import com.swiftconductor.annotations.Trace;
+import com.swiftconductor.annotations.VisibleForTesting;
+import com.swiftconductor.common.metadata.tasks.*;
+import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.common.metadata.workflow.SkipTaskRequest;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.common.utils.TaskUtils;
+import com.swiftconductor.core.WorkflowContext;
+import com.swiftconductor.core.config.ConductorProperties;
+import com.swiftconductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.core.event.WorkflowCreationEvent;
+import com.swiftconductor.core.event.WorkflowEvaluationEvent;
+import com.swiftconductor.core.exception.*;
+import com.swiftconductor.core.execution.tasks.SystemTaskRegistry;
+import com.swiftconductor.core.execution.tasks.Terminate;
+import com.swiftconductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.core.listener.TaskStatusListener;
+import com.swiftconductor.core.listener.WorkflowStatusListener;
+import com.swiftconductor.core.metadata.MetadataMapperService;
+import com.swiftconductor.core.utils.IDGenerator;
+import com.swiftconductor.core.utils.ParametersUtils;
+import com.swiftconductor.core.utils.QueueUtils;
+import com.swiftconductor.core.utils.Utils;
+import com.swiftconductor.dao.MetadataDAO;
+import com.swiftconductor.dao.QueueDAO;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.service.ExecutionLockService;
 
-import static com.netflix.conductor.core.utils.Utils.DECIDER_QUEUE;
-import static com.netflix.conductor.model.TaskModel.Status.*;
+import static com.swiftconductor.core.utils.Utils.DECIDER_QUEUE;
+import static com.swiftconductor.model.TaskModel.Status.*;
 
 /** Workflow services provider interface */
 @Trace

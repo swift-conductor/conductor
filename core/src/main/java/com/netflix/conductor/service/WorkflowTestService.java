@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.service;
+package com.swiftconductor.service;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -19,13 +19,13 @@ import java.util.stream.Stream;
 
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.tasks.TaskResult;
-import com.netflix.conductor.common.metadata.tasks.TaskType;
-import com.netflix.conductor.common.run.Workflow;
-import com.netflix.conductor.common.run.WorkflowTestRequest;
-import com.netflix.conductor.dao.ExecutionDAO;
-import com.netflix.conductor.model.TaskModel;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.common.run.Workflow;
+import com.swiftconductor.common.run.WorkflowTestRequest;
+import com.swiftconductor.dao.ExecutionDAO;
+import com.swiftconductor.model.TaskModel;
 
 @Component
 public class WorkflowTestService {

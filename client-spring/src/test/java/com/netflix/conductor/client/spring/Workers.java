@@ -11,15 +11,15 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.spring;
+package com.swiftconductor.client.spring;
 
 import java.util.Date;
 
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.sdk.workflow.executor.task.TaskContext;
-import com.netflix.conductor.sdk.workflow.task.InputParam;
-import com.netflix.conductor.sdk.workflow.task.WorkerTask;
+import com.swiftconductor.sdk.workflow.executor.task.TaskContext;
+import com.swiftconductor.sdk.workflow.task.InputParam;
+import com.swiftconductor.sdk.workflow.task.WorkerTask;
 
 @Component
 public class Workers {

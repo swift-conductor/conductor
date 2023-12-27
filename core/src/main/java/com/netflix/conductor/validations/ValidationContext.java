@@ -11,14 +11,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.validations;
+package com.swiftconductor.validations;
 
-import com.netflix.conductor.dao.MetadataDAO;
+import com.swiftconductor.dao.MetadataDAO;
 
 /**
  * This context is defined to get access to {@link MetadataDAO} inside {@link
  * WorkflowTaskTypeConstraint} constraint validator to validate {@link
- * com.netflix.conductor.common.metadata.workflow.WorkflowTask}.
+ * com.swiftconductor.common.metadata.workflow.WorkflowTask}.
  */
 public class ValidationContext {
 

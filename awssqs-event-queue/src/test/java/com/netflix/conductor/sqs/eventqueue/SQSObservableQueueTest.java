@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.sqs.eventqueue;
+package com.swiftconductor.sqs.eventqueue;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 import org.mockito.stubbing.Answer;
 
-import com.netflix.conductor.core.events.queue.Message;
+import com.swiftconductor.core.events.queue.Message;
 
 import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.model.ListQueuesRequest;

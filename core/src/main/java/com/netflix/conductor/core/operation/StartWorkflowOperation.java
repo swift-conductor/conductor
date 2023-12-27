@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.operation;
+package com.swiftconductor.core.operation;
 
 import java.util.Map;
 import java.util.Optional;
@@ -23,19 +23,19 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.core.WorkflowContext;
-import com.netflix.conductor.core.dal.ExecutionDAOFacade;
-import com.netflix.conductor.core.event.WorkflowCreationEvent;
-import com.netflix.conductor.core.event.WorkflowEvaluationEvent;
-import com.netflix.conductor.core.exception.TransientException;
-import com.netflix.conductor.core.execution.StartWorkflowInput;
-import com.netflix.conductor.core.metadata.MetadataMapperService;
-import com.netflix.conductor.core.utils.IDGenerator;
-import com.netflix.conductor.core.utils.ParametersUtils;
-import com.netflix.conductor.metrics.Monitors;
-import com.netflix.conductor.model.WorkflowModel;
-import com.netflix.conductor.service.ExecutionLockService;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.core.WorkflowContext;
+import com.swiftconductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.core.event.WorkflowCreationEvent;
+import com.swiftconductor.core.event.WorkflowEvaluationEvent;
+import com.swiftconductor.core.exception.TransientException;
+import com.swiftconductor.core.execution.StartWorkflowInput;
+import com.swiftconductor.core.metadata.MetadataMapperService;
+import com.swiftconductor.core.utils.IDGenerator;
+import com.swiftconductor.core.utils.ParametersUtils;
+import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.service.ExecutionLockService;
 
 @Component
 public class StartWorkflowOperation implements WorkflowOperation<StartWorkflowInput, String> {

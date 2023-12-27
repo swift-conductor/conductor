@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.core.execution.tasks;
+package com.swiftconductor.core.execution.tasks;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -22,17 +22,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.netflix.conductor.annotations.VisibleForTesting;
-import com.netflix.conductor.common.metadata.tasks.TaskDef;
-import com.netflix.conductor.common.metadata.workflow.WorkflowTask;
-import com.netflix.conductor.common.utils.TaskUtils;
-import com.netflix.conductor.core.events.ScriptEvaluator;
-import com.netflix.conductor.core.execution.WorkflowExecutor;
-import com.netflix.conductor.core.utils.ParametersUtils;
-import com.netflix.conductor.model.TaskModel;
-import com.netflix.conductor.model.WorkflowModel;
+import com.swiftconductor.annotations.VisibleForTesting;
+import com.swiftconductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.common.utils.TaskUtils;
+import com.swiftconductor.core.events.ScriptEvaluator;
+import com.swiftconductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.core.utils.ParametersUtils;
+import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.model.WorkflowModel;
 
-import static com.netflix.conductor.common.metadata.tasks.TaskType.TASK_TYPE_DO_WHILE;
+import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_DO_WHILE;
 
 @Component(TASK_TYPE_DO_WHILE)
 public class DoWhile extends WorkflowSystemTask {

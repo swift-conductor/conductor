@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.lock;
+package com.swiftconductor.redis.lock;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,9 +23,9 @@ import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
 
-import com.netflix.conductor.redislock.config.RedisLockProperties;
-import com.netflix.conductor.redislock.config.RedisLockProperties.REDIS_SERVER_TYPE;
-import com.netflix.conductor.redislock.lock.RedisLock;
+import com.swiftconductor.redislock.config.RedisLockProperties;
+import com.swiftconductor.redislock.config.RedisLockProperties.REDIS_SERVER_TYPE;
+import com.swiftconductor.redislock.lock.RedisLock;
 
 import redis.embedded.RedisServer;
 

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.common.run;
+package com.swiftconductor.common.run;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -21,12 +21,12 @@ import javax.validation.constraints.Min;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.netflix.conductor.annotations.protogen.ProtoEnum;
-import com.netflix.conductor.annotations.protogen.ProtoField;
-import com.netflix.conductor.annotations.protogen.ProtoMessage;
-import com.netflix.conductor.common.metadata.Auditable;
-import com.netflix.conductor.common.metadata.tasks.Task;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.annotations.protogen.ProtoEnum;
+import com.swiftconductor.annotations.protogen.ProtoField;
+import com.swiftconductor.annotations.protogen.ProtoMessage;
+import com.swiftconductor.common.metadata.Auditable;
+import com.swiftconductor.common.metadata.tasks.Task;
+import com.swiftconductor.common.metadata.workflow.WorkflowDef;
 
 @ProtoMessage
 public class Workflow extends Auditable {

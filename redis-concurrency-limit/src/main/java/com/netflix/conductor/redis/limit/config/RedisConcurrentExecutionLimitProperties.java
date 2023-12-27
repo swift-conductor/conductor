@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redis.limit.config;
+package com.swiftconductor.redis.limit.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

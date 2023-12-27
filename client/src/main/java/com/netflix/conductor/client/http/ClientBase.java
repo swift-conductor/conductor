@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.client.http;
+package com.swiftconductor.client.http;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -28,14 +28,14 @@ import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.netflix.conductor.client.config.ConductorClientConfiguration;
-import com.netflix.conductor.client.config.DefaultConductorClientConfiguration;
-import com.netflix.conductor.client.exception.ConductorClientException;
-import com.netflix.conductor.common.config.ObjectMapperProvider;
-import com.netflix.conductor.common.model.BulkResponse;
-import com.netflix.conductor.common.run.ExternalStorageLocation;
-import com.netflix.conductor.common.utils.ExternalPayloadStorage;
-import com.netflix.conductor.common.validation.ErrorResponse;
+import com.swiftconductor.client.config.ConductorClientConfiguration;
+import com.swiftconductor.client.config.DefaultConductorClientConfiguration;
+import com.swiftconductor.client.exception.ConductorClientException;
+import com.swiftconductor.common.config.ObjectMapperProvider;
+import com.swiftconductor.common.model.BulkResponse;
+import com.swiftconductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.common.validation.ErrorResponse;
 
 import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -223,7 +223,7 @@ public abstract class ClientBase {
      * payload from the server and then uploads to this location
      *
      * @param payloadType the {@link
-     *     com.netflix.conductor.common.utils.ExternalPayloadStorage.PayloadType} to be uploaded
+     *     com.swiftconductor.common.utils.ExternalPayloadStorage.PayloadType} to be uploaded
      * @param payloadBytes the byte array containing the payload
      * @param payloadSize the size of the payload
      * @return the path where the payload is stored in external storage
@@ -248,7 +248,7 @@ public abstract class ClientBase {
      * the uri of the payload fom the server and then downloads from this location.
      *
      * @param payloadType the {@link
-     *     com.netflix.conductor.common.utils.ExternalPayloadStorage.PayloadType} to be downloaded
+     *     com.swiftconductor.common.utils.ExternalPayloadStorage.PayloadType} to be downloaded
      * @param path the relative of the payload in external storage
      * @return the payload object that is stored in external storage
      */

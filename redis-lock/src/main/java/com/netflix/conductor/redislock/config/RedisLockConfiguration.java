@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.redislock.config;
+package com.swiftconductor.redislock.config;
 
 import java.util.Arrays;
 
@@ -24,9 +24,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.netflix.conductor.core.sync.Lock;
-import com.netflix.conductor.redislock.config.RedisLockProperties.REDIS_SERVER_TYPE;
-import com.netflix.conductor.redislock.lock.RedisLock;
+import com.swiftconductor.core.sync.Lock;
+import com.swiftconductor.redislock.config.RedisLockProperties.REDIS_SERVER_TYPE;
+import com.swiftconductor.redislock.lock.RedisLock;
 
 @Configuration
 @EnableConfigurationProperties(RedisLockProperties.class)

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.netflix.conductor.es6.dao.index;
+package com.swiftconductor.es6.dao.index;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -27,14 +27,14 @@ import java.util.function.Supplier;
 
 import org.junit.Test;
 
-import com.netflix.conductor.common.metadata.events.EventExecution;
-import com.netflix.conductor.common.metadata.events.EventHandler;
-import com.netflix.conductor.common.metadata.tasks.TaskExecLog;
-import com.netflix.conductor.common.run.TaskSummary;
-import com.netflix.conductor.common.run.Workflow.WorkflowStatus;
-import com.netflix.conductor.common.run.WorkflowSummary;
-import com.netflix.conductor.core.events.queue.Message;
-import com.netflix.conductor.es6.utils.TestUtils;
+import com.swiftconductor.common.metadata.events.EventExecution;
+import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.common.run.TaskSummary;
+import com.swiftconductor.common.run.Workflow.WorkflowStatus;
+import com.swiftconductor.common.run.WorkflowSummary;
+import com.swiftconductor.core.events.queue.Message;
+import com.swiftconductor.es6.utils.TestUtils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.common.collect.ImmutableMap;
