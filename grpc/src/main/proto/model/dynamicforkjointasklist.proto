@@ -5,7 +5,7 @@ import "model/dynamicforkjointask.proto";
 
 option java_package = "com.swiftconductor.proto";
 option java_outer_classname = "DynamicForkJoinTaskListPb";
-option go_package = "github.com/netflix/conductor/client/gogrpc/conductor/model";
+option go_package = "github.com/swift-conductor/conductor/client/gogrpc/conductor/model";
 
 message DynamicForkJoinTaskList {
     repeated DynamicForkJoinTask dynamic_tasks = 1;

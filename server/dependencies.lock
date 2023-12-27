@@ -74,9 +74,6 @@
         "com.swiftconductor:conductor-rest": {
             "project": true
         },
-        "io.orkes.queues:orkes-conductor-queues": {
-            "locked": "1.0.3"
-        },
         "org.apache.logging.log4j:log4j-api": {
             "locked": "2.17.2"
         },
@@ -523,9 +520,6 @@
                 "com.swiftconductor:conductor-grpc"
             ],
             "locked": "1.57.2"
-        },
-        "io.orkes.queues:orkes-conductor-queues": {
-            "locked": "1.0.3"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -1186,9 +1180,6 @@
             ],
             "locked": "1.57.2"
         },
-        "io.orkes.queues:orkes-conductor-queues": {
-            "locked": "1.0.3"
-        },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
                 "com.swiftconductor:conductor-awssqs-event-queue",
@@ -1525,9 +1516,6 @@
         },
         "io.grpc:grpc-testing": {
             "locked": "1.57.2"
-        },
-        "io.orkes.queues:orkes-conductor-queues": {
-            "locked": "1.0.3"
         },
         "junit:junit": {
             "locked": "4.13.2"
@@ -1990,9 +1978,6 @@
         },
         "io.grpc:grpc-testing": {
             "locked": "1.57.2"
-        },
-        "io.orkes.queues:orkes-conductor-queues": {
-            "locked": "1.0.3"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [

@@ -44,9 +44,9 @@ task protogen(dependsOn: jar, type: JavaExec) {
     args(
             "conductor.proto",
             "com.swiftconductor.proto",
-            "github.com/netflix/conductor/client/gogrpc/conductor/model",
+            "github.com/swift-conductor/conductor/client/gogrpc/conductor/model",
             "${rootDir}/grpc/src/main/proto",
-            "${rootDir}/grpc/src/main/java/com/netflix/conductor/grpc",
+            "${rootDir}/grpc/src/main/java/com/swiftconductor/conductor/grpc",
             "com.swiftconductor.grpc",
             jar.archivePath,
             "com.swiftconductor.common",

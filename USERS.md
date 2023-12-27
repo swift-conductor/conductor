@@ -3,7 +3,7 @@
 
 We would like to keep track of whose using Conductor. Please send a pull request with your company name and Github handle.
 
-* [Swift Software Group](https://www.swiftsoftwaregroup.com/) [[@vkantchev](https://github.com/vkantchev)]
+* [Swift Software Group](https://www.swiftsoftwaregroup.com/) [[@swiftsoftwaregroup](https://github.com/swiftsoftwaregroup)]
 * [Netflix](https://www.netflix.com/) [[@aravindanr](https://github.com/aravindanr)]
 * [Florida Blue](http://bcbsfl.com/) [[@rickfish](https://github.com/rickfish)]
 * [UWM](https://www.uwm.com/) [[@zergrushjoe](https://github.com/ZergRushJoe)]

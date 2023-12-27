@@ -457,7 +457,7 @@
   "schemaVersion": 2,
   "restartable": true,
   "workflowStatusListenerEnabled": false,
-  "ownerEmail": "user@orkes.io",
+  "ownerEmail": "user@swiftsoftwaregroup.com",
   "timeoutPolicy": "ALERT_ONLY",
   "timeoutSeconds": 0,
   "variables": {},
