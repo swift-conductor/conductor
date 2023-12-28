@@ -37,6 +37,8 @@ plugins {
 
     id 'com.netflix.nebula.contacts' version '7.0.1'
     id 'com.netflix.nebula.netflixoss' version '11.3.2'
+
+    id 'io.github.gradle-nexus.publish-plugin' version '1.3.0'
 }
 
 // Establish version and status
@@ -306,7 +308,7 @@ configure(allprojects - project(':conductor-grpc')) {
     configure(project(":conductor-$it")) {
         spotless {
             groovy {
-                importOrder('java', 'javax', 'org', 'com.netflix', '', '\\#com.netflix', '\\#')
+                importOrder('java', 'javax', 'org', 'com.swiftconductor', '', '\\#com.conductor', '\\#')
                 licenseHeaderFile("$rootDir/licenseheader.txt")
             }
         }
@@ -323,6 +325,15 @@ configure(allprojects) {
         'hello@swiftsoftwaregroup.com' {
             github 'swift-conductor'
             moniker 'Swift Software Group'
+        }
+    }
+}
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
         }
     }
 }
