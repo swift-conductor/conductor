@@ -13,10 +13,11 @@
  */
 package com.swiftconductor.client.http
 
-import com.sun.jersey.api.client.ClientResponse
 import com.swiftconductor.common.metadata.tasks.Task
 import com.swiftconductor.common.run.SearchResult
 import com.swiftconductor.common.run.TaskSummary
+
+import com.sun.jersey.api.client.ClientResponse
 import spock.lang.Subject
 
 class TaskClientSpec extends ClientSpecification {

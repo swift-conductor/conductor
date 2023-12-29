@@ -13,7 +13,6 @@
  */
 package com.swiftconductor.core.execution.tasks
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.swiftconductor.common.metadata.workflow.WorkflowDef
 import com.swiftconductor.common.metadata.workflow.WorkflowTask
 import com.swiftconductor.common.utils.TaskUtils
@@ -22,6 +21,8 @@ import com.swiftconductor.core.execution.WorkflowExecutor
 import com.swiftconductor.core.utils.ParametersUtils
 import com.swiftconductor.model.TaskModel
 import com.swiftconductor.model.WorkflowModel
+
+import com.fasterxml.jackson.databind.ObjectMapper
 import spock.lang.Specification
 import spock.lang.Subject
 

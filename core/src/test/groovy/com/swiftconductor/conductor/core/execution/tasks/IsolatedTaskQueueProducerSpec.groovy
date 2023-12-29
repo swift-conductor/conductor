@@ -19,6 +19,7 @@ import org.junit.Test
 
 import com.swiftconductor.common.metadata.tasks.TaskDef
 import com.swiftconductor.service.MetadataService
+
 import spock.lang.Specification
 import spock.lang.Subject
 

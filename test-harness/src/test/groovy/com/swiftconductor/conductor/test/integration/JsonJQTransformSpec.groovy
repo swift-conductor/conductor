@@ -17,6 +17,7 @@ import com.swiftconductor.common.metadata.tasks.Task
 import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest
 import com.swiftconductor.common.run.Workflow
 import com.swiftconductor.test.base.AbstractSpecification
+
 import spock.lang.Shared
 
 class JsonJQTransformSpec extends AbstractSpecification {

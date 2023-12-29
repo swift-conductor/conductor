@@ -20,6 +20,7 @@ import com.swiftconductor.common.run.Workflow
 import com.swiftconductor.core.execution.tasks.Join
 import com.swiftconductor.dao.QueueDAO
 import com.swiftconductor.test.base.AbstractSpecification
+
 import spock.lang.Shared
 import spock.lang.Unroll
 

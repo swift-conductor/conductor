@@ -19,6 +19,7 @@ import com.swiftconductor.common.metadata.tasks.Task
 import com.swiftconductor.common.run.Workflow
 import com.swiftconductor.core.execution.tasks.SubWorkflow
 import com.swiftconductor.test.base.AbstractSpecification
+
 import spock.lang.Shared
 
 class FailureWorkflowSpec extends AbstractSpecification {

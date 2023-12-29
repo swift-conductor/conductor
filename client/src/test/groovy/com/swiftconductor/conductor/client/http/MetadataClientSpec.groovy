@@ -13,9 +13,10 @@
  */
 package com.swiftconductor.client.http
 
-import com.sun.jersey.api.client.ClientResponse
 import com.swiftconductor.client.exception.ConductorClientException
 import com.swiftconductor.common.metadata.workflow.WorkflowDef
+
+import com.sun.jersey.api.client.ClientResponse
 import spock.lang.Subject
 
 class MetadataClientSpec extends ClientSpecification {

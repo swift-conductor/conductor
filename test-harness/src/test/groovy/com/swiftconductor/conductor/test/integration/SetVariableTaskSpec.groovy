@@ -16,6 +16,7 @@ package com.swiftconductor.test.integration
 import com.swiftconductor.common.metadata.tasks.Task
 import com.swiftconductor.common.run.Workflow
 import com.swiftconductor.test.base.AbstractSpecification
+
 import spock.lang.Shared
 
 class SetVariableTaskSpec extends AbstractSpecification {

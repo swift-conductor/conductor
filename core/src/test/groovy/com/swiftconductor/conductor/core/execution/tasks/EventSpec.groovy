@@ -13,8 +13,6 @@
  */
 package com.swiftconductor.core.execution.tasks
 
-import com.fasterxml.jackson.core.JsonParseException
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.swiftconductor.common.metadata.workflow.WorkflowDef
 import com.swiftconductor.core.events.EventQueues
 import com.swiftconductor.core.events.queue.Message
@@ -24,6 +22,9 @@ import com.swiftconductor.core.exception.TransientException
 import com.swiftconductor.core.utils.ParametersUtils
 import com.swiftconductor.model.TaskModel
 import com.swiftconductor.model.WorkflowModel
+
+import com.fasterxml.jackson.core.JsonParseException
+import com.fasterxml.jackson.databind.ObjectMapper
 import spock.lang.Specification
 import spock.lang.Subject
 

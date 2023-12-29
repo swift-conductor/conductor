@@ -23,6 +23,7 @@ import com.swiftconductor.core.execution.tasks.Join
 import com.swiftconductor.core.execution.tasks.SubWorkflow
 import com.swiftconductor.dao.QueueDAO
 import com.swiftconductor.test.base.AbstractSpecification
+
 import spock.lang.Shared
 
 import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_FORK

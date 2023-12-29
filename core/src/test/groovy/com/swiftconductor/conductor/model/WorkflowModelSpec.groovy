@@ -13,10 +13,11 @@
  */
 package com.swiftconductor.model
 
-import com.fasterxml.jackson.databind.JsonNode
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.swiftconductor.common.config.ObjectMapperProvider
 import com.swiftconductor.common.metadata.workflow.WorkflowDef
+
+import com.fasterxml.jackson.databind.JsonNode
+import com.fasterxml.jackson.databind.ObjectMapper
 import spock.lang.Specification
 import spock.lang.Subject
 

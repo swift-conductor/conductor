@@ -15,7 +15,6 @@ package com.swiftconductor.core.execution
 
 import java.time.Duration
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.swiftconductor.common.metadata.tasks.TaskDef
 import com.swiftconductor.core.config.ConductorProperties
 import com.swiftconductor.core.dal.ExecutionDAOFacade
@@ -28,6 +27,8 @@ import com.swiftconductor.dao.MetadataDAO
 import com.swiftconductor.dao.QueueDAO
 import com.swiftconductor.model.TaskModel
 import com.swiftconductor.model.WorkflowModel
+
+import com.fasterxml.jackson.databind.ObjectMapper
 import spock.lang.Specification
 import spock.lang.Subject
 

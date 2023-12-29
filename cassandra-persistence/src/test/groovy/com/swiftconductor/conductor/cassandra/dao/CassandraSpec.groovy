@@ -20,12 +20,13 @@ import org.springframework.test.context.ContextConfiguration
 import org.testcontainers.containers.CassandraContainer
 import org.testcontainers.spock.Testcontainers
 
-import com.datastax.driver.core.ConsistencyLevel
-import com.datastax.driver.core.Session
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.swiftconductor.cassandra.config.CassandraProperties
 import com.swiftconductor.cassandra.util.Statements
 import com.swiftconductor.common.config.TestObjectMapperConfiguration
+
+import com.datastax.driver.core.ConsistencyLevel
+import com.datastax.driver.core.Session
+import com.fasterxml.jackson.databind.ObjectMapper
 import groovy.transform.PackageScope
 import spock.lang.Shared
 import spock.lang.Specification

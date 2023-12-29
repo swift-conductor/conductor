@@ -23,6 +23,7 @@ import com.swiftconductor.core.execution.WorkflowExecutor
 import com.swiftconductor.core.operation.StartWorkflowOperation
 import com.swiftconductor.model.TaskModel
 import com.swiftconductor.model.WorkflowModel
+
 import spock.lang.Specification
 import spock.lang.Subject
 

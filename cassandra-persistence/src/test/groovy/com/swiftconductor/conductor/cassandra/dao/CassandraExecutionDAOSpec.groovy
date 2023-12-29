@@ -21,6 +21,7 @@ import com.swiftconductor.core.exception.NonTransientException
 import com.swiftconductor.core.utils.IDGenerator
 import com.swiftconductor.model.TaskModel
 import com.swiftconductor.model.WorkflowModel
+
 import spock.lang.Subject
 
 import static com.swiftconductor.common.metadata.events.EventExecution.Status.COMPLETED

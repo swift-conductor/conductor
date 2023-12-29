@@ -25,6 +25,7 @@ import com.swiftconductor.core.reconciliation.WorkflowSweeper
 import com.swiftconductor.service.ExecutionService
 import com.swiftconductor.service.MetadataService
 import com.swiftconductor.test.util.WorkflowTestUtil
+
 import spock.lang.Specification
 
 @SpringBootTest

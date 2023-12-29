@@ -24,6 +24,7 @@ import com.swiftconductor.core.execution.tasks.SubWorkflow
 import com.swiftconductor.test.base.AbstractSpecification
 import com.swiftconductor.test.utils.MockExternalPayloadStorage
 import com.swiftconductor.test.utils.UserTask
+
 import spock.lang.Shared
 
 import static com.swiftconductor.test.util.WorkflowTestUtil.verifyPayload

@@ -15,6 +15,7 @@ package com.swiftconductor.cassandra.dao
 
 import com.swiftconductor.common.metadata.tasks.TaskDef
 import com.swiftconductor.common.metadata.workflow.WorkflowDef
+
 import spock.lang.Subject
 
 class CassandraMetadataDAOSpec extends CassandraSpec {

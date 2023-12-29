@@ -13,8 +13,9 @@
  */
 package com.swiftconductor.client.http
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.swiftconductor.common.config.ObjectMapperProvider
+
+import com.fasterxml.jackson.databind.ObjectMapper
 import spock.lang.Specification
 
 abstract class ClientSpecification extends Specification {

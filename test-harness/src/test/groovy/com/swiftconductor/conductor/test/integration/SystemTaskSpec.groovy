@@ -21,6 +21,7 @@ import com.swiftconductor.common.run.Workflow
 import com.swiftconductor.dao.QueueDAO
 import com.swiftconductor.test.base.AbstractSpecification
 import com.swiftconductor.test.utils.UserTask
+
 import spock.lang.Shared
 
 import static com.swiftconductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedTask

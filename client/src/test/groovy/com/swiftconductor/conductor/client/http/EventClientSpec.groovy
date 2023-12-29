@@ -13,9 +13,10 @@
  */
 package com.swiftconductor.client.http
 
+import com.swiftconductor.common.metadata.events.EventHandler
+
 import com.sun.jersey.api.client.ClientResponse
 import com.sun.jersey.api.client.WebResource
-import com.swiftconductor.common.metadata.events.EventHandler
 import spock.lang.Subject
 import spock.lang.Unroll
 

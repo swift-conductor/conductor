@@ -15,6 +15,7 @@ package com.swiftconductor.cassandra.dao
 
 import com.swiftconductor.common.metadata.events.EventExecution
 import com.swiftconductor.common.metadata.events.EventHandler
+
 import spock.lang.Subject
 
 class CassandraEventHandlerDAOSpec extends CassandraSpec {

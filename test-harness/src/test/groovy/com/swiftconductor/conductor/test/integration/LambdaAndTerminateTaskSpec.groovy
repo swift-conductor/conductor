@@ -20,6 +20,7 @@ import com.swiftconductor.common.metadata.tasks.TaskResult
 import com.swiftconductor.common.run.Workflow
 import com.swiftconductor.core.execution.tasks.SubWorkflow
 import com.swiftconductor.test.base.AbstractSpecification
+
 import spock.lang.Shared
 
 import static com.swiftconductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedTask

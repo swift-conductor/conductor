@@ -13,11 +13,12 @@
  */
 package com.swiftconductor.client.http
 
-import com.sun.jersey.api.client.ClientResponse
 import com.swiftconductor.common.metadata.workflow.WorkflowDef
 import com.swiftconductor.common.run.SearchResult
 import com.swiftconductor.common.run.Workflow
 import com.swiftconductor.common.run.WorkflowSummary
+
+import com.sun.jersey.api.client.ClientResponse
 import spock.lang.Subject
 
 class WorkflowClientSpec extends ClientSpecification {

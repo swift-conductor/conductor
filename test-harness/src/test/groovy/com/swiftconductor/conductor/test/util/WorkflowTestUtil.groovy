@@ -19,7 +19,6 @@ import org.apache.commons.lang3.StringUtils
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.swiftconductor.common.metadata.tasks.Task
 import com.swiftconductor.common.metadata.tasks.TaskDef
 import com.swiftconductor.common.metadata.tasks.TaskResult
@@ -31,6 +30,8 @@ import com.swiftconductor.dao.QueueDAO
 import com.swiftconductor.model.WorkflowModel
 import com.swiftconductor.service.ExecutionService
 import com.swiftconductor.service.MetadataService
+
+import com.fasterxml.jackson.databind.ObjectMapper
 
 /**
  * This is a helper class used to initialize task definitions required by the tests when loaded up.

@@ -18,6 +18,7 @@ import com.swiftconductor.common.metadata.tasks.TaskResult
 import com.swiftconductor.common.metadata.tasks.TaskType
 import com.swiftconductor.common.run.Workflow
 import com.swiftconductor.test.base.AbstractSpecification
+
 import spock.lang.Shared
 
 import static com.swiftconductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedLargePayloadTask

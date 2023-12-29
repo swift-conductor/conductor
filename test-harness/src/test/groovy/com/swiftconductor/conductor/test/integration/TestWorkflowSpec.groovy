@@ -27,6 +27,7 @@ import com.swiftconductor.common.run.WorkflowTestRequest
 import com.swiftconductor.core.operation.StartWorkflowOperation
 import com.swiftconductor.service.WorkflowTestService
 import com.swiftconductor.test.base.AbstractSpecification
+
 import spock.lang.Shared
 
 import static com.swiftconductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedLargePayloadTask
