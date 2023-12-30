@@ -11,11 +11,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sdk.workflow.def.tasks;
+package com.swiftconductor.conductor.sdk.workflow.def.tasks;
 
 import com.google.common.base.Strings;
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
 
 /**
  * JQ Transformation task See https://stedolan.github.io/jq/ for how to form the queries to parse

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.common.metadata.workflow;
+package com.swiftconductor.conductor.common.metadata.workflow;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -27,10 +27,10 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.PositiveOrZero;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.swiftconductor.annotations.protogen.ProtoField;
-import com.swiftconductor.annotations.protogen.ProtoMessage;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.annotations.protogen.ProtoField;
+import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
 
 /**
  * This is the task definition definied as part of the {@link WorkflowDef}. The tasks definied in

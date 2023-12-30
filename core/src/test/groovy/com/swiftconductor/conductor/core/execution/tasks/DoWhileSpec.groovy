@@ -11,23 +11,23 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution.tasks
+package com.swiftconductor.conductor.core.execution.tasks
 
-import com.swiftconductor.common.metadata.workflow.WorkflowDef
-import com.swiftconductor.common.metadata.workflow.WorkflowTask
-import com.swiftconductor.common.utils.TaskUtils
-import com.swiftconductor.core.exception.TerminateWorkflowException
-import com.swiftconductor.core.execution.WorkflowExecutor
-import com.swiftconductor.core.utils.ParametersUtils
-import com.swiftconductor.model.TaskModel
-import com.swiftconductor.model.WorkflowModel
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask
+import com.swiftconductor.conductor.common.utils.TaskUtils
+import com.swiftconductor.conductor.core.exception.TerminateWorkflowException
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor
+import com.swiftconductor.conductor.core.utils.ParametersUtils
+import com.swiftconductor.conductor.model.TaskModel
+import com.swiftconductor.conductor.model.WorkflowModel
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import spock.lang.Specification
 import spock.lang.Subject
 
-import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_DO_WHILE
-import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_HTTP
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_DO_WHILE
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_HTTP
 
 class DoWhileSpec extends Specification {
 

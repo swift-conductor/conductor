@@ -11,13 +11,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sdk.workflow.def;
+package com.swiftconductor.conductor.sdk.workflow.def;
 
 import org.junit.jupiter.api.Test;
 
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.sdk.workflow.def.tasks.*;
-import com.swiftconductor.sdk.workflow.executor.WorkflowExecutor;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.sdk.workflow.def.tasks.*;
+import com.swiftconductor.conductor.sdk.workflow.executor.WorkflowExecutor;
 
 import static org.junit.jupiter.api.Assertions.*;
 

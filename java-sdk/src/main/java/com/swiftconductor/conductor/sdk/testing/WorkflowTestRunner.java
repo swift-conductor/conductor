@@ -11,11 +11,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sdk.testing;
+package com.swiftconductor.conductor.sdk.testing;
 
-import com.swiftconductor.client.http.TaskClient;
-import com.swiftconductor.sdk.workflow.executor.WorkflowExecutor;
-import com.swiftconductor.sdk.workflow.executor.task.AnnotatedWorkerExecutor;
+import com.swiftconductor.conductor.client.http.TaskClient;
+import com.swiftconductor.conductor.sdk.workflow.executor.WorkflowExecutor;
+import com.swiftconductor.conductor.sdk.workflow.executor.task.AnnotatedWorkerExecutor;
 
 public class WorkflowTestRunner {
 

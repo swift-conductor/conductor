@@ -11,12 +11,12 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.tasks.http.providers;
+package com.swiftconductor.conductor.tasks.http.providers;
 
 import org.springframework.lang.NonNull;
 import org.springframework.web.client.RestTemplate;
 
-import com.swiftconductor.tasks.http.HttpTask;
+import com.swiftconductor.conductor.tasks.http.HttpTask;
 
 @FunctionalInterface
 public interface RestTemplateProvider {

@@ -11,13 +11,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.common.config;
+package com.swiftconductor.conductor.common.config;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.afterburner.AfterburnerModule;
-import com.swiftconductor.common.jackson.JsonProtoModule;
+import com.swiftconductor.conductor.common.jackson.JsonProtoModule;
 
 /**
  * A Factory class for creating a customized {@link ObjectMapper}. This is only used by the

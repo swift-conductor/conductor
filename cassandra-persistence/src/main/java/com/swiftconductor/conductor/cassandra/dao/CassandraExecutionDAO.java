@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.cassandra.dao;
+package com.swiftconductor.conductor.cassandra.dao;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -24,21 +24,21 @@ import com.datastax.driver.core.exceptions.DriverException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
-import com.swiftconductor.annotations.Trace;
-import com.swiftconductor.cassandra.config.CassandraProperties;
-import com.swiftconductor.cassandra.util.Statements;
-import com.swiftconductor.common.metadata.events.EventExecution;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.core.exception.NonTransientException;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.dao.ConcurrentExecutionLimitDAO;
-import com.swiftconductor.dao.ExecutionDAO;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.annotations.Trace;
+import com.swiftconductor.conductor.cassandra.config.CassandraProperties;
+import com.swiftconductor.conductor.cassandra.util.Statements;
+import com.swiftconductor.conductor.common.metadata.events.EventExecution;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.core.exception.NonTransientException;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.dao.ConcurrentExecutionLimitDAO;
+import com.swiftconductor.conductor.dao.ExecutionDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
-import static com.swiftconductor.cassandra.util.Constants.*;
+import static com.swiftconductor.conductor.cassandra.util.Constants.*;
 
 @Trace
 public class CassandraExecutionDAO extends CassandraBaseDAO

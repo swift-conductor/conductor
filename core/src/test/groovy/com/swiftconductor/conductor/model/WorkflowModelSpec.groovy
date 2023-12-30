@@ -11,10 +11,10 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.model
+package com.swiftconductor.conductor.model
 
-import com.swiftconductor.common.config.ObjectMapperProvider
-import com.swiftconductor.common.metadata.workflow.WorkflowDef
+import com.swiftconductor.conductor.common.config.ObjectMapperProvider
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef
 
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.metrics;
+package com.swiftconductor.conductor.metrics;
 
 import java.util.List;
 import java.util.Map;
@@ -24,10 +24,10 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.core.dal.ExecutionDAOFacade;
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.service.MetadataService;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.service.MetadataService;
 
 @RunWith(SpringRunner.class)
 public class WorkflowMonitorTest {

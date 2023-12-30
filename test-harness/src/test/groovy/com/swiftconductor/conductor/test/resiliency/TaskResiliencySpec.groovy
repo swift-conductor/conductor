@@ -11,18 +11,18 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.test.resiliency
+package com.swiftconductor.conductor.test.resiliency
 
 import org.springframework.beans.factory.annotation.Autowired
 
-import com.swiftconductor.common.metadata.tasks.Task
-import com.swiftconductor.common.run.Workflow
-import com.swiftconductor.core.reconciliation.WorkflowRepairService
-import com.swiftconductor.test.base.AbstractResiliencySpecification
+import com.swiftconductor.conductor.common.metadata.tasks.Task
+import com.swiftconductor.conductor.common.run.Workflow
+import com.swiftconductor.conductor.core.reconciliation.WorkflowRepairService
+import com.swiftconductor.conductor.test.base.AbstractResiliencySpecification
 
 import spock.lang.Shared
 
-import static com.swiftconductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedTask
+import static com.swiftconductor.conductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedTask
 
 class TaskResiliencySpec extends AbstractResiliencySpecification {
 

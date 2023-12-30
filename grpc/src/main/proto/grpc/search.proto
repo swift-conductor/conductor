@@ -1,7 +1,7 @@
 syntax = "proto3";
 package conductor.grpc.search;
 
-option java_package = "com.swiftconductor.grpc";
+option java_package = "com.swiftconductor.conductor.grpc";
 option java_outer_classname = "SearchPb";
 option go_package = "github.com/netflix/conductor/client/gogrpc/conductor/grpc/search";
 

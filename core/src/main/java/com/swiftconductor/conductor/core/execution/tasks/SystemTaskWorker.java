@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution.tasks;
+package com.swiftconductor.conductor.core.execution.tasks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -26,15 +26,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.annotations.VisibleForTesting;
-import com.swiftconductor.core.LifecycleAwareComponent;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.execution.AsyncSystemTaskExecutor;
-import com.swiftconductor.core.utils.QueueUtils;
-import com.swiftconductor.core.utils.SemaphoreUtil;
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.service.ExecutionService;
+import com.swiftconductor.conductor.annotations.VisibleForTesting;
+import com.swiftconductor.conductor.core.LifecycleAwareComponent;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.execution.AsyncSystemTaskExecutor;
+import com.swiftconductor.conductor.core.utils.QueueUtils;
+import com.swiftconductor.conductor.core.utils.SemaphoreUtil;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.service.ExecutionService;
 
 /** The worker that polls and executes an async system task. */
 @Component

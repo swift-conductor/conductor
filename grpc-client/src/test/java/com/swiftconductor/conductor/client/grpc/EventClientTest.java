@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.grpc;
+package com.swiftconductor.conductor.client.grpc;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,11 +24,11 @@ import org.mockito.Mock;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.grpc.EventServiceGrpc;
-import com.swiftconductor.grpc.EventServicePb;
-import com.swiftconductor.grpc.ProtoMapper;
-import com.swiftconductor.proto.EventHandlerPb;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.grpc.EventServiceGrpc;
+import com.swiftconductor.conductor.grpc.EventServicePb;
+import com.swiftconductor.conductor.grpc.ProtoMapper;
+import com.swiftconductor.conductor.proto.EventHandlerPb;
 
 import static junit.framework.TestCase.assertEquals;
 import static org.mockito.Mockito.mock;

@@ -13,8 +13,8 @@
  */
 package com.example;
 
-import com.swiftconductor.annotations.protogen.ProtoField;
-import com.swiftconductor.annotations.protogen.ProtoMessage;
+import com.swiftconductor.conductor.annotations.protogen.ProtoField;
+import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
 
 @ProtoMessage
 public class Example {

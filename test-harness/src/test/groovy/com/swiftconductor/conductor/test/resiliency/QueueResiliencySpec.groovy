@@ -11,24 +11,24 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.test.resiliency
+package com.swiftconductor.conductor.test.resiliency
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 
-import com.swiftconductor.common.metadata.tasks.Task
-import com.swiftconductor.common.metadata.tasks.TaskResult
-import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest
-import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest
-import com.swiftconductor.common.run.Workflow
-import com.swiftconductor.common.utils.ExternalPayloadStorage
-import com.swiftconductor.core.exception.NotFoundException
-import com.swiftconductor.core.exception.TransientException
-import com.swiftconductor.core.utils.QueueUtils
-import com.swiftconductor.core.utils.Utils
-import com.swiftconductor.rest.controllers.TaskResource
-import com.swiftconductor.rest.controllers.WorkflowResource
-import com.swiftconductor.test.base.AbstractResiliencySpecification
+import com.swiftconductor.conductor.common.metadata.tasks.Task
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult
+import com.swiftconductor.conductor.common.metadata.workflow.RerunWorkflowRequest
+import com.swiftconductor.conductor.common.metadata.workflow.StartWorkflowRequest
+import com.swiftconductor.conductor.common.run.Workflow
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage
+import com.swiftconductor.conductor.core.exception.NotFoundException
+import com.swiftconductor.conductor.core.exception.TransientException
+import com.swiftconductor.conductor.core.utils.QueueUtils
+import com.swiftconductor.conductor.core.utils.Utils
+import com.swiftconductor.conductor.rest.controllers.TaskResource
+import com.swiftconductor.conductor.rest.controllers.WorkflowResource
+import com.swiftconductor.conductor.test.base.AbstractResiliencySpecification
 
 /**
  * When QueueDAO is unavailable,

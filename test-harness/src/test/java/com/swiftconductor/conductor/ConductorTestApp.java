@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor;
+package com.swiftconductor.conductor;
 
 import java.io.IOException;
 
@@ -19,7 +19,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-/** Copy of com.swiftconductor.Conductor for use by @SpringBootTest in AbstractSpecification. */
+/**
+ * Copy of com.swiftconductor.conductor.Conductor for use by @SpringBootTest in
+ * AbstractSpecification.
+ */
 
 // Prevents from the datasource beans to be loaded, AS they are needed only for specific databases.
 // In case that SQL database is selected this class will be imported back in the appropriate

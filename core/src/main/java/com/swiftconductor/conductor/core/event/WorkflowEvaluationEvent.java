@@ -11,11 +11,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.event;
+package com.swiftconductor.conductor.core.event;
 
 import java.io.Serializable;
 
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
 public final class WorkflowEvaluationEvent implements Serializable {
 

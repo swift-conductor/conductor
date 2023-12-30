@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.es6.dao.index;
+package com.swiftconductor.conductor.es6.dao.index;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -61,18 +61,18 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.MapType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
-import com.swiftconductor.annotations.Trace;
-import com.swiftconductor.common.metadata.events.EventExecution;
-import com.swiftconductor.common.metadata.tasks.TaskExecLog;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.TaskSummary;
-import com.swiftconductor.common.run.WorkflowSummary;
-import com.swiftconductor.core.events.queue.Message;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.dao.IndexDAO;
-import com.swiftconductor.es6.config.ElasticSearchProperties;
-import com.swiftconductor.es6.dao.query.parser.internal.ParserException;
-import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.conductor.annotations.Trace;
+import com.swiftconductor.conductor.common.metadata.events.EventExecution;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.TaskSummary;
+import com.swiftconductor.conductor.common.run.WorkflowSummary;
+import com.swiftconductor.conductor.core.events.queue.Message;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.dao.IndexDAO;
+import com.swiftconductor.conductor.es6.config.ElasticSearchProperties;
+import com.swiftconductor.conductor.es6.dao.query.parser.internal.ParserException;
+import com.swiftconductor.conductor.metrics.Monitors;
 
 @Trace
 public class ElasticSearchDAOV6 extends ElasticSearchBaseDAO implements IndexDAO {

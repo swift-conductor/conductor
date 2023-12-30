@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redis.config;
+package com.swiftconductor.conductor.redis.config;
 
 import java.util.List;
 import java.util.Set;
@@ -27,8 +27,8 @@ import com.netflix.dyno.connectionpool.Host;
 import com.netflix.dyno.connectionpool.HostSupplier;
 import com.netflix.dyno.connectionpool.TokenMapSupplier;
 
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.redis.jedis.JedisCluster;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.redis.jedis.JedisCluster;
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.Protocol;
 import redis.clients.jedis.commands.JedisCommands;

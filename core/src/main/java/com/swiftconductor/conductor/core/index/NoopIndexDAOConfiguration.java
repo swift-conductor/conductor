@@ -11,13 +11,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.index;
+package com.swiftconductor.conductor.core.index;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.swiftconductor.dao.IndexDAO;
+import com.swiftconductor.conductor.dao.IndexDAO;
 
 @Configuration(proxyBeanMethods = false)
 @ConditionalOnProperty(name = "conductor.indexing.enabled", havingValue = "false")

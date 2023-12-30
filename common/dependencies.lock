@@ -7,159 +7,159 @@
     "annotationsProcessorCodegen": {
         "com.fasterxml.jackson.core:jackson-annotations": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.fasterxml.jackson.core:jackson-core": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.fasterxml.jackson.core:jackson-databind": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-smile": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-jdk8": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-joda": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-jsr310": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.fasterxml.jackson.module:jackson-module-afterburner": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.13.5"
         },
         "com.github.jknack:handlebars": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "4.3.1"
         },
         "com.google.guava:guava": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "32.1.2-jre"
         },
         "com.google.protobuf:protobuf-java": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "3.21.12"
         },
-        "com.swiftconductor:conductor-annotations": {
+        "com.swiftconductor.conductor:conductor-annotations": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "project": true
         },
-        "com.swiftconductor:conductor-annotations-processor": {
+        "com.swiftconductor.conductor:conductor-annotations-processor": {
             "project": true
         },
         "com.squareup:javapoet": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "1.13.0"
         },
         "javax.annotation:javax.annotation-api": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "1.3.2"
         },
         "org.apache.logging.log4j:log4j-api": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-core": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-jul": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-slf4j-impl": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-web": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "2.17.2"
         },
         "org.yaml:snakeyaml": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations",
-                "com.swiftconductor:conductor-annotations-processor"
+                "com.swiftconductor.conductor:conductor-annotations",
+                "com.swiftconductor.conductor:conductor-annotations-processor"
             ],
             "locked": "1.30"
         }
@@ -201,7 +201,7 @@
         "com.google.protobuf:protobuf-java": {
             "locked": "3.24.3"
         },
-        "com.swiftconductor:conductor-annotations": {
+        "com.swiftconductor.conductor:conductor-annotations": {
             "project": true
         },
         "org.apache.bval:bval-jsr": {
@@ -241,74 +241,74 @@
     "runtimeClasspath": {
         "com.fasterxml.jackson.core:jackson-annotations": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.core:jackson-core": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.core:jackson-databind": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-smile": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-jdk8": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-joda": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-jsr310": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.module:jackson-module-afterburner": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.google.protobuf:protobuf-java": {
             "locked": "3.24.3"
         },
-        "com.swiftconductor:conductor-annotations": {
+        "com.swiftconductor.conductor:conductor-annotations": {
             "project": true
         },
         "org.apache.bval:bval-jsr": {
@@ -319,37 +319,37 @@
         },
         "org.apache.logging.log4j:log4j-api": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-core": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-jul": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-slf4j-impl": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-web": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.17.2"
         },
         "org.yaml:snakeyaml": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.0"
         }
@@ -391,7 +391,7 @@
         "com.google.protobuf:protobuf-java": {
             "locked": "3.24.3"
         },
-        "com.swiftconductor:conductor-annotations": {
+        "com.swiftconductor.conductor:conductor-annotations": {
             "project": true
         },
         "junit:junit": {
@@ -440,74 +440,74 @@
     "testRuntimeClasspath": {
         "com.fasterxml.jackson.core:jackson-annotations": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.core:jackson-core": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.core:jackson-databind": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-smile": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-jdk8": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-joda": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.datatype:jackson-datatype-jsr310": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.fasterxml.jackson.module:jackson-module-afterburner": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.15.0"
         },
         "com.google.protobuf:protobuf-java": {
             "locked": "3.24.3"
         },
-        "com.swiftconductor:conductor-annotations": {
+        "com.swiftconductor.conductor:conductor-annotations": {
             "project": true
         },
         "junit:junit": {
@@ -524,31 +524,31 @@
         },
         "org.apache.logging.log4j:log4j-api": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-core": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-jul": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-slf4j-impl": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.17.2"
         },
         "org.apache.logging.log4j:log4j-web": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.17.2"
         },
@@ -566,7 +566,7 @@
         },
         "org.yaml:snakeyaml": {
             "firstLevelTransitive": [
-                "com.swiftconductor:conductor-annotations"
+                "com.swiftconductor.conductor:conductor-annotations"
             ],
             "locked": "2.0"
         }

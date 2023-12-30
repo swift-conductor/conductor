@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.reconciliation;
+package com.swiftconductor.conductor.core.reconciliation;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -22,12 +22,12 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.core.LifecycleAwareComponent;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.conductor.core.LifecycleAwareComponent;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
 
-import static com.swiftconductor.core.utils.Utils.DECIDER_QUEUE;
+import static com.swiftconductor.conductor.core.utils.Utils.DECIDER_QUEUE;
 
 /**
  * Periodically polls all running workflows in the system and evaluates them for timeouts and/or

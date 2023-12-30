@@ -11,25 +11,25 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution.tasks
+package com.swiftconductor.conductor.core.execution.tasks
 
 import javax.validation.ConstraintViolation
 import javax.validation.Validator
 
-import com.swiftconductor.common.config.ObjectMapperProvider
-import com.swiftconductor.core.exception.NotFoundException
-import com.swiftconductor.core.exception.TransientException
-import com.swiftconductor.core.execution.WorkflowExecutor
-import com.swiftconductor.core.operation.StartWorkflowOperation
-import com.swiftconductor.model.TaskModel
-import com.swiftconductor.model.WorkflowModel
+import com.swiftconductor.conductor.common.config.ObjectMapperProvider
+import com.swiftconductor.conductor.core.exception.NotFoundException
+import com.swiftconductor.conductor.core.exception.TransientException
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor
+import com.swiftconductor.conductor.core.operation.StartWorkflowOperation
+import com.swiftconductor.conductor.model.TaskModel
+import com.swiftconductor.conductor.model.WorkflowModel
 
 import spock.lang.Specification
 import spock.lang.Subject
 
-import static com.swiftconductor.core.execution.tasks.StartWorkflow.START_WORKFLOW_PARAMETER
-import static com.swiftconductor.model.TaskModel.Status.FAILED
-import static com.swiftconductor.model.TaskModel.Status.SCHEDULED
+import static com.swiftconductor.conductor.core.execution.tasks.StartWorkflow.START_WORKFLOW_PARAMETER
+import static com.swiftconductor.conductor.model.TaskModel.Status.FAILED
+import static com.swiftconductor.conductor.model.TaskModel.Status.SCHEDULED
 
 /**
  * Unit test for StartWorkflow. Success and Javax validation cases are covered by the StartWorkflowSpec in test-harness module.

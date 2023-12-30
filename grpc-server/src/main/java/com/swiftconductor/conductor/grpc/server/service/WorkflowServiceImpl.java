@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.grpc.server.service;
+package com.swiftconductor.conductor.grpc.server.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,20 +22,20 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.swiftconductor.common.metadata.workflow.SkipTaskRequest;
-import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.Workflow;
-import com.swiftconductor.common.run.WorkflowSummary;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.grpc.ProtoMapper;
-import com.swiftconductor.grpc.SearchPb;
-import com.swiftconductor.grpc.WorkflowServiceGrpc;
-import com.swiftconductor.grpc.WorkflowServicePb;
-import com.swiftconductor.proto.RerunWorkflowRequestPb;
-import com.swiftconductor.proto.StartWorkflowRequestPb;
-import com.swiftconductor.proto.WorkflowPb;
-import com.swiftconductor.service.WorkflowService;
+import com.swiftconductor.conductor.common.metadata.workflow.SkipTaskRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.Workflow;
+import com.swiftconductor.conductor.common.run.WorkflowSummary;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.grpc.ProtoMapper;
+import com.swiftconductor.conductor.grpc.SearchPb;
+import com.swiftconductor.conductor.grpc.WorkflowServiceGrpc;
+import com.swiftconductor.conductor.grpc.WorkflowServicePb;
+import com.swiftconductor.conductor.proto.RerunWorkflowRequestPb;
+import com.swiftconductor.conductor.proto.StartWorkflowRequestPb;
+import com.swiftconductor.conductor.proto.WorkflowPb;
+import com.swiftconductor.conductor.service.WorkflowService;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 

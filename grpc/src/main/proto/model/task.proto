@@ -5,7 +5,7 @@ import "model/workflowtask.proto";
 import "google/protobuf/struct.proto";
 import "google/protobuf/any.proto";
 
-option java_package = "com.swiftconductor.proto";
+option java_package = "com.swiftconductor.conductor.proto";
 option java_outer_classname = "TaskPb";
 option go_package = "github.com/swift-conductor/conductor/client/gogrpc/conductor/model";
 

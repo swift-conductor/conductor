@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redis.limit
+package com.swiftconductor.conductor.redis.limit
 
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory
@@ -19,10 +19,10 @@ import org.springframework.data.redis.core.StringRedisTemplate
 import org.testcontainers.containers.GenericContainer
 import org.testcontainers.spock.Testcontainers
 
-import com.swiftconductor.common.metadata.tasks.TaskDef
-import com.swiftconductor.common.metadata.workflow.WorkflowTask
-import com.swiftconductor.model.TaskModel
-import com.swiftconductor.redis.limit.config.RedisConcurrentExecutionLimitProperties
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask
+import com.swiftconductor.conductor.model.TaskModel
+import com.swiftconductor.conductor.redis.limit.config.RedisConcurrentExecutionLimitProperties
 
 import spock.lang.Specification
 import spock.lang.Subject

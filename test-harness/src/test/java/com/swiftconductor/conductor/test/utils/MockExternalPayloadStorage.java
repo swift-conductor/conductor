@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.test.utils;
+package com.swiftconductor.conductor.test.utils;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -29,14 +29,14 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.metadata.workflow.SubWorkflowParams;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.common.run.ExternalStorageLocation;
-import com.swiftconductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.conductor.common.metadata.workflow.SubWorkflowParams;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
 
-import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_SIMPLE;
-import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_SUB_WORKFLOW;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_SIMPLE;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_SUB_WORKFLOW;
 
 /** A {@link ExternalPayloadStorage} implementation that stores payload in file. */
 @ConditionalOnProperty(name = "conductor.external-payload-storage.type", havingValue = "mock")

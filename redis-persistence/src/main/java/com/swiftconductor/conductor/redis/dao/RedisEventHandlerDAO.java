@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redis.dao;
+package com.swiftconductor.conductor.redis.dao;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -25,15 +25,15 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Preconditions;
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.exception.ConflictException;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.dao.EventHandlerDAO;
-import com.swiftconductor.redis.config.AnyRedisCondition;
-import com.swiftconductor.redis.config.RedisProperties;
-import com.swiftconductor.redis.jedis.JedisProxy;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.exception.ConflictException;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.dao.EventHandlerDAO;
+import com.swiftconductor.conductor.redis.config.AnyRedisCondition;
+import com.swiftconductor.conductor.redis.config.RedisProperties;
+import com.swiftconductor.conductor.redis.jedis.JedisProxy;
 
 @Component
 @Conditional(AnyRedisCondition.class)

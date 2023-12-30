@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redislock.lock;
+package com.swiftconductor.conductor.redislock.lock;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,9 +22,9 @@ import org.redisson.api.RedissonClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.swiftconductor.core.sync.Lock;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.redislock.config.RedisLockProperties;
+import com.swiftconductor.conductor.core.sync.Lock;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.redislock.config.RedisLockProperties;
 
 public class RedisLock implements Lock {
 

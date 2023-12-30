@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redis.dao;
+package com.swiftconductor.conductor.redis.dao;
 
 import java.util.Collections;
 import java.util.List;
@@ -27,8 +27,8 @@ import com.netflix.dyno.queues.DynoQueue;
 import com.netflix.dyno.queues.Message;
 import com.netflix.dyno.queues.redis.RedisQueues;
 
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.redis.config.AnyRedisCondition;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.redis.config.AnyRedisCondition;
 
 @Component
 @Conditional(AnyRedisCondition.class)
@@ -57,7 +57,8 @@ public class DynoQueueDAO implements QueueDAO {
 
     @Override
     public void push(
-            String queueName, List<com.swiftconductor.core.events.queue.Message> messages) {
+            String queueName,
+            List<com.swiftconductor.conductor.core.events.queue.Message> messages) {
         List<Message> msgs =
                 messages.stream()
                         .map(
@@ -100,13 +101,13 @@ public class DynoQueueDAO implements QueueDAO {
     }
 
     @Override
-    public List<com.swiftconductor.core.events.queue.Message> pollMessages(
+    public List<com.swiftconductor.conductor.core.events.queue.Message> pollMessages(
             String queueName, int count, int timeout) {
         List<Message> msgs = queues.get(queueName).pop(count, timeout, TimeUnit.MILLISECONDS);
         return msgs.stream()
                 .map(
                         msg ->
-                                new com.swiftconductor.core.events.queue.Message(
+                                new com.swiftconductor.conductor.core.events.queue.Message(
                                         msg.getId(), msg.getPayload(), null, msg.getPriority()))
                 .collect(Collectors.toList());
     }

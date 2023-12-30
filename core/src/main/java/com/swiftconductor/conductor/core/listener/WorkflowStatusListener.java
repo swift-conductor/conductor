@@ -11,9 +11,9 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.listener;
+package com.swiftconductor.conductor.core.listener;
 
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
 /** Listener for the completed and terminated workflows */
 public interface WorkflowStatusListener {

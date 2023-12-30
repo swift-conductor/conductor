@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.testing;
+package com.swiftconductor.conductor.client.testing;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,15 +26,15 @@ import org.junit.jupiter.api.TestInstance;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.client.http.MetadataClient;
-import com.swiftconductor.client.http.WorkflowClient;
-import com.swiftconductor.common.config.ObjectMapperProvider;
-import com.swiftconductor.common.metadata.tasks.TaskResult;
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.common.run.Workflow;
-import com.swiftconductor.common.run.WorkflowTestRequest;
+import com.swiftconductor.conductor.client.http.MetadataClient;
+import com.swiftconductor.conductor.client.http.WorkflowClient;
+import com.swiftconductor.conductor.common.config.ObjectMapperProvider;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.common.run.Workflow;
+import com.swiftconductor.conductor.common.run.WorkflowTestRequest;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

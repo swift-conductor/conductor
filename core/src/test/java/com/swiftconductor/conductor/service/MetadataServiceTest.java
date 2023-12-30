@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.service;
+package com.swiftconductor.conductor.service;
 
 import java.util.*;
 
@@ -25,18 +25,18 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowDefSummary;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.common.model.BulkResponse;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.dao.EventHandlerDAO;
-import com.swiftconductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDefSummary;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.common.model.BulkResponse;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.dao.EventHandlerDAO;
+import com.swiftconductor.conductor.dao.MetadataDAO;
 
-import static com.swiftconductor.TestUtils.getConstraintViolationMessages;
+import static com.swiftconductor.conductor.TestUtils.getConstraintViolationMessages;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;

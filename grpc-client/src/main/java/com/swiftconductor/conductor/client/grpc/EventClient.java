@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.grpc;
+package com.swiftconductor.conductor.client.grpc;
 
 import java.util.Iterator;
 
@@ -19,10 +19,10 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Iterators;
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.grpc.EventServiceGrpc;
-import com.swiftconductor.grpc.EventServicePb;
-import com.swiftconductor.proto.EventHandlerPb;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.grpc.EventServiceGrpc;
+import com.swiftconductor.conductor.grpc.EventServicePb;
+import com.swiftconductor.conductor.proto.EventHandlerPb;
 import io.grpc.ManagedChannelBuilder;
 
 public class EventClient extends ClientBase {

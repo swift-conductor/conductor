@@ -11,18 +11,18 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sdk.workflow.def;
+package com.swiftconductor.conductor.sdk.workflow.def;
 
 import java.util.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.sdk.workflow.def.tasks.*;
-import com.swiftconductor.sdk.workflow.executor.WorkflowExecutor;
-import com.swiftconductor.sdk.workflow.utils.InputOutputGetter;
-import com.swiftconductor.sdk.workflow.utils.MapBuilder;
-import com.swiftconductor.sdk.workflow.utils.ObjectMapperProvider;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.sdk.workflow.def.tasks.*;
+import com.swiftconductor.conductor.sdk.workflow.executor.WorkflowExecutor;
+import com.swiftconductor.conductor.sdk.workflow.utils.InputOutputGetter;
+import com.swiftconductor.conductor.sdk.workflow.utils.MapBuilder;
+import com.swiftconductor.conductor.sdk.workflow.utils.ObjectMapperProvider;
 
 /**
  * @param <T> Input type for the workflow

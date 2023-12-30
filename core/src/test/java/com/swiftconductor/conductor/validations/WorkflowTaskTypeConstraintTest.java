@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.validations;
+package com.swiftconductor.conductor.validations;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -35,12 +35,12 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.common.metadata.workflow.SubWorkflowParams;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.core.execution.tasks.Terminate;
-import com.swiftconductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.common.metadata.workflow.SubWorkflowParams;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.core.execution.tasks.Terminate;
+import com.swiftconductor.conductor.dao.MetadataDAO;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

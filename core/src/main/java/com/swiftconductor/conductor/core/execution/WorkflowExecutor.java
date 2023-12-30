@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution;
+package com.swiftconductor.conductor.core.execution;
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -25,40 +25,40 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.annotations.Trace;
-import com.swiftconductor.annotations.VisibleForTesting;
-import com.swiftconductor.common.metadata.tasks.*;
-import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.swiftconductor.common.metadata.workflow.SkipTaskRequest;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.common.run.Workflow;
-import com.swiftconductor.common.utils.TaskUtils;
-import com.swiftconductor.core.WorkflowContext;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.dal.ExecutionDAOFacade;
-import com.swiftconductor.core.event.WorkflowCreationEvent;
-import com.swiftconductor.core.event.WorkflowEvaluationEvent;
-import com.swiftconductor.core.exception.*;
-import com.swiftconductor.core.execution.tasks.SystemTaskRegistry;
-import com.swiftconductor.core.execution.tasks.Terminate;
-import com.swiftconductor.core.execution.tasks.WorkflowSystemTask;
-import com.swiftconductor.core.listener.TaskStatusListener;
-import com.swiftconductor.core.listener.WorkflowStatusListener;
-import com.swiftconductor.core.metadata.MetadataMapperService;
-import com.swiftconductor.core.utils.IDGenerator;
-import com.swiftconductor.core.utils.ParametersUtils;
-import com.swiftconductor.core.utils.QueueUtils;
-import com.swiftconductor.core.utils.Utils;
-import com.swiftconductor.dao.MetadataDAO;
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
-import com.swiftconductor.service.ExecutionLockService;
+import com.swiftconductor.conductor.annotations.Trace;
+import com.swiftconductor.conductor.annotations.VisibleForTesting;
+import com.swiftconductor.conductor.common.metadata.tasks.*;
+import com.swiftconductor.conductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.SkipTaskRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.common.run.Workflow;
+import com.swiftconductor.conductor.common.utils.TaskUtils;
+import com.swiftconductor.conductor.core.WorkflowContext;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.conductor.core.event.WorkflowCreationEvent;
+import com.swiftconductor.conductor.core.event.WorkflowEvaluationEvent;
+import com.swiftconductor.conductor.core.exception.*;
+import com.swiftconductor.conductor.core.execution.tasks.SystemTaskRegistry;
+import com.swiftconductor.conductor.core.execution.tasks.Terminate;
+import com.swiftconductor.conductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.conductor.core.listener.TaskStatusListener;
+import com.swiftconductor.conductor.core.listener.WorkflowStatusListener;
+import com.swiftconductor.conductor.core.metadata.MetadataMapperService;
+import com.swiftconductor.conductor.core.utils.IDGenerator;
+import com.swiftconductor.conductor.core.utils.ParametersUtils;
+import com.swiftconductor.conductor.core.utils.QueueUtils;
+import com.swiftconductor.conductor.core.utils.Utils;
+import com.swiftconductor.conductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
+import com.swiftconductor.conductor.service.ExecutionLockService;
 
-import static com.swiftconductor.core.utils.Utils.DECIDER_QUEUE;
-import static com.swiftconductor.model.TaskModel.Status.*;
+import static com.swiftconductor.conductor.core.utils.Utils.DECIDER_QUEUE;
+import static com.swiftconductor.conductor.model.TaskModel.Status.*;
 
 /** Workflow services provider interface */
 @Trace

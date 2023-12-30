@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.cassandra.dao;
+package com.swiftconductor.conductor.cassandra.dao;
 
 import java.util.Collections;
 import java.util.List;
@@ -26,16 +26,16 @@ import com.datastax.driver.core.Row;
 import com.datastax.driver.core.Session;
 import com.datastax.driver.core.exceptions.DriverException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.annotations.Trace;
-import com.swiftconductor.cassandra.config.CassandraProperties;
-import com.swiftconductor.cassandra.util.Statements;
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.dao.EventHandlerDAO;
-import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.conductor.annotations.Trace;
+import com.swiftconductor.conductor.cassandra.config.CassandraProperties;
+import com.swiftconductor.conductor.cassandra.util.Statements;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.dao.EventHandlerDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
 
-import static com.swiftconductor.cassandra.util.Constants.EVENT_HANDLER_KEY;
-import static com.swiftconductor.cassandra.util.Constants.HANDLERS_KEY;
+import static com.swiftconductor.conductor.cassandra.util.Constants.EVENT_HANDLER_KEY;
+import static com.swiftconductor.conductor.cassandra.util.Constants.HANDLERS_KEY;
 
 @Trace
 public class CassandraEventHandlerDAO extends CassandraBaseDAO implements EventHandlerDAO {

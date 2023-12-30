@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.utils;
+package com.swiftconductor.conductor.core.utils;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -19,7 +19,7 @@ import java.util.*;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.swiftconductor.core.exception.TransientException;
+import com.swiftconductor.conductor.core.exception.TransientException;
 
 public class Utils {
 

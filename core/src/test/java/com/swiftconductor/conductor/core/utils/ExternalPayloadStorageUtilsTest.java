@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.utils;
+package com.swiftconductor.conductor.core.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -32,16 +32,16 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.unit.DataSize;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.config.TestObjectMapperConfiguration;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.run.ExternalStorageLocation;
-import com.swiftconductor.common.utils.ExternalPayloadStorage;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.exception.TerminateWorkflowException;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
-import static com.swiftconductor.model.TaskModel.Status.FAILED_WITH_TERMINAL_ERROR;
+import static com.swiftconductor.conductor.model.TaskModel.Status.FAILED_WITH_TERMINAL_ERROR;
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
@@ -108,7 +108,7 @@ public class ExternalPayloadStorageUtilsTest {
         AtomicInteger uploadCount = new AtomicInteger(0);
 
         InputStream stream =
-                com.swiftconductor.core.utils.ExternalPayloadStorageUtilsTest.class
+                com.swiftconductor.conductor.core.utils.ExternalPayloadStorageUtilsTest.class
                         .getResourceAsStream("/payload.json");
         Map<String, Object> payload = objectMapper.readValue(stream, Map.class);
 
@@ -143,7 +143,7 @@ public class ExternalPayloadStorageUtilsTest {
         AtomicInteger uploadCount = new AtomicInteger(0);
 
         InputStream stream =
-                com.swiftconductor.core.utils.ExternalPayloadStorageUtilsTest.class
+                com.swiftconductor.conductor.core.utils.ExternalPayloadStorageUtilsTest.class
                         .getResourceAsStream("/payload.json");
         Map<String, Object> payload = objectMapper.readValue(stream, Map.class);
 

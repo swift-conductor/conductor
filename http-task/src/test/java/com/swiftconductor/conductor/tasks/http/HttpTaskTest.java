@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.tasks.http;
+package com.swiftconductor.conductor.tasks.http;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -34,19 +34,19 @@ import org.testcontainers.utility.DockerImageName;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.core.execution.DeciderService;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.core.execution.tasks.SystemTaskRegistry;
-import com.swiftconductor.core.utils.ExternalPayloadStorageUtils;
-import com.swiftconductor.core.utils.IDGenerator;
-import com.swiftconductor.core.utils.ParametersUtils;
-import com.swiftconductor.dao.MetadataDAO;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
-import com.swiftconductor.tasks.http.providers.DefaultRestTemplateProvider;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.core.execution.DeciderService;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.execution.tasks.SystemTaskRegistry;
+import com.swiftconductor.conductor.core.utils.ExternalPayloadStorageUtils;
+import com.swiftconductor.conductor.core.utils.IDGenerator;
+import com.swiftconductor.conductor.core.utils.ParametersUtils;
+import com.swiftconductor.conductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
+import com.swiftconductor.conductor.tasks.http.providers.DefaultRestTemplateProvider;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;

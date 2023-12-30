@@ -11,21 +11,21 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.cassandra.dao
+package com.swiftconductor.conductor.cassandra.dao
 
-import com.swiftconductor.common.metadata.events.EventExecution
-import com.swiftconductor.common.metadata.tasks.TaskDef
-import com.swiftconductor.common.metadata.workflow.WorkflowDef
-import com.swiftconductor.common.metadata.workflow.WorkflowTask
-import com.swiftconductor.core.exception.NonTransientException
-import com.swiftconductor.core.utils.IDGenerator
-import com.swiftconductor.model.TaskModel
-import com.swiftconductor.model.WorkflowModel
+import com.swiftconductor.conductor.common.metadata.events.EventExecution
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask
+import com.swiftconductor.conductor.core.exception.NonTransientException
+import com.swiftconductor.conductor.core.utils.IDGenerator
+import com.swiftconductor.conductor.model.TaskModel
+import com.swiftconductor.conductor.model.WorkflowModel
 
 import spock.lang.Subject
 
-import static com.swiftconductor.common.metadata.events.EventExecution.Status.COMPLETED
-import static com.swiftconductor.common.metadata.events.EventExecution.Status.IN_PROGRESS
+import static com.swiftconductor.conductor.common.metadata.events.EventExecution.Status.COMPLETED
+import static com.swiftconductor.conductor.common.metadata.events.EventExecution.Status.IN_PROGRESS
 
 class CassandraExecutionDAOSpec extends CassandraSpec {
 

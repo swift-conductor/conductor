@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.grpc.server.service;
+package com.swiftconductor.conductor.grpc.server.service;
 
 import java.util.Collections;
 import java.util.concurrent.CountDownLatch;
@@ -22,15 +22,15 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.TaskSummary;
-import com.swiftconductor.grpc.SearchPb;
-import com.swiftconductor.grpc.TaskServicePb;
-import com.swiftconductor.proto.TaskPb;
-import com.swiftconductor.proto.TaskSummaryPb;
-import com.swiftconductor.service.ExecutionService;
-import com.swiftconductor.service.TaskService;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.TaskSummary;
+import com.swiftconductor.conductor.grpc.SearchPb;
+import com.swiftconductor.conductor.grpc.TaskServicePb;
+import com.swiftconductor.conductor.proto.TaskPb;
+import com.swiftconductor.conductor.proto.TaskSummaryPb;
+import com.swiftconductor.conductor.service.ExecutionService;
+import com.swiftconductor.conductor.service.TaskService;
 import io.grpc.stub.StreamObserver;
 
 import static org.junit.Assert.assertEquals;

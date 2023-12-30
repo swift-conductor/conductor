@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.automator;
+package com.swiftconductor.conductor.client.automator;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -35,12 +35,12 @@ import com.netflix.spectator.api.Registry;
 import com.netflix.spectator.api.Spectator;
 import com.netflix.spectator.api.patterns.ThreadPoolMonitor;
 
-import com.swiftconductor.client.config.PropertyFactory;
-import com.swiftconductor.client.http.TaskClient;
-import com.swiftconductor.client.telemetry.MetricsContainer;
-import com.swiftconductor.client.worker.Worker;
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.conductor.client.config.PropertyFactory;
+import com.swiftconductor.conductor.client.http.TaskClient;
+import com.swiftconductor.conductor.client.telemetry.MetricsContainer;
+import com.swiftconductor.conductor.client.worker.Worker;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
 
 /**
  * Manages the threadpool used by the workers for execution and server communication (polling and

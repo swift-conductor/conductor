@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.cassandra.config.cache;
+package com.swiftconductor.conductor.cassandra.config.cache;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,15 +31,15 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 
-import com.swiftconductor.annotations.Trace;
-import com.swiftconductor.cassandra.config.CassandraProperties;
-import com.swiftconductor.cassandra.dao.CassandraMetadataDAO;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.dao.MetadataDAO;
-import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.conductor.annotations.Trace;
+import com.swiftconductor.conductor.cassandra.config.CassandraProperties;
+import com.swiftconductor.conductor.cassandra.dao.CassandraMetadataDAO;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
 
-import static com.swiftconductor.cassandra.config.cache.CachingConfig.TASK_DEF_CACHE;
+import static com.swiftconductor.conductor.cassandra.config.cache.CachingConfig.TASK_DEF_CACHE;
 
 @Trace
 public class CacheableMetadataDAO implements MetadataDAO {

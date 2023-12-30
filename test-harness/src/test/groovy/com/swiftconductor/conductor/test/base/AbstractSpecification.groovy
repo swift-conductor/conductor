@@ -11,20 +11,20 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.test.base
+package com.swiftconductor.conductor.test.base
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.TestPropertySource
 
-import com.swiftconductor.core.execution.AsyncSystemTaskExecutor
-import com.swiftconductor.core.execution.StartWorkflowInput
-import com.swiftconductor.core.execution.WorkflowExecutor
-import com.swiftconductor.core.operation.StartWorkflowOperation
-import com.swiftconductor.core.reconciliation.WorkflowSweeper
-import com.swiftconductor.service.ExecutionService
-import com.swiftconductor.service.MetadataService
-import com.swiftconductor.test.util.WorkflowTestUtil
+import com.swiftconductor.conductor.core.execution.AsyncSystemTaskExecutor
+import com.swiftconductor.conductor.core.execution.StartWorkflowInput
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor
+import com.swiftconductor.conductor.core.operation.StartWorkflowOperation
+import com.swiftconductor.conductor.core.reconciliation.WorkflowSweeper
+import com.swiftconductor.conductor.service.ExecutionService
+import com.swiftconductor.conductor.service.MetadataService
+import com.swiftconductor.conductor.test.util.WorkflowTestUtil
 
 import spock.lang.Specification
 

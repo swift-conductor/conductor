@@ -11,10 +11,10 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.http
+package com.swiftconductor.conductor.client.http
 
-import com.swiftconductor.client.exception.ConductorClientException
-import com.swiftconductor.common.metadata.workflow.WorkflowDef
+import com.swiftconductor.conductor.client.exception.ConductorClientException
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef
 
 import com.sun.jersey.api.client.ClientResponse
 import spock.lang.Subject

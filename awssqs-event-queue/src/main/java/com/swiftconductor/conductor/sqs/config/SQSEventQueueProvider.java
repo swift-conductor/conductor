@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sqs.config;
+package com.swiftconductor.conductor.sqs.config;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -19,9 +19,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.lang.NonNull;
 
 import com.amazonaws.services.sqs.AmazonSQS;
-import com.swiftconductor.core.events.EventQueueProvider;
-import com.swiftconductor.core.events.queue.ObservableQueue;
-import com.swiftconductor.sqs.eventqueue.SQSObservableQueue;
+import com.swiftconductor.conductor.core.events.EventQueueProvider;
+import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.conductor.sqs.eventqueue.SQSObservableQueue;
 import rx.Scheduler;
 
 public class SQSEventQueueProvider implements EventQueueProvider {

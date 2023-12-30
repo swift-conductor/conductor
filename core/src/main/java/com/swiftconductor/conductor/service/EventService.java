@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.service;
+package com.swiftconductor.conductor.service;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.validation.annotation.Validated;
 
-import com.swiftconductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
 
 @Validated
 public interface EventService {

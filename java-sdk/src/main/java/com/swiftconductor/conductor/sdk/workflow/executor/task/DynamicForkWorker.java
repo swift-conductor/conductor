@@ -11,21 +11,21 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sdk.workflow.executor.task;
+package com.swiftconductor.conductor.sdk.workflow.executor.task;
 
 import java.lang.reflect.Method;
 import java.util.Map;
 import java.util.function.Function;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.client.worker.Worker;
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.tasks.TaskResult;
-import com.swiftconductor.sdk.workflow.def.tasks.DynamicFork;
-import com.swiftconductor.sdk.workflow.def.tasks.DynamicForkInput;
-import com.swiftconductor.sdk.workflow.task.InputParam;
-import com.swiftconductor.sdk.workflow.utils.ObjectMapperProvider;
+import com.swiftconductor.conductor.client.worker.Worker;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.conductor.sdk.workflow.def.tasks.DynamicFork;
+import com.swiftconductor.conductor.sdk.workflow.def.tasks.DynamicForkInput;
+import com.swiftconductor.conductor.sdk.workflow.task.InputParam;
+import com.swiftconductor.conductor.sdk.workflow.utils.ObjectMapperProvider;
 
 public class DynamicForkWorker implements Worker {
 

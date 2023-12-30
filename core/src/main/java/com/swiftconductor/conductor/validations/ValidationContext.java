@@ -11,14 +11,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.validations;
+package com.swiftconductor.conductor.validations;
 
-import com.swiftconductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.dao.MetadataDAO;
 
 /**
  * This context is defined to get access to {@link MetadataDAO} inside {@link
  * WorkflowTaskTypeConstraint} constraint validator to validate {@link
- * com.swiftconductor.common.metadata.workflow.WorkflowTask}.
+ * com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask}.
  */
 public class ValidationContext {
 

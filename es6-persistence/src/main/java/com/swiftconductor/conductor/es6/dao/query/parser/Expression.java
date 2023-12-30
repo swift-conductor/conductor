@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.es6.dao.query.parser;
+package com.swiftconductor.conductor.es6.dao.query.parser;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
@@ -20,9 +20,9 @@ import java.io.InputStream;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 
-import com.swiftconductor.es6.dao.query.parser.internal.AbstractNode;
-import com.swiftconductor.es6.dao.query.parser.internal.BooleanOp;
-import com.swiftconductor.es6.dao.query.parser.internal.ParserException;
+import com.swiftconductor.conductor.es6.dao.query.parser.internal.AbstractNode;
+import com.swiftconductor.conductor.es6.dao.query.parser.internal.BooleanOp;
+import com.swiftconductor.conductor.es6.dao.query.parser.internal.ParserException;
 
 public class Expression extends AbstractNode implements FilterProvider {
 

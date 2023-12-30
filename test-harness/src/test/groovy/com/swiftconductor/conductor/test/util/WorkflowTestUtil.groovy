@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.test.util
+package com.swiftconductor.conductor.test.util
 
 import javax.annotation.PostConstruct
 
@@ -19,17 +19,17 @@ import org.apache.commons.lang3.StringUtils
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
-import com.swiftconductor.common.metadata.tasks.Task
-import com.swiftconductor.common.metadata.tasks.TaskDef
-import com.swiftconductor.common.metadata.tasks.TaskResult
-import com.swiftconductor.common.metadata.workflow.WorkflowDef
-import com.swiftconductor.core.WorkflowContext
-import com.swiftconductor.core.exception.NotFoundException
-import com.swiftconductor.core.execution.WorkflowExecutor
-import com.swiftconductor.dao.QueueDAO
-import com.swiftconductor.model.WorkflowModel
-import com.swiftconductor.service.ExecutionService
-import com.swiftconductor.service.MetadataService
+import com.swiftconductor.conductor.common.metadata.tasks.Task
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef
+import com.swiftconductor.conductor.core.WorkflowContext
+import com.swiftconductor.conductor.core.exception.NotFoundException
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor
+import com.swiftconductor.conductor.dao.QueueDAO
+import com.swiftconductor.conductor.model.WorkflowModel
+import com.swiftconductor.conductor.service.ExecutionService
+import com.swiftconductor.conductor.service.MetadataService
 
 import com.fasterxml.jackson.databind.ObjectMapper
 

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sdk.workflow.executor.task;
+package com.swiftconductor.conductor.sdk.workflow.executor.task;
 
 import java.lang.reflect.Method;
 import java.util.*;
@@ -22,10 +22,10 @@ import org.slf4j.LoggerFactory;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Strings;
 import com.google.common.reflect.ClassPath;
-import com.swiftconductor.client.automator.TaskRunnerConfigurer;
-import com.swiftconductor.client.http.TaskClient;
-import com.swiftconductor.client.worker.Worker;
-import com.swiftconductor.sdk.workflow.task.WorkerTask;
+import com.swiftconductor.conductor.client.automator.TaskRunnerConfigurer;
+import com.swiftconductor.conductor.client.http.TaskClient;
+import com.swiftconductor.conductor.client.worker.Worker;
+import com.swiftconductor.conductor.sdk.workflow.task.WorkerTask;
 
 public class AnnotatedWorkerExecutor {
 

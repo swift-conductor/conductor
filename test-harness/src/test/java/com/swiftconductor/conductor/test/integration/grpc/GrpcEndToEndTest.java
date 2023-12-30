@@ -11,14 +11,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.test.integration.grpc;
+package com.swiftconductor.conductor.test.integration.grpc;
 
 import org.junit.Before;
 
-import com.swiftconductor.client.grpc.EventClient;
-import com.swiftconductor.client.grpc.MetadataClient;
-import com.swiftconductor.client.grpc.TaskClient;
-import com.swiftconductor.client.grpc.WorkflowClient;
+import com.swiftconductor.conductor.client.grpc.EventClient;
+import com.swiftconductor.conductor.client.grpc.MetadataClient;
+import com.swiftconductor.conductor.client.grpc.TaskClient;
+import com.swiftconductor.conductor.client.grpc.WorkflowClient;
 
 public class GrpcEndToEndTest extends AbstractGrpcEndToEndTest {
 

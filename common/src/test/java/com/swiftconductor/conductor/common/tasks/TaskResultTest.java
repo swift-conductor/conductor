@@ -11,15 +11,15 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.common.tasks;
+package com.swiftconductor.conductor.common.tasks;
 
 import java.util.HashMap;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
 
 import static org.junit.Assert.assertEquals;
 
