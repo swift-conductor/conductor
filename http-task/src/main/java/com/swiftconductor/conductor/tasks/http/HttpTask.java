@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.tasks.http;
+package com.swiftconductor.conductor.tasks.http;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -31,14 +31,14 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.core.execution.tasks.WorkflowSystemTask;
-import com.swiftconductor.core.utils.Utils;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
-import com.swiftconductor.tasks.http.providers.RestTemplateProvider;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.conductor.core.utils.Utils;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
+import com.swiftconductor.conductor.tasks.http.providers.RestTemplateProvider;
 
-import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_HTTP;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_HTTP;
 
 /** Task that enables calling another HTTP endpoint as part of its execution */
 @Component(TASK_TYPE_HTTP)

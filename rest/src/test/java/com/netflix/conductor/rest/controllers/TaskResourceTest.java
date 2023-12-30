@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.rest.controllers;
+package com.swiftconductor.conductor.rest.controllers;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,14 +23,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
 
-import com.swiftconductor.common.metadata.tasks.PollData;
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.metadata.tasks.TaskExecLog;
-import com.swiftconductor.common.metadata.tasks.TaskResult;
-import com.swiftconductor.common.run.ExternalStorageLocation;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.TaskSummary;
-import com.swiftconductor.service.TaskService;
+import com.swiftconductor.conductor.common.metadata.tasks.PollData;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.conductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.TaskSummary;
+import com.swiftconductor.conductor.service.TaskService;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

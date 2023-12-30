@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.common.run;
+package com.swiftconductor.conductor.common.run;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -23,10 +23,10 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.swiftconductor.annotations.protogen.ProtoField;
-import com.swiftconductor.annotations.protogen.ProtoMessage;
-import com.swiftconductor.common.run.Workflow.WorkflowStatus;
-import com.swiftconductor.common.utils.SummaryUtil;
+import com.swiftconductor.conductor.annotations.protogen.ProtoField;
+import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
+import com.swiftconductor.conductor.common.run.Workflow.WorkflowStatus;
+import com.swiftconductor.conductor.common.utils.SummaryUtil;
 
 /** Captures workflow summary info to be indexed in Elastic Search. */
 @ProtoMessage

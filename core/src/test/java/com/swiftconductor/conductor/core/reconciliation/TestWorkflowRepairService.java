@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.reconciliation;
+package com.swiftconductor.conductor.core.reconciliation;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -22,18 +22,18 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.events.EventQueues;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.core.execution.tasks.*;
-import com.swiftconductor.core.operation.StartWorkflowOperation;
-import com.swiftconductor.core.utils.ParametersUtils;
-import com.swiftconductor.dao.ExecutionDAO;
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.events.EventQueues;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.execution.tasks.*;
+import com.swiftconductor.conductor.core.operation.StartWorkflowOperation;
+import com.swiftconductor.conductor.core.utils.ParametersUtils;
+import com.swiftconductor.conductor.dao.ExecutionDAO;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
-import static com.swiftconductor.common.metadata.tasks.TaskType.*;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.*;
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.ArgumentMatchers.anyString;

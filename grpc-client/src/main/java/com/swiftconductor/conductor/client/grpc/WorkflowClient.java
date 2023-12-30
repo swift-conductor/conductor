@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.grpc;
+package com.swiftconductor.conductor.client.grpc;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,15 +22,15 @@ import javax.annotation.Nullable;
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.base.Preconditions;
-import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.Workflow;
-import com.swiftconductor.common.run.WorkflowSummary;
-import com.swiftconductor.grpc.SearchPb;
-import com.swiftconductor.grpc.WorkflowServiceGrpc;
-import com.swiftconductor.grpc.WorkflowServicePb;
-import com.swiftconductor.proto.WorkflowPb;
+import com.swiftconductor.conductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.Workflow;
+import com.swiftconductor.conductor.common.run.WorkflowSummary;
+import com.swiftconductor.conductor.grpc.SearchPb;
+import com.swiftconductor.conductor.grpc.WorkflowServiceGrpc;
+import com.swiftconductor.conductor.grpc.WorkflowServicePb;
+import com.swiftconductor.conductor.proto.WorkflowPb;
 import io.grpc.ManagedChannelBuilder;
 
 public class WorkflowClient extends ClientBase {

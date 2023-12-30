@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.service;
+package com.swiftconductor.conductor.service;
 
 import java.util.List;
 
@@ -19,10 +19,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.swiftconductor.annotations.Audit;
-import com.swiftconductor.annotations.Trace;
-import com.swiftconductor.common.model.BulkResponse;
-import com.swiftconductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.annotations.Audit;
+import com.swiftconductor.conductor.annotations.Trace;
+import com.swiftconductor.conductor.common.model.BulkResponse;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
 
 @Audit
 @Trace

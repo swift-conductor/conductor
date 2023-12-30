@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution.mapper;
+package com.swiftconductor.conductor.core.execution.mapper;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -25,16 +25,16 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.mockito.Mockito;
 
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.core.exception.TerminateWorkflowException;
-import com.swiftconductor.core.execution.DeciderService;
-import com.swiftconductor.core.utils.IDGenerator;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.conductor.core.execution.DeciderService;
+import com.swiftconductor.conductor.core.utils.IDGenerator;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
-import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_FORK;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_FORK;
 import static org.junit.Assert.assertEquals;
 
 public class ForkJoinTaskMapperTest {

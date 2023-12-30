@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.rest.controllers;
+package com.swiftconductor.conductor.rest.controllers;
 
 import java.util.List;
 import java.util.Map;
@@ -28,15 +28,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.swiftconductor.common.metadata.workflow.SkipTaskRequest;
-import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
-import com.swiftconductor.common.run.*;
-import com.swiftconductor.service.WorkflowService;
-import com.swiftconductor.service.WorkflowTestService;
+import com.swiftconductor.conductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.SkipTaskRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.conductor.common.run.*;
+import com.swiftconductor.conductor.service.WorkflowService;
+import com.swiftconductor.conductor.service.WorkflowTestService;
 import io.swagger.v3.oas.annotations.Operation;
 
-import static com.swiftconductor.rest.config.RequestMappingConstants.WORKFLOW;
+import static com.swiftconductor.conductor.rest.config.RequestMappingConstants.WORKFLOW;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
 

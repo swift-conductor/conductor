@@ -8,7 +8,7 @@ import "model/skiptaskrequest.proto";
 import "model/startworkflowrequest.proto";
 import "model/rerunworkflowrequest.proto";
 
-option java_package = "com.swiftconductor.grpc";
+option java_package = "com.swiftconductor.conductor.grpc";
 option java_outer_classname = "WorkflowServicePb";
 option go_package = "github.com/netflix/conductor/client/gogrpc/conductor/grpc/workflows";
 

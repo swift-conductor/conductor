@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.metrics;
+package com.swiftconductor.conductor.metrics;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,8 +29,8 @@ import com.netflix.spectator.api.Spectator;
 import com.netflix.spectator.api.Timer;
 import com.netflix.spectator.api.histogram.PercentileTimer;
 
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
 public class Monitors {
 

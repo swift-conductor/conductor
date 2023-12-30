@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.grpc;
+package com.swiftconductor.conductor.client.grpc;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,8 +20,8 @@ import javax.annotation.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.swiftconductor.grpc.ProtoMapper;
-import com.swiftconductor.grpc.SearchPb;
+import com.swiftconductor.conductor.grpc.ProtoMapper;
+import com.swiftconductor.conductor.grpc.SearchPb;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 

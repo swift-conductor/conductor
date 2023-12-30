@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.test.utils;
+package com.swiftconductor.conductor.test.utils;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -27,10 +27,10 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.util.concurrent.Uninterruptibles;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.core.execution.tasks.WorkflowSystemTask;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
 @Component(UserTask.NAME)
 public class UserTask extends WorkflowSystemTask {

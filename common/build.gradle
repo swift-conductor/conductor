@@ -40,16 +40,16 @@ dependencies {
 
 task protogen(dependsOn: jar, type: JavaExec) {
     classpath configurations.annotationsProcessorCodegen
-    mainClass = "com.swiftconductor.annotationsprocessor.protogen.ProtoGenTask"
+    mainClass = "com.swiftconductor.conductor.annotationsprocessor.protogen.ProtoGenTask"
     args(
             "conductor.proto",
-            "com.swiftconductor.proto",
+            "com.swiftconductor.conductor.proto",
             "github.com/swift-conductor/conductor/client/gogrpc/conductor/model",
             "${rootDir}/grpc/src/main/proto",
             "${rootDir}/grpc/src/main/java/com/swiftconductor/conductor/grpc",
-            "com.swiftconductor.grpc",
+            "com.swiftconductor.conductor.grpc",
             jar.archivePath,
-            "com.swiftconductor.common",
+            "com.swiftconductor.conductor.common",
     )
 }
 

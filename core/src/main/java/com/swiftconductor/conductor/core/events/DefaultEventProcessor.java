@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.events;
+package com.swiftconductor.conductor.core.events;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,21 +34,21 @@ import org.springframework.util.CollectionUtils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spotify.futures.CompletableFutures;
-import com.swiftconductor.common.metadata.events.EventExecution;
-import com.swiftconductor.common.metadata.events.EventExecution.Status;
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.common.metadata.events.EventHandler.Action;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.events.queue.Message;
-import com.swiftconductor.core.events.queue.ObservableQueue;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.core.execution.evaluators.Evaluator;
-import com.swiftconductor.core.utils.JsonUtils;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.service.ExecutionService;
-import com.swiftconductor.service.MetadataService;
+import com.swiftconductor.conductor.common.metadata.events.EventExecution;
+import com.swiftconductor.conductor.common.metadata.events.EventExecution.Status;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler.Action;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.events.queue.Message;
+import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.core.execution.evaluators.Evaluator;
+import com.swiftconductor.conductor.core.utils.JsonUtils;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.service.ExecutionService;
+import com.swiftconductor.conductor.service.MetadataService;
 
-import static com.swiftconductor.core.utils.Utils.isTransientException;
+import static com.swiftconductor.conductor.core.utils.Utils.isTransientException;
 
 /**
  * Event Processor is used to dispatch actions configured in the event handlers, based on incoming

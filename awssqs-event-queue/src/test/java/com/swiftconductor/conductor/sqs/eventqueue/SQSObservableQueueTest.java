@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sqs.eventqueue;
+package com.swiftconductor.conductor.sqs.eventqueue;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -27,7 +27,7 @@ import com.amazonaws.services.sqs.model.ListQueuesResult;
 import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.ReceiveMessageResult;
 import com.google.common.util.concurrent.Uninterruptibles;
-import com.swiftconductor.core.events.queue.Message;
+import com.swiftconductor.conductor.core.events.queue.Message;
 import rx.Observable;
 
 import static org.junit.Assert.assertEquals;

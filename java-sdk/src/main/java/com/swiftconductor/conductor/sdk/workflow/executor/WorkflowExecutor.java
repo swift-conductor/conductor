@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sdk.workflow.executor;
+package com.swiftconductor.conductor.sdk.workflow.executor;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,18 +28,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.jersey.api.client.ClientHandler;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.client.filter.ClientFilter;
-import com.swiftconductor.client.http.MetadataClient;
-import com.swiftconductor.client.http.TaskClient;
-import com.swiftconductor.client.http.WorkflowClient;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.run.Workflow;
-import com.swiftconductor.sdk.workflow.def.ConductorWorkflow;
-import com.swiftconductor.sdk.workflow.def.tasks.*;
-import com.swiftconductor.sdk.workflow.executor.task.AnnotatedWorkerExecutor;
-import com.swiftconductor.sdk.workflow.utils.ObjectMapperProvider;
+import com.swiftconductor.conductor.client.http.MetadataClient;
+import com.swiftconductor.conductor.client.http.TaskClient;
+import com.swiftconductor.conductor.client.http.WorkflowClient;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.run.Workflow;
+import com.swiftconductor.conductor.sdk.workflow.def.ConductorWorkflow;
+import com.swiftconductor.conductor.sdk.workflow.def.tasks.*;
+import com.swiftconductor.conductor.sdk.workflow.executor.task.AnnotatedWorkerExecutor;
+import com.swiftconductor.conductor.sdk.workflow.utils.ObjectMapperProvider;
 
 public class WorkflowExecutor {
 

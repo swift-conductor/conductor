@@ -11,14 +11,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.annotationsprocessor.protogen;
+package com.swiftconductor.conductor.annotationsprocessor.protogen;
 
 import javax.lang.model.element.Modifier;
 
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
-import com.swiftconductor.annotationsprocessor.protogen.types.MessageType;
+import com.swiftconductor.conductor.annotationsprocessor.protogen.types.MessageType;
 
 public class Enum extends AbstractMessage {
     public enum MapType {

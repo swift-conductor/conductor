@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.common.metadata.tasks;
+package com.swiftconductor.conductor.common.metadata.tasks;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,10 +21,10 @@ import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.protobuf.Any;
-import com.swiftconductor.annotations.protogen.ProtoEnum;
-import com.swiftconductor.annotations.protogen.ProtoField;
-import com.swiftconductor.annotations.protogen.ProtoMessage;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.annotations.protogen.ProtoEnum;
+import com.swiftconductor.conductor.annotations.protogen.ProtoField;
+import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
 import io.swagger.v3.oas.annotations.Hidden;
 
 @ProtoMessage
@@ -504,7 +504,8 @@ public class Task {
      * @param workflowType the name of the workflow
      * @return the task object with the workflow type set
      */
-    public com.swiftconductor.common.metadata.tasks.Task setWorkflowType(String workflowType) {
+    public com.swiftconductor.conductor.common.metadata.tasks.Task setWorkflowType(
+            String workflowType) {
         this.workflowType = workflowType;
         return this;
     }

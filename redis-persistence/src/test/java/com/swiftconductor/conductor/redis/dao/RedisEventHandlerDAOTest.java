@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redis.dao;
+package com.swiftconductor.conductor.redis.dao;
 
 import java.util.List;
 import java.util.UUID;
@@ -24,15 +24,15 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.config.TestObjectMapperConfiguration;
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.common.metadata.events.EventHandler.Action;
-import com.swiftconductor.common.metadata.events.EventHandler.Action.Type;
-import com.swiftconductor.common.metadata.events.EventHandler.StartWorkflow;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.redis.config.RedisProperties;
-import com.swiftconductor.redis.jedis.JedisMock;
-import com.swiftconductor.redis.jedis.JedisProxy;
+import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler.Action;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler.Action.Type;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler.StartWorkflow;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.redis.config.RedisProperties;
+import com.swiftconductor.conductor.redis.jedis.JedisMock;
+import com.swiftconductor.conductor.redis.jedis.JedisProxy;
 import redis.clients.jedis.commands.JedisCommands;
 
 import static org.junit.Assert.assertEquals;

@@ -11,17 +11,17 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.testing;
+package com.swiftconductor.conductor.client.testing;
 
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.run.Workflow;
-import com.swiftconductor.common.run.WorkflowTestRequest;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.run.Workflow;
+import com.swiftconductor.conductor.common.run.WorkflowTestRequest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

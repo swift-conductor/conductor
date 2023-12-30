@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.utils;
+package com.swiftconductor.conductor.core.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -26,17 +26,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.annotations.VisibleForTesting;
-import com.swiftconductor.common.run.ExternalStorageLocation;
-import com.swiftconductor.common.utils.ExternalPayloadStorage;
-import com.swiftconductor.common.utils.ExternalPayloadStorage.PayloadType;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.exception.NonTransientException;
-import com.swiftconductor.core.exception.TerminateWorkflowException;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.annotations.VisibleForTesting;
+import com.swiftconductor.conductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage.PayloadType;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.exception.NonTransientException;
+import com.swiftconductor.conductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
 /** Provides utility functions to upload and download payloads to {@link ExternalPayloadStorage} */
 @Component

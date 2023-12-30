@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.cassandra.util
+package com.swiftconductor.conductor.cassandra.util
 
 import spock.lang.Specification
 import spock.lang.Subject

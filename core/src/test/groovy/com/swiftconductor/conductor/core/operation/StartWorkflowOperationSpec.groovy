@@ -11,17 +11,17 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.operation
+package com.swiftconductor.conductor.core.operation
 
 import org.springframework.context.ApplicationEventPublisher
 
-import com.swiftconductor.common.metadata.workflow.WorkflowDef
-import com.swiftconductor.core.dal.ExecutionDAOFacade
-import com.swiftconductor.core.execution.StartWorkflowInput
-import com.swiftconductor.core.metadata.MetadataMapperService
-import com.swiftconductor.core.utils.IDGenerator
-import com.swiftconductor.core.utils.ParametersUtils
-import com.swiftconductor.service.ExecutionLockService
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef
+import com.swiftconductor.conductor.core.dal.ExecutionDAOFacade
+import com.swiftconductor.conductor.core.execution.StartWorkflowInput
+import com.swiftconductor.conductor.core.metadata.MetadataMapperService
+import com.swiftconductor.conductor.core.utils.IDGenerator
+import com.swiftconductor.conductor.core.utils.ParametersUtils
+import com.swiftconductor.conductor.service.ExecutionLockService
 
 import spock.lang.Specification
 import spock.lang.Subject

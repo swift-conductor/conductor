@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sqs.config;
+package com.swiftconductor.conductor.sqs.config;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,11 +31,11 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.events.EventQueueProvider;
-import com.swiftconductor.core.events.queue.ObservableQueue;
-import com.swiftconductor.model.TaskModel.Status;
-import com.swiftconductor.sqs.eventqueue.SQSObservableQueue.Builder;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.events.EventQueueProvider;
+import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.conductor.model.TaskModel.Status;
+import com.swiftconductor.conductor.sqs.eventqueue.SQSObservableQueue.Builder;
 import rx.Scheduler;
 
 @Configuration

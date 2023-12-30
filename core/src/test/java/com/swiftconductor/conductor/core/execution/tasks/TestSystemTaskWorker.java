@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution.tasks;
+package com.swiftconductor.conductor.core.execution.tasks;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -23,10 +23,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.execution.AsyncSystemTaskExecutor;
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.service.ExecutionService;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.execution.AsyncSystemTaskExecutor;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.service.ExecutionService;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;

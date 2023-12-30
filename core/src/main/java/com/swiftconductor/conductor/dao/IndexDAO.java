@@ -11,17 +11,17 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.dao;
+package com.swiftconductor.conductor.dao;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.swiftconductor.common.metadata.events.EventExecution;
-import com.swiftconductor.common.metadata.tasks.TaskExecLog;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.TaskSummary;
-import com.swiftconductor.common.run.WorkflowSummary;
-import com.swiftconductor.core.events.queue.Message;
+import com.swiftconductor.conductor.common.metadata.events.EventExecution;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.TaskSummary;
+import com.swiftconductor.conductor.common.run.WorkflowSummary;
+import com.swiftconductor.conductor.core.events.queue.Message;
 
 /** DAO to index the workflow and task details for searching. */
 public interface IndexDAO {

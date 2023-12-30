@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.http;
+package com.swiftconductor.conductor.client.http;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -31,18 +31,18 @@ import com.sun.jersey.api.client.GenericType;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.client.filter.ClientFilter;
-import com.swiftconductor.client.config.ConductorClientConfiguration;
-import com.swiftconductor.client.config.DefaultConductorClientConfiguration;
-import com.swiftconductor.client.exception.ConductorClientException;
-import com.swiftconductor.client.telemetry.MetricsContainer;
-import com.swiftconductor.common.metadata.tasks.PollData;
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.metadata.tasks.TaskExecLog;
-import com.swiftconductor.common.metadata.tasks.TaskResult;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.TaskSummary;
-import com.swiftconductor.common.utils.ExternalPayloadStorage;
-import com.swiftconductor.common.utils.ExternalPayloadStorage.PayloadType;
+import com.swiftconductor.conductor.client.config.ConductorClientConfiguration;
+import com.swiftconductor.conductor.client.config.DefaultConductorClientConfiguration;
+import com.swiftconductor.conductor.client.exception.ConductorClientException;
+import com.swiftconductor.conductor.client.telemetry.MetricsContainer;
+import com.swiftconductor.conductor.common.metadata.tasks.PollData;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.TaskSummary;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage.PayloadType;
 
 /** Client for conductor task management including polling for task, updating task status etc. */
 public class TaskClient extends ClientBase {

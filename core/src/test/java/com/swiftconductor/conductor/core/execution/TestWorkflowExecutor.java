@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution;
+package com.swiftconductor.conductor.core.execution;
 
 import java.time.Duration;
 import java.util.*;
@@ -33,38 +33,38 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.config.TestObjectMapperConfiguration;
-import com.swiftconductor.common.metadata.tasks.PollData;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.tasks.TaskResult;
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.common.utils.ExternalPayloadStorage;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.dal.ExecutionDAOFacade;
-import com.swiftconductor.core.event.WorkflowCreationEvent;
-import com.swiftconductor.core.exception.ConflictException;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.exception.TerminateWorkflowException;
-import com.swiftconductor.core.execution.evaluators.Evaluator;
-import com.swiftconductor.core.execution.mapper.*;
-import com.swiftconductor.core.execution.tasks.*;
-import com.swiftconductor.core.listener.TaskStatusListener;
-import com.swiftconductor.core.listener.WorkflowStatusListener;
-import com.swiftconductor.core.metadata.MetadataMapperService;
-import com.swiftconductor.core.operation.StartWorkflowOperation;
-import com.swiftconductor.core.utils.ExternalPayloadStorageUtils;
-import com.swiftconductor.core.utils.IDGenerator;
-import com.swiftconductor.core.utils.ParametersUtils;
-import com.swiftconductor.dao.MetadataDAO;
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
-import com.swiftconductor.service.ExecutionLockService;
+import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.conductor.common.metadata.tasks.PollData;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.conductor.core.event.WorkflowCreationEvent;
+import com.swiftconductor.conductor.core.exception.ConflictException;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.conductor.core.execution.evaluators.Evaluator;
+import com.swiftconductor.conductor.core.execution.mapper.*;
+import com.swiftconductor.conductor.core.execution.tasks.*;
+import com.swiftconductor.conductor.core.listener.TaskStatusListener;
+import com.swiftconductor.conductor.core.listener.WorkflowStatusListener;
+import com.swiftconductor.conductor.core.metadata.MetadataMapperService;
+import com.swiftconductor.conductor.core.operation.StartWorkflowOperation;
+import com.swiftconductor.conductor.core.utils.ExternalPayloadStorageUtils;
+import com.swiftconductor.conductor.core.utils.IDGenerator;
+import com.swiftconductor.conductor.core.utils.ParametersUtils;
+import com.swiftconductor.conductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
+import com.swiftconductor.conductor.service.ExecutionLockService;
 
-import static com.swiftconductor.common.metadata.tasks.TaskType.*;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.*;
 import static java.util.Comparator.comparingInt;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.maxBy;

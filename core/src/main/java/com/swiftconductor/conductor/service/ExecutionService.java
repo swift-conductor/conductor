@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.service;
+package com.swiftconductor.conductor.service;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -21,24 +21,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.swiftconductor.annotations.Trace;
-import com.swiftconductor.common.metadata.events.EventExecution;
-import com.swiftconductor.common.metadata.tasks.*;
-import com.swiftconductor.common.run.*;
-import com.swiftconductor.common.utils.ExternalPayloadStorage;
-import com.swiftconductor.common.utils.ExternalPayloadStorage.Operation;
-import com.swiftconductor.common.utils.ExternalPayloadStorage.PayloadType;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.dal.ExecutionDAOFacade;
-import com.swiftconductor.core.events.queue.Message;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.core.execution.tasks.SystemTaskRegistry;
-import com.swiftconductor.core.utils.QueueUtils;
-import com.swiftconductor.core.utils.Utils;
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.conductor.annotations.Trace;
+import com.swiftconductor.conductor.common.metadata.events.EventExecution;
+import com.swiftconductor.conductor.common.metadata.tasks.*;
+import com.swiftconductor.conductor.common.run.*;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage.Operation;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage.PayloadType;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.conductor.core.events.queue.Message;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.execution.tasks.SystemTaskRegistry;
+import com.swiftconductor.conductor.core.utils.QueueUtils;
+import com.swiftconductor.conductor.core.utils.Utils;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.model.TaskModel;
 
 @Trace
 @Service

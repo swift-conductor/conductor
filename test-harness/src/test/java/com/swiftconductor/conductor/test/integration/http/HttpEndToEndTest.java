@@ -11,14 +11,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.test.integration.http;
+package com.swiftconductor.conductor.test.integration.http;
 
 import org.junit.Before;
 
-import com.swiftconductor.client.http.EventClient;
-import com.swiftconductor.client.http.MetadataClient;
-import com.swiftconductor.client.http.TaskClient;
-import com.swiftconductor.client.http.WorkflowClient;
+import com.swiftconductor.conductor.client.http.EventClient;
+import com.swiftconductor.conductor.client.http.MetadataClient;
+import com.swiftconductor.conductor.client.http.TaskClient;
+import com.swiftconductor.conductor.client.http.WorkflowClient;
 
 public class HttpEndToEndTest extends AbstractHttpEndToEndTest {
 

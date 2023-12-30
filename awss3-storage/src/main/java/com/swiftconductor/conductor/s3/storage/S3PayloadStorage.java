@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.s3.storage;
+package com.swiftconductor.conductor.s3.storage;
 
 import java.io.InputStream;
 import java.net.URISyntaxException;
@@ -25,12 +25,12 @@ import com.amazonaws.HttpMethod;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.*;
-import com.swiftconductor.common.run.ExternalStorageLocation;
-import com.swiftconductor.common.utils.ExternalPayloadStorage;
-import com.swiftconductor.core.exception.NonTransientException;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.core.utils.IDGenerator;
-import com.swiftconductor.s3.config.S3Properties;
+import com.swiftconductor.conductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.conductor.core.exception.NonTransientException;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.core.utils.IDGenerator;
+import com.swiftconductor.conductor.s3.config.S3Properties;
 
 /**
  * An implementation of {@link ExternalPayloadStorage} using AWS S3 for storing large JSON payload

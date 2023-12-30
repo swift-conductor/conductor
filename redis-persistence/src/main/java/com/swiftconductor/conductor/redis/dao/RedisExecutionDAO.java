@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redis.dao;
+package com.swiftconductor.conductor.redis.dao;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -25,18 +25,18 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
-import com.swiftconductor.common.metadata.events.EventExecution;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.dao.ConcurrentExecutionLimitDAO;
-import com.swiftconductor.dao.ExecutionDAO;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
-import com.swiftconductor.redis.config.AnyRedisCondition;
-import com.swiftconductor.redis.config.RedisProperties;
-import com.swiftconductor.redis.jedis.JedisProxy;
+import com.swiftconductor.conductor.common.metadata.events.EventExecution;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.dao.ConcurrentExecutionLimitDAO;
+import com.swiftconductor.conductor.dao.ExecutionDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
+import com.swiftconductor.conductor.redis.config.AnyRedisCondition;
+import com.swiftconductor.conductor.redis.config.RedisProperties;
+import com.swiftconductor.conductor.redis.jedis.JedisProxy;
 
 @Component
 @Conditional(AnyRedisCondition.class)

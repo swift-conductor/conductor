@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.cassandra.config;
+package com.swiftconductor.conductor.cassandra.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,16 +25,16 @@ import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Metadata;
 import com.datastax.driver.core.Session;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.cassandra.config.cache.CacheableEventHandlerDAO;
-import com.swiftconductor.cassandra.config.cache.CacheableMetadataDAO;
-import com.swiftconductor.cassandra.dao.CassandraEventHandlerDAO;
-import com.swiftconductor.cassandra.dao.CassandraExecutionDAO;
-import com.swiftconductor.cassandra.dao.CassandraMetadataDAO;
-import com.swiftconductor.cassandra.dao.CassandraPollDataDAO;
-import com.swiftconductor.cassandra.util.Statements;
-import com.swiftconductor.dao.EventHandlerDAO;
-import com.swiftconductor.dao.ExecutionDAO;
-import com.swiftconductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.cassandra.config.cache.CacheableEventHandlerDAO;
+import com.swiftconductor.conductor.cassandra.config.cache.CacheableMetadataDAO;
+import com.swiftconductor.conductor.cassandra.dao.CassandraEventHandlerDAO;
+import com.swiftconductor.conductor.cassandra.dao.CassandraExecutionDAO;
+import com.swiftconductor.conductor.cassandra.dao.CassandraMetadataDAO;
+import com.swiftconductor.conductor.cassandra.dao.CassandraPollDataDAO;
+import com.swiftconductor.conductor.cassandra.util.Statements;
+import com.swiftconductor.conductor.dao.EventHandlerDAO;
+import com.swiftconductor.conductor.dao.ExecutionDAO;
+import com.swiftconductor.conductor.dao.MetadataDAO;
 
 @Configuration(proxyBeanMethods = false)
 @EnableConfigurationProperties(CassandraProperties.class)

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.grpc.server.service;
+package com.swiftconductor.conductor.grpc.server.service;
 
 import org.springframework.stereotype.Service;
 

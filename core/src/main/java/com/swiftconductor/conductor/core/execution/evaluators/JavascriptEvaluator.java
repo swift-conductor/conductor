@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution.evaluators;
+package com.swiftconductor.conductor.core.execution.evaluators;
 
 import javax.script.ScriptException;
 
@@ -19,8 +19,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.core.events.ScriptEvaluator;
-import com.swiftconductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.conductor.core.events.ScriptEvaluator;
+import com.swiftconductor.conductor.core.exception.TerminateWorkflowException;
 
 @Component(JavascriptEvaluator.NAME)
 public class JavascriptEvaluator implements Evaluator {

@@ -11,16 +11,16 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution.mapper;
+package com.swiftconductor.conductor.core.execution.mapper;
 
 import java.util.Map;
 
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.core.execution.DeciderService;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.core.execution.DeciderService;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
 /** Business Object class used for interaction between the DeciderService and Different Mappers */
 public class TaskMapperContext {

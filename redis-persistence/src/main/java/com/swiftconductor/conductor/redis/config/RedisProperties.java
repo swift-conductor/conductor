@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redis.config;
+package com.swiftconductor.conductor.redis.config;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
@@ -24,8 +24,8 @@ import com.netflix.dyno.connectionpool.RetryPolicy.RetryPolicyFactory;
 import com.netflix.dyno.connectionpool.impl.RetryNTimes;
 import com.netflix.dyno.connectionpool.impl.RunOnce;
 
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
 
 @ConfigurationProperties("conductor.redis")
 public class RedisProperties {

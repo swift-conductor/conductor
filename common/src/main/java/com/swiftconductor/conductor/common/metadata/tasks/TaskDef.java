@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.common.metadata.tasks;
+package com.swiftconductor.conductor.common.metadata.tasks;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,12 +25,12 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-import com.swiftconductor.annotations.protogen.ProtoEnum;
-import com.swiftconductor.annotations.protogen.ProtoField;
-import com.swiftconductor.annotations.protogen.ProtoMessage;
-import com.swiftconductor.common.constraints.OwnerEmailMandatoryConstraint;
-import com.swiftconductor.common.constraints.TaskTimeoutConstraint;
-import com.swiftconductor.common.metadata.BaseDef;
+import com.swiftconductor.conductor.annotations.protogen.ProtoEnum;
+import com.swiftconductor.conductor.annotations.protogen.ProtoField;
+import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
+import com.swiftconductor.conductor.common.constraints.OwnerEmailMandatoryConstraint;
+import com.swiftconductor.conductor.common.constraints.TaskTimeoutConstraint;
+import com.swiftconductor.conductor.common.metadata.BaseDef;
 
 @ProtoMessage
 @TaskTimeoutConstraint

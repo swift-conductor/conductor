@@ -11,13 +11,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.annotationsprocessor.protogen;
+package com.swiftconductor.conductor.annotationsprocessor.protogen;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import com.squareup.javapoet.ClassName;
-import com.swiftconductor.annotationsprocessor.protogen.types.TypeMapper;
+import com.swiftconductor.conductor.annotationsprocessor.protogen.types.TypeMapper;
 
 public class ProtoFile {
     public static String PROTO_SUFFIX = "Pb";

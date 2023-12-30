@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.reconciliation;
+package com.swiftconductor.conductor.core.reconciliation;
 
 import java.time.Instant;
 import java.util.Optional;
@@ -24,22 +24,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.annotations.VisibleForTesting;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.core.WorkflowContext;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.dal.ExecutionDAOFacade;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.TaskModel.Status;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.annotations.VisibleForTesting;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.core.WorkflowContext;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.dal.ExecutionDAOFacade;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.TaskModel.Status;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
-import static com.swiftconductor.core.config.SchedulerConfiguration.SWEEPER_EXECUTOR_NAME;
-import static com.swiftconductor.core.utils.Utils.DECIDER_QUEUE;
+import static com.swiftconductor.conductor.core.config.SchedulerConfiguration.SWEEPER_EXECUTOR_NAME;
+import static com.swiftconductor.conductor.core.utils.Utils.DECIDER_QUEUE;
 
 @Component
 public class WorkflowSweeper {

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.service;
+package com.swiftconductor.conductor.service;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,9 +28,9 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.swiftconductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
 
-import static com.swiftconductor.TestUtils.getConstraintViolationMessages;
+import static com.swiftconductor.conductor.TestUtils.getConstraintViolationMessages;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.service;
+package com.swiftconductor.conductor.service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,21 +20,21 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.swiftconductor.annotations.Audit;
-import com.swiftconductor.annotations.Trace;
-import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.swiftconductor.common.metadata.workflow.SkipTaskRequest;
-import com.swiftconductor.common.metadata.workflow.StartWorkflowRequest;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.run.ExternalStorageLocation;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.Workflow;
-import com.swiftconductor.common.run.WorkflowSummary;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.execution.StartWorkflowInput;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.core.operation.StartWorkflowOperation;
-import com.swiftconductor.core.utils.Utils;
+import com.swiftconductor.conductor.annotations.Audit;
+import com.swiftconductor.conductor.annotations.Trace;
+import com.swiftconductor.conductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.SkipTaskRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.StartWorkflowRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.run.ExternalStorageLocation;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.Workflow;
+import com.swiftconductor.conductor.common.run.WorkflowSummary;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.execution.StartWorkflowInput;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.operation.StartWorkflowOperation;
+import com.swiftconductor.conductor.core.utils.Utils;
 
 @Audit
 @Trace

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.es6.dao.index;
+package com.swiftconductor.conductor.es6.dao.index;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -25,14 +25,14 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.common.collect.ImmutableMap;
-import com.swiftconductor.common.metadata.events.EventExecution;
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.common.metadata.tasks.TaskExecLog;
-import com.swiftconductor.common.run.TaskSummary;
-import com.swiftconductor.common.run.Workflow.WorkflowStatus;
-import com.swiftconductor.common.run.WorkflowSummary;
-import com.swiftconductor.core.events.queue.Message;
-import com.swiftconductor.es6.utils.TestUtils;
+import com.swiftconductor.conductor.common.metadata.events.EventExecution;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.conductor.common.run.TaskSummary;
+import com.swiftconductor.conductor.common.run.Workflow.WorkflowStatus;
+import com.swiftconductor.conductor.common.run.WorkflowSummary;
+import com.swiftconductor.conductor.core.events.queue.Message;
+import com.swiftconductor.conductor.es6.utils.TestUtils;
 
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertFalse;

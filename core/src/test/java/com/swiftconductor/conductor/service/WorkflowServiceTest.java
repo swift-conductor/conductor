@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.service;
+package com.swiftconductor.conductor.service;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -29,17 +29,17 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest;
-import com.swiftconductor.common.metadata.workflow.SkipTaskRequest;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.Workflow;
-import com.swiftconductor.common.run.WorkflowSummary;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.core.operation.StartWorkflowOperation;
+import com.swiftconductor.conductor.common.metadata.workflow.RerunWorkflowRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.SkipTaskRequest;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.Workflow;
+import com.swiftconductor.conductor.common.run.WorkflowSummary;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.operation.StartWorkflowOperation;
 
-import static com.swiftconductor.TestUtils.getConstraintViolationMessages;
+import static com.swiftconductor.conductor.TestUtils.getConstraintViolationMessages;
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.mock;

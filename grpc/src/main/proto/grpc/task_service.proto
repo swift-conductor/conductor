@@ -7,7 +7,7 @@ import "model/tasksummary.proto";
 import "model/task.proto";
 import "grpc/search.proto";
 
-option java_package = "com.swiftconductor.grpc";
+option java_package = "com.swiftconductor.conductor.grpc";
 option java_outer_classname = "TaskServicePb";
 option go_package = "github.com/netflix/conductor/client/gogrpc/conductor/grpc/tasks";
 

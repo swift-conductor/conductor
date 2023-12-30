@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.events;
+package com.swiftconductor.conductor.core.events;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -24,14 +24,14 @@ import org.springframework.context.Lifecycle;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.core.LifecycleAwareComponent;
-import com.swiftconductor.core.events.queue.DefaultEventQueueProcessor;
-import com.swiftconductor.core.events.queue.Message;
-import com.swiftconductor.core.events.queue.ObservableQueue;
-import com.swiftconductor.dao.EventHandlerDAO;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.model.TaskModel.Status;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.core.LifecycleAwareComponent;
+import com.swiftconductor.conductor.core.events.queue.DefaultEventQueueProcessor;
+import com.swiftconductor.conductor.core.events.queue.Message;
+import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.conductor.dao.EventHandlerDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.model.TaskModel.Status;
 
 /**
  * Manages the event queues registered in the system and sets up listeners for these.

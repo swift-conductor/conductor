@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redis.config;
+package com.swiftconductor.conductor.redis.config;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,7 @@ import com.netflix.dyno.queues.redis.sharding.ShardingStrategy;
 import com.netflix.dyno.queues.shard.DynoShardSupplier;
 
 import com.google.inject.ProvisionException;
-import com.swiftconductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
+import com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
 import redis.clients.jedis.commands.JedisCommands;
 
 @Configuration(proxyBeanMethods = false)

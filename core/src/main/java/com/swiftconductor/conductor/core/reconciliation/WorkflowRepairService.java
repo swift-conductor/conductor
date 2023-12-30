@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.reconciliation;
+package com.swiftconductor.conductor.core.reconciliation;
 
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -23,19 +23,19 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
-import com.swiftconductor.annotations.VisibleForTesting;
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.execution.tasks.SystemTaskRegistry;
-import com.swiftconductor.core.execution.tasks.WorkflowSystemTask;
-import com.swiftconductor.core.utils.QueueUtils;
-import com.swiftconductor.core.utils.Utils;
-import com.swiftconductor.dao.ExecutionDAO;
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.annotations.VisibleForTesting;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.execution.tasks.SystemTaskRegistry;
+import com.swiftconductor.conductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.conductor.core.utils.QueueUtils;
+import com.swiftconductor.conductor.core.utils.Utils;
+import com.swiftconductor.conductor.dao.ExecutionDAO;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
 /**
  * A helper service that tries to keep ExecutionDAO and QueueDAO in sync, based on the task or

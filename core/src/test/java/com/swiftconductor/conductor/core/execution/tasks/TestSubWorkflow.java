@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution.tasks;
+package com.swiftconductor.conductor.core.execution.tasks;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,15 +24,15 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.config.TestObjectMapperConfiguration;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.core.exception.NonTransientException;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.core.execution.StartWorkflowInput;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.core.operation.StartWorkflowOperation;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.core.exception.NonTransientException;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.core.execution.StartWorkflowInput;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.operation.StartWorkflowOperation;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

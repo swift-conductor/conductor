@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.events.queue;
+package com.swiftconductor.conductor.core.events.queue;
 
 import java.util.*;
 
@@ -25,16 +25,16 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.metadata.tasks.TaskResult;
-import com.swiftconductor.common.utils.TaskUtils;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.TaskModel.Status;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.conductor.common.utils.TaskUtils;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.TaskModel.Status;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
-import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_WAIT;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_WAIT;
 
 /**
  * Monitors and processes messages on the default event queues that Conductor listens on.

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.events;
+package com.swiftconductor.conductor.core.events;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -30,30 +30,30 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.config.TestObjectMapperConfiguration;
-import com.swiftconductor.common.metadata.events.EventExecution;
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.common.metadata.events.EventHandler.Action;
-import com.swiftconductor.common.metadata.events.EventHandler.Action.Type;
-import com.swiftconductor.common.metadata.events.EventHandler.StartWorkflow;
-import com.swiftconductor.common.metadata.events.EventHandler.TaskDetails;
-import com.swiftconductor.core.config.ConductorCoreConfiguration;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.events.queue.Message;
-import com.swiftconductor.core.events.queue.ObservableQueue;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.core.execution.StartWorkflowInput;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.core.execution.evaluators.Evaluator;
-import com.swiftconductor.core.execution.evaluators.JavascriptEvaluator;
-import com.swiftconductor.core.operation.StartWorkflowOperation;
-import com.swiftconductor.core.utils.ExternalPayloadStorageUtils;
-import com.swiftconductor.core.utils.JsonUtils;
-import com.swiftconductor.core.utils.ParametersUtils;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
-import com.swiftconductor.service.ExecutionService;
-import com.swiftconductor.service.MetadataService;
+import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.conductor.common.metadata.events.EventExecution;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler.Action;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler.Action.Type;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler.StartWorkflow;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler.TaskDetails;
+import com.swiftconductor.conductor.core.config.ConductorCoreConfiguration;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.events.queue.Message;
+import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.core.execution.StartWorkflowInput;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.execution.evaluators.Evaluator;
+import com.swiftconductor.conductor.core.execution.evaluators.JavascriptEvaluator;
+import com.swiftconductor.conductor.core.operation.StartWorkflowOperation;
+import com.swiftconductor.conductor.core.utils.ExternalPayloadStorageUtils;
+import com.swiftconductor.conductor.core.utils.JsonUtils;
+import com.swiftconductor.conductor.core.utils.ParametersUtils;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
+import com.swiftconductor.conductor.service.ExecutionService;
+import com.swiftconductor.conductor.service.MetadataService;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;

@@ -11,13 +11,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.sync.local;
+package com.swiftconductor.conductor.core.sync.local;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.swiftconductor.core.sync.Lock;
+import com.swiftconductor.conductor.core.sync.Lock;
 
 @Configuration
 @ConditionalOnProperty(name = "conductor.workflow-execution-lock.type", havingValue = "local_only")

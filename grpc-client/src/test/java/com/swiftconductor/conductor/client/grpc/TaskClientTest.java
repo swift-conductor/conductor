@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.grpc;
+package com.swiftconductor.conductor.client.grpc;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,15 +20,15 @@ import org.mockito.Mock;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.TaskSummary;
-import com.swiftconductor.grpc.ProtoMapper;
-import com.swiftconductor.grpc.SearchPb;
-import com.swiftconductor.grpc.TaskServiceGrpc;
-import com.swiftconductor.grpc.TaskServicePb;
-import com.swiftconductor.proto.TaskPb;
-import com.swiftconductor.proto.TaskSummaryPb;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.TaskSummary;
+import com.swiftconductor.conductor.grpc.ProtoMapper;
+import com.swiftconductor.conductor.grpc.SearchPb;
+import com.swiftconductor.conductor.grpc.TaskServiceGrpc;
+import com.swiftconductor.conductor.grpc.TaskServicePb;
+import com.swiftconductor.conductor.proto.TaskPb;
+import com.swiftconductor.conductor.proto.TaskSummaryPb;
 import io.grpc.ManagedChannelBuilder;
 
 import static junit.framework.TestCase.assertEquals;

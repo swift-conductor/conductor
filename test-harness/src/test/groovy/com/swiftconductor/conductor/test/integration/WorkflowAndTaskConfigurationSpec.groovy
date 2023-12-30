@@ -11,26 +11,26 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.test.integration
+package com.swiftconductor.conductor.test.integration
 
 import org.springframework.beans.factory.annotation.Autowired
 
-import com.swiftconductor.common.metadata.tasks.Task
-import com.swiftconductor.common.metadata.tasks.TaskDef
-import com.swiftconductor.common.metadata.tasks.TaskResult
-import com.swiftconductor.common.metadata.tasks.TaskType
-import com.swiftconductor.common.metadata.workflow.RerunWorkflowRequest
-import com.swiftconductor.common.metadata.workflow.WorkflowDef
-import com.swiftconductor.common.metadata.workflow.WorkflowTask
-import com.swiftconductor.common.run.Workflow
-import com.swiftconductor.core.execution.StartWorkflowInput
-import com.swiftconductor.core.utils.Utils
-import com.swiftconductor.dao.QueueDAO
-import com.swiftconductor.test.base.AbstractSpecification
+import com.swiftconductor.conductor.common.metadata.tasks.Task
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType
+import com.swiftconductor.conductor.common.metadata.workflow.RerunWorkflowRequest
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask
+import com.swiftconductor.conductor.common.run.Workflow
+import com.swiftconductor.conductor.core.execution.StartWorkflowInput
+import com.swiftconductor.conductor.core.utils.Utils
+import com.swiftconductor.conductor.dao.QueueDAO
+import com.swiftconductor.conductor.test.base.AbstractSpecification
 
 import spock.lang.Shared
 
-import static com.swiftconductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedTask
+import static com.swiftconductor.conductor.test.util.WorkflowTestUtil.verifyPolledAndAcknowledgedTask
 
 class WorkflowAndTaskConfigurationSpec extends AbstractSpecification {
 

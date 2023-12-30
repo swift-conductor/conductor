@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sqs.eventqueue;
+package com.swiftconductor.conductor.sqs.eventqueue;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -30,18 +30,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.util.concurrent.Uninterruptibles;
-import com.swiftconductor.common.config.TestObjectMapperConfiguration;
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.metadata.tasks.TaskResult;
-import com.swiftconductor.core.events.queue.DefaultEventQueueProcessor;
-import com.swiftconductor.core.events.queue.Message;
-import com.swiftconductor.core.events.queue.ObservableQueue;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.TaskModel.Status;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
+import com.swiftconductor.conductor.core.events.queue.DefaultEventQueueProcessor;
+import com.swiftconductor.conductor.core.events.queue.Message;
+import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.TaskModel.Status;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
-import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_WAIT;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_WAIT;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.*;

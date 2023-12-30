@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redis.jedis;
+package com.swiftconductor.conductor.redis.jedis;
 
 import java.util.List;
 
@@ -20,8 +20,8 @@ import org.junit.Test;
 
 import com.netflix.dyno.connectionpool.Host;
 
-import com.swiftconductor.redis.config.RedisProperties;
-import com.swiftconductor.redis.dynoqueue.ConfigurationHostSupplier;
+import com.swiftconductor.conductor.redis.config.RedisProperties;
+import com.swiftconductor.conductor.redis.dynoqueue.ConfigurationHostSupplier;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

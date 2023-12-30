@@ -11,15 +11,15 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution.tasks;
+package com.swiftconductor.conductor.core.execution.tasks;
 
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
-import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_NOOP;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_NOOP;
 
 @Component(TASK_TYPE_NOOP)
 public class Noop extends WorkflowSystemTask {

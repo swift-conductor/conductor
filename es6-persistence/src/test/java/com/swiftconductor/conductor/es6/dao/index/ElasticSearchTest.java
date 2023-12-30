@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.es6.dao.index;
+package com.swiftconductor.conductor.es6.dao.index;
 
 import java.util.Map;
 
@@ -28,8 +28,8 @@ import org.testcontainers.elasticsearch.ElasticsearchContainer;
 import org.testcontainers.utility.DockerImageName;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.config.TestObjectMapperConfiguration;
-import com.swiftconductor.es6.config.ElasticSearchProperties;
+import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
+import com.swiftconductor.conductor.es6.config.ElasticSearchProperties;
 
 @ContextConfiguration(
         classes = {TestObjectMapperConfiguration.class, ElasticSearchTest.TestConfiguration.class})

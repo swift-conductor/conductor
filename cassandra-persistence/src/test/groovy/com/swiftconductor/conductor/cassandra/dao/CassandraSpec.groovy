@@ -11,18 +11,19 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.cassandra.dao
+package com.swiftconductor.conductor.cassandra.dao
 
 import java.time.Duration
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.ContextConfiguration
 import org.testcontainers.containers.CassandraContainer
+import org.testcontainers.containers.wait.CassandraQueryWaitStrategy;
 import org.testcontainers.spock.Testcontainers
 
-import com.swiftconductor.cassandra.config.CassandraProperties
-import com.swiftconductor.cassandra.util.Statements
-import com.swiftconductor.common.config.TestObjectMapperConfiguration
+import com.swiftconductor.conductor.cassandra.config.CassandraProperties
+import com.swiftconductor.conductor.cassandra.util.Statements
+import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration
 
 import com.datastax.driver.core.ConsistencyLevel
 import com.datastax.driver.core.Session
@@ -38,7 +39,7 @@ abstract class CassandraSpec extends Specification {
 
     @Shared
     CassandraContainer cassandra = new CassandraContainer()
-
+                                        .waitingFor(new CassandraQueryWaitStrategy());
     @Shared
     Session session
 

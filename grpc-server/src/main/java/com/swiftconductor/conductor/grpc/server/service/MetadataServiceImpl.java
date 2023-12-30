@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.grpc.server.service;
+package com.swiftconductor.conductor.grpc.server.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,15 +20,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.grpc.MetadataServiceGrpc;
-import com.swiftconductor.grpc.MetadataServicePb;
-import com.swiftconductor.grpc.ProtoMapper;
-import com.swiftconductor.proto.TaskDefPb;
-import com.swiftconductor.proto.WorkflowDefPb;
-import com.swiftconductor.service.MetadataService;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.grpc.MetadataServiceGrpc;
+import com.swiftconductor.conductor.grpc.MetadataServicePb;
+import com.swiftconductor.conductor.grpc.ProtoMapper;
+import com.swiftconductor.conductor.proto.TaskDefPb;
+import com.swiftconductor.conductor.proto.WorkflowDefPb;
+import com.swiftconductor.conductor.service.MetadataService;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 

@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.redis.dao;
+package com.swiftconductor.conductor.redis.dao;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -29,13 +29,13 @@ import com.netflix.dyno.queues.ShardSupplier;
 import com.netflix.dyno.queues.redis.RedisQueues;
 import com.netflix.dyno.queues.redis.sharding.ShardingStrategy;
 
-import com.swiftconductor.dao.QueueDAO;
-import com.swiftconductor.redis.config.RedisProperties;
-import com.swiftconductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
-import com.swiftconductor.redis.jedis.JedisMock;
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.redis.config.RedisProperties;
+import com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
+import com.swiftconductor.conductor.redis.jedis.JedisMock;
 import redis.clients.jedis.commands.JedisCommands;
 
-import static com.swiftconductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider.LOCAL_ONLY_STRATEGY;
+import static com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider.LOCAL_ONLY_STRATEGY;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;

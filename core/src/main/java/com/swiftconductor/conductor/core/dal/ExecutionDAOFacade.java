@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.dal;
+package com.swiftconductor.conductor.core.dal;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -31,29 +31,29 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.common.metadata.events.EventExecution;
-import com.swiftconductor.common.metadata.tasks.PollData;
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.tasks.TaskExecLog;
-import com.swiftconductor.common.run.SearchResult;
-import com.swiftconductor.common.run.TaskSummary;
-import com.swiftconductor.common.run.Workflow;
-import com.swiftconductor.common.run.WorkflowSummary;
-import com.swiftconductor.common.utils.ExternalPayloadStorage;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.events.queue.Message;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.exception.TerminateWorkflowException;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.core.utils.ExternalPayloadStorageUtils;
-import com.swiftconductor.core.utils.QueueUtils;
-import com.swiftconductor.dao.*;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.common.metadata.events.EventExecution;
+import com.swiftconductor.conductor.common.metadata.tasks.PollData;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskExecLog;
+import com.swiftconductor.conductor.common.run.SearchResult;
+import com.swiftconductor.conductor.common.run.TaskSummary;
+import com.swiftconductor.conductor.common.run.Workflow;
+import com.swiftconductor.conductor.common.run.WorkflowSummary;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.events.queue.Message;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.core.utils.ExternalPayloadStorageUtils;
+import com.swiftconductor.conductor.core.utils.QueueUtils;
+import com.swiftconductor.conductor.dao.*;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
-import static com.swiftconductor.core.utils.Utils.DECIDER_QUEUE;
+import static com.swiftconductor.conductor.core.utils.Utils.DECIDER_QUEUE;
 
 /**
  * Service that acts as a facade for accessing execution data from the {@link ExecutionDAO}, {@link
@@ -488,8 +488,8 @@ public class ExecutionDAOFacade {
      *
      * @param taskModel the task to be updated in the data store
      * @throws TransientException if the {@link IndexDAO} or {@link ExecutionDAO} operations fail.
-     * @throws com.swiftconductor.core.exception.NonTransientException if the externalization of
-     *     payload fails.
+     * @throws com.swiftconductor.conductor.core.exception.NonTransientException if the
+     *     externalization of payload fails.
      */
     public void updateTask(TaskModel taskModel) {
         if (taskModel.getStatus() != null) {

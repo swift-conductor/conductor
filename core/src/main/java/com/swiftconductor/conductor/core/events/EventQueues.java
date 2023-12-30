@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.events;
+package com.swiftconductor.conductor.core.events;
 
 import java.util.List;
 import java.util.Map;
@@ -24,8 +24,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.core.events.queue.ObservableQueue;
-import com.swiftconductor.core.utils.ParametersUtils;
+import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.conductor.core.utils.ParametersUtils;
 
 /** Holders for internal event queues */
 @Component

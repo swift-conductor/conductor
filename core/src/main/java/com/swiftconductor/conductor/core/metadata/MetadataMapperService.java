@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.metadata;
+package com.swiftconductor.conductor.core.metadata;
 
 import java.util.Optional;
 import java.util.Set;
@@ -22,20 +22,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.annotations.VisibleForTesting;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.common.metadata.workflow.SubWorkflowParams;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.core.WorkflowContext;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.core.exception.TerminateWorkflowException;
-import com.swiftconductor.core.utils.Utils;
-import com.swiftconductor.dao.MetadataDAO;
-import com.swiftconductor.metrics.Monitors;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.annotations.VisibleForTesting;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.common.metadata.workflow.SubWorkflowParams;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.core.WorkflowContext;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.core.exception.TerminateWorkflowException;
+import com.swiftconductor.conductor.core.utils.Utils;
+import com.swiftconductor.conductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
 /**
  * Populates metadata definitions within workflow objects. Benefits of loading and populating

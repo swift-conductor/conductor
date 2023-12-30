@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.automator;
+package com.swiftconductor.conductor.client.automator;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -30,9 +30,9 @@ import org.slf4j.LoggerFactory;
 
 import com.netflix.discovery.EurekaClient;
 
-import com.swiftconductor.client.exception.ConductorClientException;
-import com.swiftconductor.client.http.TaskClient;
-import com.swiftconductor.client.worker.Worker;
+import com.swiftconductor.conductor.client.exception.ConductorClientException;
+import com.swiftconductor.conductor.client.http.TaskClient;
+import com.swiftconductor.conductor.client.worker.Worker;
 
 /** Configures automated polling of tasks and execution via the registered {@link Worker}s. */
 public class TaskRunnerConfigurer {

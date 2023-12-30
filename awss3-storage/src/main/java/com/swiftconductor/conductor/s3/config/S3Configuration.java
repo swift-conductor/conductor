@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.s3.config;
+package com.swiftconductor.conductor.s3.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -20,9 +20,9 @@ import org.springframework.context.annotation.Configuration;
 
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
-import com.swiftconductor.common.utils.ExternalPayloadStorage;
-import com.swiftconductor.core.utils.IDGenerator;
-import com.swiftconductor.s3.storage.S3PayloadStorage;
+import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
+import com.swiftconductor.conductor.core.utils.IDGenerator;
+import com.swiftconductor.conductor.s3.storage.S3PayloadStorage;
 
 @Configuration
 @EnableConfigurationProperties(S3Properties.class)

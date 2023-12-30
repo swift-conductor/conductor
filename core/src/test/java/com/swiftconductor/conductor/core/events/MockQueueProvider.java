@@ -11,11 +11,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.events;
+package com.swiftconductor.conductor.core.events;
 
 import org.springframework.lang.NonNull;
 
-import com.swiftconductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
 
 public class MockQueueProvider implements EventQueueProvider {
 

@@ -63,7 +63,7 @@ allprojects {
         }
     }
 
-    group = 'com.swiftconductor'
+    group = 'com.swiftconductor.conductor'
 
     configurations.all {
         exclude group: 'ch.qos.logback', module: 'logback-classic'
@@ -308,7 +308,7 @@ configure(allprojects - project(':conductor-grpc')) {
     configure(project(":conductor-$it")) {
         spotless {
             groovy {
-                importOrder('java', 'javax', 'org', 'com.swiftconductor', '', '\\#com.conductor', '\\#')
+                importOrder('java', 'javax', 'org', 'com.swiftconductor.conductor', '', '\\#com.conductor', '\\#')
                 licenseHeaderFile("$rootDir/licenseheader.txt")
             }
         }

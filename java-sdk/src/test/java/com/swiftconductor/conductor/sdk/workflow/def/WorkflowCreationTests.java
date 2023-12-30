@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.sdk.workflow.def;
+package com.swiftconductor.conductor.sdk.workflow.def;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,16 +30,16 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.swiftconductor.common.metadata.tasks.TaskType;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.run.Workflow;
-import com.swiftconductor.sdk.testing.WorkflowTestRunner;
-import com.swiftconductor.sdk.workflow.def.tasks.*;
-import com.swiftconductor.sdk.workflow.executor.WorkflowExecutor;
-import com.swiftconductor.sdk.workflow.task.InputParam;
-import com.swiftconductor.sdk.workflow.task.OutputParam;
-import com.swiftconductor.sdk.workflow.task.WorkerTask;
-import com.swiftconductor.sdk.workflow.testing.TestWorkflowInput;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.run.Workflow;
+import com.swiftconductor.conductor.sdk.testing.WorkflowTestRunner;
+import com.swiftconductor.conductor.sdk.workflow.def.tasks.*;
+import com.swiftconductor.conductor.sdk.workflow.executor.WorkflowExecutor;
+import com.swiftconductor.conductor.sdk.workflow.task.InputParam;
+import com.swiftconductor.conductor.sdk.workflow.task.OutputParam;
+import com.swiftconductor.conductor.sdk.workflow.task.WorkerTask;
+import com.swiftconductor.conductor.sdk.workflow.testing.TestWorkflowInput;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -55,7 +55,7 @@ public class WorkflowCreationTests {
     @BeforeAll
     public static void init() throws IOException {
         runner = new WorkflowTestRunner(8080, "3.7.3");
-        runner.init("com.swiftconductor.sdk");
+        runner.init("com.swiftconductor.conductor.sdk");
         executor = runner.getWorkflowExecutor();
     }
 

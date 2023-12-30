@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.client.spring;
+package com.swiftconductor.conductor.client.spring;
 
 import java.util.Map;
 
@@ -22,9 +22,9 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.client.http.TaskClient;
-import com.swiftconductor.sdk.workflow.executor.task.AnnotatedWorkerExecutor;
-import com.swiftconductor.sdk.workflow.executor.task.WorkerConfiguration;
+import com.swiftconductor.conductor.client.http.TaskClient;
+import com.swiftconductor.conductor.sdk.workflow.executor.task.AnnotatedWorkerExecutor;
+import com.swiftconductor.conductor.sdk.workflow.executor.task.WorkerConfiguration;
 
 @Component
 public class ConductorWorkerAutoConfiguration

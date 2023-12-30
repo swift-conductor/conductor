@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.rest.controllers;
+package com.swiftconductor.conductor.rest.controllers;
 
 import java.util.List;
 import java.util.Map;
@@ -23,11 +23,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.service.AdminService;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.service.AdminService;
 import io.swagger.v3.oas.annotations.Operation;
 
-import static com.swiftconductor.rest.config.RequestMappingConstants.ADMIN;
+import static com.swiftconductor.conductor.rest.config.RequestMappingConstants.ADMIN;
 import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
 
 @RestController

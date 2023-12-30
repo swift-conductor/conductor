@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.service;
+package com.swiftconductor.conductor.service;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -22,14 +22,14 @@ import java.util.Optional;
 import org.springframework.boot.info.BuildProperties;
 import org.springframework.stereotype.Service;
 
-import com.swiftconductor.annotations.Audit;
-import com.swiftconductor.annotations.Trace;
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.events.EventQueueManager;
-import com.swiftconductor.core.reconciliation.WorkflowRepairService;
-import com.swiftconductor.core.utils.Utils;
-import com.swiftconductor.dao.QueueDAO;
+import com.swiftconductor.conductor.annotations.Audit;
+import com.swiftconductor.conductor.annotations.Trace;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.events.EventQueueManager;
+import com.swiftconductor.conductor.core.reconciliation.WorkflowRepairService;
+import com.swiftconductor.conductor.core.utils.Utils;
+import com.swiftconductor.conductor.dao.QueueDAO;
 
 @Audit
 @Trace

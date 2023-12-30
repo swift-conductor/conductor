@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.service;
+package com.swiftconductor.conductor.service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -23,18 +23,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.swiftconductor.common.constraints.OwnerEmailMandatoryConstraint;
-import com.swiftconductor.common.metadata.events.EventHandler;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowDefSummary;
-import com.swiftconductor.common.model.BulkResponse;
-import com.swiftconductor.core.WorkflowContext;
-import com.swiftconductor.core.config.ConductorProperties;
-import com.swiftconductor.core.exception.NotFoundException;
-import com.swiftconductor.dao.EventHandlerDAO;
-import com.swiftconductor.dao.MetadataDAO;
-import com.swiftconductor.validations.ValidationContext;
+import com.swiftconductor.conductor.common.constraints.OwnerEmailMandatoryConstraint;
+import com.swiftconductor.conductor.common.metadata.events.EventHandler;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDefSummary;
+import com.swiftconductor.conductor.common.model.BulkResponse;
+import com.swiftconductor.conductor.core.WorkflowContext;
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.core.exception.NotFoundException;
+import com.swiftconductor.conductor.dao.EventHandlerDAO;
+import com.swiftconductor.conductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.validations.ValidationContext;
 
 @Service
 public class MetadataServiceImpl implements MetadataService {

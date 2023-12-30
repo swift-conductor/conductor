@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.execution.tasks;
+package com.swiftconductor.conductor.core.execution.tasks;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -22,17 +22,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.swiftconductor.annotations.VisibleForTesting;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowTask;
-import com.swiftconductor.common.utils.TaskUtils;
-import com.swiftconductor.core.events.ScriptEvaluator;
-import com.swiftconductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.core.utils.ParametersUtils;
-import com.swiftconductor.model.TaskModel;
-import com.swiftconductor.model.WorkflowModel;
+import com.swiftconductor.conductor.annotations.VisibleForTesting;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+import com.swiftconductor.conductor.common.utils.TaskUtils;
+import com.swiftconductor.conductor.core.events.ScriptEvaluator;
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.utils.ParametersUtils;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
 
-import static com.swiftconductor.common.metadata.tasks.TaskType.TASK_TYPE_DO_WHILE;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_DO_WHILE;
 
 @Component(TASK_TYPE_DO_WHILE)
 public class DoWhile extends WorkflowSystemTask {

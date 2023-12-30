@@ -11,7 +11,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.cassandra.dao;
+package com.swiftconductor.conductor.cassandra.dao;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -33,23 +33,23 @@ import com.datastax.driver.core.Row;
 import com.datastax.driver.core.Session;
 import com.datastax.driver.core.exceptions.DriverException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.annotations.Trace;
-import com.swiftconductor.annotations.VisibleForTesting;
-import com.swiftconductor.cassandra.config.CassandraProperties;
-import com.swiftconductor.cassandra.util.Statements;
-import com.swiftconductor.common.metadata.tasks.TaskDef;
-import com.swiftconductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.core.exception.ConflictException;
-import com.swiftconductor.core.exception.TransientException;
-import com.swiftconductor.dao.MetadataDAO;
-import com.swiftconductor.metrics.Monitors;
+import com.swiftconductor.conductor.annotations.Trace;
+import com.swiftconductor.conductor.annotations.VisibleForTesting;
+import com.swiftconductor.conductor.cassandra.config.CassandraProperties;
+import com.swiftconductor.conductor.cassandra.util.Statements;
+import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.core.exception.ConflictException;
+import com.swiftconductor.conductor.core.exception.TransientException;
+import com.swiftconductor.conductor.dao.MetadataDAO;
+import com.swiftconductor.conductor.metrics.Monitors;
 
-import static com.swiftconductor.cassandra.util.Constants.TASK_DEFINITION_KEY;
-import static com.swiftconductor.cassandra.util.Constants.TASK_DEFS_KEY;
-import static com.swiftconductor.cassandra.util.Constants.WORKFLOW_DEFINITION_KEY;
-import static com.swiftconductor.cassandra.util.Constants.WORKFLOW_DEF_INDEX_KEY;
-import static com.swiftconductor.cassandra.util.Constants.WORKFLOW_DEF_NAME_VERSION_KEY;
-import static com.swiftconductor.common.metadata.tasks.TaskDef.ONE_HOUR;
+import static com.swiftconductor.conductor.cassandra.util.Constants.TASK_DEFINITION_KEY;
+import static com.swiftconductor.conductor.cassandra.util.Constants.TASK_DEFS_KEY;
+import static com.swiftconductor.conductor.cassandra.util.Constants.WORKFLOW_DEFINITION_KEY;
+import static com.swiftconductor.conductor.cassandra.util.Constants.WORKFLOW_DEF_INDEX_KEY;
+import static com.swiftconductor.conductor.cassandra.util.Constants.WORKFLOW_DEF_NAME_VERSION_KEY;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskDef.ONE_HOUR;
 
 @Trace
 public class CassandraMetadataDAO extends CassandraBaseDAO implements MetadataDAO {

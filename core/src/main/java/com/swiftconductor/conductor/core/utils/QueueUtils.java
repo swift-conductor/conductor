@@ -11,12 +11,12 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.swiftconductor.core.utils;
+package com.swiftconductor.conductor.core.utils;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.swiftconductor.common.metadata.tasks.Task;
-import com.swiftconductor.model.TaskModel;
+import com.swiftconductor.conductor.common.metadata.tasks.Task;
+import com.swiftconductor.conductor.model.TaskModel;
 
 public class QueueUtils {
 
