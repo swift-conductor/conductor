@@ -18,7 +18,7 @@ import java.time.Duration
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.ContextConfiguration
 import org.testcontainers.containers.CassandraContainer
-import org.testcontainers.containers.wait.CassandraQueryWaitStrategy;
+import org.testcontainers.containers.wait.CassandraQueryWaitStrategy
 import org.testcontainers.spock.Testcontainers
 
 import com.swiftconductor.conductor.cassandra.config.CassandraProperties
