@@ -1,4 +1,4 @@
-![Conductor](docs/docs/img/logo.png)
+![Conductor](docs/logo.svg)
 
 ## Notice
 
