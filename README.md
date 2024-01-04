@@ -24,7 +24,13 @@ The final Netflix release is [![Github release](https://img.shields.io/github/v/
 
 ## Workflow Creation in Code
 
-Conductor supports creating workflows using JSON and Code. SDK support for creating workflows using code is available in multiple languages and can be found at https://github.com/conductor-sdk
+Conductor supports creating workflows using JSON and Code. SDK support for creating workflows using code is available in multiple languages and can be found at:
+
+* [Swift Conductor Client SDK for Python](https://pypi.org/project/swift-conductor-client/)
+* [Swift Conductor Client SDK for .NET](https://www.nuget.org/packages/swift-conductor-client)
+* [Swift Conductor Client SDK for Java](https://github.com/swift-conductor/conductor/tree/main/java-sdk)
+* [Swift Conductor Client SDK for Go](https://github.com/swift-conductor/conductor/tree/main/java-sdk)
+* [Swift Conductor Client SDK for TypeScript / JavaScript](https://github.com/swift-conductor/conductor-client-typescript)
 
 ## Community Contributions
 
@@ -36,17 +42,19 @@ The modules contributed by the community are housed at [conductor-community](htt
 
 ## Getting Started - Building & Running Conductor
 
-###  Using Docker:
+###  Using Docker
 
-The easiest way to get started is with Docker containers. Please follow the instructions [here](https://swiftconductor.com/devguide/running/docker.html). 
+The easiest way to get started is with Docker containers. Please follow the instructions [here](https://swiftconductor.com/getting-started/running/docker.html). 
 
-###  From Source:
+###  From Source
 
 Conductor Server is a [Spring Boot](https://spring.io/projects/spring-boot) project and follows all applicable conventions. See instructions [here](https://swiftconductor.com/getting-started/running/source.html).
 
 ## Published Artifacts
 
-Current binaries are available from the [Maven Central Repository](https://search.maven.org/search?q=g:com.swiftconductor.conductor).
+Current snapshot binaries `3.16-SNAPSHOT` are available from the [Maven Snapshot Repository](https://s01.oss.sonatype.org/content/repositories/snapshots/com/swiftconductor/conductor/).  See [OSSRH Usage Notes](https://central.sonatype.org/publish/publish-guide/#accessing-repositories) for details.
+
+Future release binaries will be available from the [Maven Central Repository](https://search.maven.org/search?q=g:com.swiftconductor.conductor).
 
 The final binaries built by Netflix are available from the [Maven Central Repository](https://search.maven.org/search?q=g:com.swiftconductor.conductor).
 
