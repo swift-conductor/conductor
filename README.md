@@ -29,7 +29,7 @@ Conductor supports creating workflows using JSON and Code. SDK support for creat
 * [Swift Conductor Client SDK for Python](https://pypi.org/project/swift-conductor-client/)
 * [Swift Conductor Client SDK for .NET](https://www.nuget.org/packages/swift-conductor-client)
 * [Swift Conductor Client SDK for Java](https://github.com/swift-conductor/conductor/tree/main/java-sdk)
-* [Swift Conductor Client SDK for Go](https://github.com/swift-conductor/conductor/tree/main/java-sdk)
+* [Swift Conductor Client SDK for Go](https://github.com/swift-conductor/conductor-client-golang)
 * [Swift Conductor Client SDK for TypeScript / JavaScript](https://github.com/swift-conductor/conductor-client-typescript)
 
 ## Community Contributions
