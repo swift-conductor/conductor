@@ -1,6 +1,7 @@
 FROM openjdk:17-jdk
 
-WORKDIR /workspace/conductor
 COPY . /workspace/conductor
+
+WORKDIR /workspace/conductor
 
 RUN ./gradlew clean build

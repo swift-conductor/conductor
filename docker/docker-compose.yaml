@@ -1,10 +1,10 @@
-version: '2.3'
+version: '3'
 
 services:
   conductor-server:
     environment:
       - CONFIG_PROP=config-redis.properties
-    image: conductor:server
+    image: swift-conductor:server
     container_name: conductor-server
     build:
       context: ../
@@ -13,7 +13,6 @@ services:
       - internal
     ports:
       - 8080:8080
-      - 5000:5000
     healthcheck:
       test: ["CMD", "curl","-I" ,"-XGET", "http://localhost:8080/health"]
       interval: 60s
@@ -45,17 +44,17 @@ services:
       test: [ "CMD", "redis-cli","ping" ]
 
   conductor-elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.16
+    image: docker.io/elasticsearch:6.8.23
     environment:
       - "ES_JAVA_OPTS=-Xms512m -Xmx1024m"
       - xpack.security.enabled=false
       - discovery.type=single-node
     volumes:
-      - esdata-conductor:/usr/share/elasticsearch/data
+      - es6-data-conductor-core:/usr/share/elasticsearch/data
     networks:
       - internal
     ports:
-      - 9201:9200
+      - 9200:9200
     healthcheck:
       test: curl http://localhost:9200/_cluster/health -o /dev/null
       interval: 5s
@@ -68,7 +67,7 @@ services:
         max-file: "3"
 
 volumes:
-  esdata-conductor:
+  es6-data-conductor-core:
     driver: local
 
 networks:

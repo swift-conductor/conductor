@@ -16,16 +16,13 @@
 
 echo "Starting Conductor server"
 
-echo "Running Nginx in background"
-# Start nginx as daemon
-nginx
-
 # Start the server
 cd /app/libs
+
 echo "Property file: $CONFIG_PROP"
 echo $CONFIG_PROP
-export config_file=
 
+export config_file=
 if [ -z "$CONFIG_PROP" ];
   then
     echo "Using default configuration file";
