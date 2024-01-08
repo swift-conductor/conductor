@@ -18,6 +18,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.AfterAll;
@@ -43,12 +44,12 @@ public class WorkflowTestFrameworkTests {
 
     @BeforeAll
     public static void init() throws IOException {
-        testRunner = new WorkflowTestRunner(8080, "3.7.3");
+        testRunner = new WorkflowTestRunner(8080, "3.16-SNAPSHOT");
         testRunner.init("com.swiftconductor.conductor.sdk.workflow.testing");
 
         executor = testRunner.getWorkflowExecutor();
         executor.loadTaskDefs("/tasks.json");
-        executor.loadWorkflowDefs("/simple_workflow.json");
+        executor.loadWorkflowDefs("/simple_workflow.json", true);
     }
 
     @AfterAll
@@ -66,7 +67,11 @@ public class WorkflowTestFrameworkTests {
         input.put("number", 0);
 
         // Start the workflow and wait for it to complete
-        Workflow workflow = executor.executeWorkflow("Decision_TaskExample", 1, input).get();
+        CompletableFuture<Workflow> completableFuture =
+                executor.executeWorkflow("Decision_TaskExample", 1, input);
+
+        Workflow workflow = completableFuture.get();
+        // Workflow workflow = completableFuture.orTimeout(20, TimeUnit.SECONDS).get();
 
         assertNotNull(workflow);
         assertEquals(Workflow.WorkflowStatus.COMPLETED, workflow.getStatus());
@@ -103,15 +108,21 @@ public class WorkflowTestFrameworkTests {
     @Test
     public void testWorkflowFailure() throws Exception {
 
-        Map<String, Object> input = new HashMap<>();
         // task2Name is missing which will cause workflow to fail
+        Map<String, Object> input = new HashMap<>();
+        // input.put("task2Name", "task_2");
         input.put("mod", "1");
         input.put("oddEven", "12");
         input.put("number", 0);
 
         // we are missing task2Name parameter which is required to wire up dynamictask
         // The workflow should fail as we are not passing it as input
-        Workflow workflow = executor.executeWorkflow("Decision_TaskExample", 1, input).get();
+        CompletableFuture<Workflow> completableFuture =
+                executor.executeWorkflow("Decision_TaskExample", 1, input);
+
+        Workflow workflow = completableFuture.get();
+        // Workflow workflow = completableFuture.orTimeout(20, TimeUnit.SECONDS).get();
+
         assertNotNull(workflow);
         assertEquals(Workflow.WorkflowStatus.FAILED, workflow.getStatus());
         assertNotNull(workflow.getReasonForIncompletion());

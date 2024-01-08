@@ -54,7 +54,7 @@ public class WorkflowCreationTests {
 
     @BeforeAll
     public static void init() throws IOException {
-        runner = new WorkflowTestRunner(8080, "3.7.3");
+        runner = new WorkflowTestRunner(8080, "3.16-SNAPSHOT");
         runner.init("com.swiftconductor.conductor.sdk");
         executor = runner.getWorkflowExecutor();
     }
