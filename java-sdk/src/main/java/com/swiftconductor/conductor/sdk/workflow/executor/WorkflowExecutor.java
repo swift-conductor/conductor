@@ -203,22 +203,7 @@ public class WorkflowExecutor {
         }
     }
 
-    public void loadWorkflowDefs(String resourcePath, boolean overwrite) throws IOException {
-        InputStream resource = WorkflowExecutor.class.getResourceAsStream(resourcePath);
-        if (resource != null) {
-            WorkflowDef workflowDef = objectMapper.readValue(resource, WorkflowDef.class);
-            loadMetadata(workflowDef, overwrite);
-        }
-    }
-
     public void loadMetadata(WorkflowDef workflowDef) {
-        metadataClient.registerWorkflowDef(workflowDef);
-    }
-
-    public void loadMetadata(WorkflowDef workflowDef, boolean overwrite) {
-        if (overwrite) {
-            metadataClient.unregisterWorkflowDef(workflowDef.getName(), workflowDef.getVersion());
-        }
         metadataClient.registerWorkflowDef(workflowDef);
     }
 

@@ -16,10 +16,12 @@ package com.swiftconductor.conductor.sdk.testing;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -86,24 +88,8 @@ public class LocalServerRunner {
         }
 
         try {
-            String downloadURL =
-                    "https://s01.oss.sonatype.org/content/repositories/snapshots"
-                            + "/com/swiftconductor/conductor/conductor-server/"
-                            + conductorVersion
-                            + "/conductor-server-"
-                            + conductorVersion
-                            + "-boot.jar";
-
-            String repositoryURL =
-                    Optional.ofNullable(System.getProperty("repositoryURL")).orElse(downloadURL);
-
-            LOGGER.info(
-                    "Running conductor with version {} from repo url {}",
-                    conductorVersion,
-                    repositoryURL);
-
             Runtime.getRuntime().addShutdownHook(new Thread(this::shutdown));
-            installAndStartServer(repositoryURL, port);
+            installAndStartServer(port);
             healthCheckExecutor.scheduleAtFixedRate(
                     () -> {
                         try {
@@ -141,19 +127,58 @@ public class LocalServerRunner {
         }
     }
 
-    private synchronized void installAndStartServer(String repositoryURL, int localServerPort)
-            throws IOException {
+    private synchronized void installAndStartServer(int localServerPort) throws IOException {
         if (serverProcess != null) {
             return;
         }
 
+        String downloadURL =
+                "https://s01.oss.sonatype.org/service/local/artifact/maven/redirect"
+                        + "?r=snapshots&g=com.swiftconductor.conductor"
+                        + "&a=conductor-server"
+                        + "&v="
+                        + conductorVersion
+                        + "&e=jar&c=boot";
+
+        String repositoryURL =
+                Optional.ofNullable(System.getProperty("repositoryURL")).orElse(downloadURL);
+
+        LOGGER.info(
+                "Running conductor with version {} from repo url {}",
+                conductorVersion,
+                repositoryURL);
+
+        String tempDir = System.getProperty("java.io.tmpdir");
+        Path serverFile = Paths.get(tempDir, "conductor-server-" + conductorVersion + ".jar");
+
+        HttpURLConnection conn = (HttpURLConnection) new URL(repositoryURL).openConnection();
+        LOGGER.info("Request URL: {}", repositoryURL);
+
+        // normally, 3xx is redirect
+        boolean redirect = false;
+        int status = conn.getResponseCode();
+        if (status != HttpURLConnection.HTTP_OK) {
+            if (status == HttpURLConnection.HTTP_MOVED_TEMP
+                    || status == HttpURLConnection.HTTP_MOVED_PERM
+                    || status == HttpURLConnection.HTTP_SEE_OTHER) redirect = true;
+        }
+
+        // get redirect url from "location" header field
+        if (redirect) {
+            repositoryURL = conn.getHeaderField("Location");
+            LOGGER.info("Redirect to URL: {}", repositoryURL);
+        }
+
+        conn.disconnect();
+
+        LOGGER.info("Downloading: {}", serverFile);
+        Files.copy(
+                new URL(repositoryURL).openStream(),
+                serverFile,
+                StandardCopyOption.REPLACE_EXISTING);
+
         String configFile =
                 LocalServerRunner.class.getResource("/test-server.properties").getFile();
-        String tempDir = System.getProperty("java.io.tmpdir");
-        Path serverFile = Paths.get(tempDir, "conductor-server.jar");
-        if (!Files.exists(serverFile)) {
-            Files.copy(new URL(repositoryURL).openStream(), serverFile);
-        }
 
         String command =
                 "java -Dserver.port="

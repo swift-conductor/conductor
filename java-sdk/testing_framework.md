@@ -22,9 +22,9 @@ JUnit, Spock and other testing frameworks being used.
 // Setup method  code - should be called once per the test lifecycle
 // e.g. @BeforeClass in JUnit
 
-// Download the published conductor server version 3.16-SNAPSHOT 
+// Download the published conductor server version 3.16.0-SNAPSHOT 
 // Start the local server at port 8096
-testRunner = new WorkflowTestRunner(8096, "3.16-SNAPSHOT");
+testRunner = new WorkflowTestRunner(8096, "3.16.0-SNAPSHOT");
 
 // Scan the packages for task workers
 testRunner.init("com.swiftconductor.conductor.testing.workflows");
@@ -46,7 +46,7 @@ Loading workflows from JSON files for testing:
 
 ```java
 executor.loadTaskDefs("/tasks.json");
-executor.loadWorkflowDefs("/simple_workflow.json", true);
+executor.loadWorkflowDefs("/simple_workflow.json");
 ```
 
 ## Sample test code that starts a workflow and verifies its execution

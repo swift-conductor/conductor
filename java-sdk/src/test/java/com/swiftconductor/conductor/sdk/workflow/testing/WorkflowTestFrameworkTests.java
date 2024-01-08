@@ -44,12 +44,12 @@ public class WorkflowTestFrameworkTests {
 
     @BeforeAll
     public static void init() throws IOException {
-        testRunner = new WorkflowTestRunner(8080, "3.16-SNAPSHOT");
+        testRunner = new WorkflowTestRunner(8080, "3.16.0-SNAPSHOT");
         testRunner.init("com.swiftconductor.conductor.sdk.workflow.testing");
 
         executor = testRunner.getWorkflowExecutor();
         executor.loadTaskDefs("/tasks.json");
-        executor.loadWorkflowDefs("/simple_workflow.json", true);
+        executor.loadWorkflowDefs("/simple_workflow.json");
     }
 
     @AfterAll

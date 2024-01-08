@@ -52,7 +52,7 @@ Conductor Server is a [Spring Boot](https://spring.io/projects/spring-boot) proj
 
 ## Published Artifacts
 
-Current snapshot binaries `3.16-SNAPSHOT` are available from the [Maven Snapshot Repository](https://s01.oss.sonatype.org/content/repositories/snapshots/com/swiftconductor/conductor/).  See [OSSRH Usage Notes](https://central.sonatype.org/publish/publish-guide/#accessing-repositories) for details.
+Current snapshot binaries `3.16.0-SNAPSHOT` are available from the [Maven Snapshot Repository](https://s01.oss.sonatype.org/content/repositories/snapshots/com/swiftconductor/conductor/).  See [OSSRH Usage Notes](https://central.sonatype.org/publish/publish-guide/#accessing-repositories) for details.
 
 Future release binaries will be available from the [Maven Central Repository](https://search.maven.org/search?q=g:com.swiftconductor.conductor).
 
