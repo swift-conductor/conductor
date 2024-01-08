@@ -1,7 +1,7 @@
 {
     "annotationProcessor": {
         "org.springframework.boot:spring-boot-configuration-processor": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         }
     },
     "compileClasspath": {
@@ -41,9 +41,6 @@
         "com.fasterxml.jackson.module:jackson-module-afterburner": {
             "locked": "2.15.0"
         },
-        "com.swiftconductor.conductor:conductor-common": {
-            "project": true
-        },
         "com.netflix.eureka:eureka-client": {
             "locked": "1.10.10"
         },
@@ -52,6 +49,9 @@
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4"
+        },
+        "com.swiftconductor.conductor:conductor-common": {
+            "project": true
         },
         "commons-io:commons-io": {
             "locked": "2.7"
@@ -177,15 +177,6 @@
             ],
             "locked": "3.24.3"
         },
-        "com.swiftconductor.conductor:conductor-annotations": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-common"
-            ],
-            "project": true
-        },
-        "com.swiftconductor.conductor:conductor-common": {
-            "project": true
-        },
         "com.netflix.eureka:eureka-client": {
             "locked": "1.10.10"
         },
@@ -194,6 +185,15 @@
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4"
+        },
+        "com.swiftconductor.conductor:conductor-annotations": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-common"
+            ],
+            "project": true
+        },
+        "com.swiftconductor.conductor:conductor-common": {
+            "project": true
         },
         "commons-io:commons-io": {
             "locked": "2.7"
@@ -299,9 +299,6 @@
         "com.fasterxml.jackson.module:jackson-module-afterburner": {
             "locked": "2.15.0"
         },
-        "com.swiftconductor.conductor:conductor-common": {
-            "project": true
-        },
         "com.netflix.eureka:eureka-client": {
             "locked": "1.10.10"
         },
@@ -310,6 +307,9 @@
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4"
+        },
+        "com.swiftconductor.conductor:conductor-common": {
+            "project": true
         },
         "commons-io:commons-io": {
             "locked": "2.7"
@@ -366,10 +366,10 @@
             "locked": "2.3-groovy-3.0"
         },
         "org.springframework.boot:spring-boot-starter-log4j2": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.springframework.boot:spring-boot-starter-test": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.yaml:snakeyaml": {
             "locked": "2.0"
@@ -462,15 +462,6 @@
             ],
             "locked": "3.24.3"
         },
-        "com.swiftconductor.conductor:conductor-annotations": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-common"
-            ],
-            "project": true
-        },
-        "com.swiftconductor.conductor:conductor-common": {
-            "project": true
-        },
         "com.netflix.eureka:eureka-client": {
             "locked": "1.10.10"
         },
@@ -479,6 +470,15 @@
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4"
+        },
+        "com.swiftconductor.conductor:conductor-annotations": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-common"
+            ],
+            "project": true
+        },
+        "com.swiftconductor.conductor:conductor-common": {
+            "project": true
         },
         "commons-io:commons-io": {
             "locked": "2.7"
@@ -564,10 +564,10 @@
             "locked": "2.3-groovy-3.0"
         },
         "org.springframework.boot:spring-boot-starter-log4j2": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.springframework.boot:spring-boot-starter-test": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.yaml:snakeyaml": {
             "firstLevelTransitive": [

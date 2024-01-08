@@ -1,7 +1,7 @@
 {
     "annotationProcessor": {
         "org.springframework.boot:spring-boot-configuration-processor": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         }
     },
     "compileClasspath": {
@@ -38,14 +38,14 @@
         "com.fasterxml.jackson.module:jackson-module-afterburner": {
             "locked": "2.15.0"
         },
+        "com.netflix.dyno-queues:dyno-queues-redis": {
+            "locked": "2.0.20"
+        },
         "com.swiftconductor.conductor:conductor-common": {
             "project": true
         },
         "com.swiftconductor.conductor:conductor-core": {
             "project": true
-        },
-        "com.netflix.dyno-queues:dyno-queues-redis": {
-            "locked": "2.0.20"
         },
         "com.thoughtworks.xstream:xstream": {
             "locked": "1.4.20"
@@ -69,7 +69,7 @@
             "locked": "0.0.17"
         },
         "org.springframework.boot:spring-boot-starter": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.yaml:snakeyaml": {
             "locked": "2.0"
@@ -186,21 +186,6 @@
             ],
             "locked": "2.7.0"
         },
-        "com.swiftconductor.conductor:conductor-annotations": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-common"
-            ],
-            "project": true
-        },
-        "com.swiftconductor.conductor:conductor-common": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-core"
-            ],
-            "project": true
-        },
-        "com.swiftconductor.conductor:conductor-core": {
-            "project": true
-        },
         "com.netflix.dyno-queues:dyno-queues-redis": {
             "locked": "2.0.20"
         },
@@ -215,6 +200,21 @@
                 "com.swiftconductor.conductor:conductor-core"
             ],
             "locked": "0.3.3"
+        },
+        "com.swiftconductor.conductor:conductor-annotations": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-common"
+            ],
+            "project": true
+        },
+        "com.swiftconductor.conductor:conductor-common": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-core"
+            ],
+            "project": true
+        },
+        "com.swiftconductor.conductor:conductor-core": {
+            "project": true
         },
         "com.thoughtworks.xstream:xstream": {
             "locked": "1.4.20"
@@ -352,14 +352,14 @@
         "com.fasterxml.jackson.module:jackson-module-afterburner": {
             "locked": "2.15.0"
         },
+        "com.netflix.dyno-queues:dyno-queues-redis": {
+            "locked": "2.0.20"
+        },
         "com.swiftconductor.conductor:conductor-common": {
             "project": true
         },
         "com.swiftconductor.conductor:conductor-core": {
             "project": true
-        },
-        "com.netflix.dyno-queues:dyno-queues-redis": {
-            "locked": "2.0.20"
         },
         "com.thoughtworks.xstream:xstream": {
             "locked": "1.4.20"
@@ -392,10 +392,10 @@
             "locked": "0.0.17"
         },
         "org.springframework.boot:spring-boot-starter-log4j2": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.springframework.boot:spring-boot-starter-test": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.yaml:snakeyaml": {
             "locked": "2.0"
@@ -512,21 +512,6 @@
             ],
             "locked": "2.7.0"
         },
-        "com.swiftconductor.conductor:conductor-annotations": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-common"
-            ],
-            "project": true
-        },
-        "com.swiftconductor.conductor:conductor-common": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-core"
-            ],
-            "project": true
-        },
-        "com.swiftconductor.conductor:conductor-core": {
-            "project": true
-        },
         "com.netflix.dyno-queues:dyno-queues-redis": {
             "locked": "2.0.20"
         },
@@ -541,6 +526,21 @@
                 "com.swiftconductor.conductor:conductor-core"
             ],
             "locked": "0.3.3"
+        },
+        "com.swiftconductor.conductor:conductor-annotations": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-common"
+            ],
+            "project": true
+        },
+        "com.swiftconductor.conductor:conductor-common": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-core"
+            ],
+            "project": true
+        },
+        "com.swiftconductor.conductor:conductor-core": {
+            "project": true
         },
         "com.thoughtworks.xstream:xstream": {
             "locked": "1.4.20"
@@ -642,10 +642,10 @@
             "locked": "0.0.17"
         },
         "org.springframework.boot:spring-boot-starter-log4j2": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.springframework.boot:spring-boot-starter-test": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.yaml:snakeyaml": {
             "firstLevelTransitive": [

@@ -1,7 +1,7 @@
 {
     "annotationProcessor": {
         "org.springframework.boot:spring-boot-configuration-processor": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         }
     },
     "compileClasspath": {
@@ -44,14 +44,14 @@
         "com.google.guava:guava": {
             "locked": "32.1.2-jre"
         },
+        "com.sun.jersey:jersey-client": {
+            "locked": "1.19.4"
+        },
         "com.swiftconductor.conductor:conductor-client": {
             "project": true
         },
         "com.swiftconductor.conductor:conductor-common": {
             "project": true
-        },
-        "com.sun.jersey:jersey-client": {
-            "locked": "1.19.4"
         },
         "javax.ws.rs:javax.ws.rs-api": {
             "locked": "2.1.1"
@@ -188,21 +188,6 @@
             ],
             "locked": "3.24.3"
         },
-        "com.swiftconductor.conductor:conductor-annotations": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-common"
-            ],
-            "project": true
-        },
-        "com.swiftconductor.conductor:conductor-client": {
-            "project": true
-        },
-        "com.swiftconductor.conductor:conductor-common": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-client"
-            ],
-            "project": true
-        },
         "com.netflix.eureka:eureka-client": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-client"
@@ -220,6 +205,21 @@
                 "com.swiftconductor.conductor:conductor-client"
             ],
             "locked": "1.19.4"
+        },
+        "com.swiftconductor.conductor:conductor-annotations": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-common"
+            ],
+            "project": true
+        },
+        "com.swiftconductor.conductor:conductor-client": {
+            "project": true
+        },
+        "com.swiftconductor.conductor:conductor-common": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-client"
+            ],
+            "project": true
         },
         "commons-io:commons-io": {
             "firstLevelTransitive": [
@@ -350,14 +350,14 @@
         "com.google.guava:guava": {
             "locked": "32.1.2-jre"
         },
+        "com.sun.jersey:jersey-client": {
+            "locked": "1.19.4"
+        },
         "com.swiftconductor.conductor:conductor-client": {
             "project": true
         },
         "com.swiftconductor.conductor:conductor-common": {
             "project": true
-        },
-        "com.sun.jersey:jersey-client": {
-            "locked": "1.19.4"
         },
         "javax.ws.rs:javax.ws.rs-api": {
             "locked": "2.1.1"
@@ -405,13 +405,13 @@
             "locked": "2.3-groovy-3.0"
         },
         "org.springframework.boot:spring-boot-starter-log4j2": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.springframework.boot:spring-boot-starter-test": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.springframework:spring-web": {
-            "locked": "5.3.30"
+            "locked": "5.3.31"
         },
         "org.yaml:snakeyaml": {
             "locked": "2.0"
@@ -524,21 +524,6 @@
             ],
             "locked": "3.24.3"
         },
-        "com.swiftconductor.conductor:conductor-annotations": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-common"
-            ],
-            "project": true
-        },
-        "com.swiftconductor.conductor:conductor-client": {
-            "project": true
-        },
-        "com.swiftconductor.conductor:conductor-common": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-client"
-            ],
-            "project": true
-        },
         "com.netflix.eureka:eureka-client": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-client"
@@ -556,6 +541,21 @@
                 "com.swiftconductor.conductor:conductor-client"
             ],
             "locked": "1.19.4"
+        },
+        "com.swiftconductor.conductor:conductor-annotations": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-common"
+            ],
+            "project": true
+        },
+        "com.swiftconductor.conductor:conductor-client": {
+            "project": true
+        },
+        "com.swiftconductor.conductor:conductor-common": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-client"
+            ],
+            "project": true
         },
         "commons-io:commons-io": {
             "firstLevelTransitive": [
@@ -656,13 +656,13 @@
             "locked": "2.3-groovy-3.0"
         },
         "org.springframework.boot:spring-boot-starter-log4j2": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.springframework.boot:spring-boot-starter-test": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.springframework:spring-web": {
-            "locked": "5.3.30"
+            "locked": "5.3.31"
         },
         "org.yaml:snakeyaml": {
             "firstLevelTransitive": [

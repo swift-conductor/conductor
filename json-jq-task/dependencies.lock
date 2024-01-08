@@ -1,7 +1,7 @@
 {
     "annotationProcessor": {
         "org.springframework.boot:spring-boot-configuration-processor": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         }
     },
     "compileClasspath": {
@@ -66,7 +66,7 @@
             "locked": "2.17.2"
         },
         "org.springframework.boot:spring-boot-starter": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.yaml:snakeyaml": {
             "locked": "2.0"
@@ -180,6 +180,18 @@
             ],
             "locked": "2.7.0"
         },
+        "com.netflix.spectator:spectator-api": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-core"
+            ],
+            "locked": "0.122.0"
+        },
+        "com.spotify:completable-futures": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-core"
+            ],
+            "locked": "0.3.3"
+        },
         "com.swiftconductor.conductor:conductor-annotations": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-common"
@@ -194,18 +206,6 @@
         },
         "com.swiftconductor.conductor:conductor-core": {
             "project": true
-        },
-        "com.netflix.spectator:spectator-api": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-core"
-            ],
-            "locked": "0.122.0"
-        },
-        "com.spotify:completable-futures": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-core"
-            ],
-            "locked": "0.3.3"
         },
         "commons-io:commons-io": {
             "firstLevelTransitive": [
@@ -374,10 +374,10 @@
             "locked": "5.8.2"
         },
         "org.springframework.boot:spring-boot-starter-log4j2": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.springframework.boot:spring-boot-starter-test": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.yaml:snakeyaml": {
             "locked": "2.0"
@@ -491,6 +491,18 @@
             ],
             "locked": "2.7.0"
         },
+        "com.netflix.spectator:spectator-api": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-core"
+            ],
+            "locked": "0.122.0"
+        },
+        "com.spotify:completable-futures": {
+            "firstLevelTransitive": [
+                "com.swiftconductor.conductor:conductor-core"
+            ],
+            "locked": "0.3.3"
+        },
         "com.swiftconductor.conductor:conductor-annotations": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-common"
@@ -505,18 +517,6 @@
         },
         "com.swiftconductor.conductor:conductor-core": {
             "project": true
-        },
-        "com.netflix.spectator:spectator-api": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-core"
-            ],
-            "locked": "0.122.0"
-        },
-        "com.spotify:completable-futures": {
-            "firstLevelTransitive": [
-                "com.swiftconductor.conductor:conductor-core"
-            ],
-            "locked": "0.3.3"
         },
         "commons-io:commons-io": {
             "firstLevelTransitive": [
@@ -615,10 +615,10 @@
             "locked": "15.4"
         },
         "org.springframework.boot:spring-boot-starter-log4j2": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.springframework.boot:spring-boot-starter-test": {
-            "locked": "2.7.16"
+            "locked": "2.7.18"
         },
         "org.yaml:snakeyaml": {
             "firstLevelTransitive": [
