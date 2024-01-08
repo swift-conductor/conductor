@@ -135,9 +135,9 @@ class StartWorkflowSpec extends AbstractSpecification {
      * Builds a TestCase for a StartWorkflowRequest with a WorkflowDef that contains two tasks.
      */
     static workflowDef() {
-        def task1 = ['name': 'integration_task_1', 'taskReferenceName': 't1', 'type': 'SIMPLE',
+        def task1 = ['name': 'integration_task_1', 'taskReferenceName': 't1', 'type': 'CUSTOM',
                      'inputParameters': ['tp1': '${workflow.input.param1}', 'tp2': '${workflow.input.param2}', 'tp3': '${CPEWF_TASK_ID}']]
-        def task2 = ['name': 'integration_task_2', 'taskReferenceName': 't2', 'type': 'SIMPLE',
+        def task2 = ['name': 'integration_task_2', 'taskReferenceName': 't2', 'type': 'CUSTOM',
                      'inputParameters': ['tp1': '${workflow.input.param1}', 'tp2': '${t1.output.op}', 'tp3': '${CPEWF_TASK_ID}']]
         def workflowDef = ['name': 'dynamic_wf', 'version': 1, 'tasks': [task1, task2], 'ownerEmail': 'abc@abc.com']
 

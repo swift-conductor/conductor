@@ -123,7 +123,7 @@ public class MetadataMapperService {
         if (shouldPopulateTaskDefinition(workflowTask)) {
             workflowTask.setTaskDefinition(metadataDAO.getTaskDef(workflowTask.getName()));
             if (workflowTask.getTaskDefinition() == null
-                    && workflowTask.getType().equals(TaskType.SIMPLE.name())) {
+                    && workflowTask.getType().equals(TaskType.CUSTOM.name())) {
                 // ad-hoc task def
                 workflowTask.setTaskDefinition(new TaskDef(workflowTask.getName()));
             }
@@ -163,7 +163,7 @@ public class MetadataMapperService {
                 workflowDefinition.collectTasks().stream()
                         .filter(
                                 workflowTask ->
-                                        workflowTask.getType().equals(TaskType.SIMPLE.name()))
+                                        workflowTask.getType().equals(TaskType.CUSTOM.name()))
                         .filter(this::shouldPopulateTaskDefinition)
                         .map(WorkflowTask::getName)
                         .collect(Collectors.toSet());

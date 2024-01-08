@@ -4,10 +4,10 @@
   "version": 1,
   "tasks": [
     {
-      "name": "simple_task_in_sub_wf",
+      "name": "custom_task_in_sub_wf",
       "taskReferenceName": "t1",
       "inputParameters": {},
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],

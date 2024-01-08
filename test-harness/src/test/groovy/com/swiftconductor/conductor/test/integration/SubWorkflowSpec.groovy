@@ -130,7 +130,7 @@ class SubWorkflowSpec extends AbstractSpecification {
         with(workflowExecutionService.getExecutionStatus(subWorkflowId, true)) {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
             tasks[0].status == Task.Status.SCHEDULED
         }
 
@@ -152,7 +152,7 @@ class SubWorkflowSpec extends AbstractSpecification {
         with(workflowExecutionService.getExecutionStatus(subWorkflowId, true)) {
             status == Workflow.WorkflowStatus.TERMINATED
             tasks.size() == 1
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
             tasks[0].status == Task.Status.CANCELED
         }
 
@@ -163,28 +163,28 @@ class SubWorkflowSpec extends AbstractSpecification {
         with(workflowExecutionService.getExecutionStatus(subWorkflowId, true)) {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 2
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
             tasks[0].status == Task.Status.CANCELED
-            tasks[1].taskType == 'simple_task_in_sub_wf'
+            tasks[1].taskType == 'custom_task_in_sub_wf'
             tasks[1].status == Task.Status.SCHEDULED
         }
 
         and: "verify that change flag is set on the sub workflow task in parent"
         workflowExecutionService.getTask(subworkflowTaskId).subworkflowChanged
 
-        when: "Polled for simple_task_in_sub_wf task in subworkflow"
-        pollAndCompleteTask = workflowTestUtil.pollAndCompleteTask('simple_task_in_sub_wf', 'task1.integration.worker', ['op': 'simple_task_in_sub_wf.done'])
+        when: "Polled for custom_task_in_sub_wf task in subworkflow"
+        pollAndCompleteTask = workflowTestUtil.pollAndCompleteTask('custom_task_in_sub_wf', 'task1.integration.worker', ['op': 'custom_task_in_sub_wf.done'])
 
-        then: "verify that the 'simple_task_in_sub_wf' was polled and acknowledged"
+        then: "verify that the 'custom_task_in_sub_wf' was polled and acknowledged"
         verifyPolledAndAcknowledgedTask(pollAndCompleteTask)
 
         and: "verify that the subworkflow is in a completed state"
         with(workflowExecutionService.getExecutionStatus(subWorkflowId, true)) {
             status == Workflow.WorkflowStatus.COMPLETED
             tasks.size() == 2
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
             tasks[0].status == Task.Status.CANCELED
-            tasks[1].taskType == 'simple_task_in_sub_wf'
+            tasks[1].taskType == 'custom_task_in_sub_wf'
             tasks[1].status == Task.Status.COMPLETED
         }
 
@@ -206,7 +206,7 @@ class SubWorkflowSpec extends AbstractSpecification {
             tasks[1].taskType == TaskType.SUB_WORKFLOW.name()
             tasks[1].status == Task.Status.COMPLETED
             !tasks[1].subworkflowChanged
-            output['op'] == 'simple_task_in_sub_wf.done'
+            output['op'] == 'custom_task_in_sub_wf.done'
         }
 
         cleanup: "Ensure that the changes to the workflow def are reverted"
@@ -275,7 +275,7 @@ class SubWorkflowSpec extends AbstractSpecification {
         with(workflowExecutionService.getExecutionStatus(subWorkflowId, true)) {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
             tasks[0].status == Task.Status.SCHEDULED
         }
 
@@ -287,7 +287,7 @@ class SubWorkflowSpec extends AbstractSpecification {
         with(workflowExecutionService.getExecutionStatus(subWorkflowId, true)) {
             status == Workflow.WorkflowStatus.TERMINATED
             tasks.size() == 1
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
             tasks[0].status == Task.Status.CANCELED
             reasonForIncompletion == terminateReason
         }

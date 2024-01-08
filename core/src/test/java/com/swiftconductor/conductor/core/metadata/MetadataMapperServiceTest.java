@@ -80,7 +80,7 @@ public class MetadataMapperServiceTest {
     }
 
     @Test
-    public void testMetadataPopulationOnSimpleTask() {
+    public void testMetadataPopulationOnCustomTask() {
         String nameTaskDefinition = "task1";
         TaskDef taskDefinition = createTaskDefinition(nameTaskDefinition);
         WorkflowTask workflowTask = createWorkflowTask(nameTaskDefinition);
@@ -292,7 +292,7 @@ public class MetadataMapperServiceTest {
     }
 
     @Test
-    public void testMetadataPopulationOnSimpleTaskDefMissing() {
+    public void testMetadataPopulationOnCustomTaskDefMissing() {
         String nameTaskDefinition = "task1";
         WorkflowTask workflowTask = createWorkflowTask(nameTaskDefinition);
 
@@ -317,7 +317,7 @@ public class MetadataMapperServiceTest {
     private WorkflowTask createWorkflowTask(String name) {
         WorkflowTask workflowTask = new WorkflowTask();
         workflowTask.setName(name);
-        workflowTask.setType(TaskType.SIMPLE.name());
+        workflowTask.setType(TaskType.CUSTOM.name());
         return workflowTask;
     }
 

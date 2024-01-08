@@ -34,9 +34,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
 
-public class SimpleTaskMapperTest {
+public class CustomTaskMapperTest {
 
-    private SimpleTaskMapper simpleTaskMapper;
+    private CustomTaskMapper customTaskMapper;
 
     private IDGenerator idGenerator = new IDGenerator();
 
@@ -45,15 +45,15 @@ public class SimpleTaskMapperTest {
     @Before
     public void setUp() {
         ParametersUtils parametersUtils = mock(ParametersUtils.class);
-        simpleTaskMapper = new SimpleTaskMapper(parametersUtils);
+        customTaskMapper = new CustomTaskMapper(parametersUtils);
     }
 
     @Test
     public void getMappedTasks() {
 
         WorkflowTask workflowTask = new WorkflowTask();
-        workflowTask.setName("simple_task");
-        workflowTask.setTaskDefinition(new TaskDef("simple_task"));
+        workflowTask.setName("custom_task");
+        workflowTask.setTaskDefinition(new TaskDef("custom_task"));
 
         String taskId = idGenerator.generate();
         String retriedTaskId = idGenerator.generate();
@@ -73,7 +73,7 @@ public class SimpleTaskMapperTest {
                         .withTaskId(taskId)
                         .build();
 
-        List<TaskModel> mappedTasks = simpleTaskMapper.getMappedTasks(taskMapperContext);
+        List<TaskModel> mappedTasks = customTaskMapper.getMappedTasks(taskMapperContext);
         assertNotNull(mappedTasks);
         assertEquals(1, mappedTasks.size());
     }
@@ -83,7 +83,7 @@ public class SimpleTaskMapperTest {
 
         // Given
         WorkflowTask workflowTask = new WorkflowTask();
-        workflowTask.setName("simple_task");
+        workflowTask.setName("custom_task");
         String taskId = idGenerator.generate();
         String retriedTaskId = idGenerator.generate();
 
@@ -110,6 +110,6 @@ public class SimpleTaskMapperTest {
                         workflowTask.getName()));
 
         // when
-        simpleTaskMapper.getMappedTasks(taskMapperContext);
+        customTaskMapper.getMappedTasks(taskMapperContext);
     }
 }

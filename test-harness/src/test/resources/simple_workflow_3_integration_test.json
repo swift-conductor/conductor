@@ -11,7 +11,7 @@
         "p2": "${workflow.input.param2}",
         "someNullKey": null
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],
@@ -29,7 +29,7 @@
         "tp1": "${workflow.input.param1}",
         "tp2": "${t1.output.op}"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],
@@ -47,7 +47,7 @@
         "tp1": "${workflow.input.param1}",
         "tp2": "${t1.output.op}"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],

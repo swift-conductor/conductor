@@ -12,7 +12,7 @@
         "mod": "workflow.input.mod",
         "oddEven": "workflow.input.oddEven"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "callbackFromWorker": true
     },
@@ -34,7 +34,7 @@
         "mod": "task_2.output.mod",
         "oddEven": "task_2.output.oddEven"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "callbackFromWorker": true
     },
@@ -55,7 +55,7 @@
               "mod": "task_3.output.mod",
               "oddEven": "task_3.output.oddEven"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "callbackFromWorker": true
           },
@@ -86,7 +86,7 @@
               "mod": "task_4.output.mod",
               "oddEven": "task_4.output.oddEven"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "callbackFromWorker": true
           },
@@ -97,7 +97,7 @@
               "mod": "task_5.output.mod",
               "oddEven": "task_5.output.oddEven"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "callbackFromWorker": true
           }
@@ -110,7 +110,7 @@
               "mod": "task_3.output.mod",
               "oddEven": "task_3.output.oddEven"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "callbackFromWorker": true
           },
@@ -121,7 +121,7 @@
               "mod": "task_7.output.mod",
               "oddEven": "task_7.output.oddEven"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "callbackFromWorker": true
           },
@@ -132,7 +132,7 @@
               "mod": "task_8.output.mod",
               "oddEven": "task_8.output.oddEven"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "callbackFromWorker": true
           },
@@ -153,7 +153,7 @@
                     "mod": "task_9.output.mod",
                     "oddEven": "task_9.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "callbackFromWorker": true
                 },
@@ -164,7 +164,7 @@
                     "mod": "task_12.output.mod",
                     "oddEven": "task_12.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "callbackFromWorker": true
                 },
@@ -192,7 +192,7 @@
                     "mod": "task_9.output.mod",
                     "oddEven": "task_9.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "callbackFromWorker": true
                 },
@@ -203,7 +203,7 @@
                     "mod": "task_15.output.mod",
                     "oddEven": "task_15.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "callbackFromWorker": true
                 },
@@ -231,7 +231,7 @@
                     "mod": "task_9.output.mod",
                     "oddEven": "task_9.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "callbackFromWorker": true
                 },
@@ -242,7 +242,7 @@
                     "mod": "task_18.output.mod",
                     "oddEven": "task_18.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "callbackFromWorker": true
                 }
@@ -255,7 +255,7 @@
                     "mod": "task_9.output.mod",
                     "oddEven": "task_9.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "callbackFromWorker": true
                 },
@@ -281,7 +281,7 @@
                     "mod": "task_21.output.mod",
                     "oddEven": "task_21.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "callbackFromWorker": true
                 }
@@ -295,7 +295,7 @@
                   "mod": "task_9.output.mod",
                   "oddEven": "task_9.output.oddEven"
                 },
-                "type": "SIMPLE",
+                "type": "CUSTOM",
                 "startDelay": 0,
                 "callbackFromWorker": true
               },
@@ -321,7 +321,7 @@
                   "mod": "task_24.output.mod",
                   "oddEven": "task_24.output.oddEven"
                 },
-                "type": "SIMPLE",
+                "type": "CUSTOM",
                 "startDelay": 0,
                 "callbackFromWorker": true
               }
@@ -341,7 +341,7 @@
         "mod": "task_3.output.mod",
         "oddEven": "task_3.output.oddEven"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "callbackFromWorker": true
     },
@@ -352,7 +352,7 @@
         "mod": "task_28.output.mod",
         "oddEven": "task_28.output.oddEven"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "callbackFromWorker": true
     },
@@ -363,7 +363,7 @@
         "mod": "task_29.output.mod",
         "oddEven": "task_29.output.oddEven"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "callbackFromWorker": true
     }

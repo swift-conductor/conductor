@@ -6,7 +6,7 @@
     {
       "name": "fetch_user_details",
       "taskReferenceName": "fetch_user_details",
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "inputParameters": {
         "userEmail": "${workflow.input.userEmail}"
       }
@@ -14,7 +14,7 @@
     {
       "name": "get_credit_score",
       "taskReferenceName": "get_credit_score",
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "inputParameters": {
         "userAccountNumber": "${fetch_user_details.output.userAccount}"
       }
@@ -22,7 +22,7 @@
     {
       "name": "calculate_loan_amount",
       "taskReferenceName": "calculate_loan_amount",
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "inputParameters": {
         "creditRating": "${get_credit_score.output.creditRating}",
         "loanAmount": "${workflow.input.loanAmount}"

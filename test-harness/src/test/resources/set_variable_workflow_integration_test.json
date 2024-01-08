@@ -3,12 +3,12 @@
   "version": 1,
   "tasks": [
     {
-      "name": "simple",
-      "taskReferenceName": "simple",
-      "description": "simple",
+      "name": "custom",
+      "taskReferenceName": "custom",
+      "description": "custom",
       "inputParameters": {
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "optional": false,
       "asyncComplete": false

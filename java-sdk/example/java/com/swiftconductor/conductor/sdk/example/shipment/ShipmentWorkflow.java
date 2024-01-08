@@ -40,10 +40,10 @@ public class ShipmentWorkflow {
                 .timeoutPolicy(WorkflowDef.TimeoutPolicy.TIME_OUT_WF, 60) // 1 day max
                 .description("Workflow to track shipment")
                 .add(
-                        new SimpleTask("calculate_tax_and_total", "calculate_tax_and_total")
+                        new CustomTask("calculate_tax_and_total", "calculate_tax_and_total")
                                 .input("orderDetail", ConductorWorkflow.input.get("orderDetail")))
                 .add(
-                        new SimpleTask("charge_payment", "charge_payment")
+                        new CustomTask("charge_payment", "charge_payment")
                                 .input(
                                         "billingId",
                                                 ConductorWorkflow.input
@@ -58,7 +58,7 @@ public class ShipmentWorkflow {
                         new Switch("shipping_label", "${workflow.input.orderDetail.shippingMethod}")
                                 .switchCase(
                                         Order.ShippingMethod.GROUND.toString(),
-                                        new SimpleTask(
+                                        new CustomTask(
                                                         "ground_shipping_label",
                                                         "ground_shipping_label")
                                                 .input(
@@ -76,7 +76,7 @@ public class ShipmentWorkflow {
                                                                         .get("orderNumber")))
                                 .switchCase(
                                         Order.ShippingMethod.NEXT_DAY_AIR.toString(),
-                                        new SimpleTask("air_shipping_label", "air_shipping_label")
+                                        new CustomTask("air_shipping_label", "air_shipping_label")
                                                 .input(
                                                         "name",
                                                                 ConductorWorkflow.input
@@ -92,7 +92,7 @@ public class ShipmentWorkflow {
                                                                         .get("orderNumber")))
                                 .switchCase(
                                         Order.ShippingMethod.SAME_DAY.toString(),
-                                        new SimpleTask(
+                                        new CustomTask(
                                                         "same_day_shipping_label",
                                                         "same_day_shipping_label")
                                                 .input(
@@ -114,7 +114,7 @@ public class ShipmentWorkflow {
                                                 Workflow.WorkflowStatus.FAILED,
                                                 "Unsupported Shipping Method")))
                 .add(
-                        new SimpleTask("send_email", "send_email")
+                        new CustomTask("send_email", "send_email")
                                 .input(
                                         "name",
                                                 ConductorWorkflow.input
@@ -137,12 +137,12 @@ public class ShipmentWorkflow {
 
         WorkflowBuilder<Shipment> builder = new WorkflowBuilder<>(executor);
 
-        SimpleTask getOrderDetails =
-                new SimpleTask("get_order_details", "get_order_details")
+        CustomTask getOrderDetails =
+                new CustomTask("get_order_details", "get_order_details")
                         .input("orderNo", ConductorWorkflow.input.get("orderNo"));
 
-        SimpleTask getUserDetails =
-                new SimpleTask("get_user_details", "get_user_details")
+        CustomTask getUserDetails =
+                new CustomTask("get_user_details", "get_user_details")
                         .input("userId", ConductorWorkflow.input.get("userId"));
 
         ConductorWorkflow<Shipment> conductorWorkflow =
@@ -164,7 +164,7 @@ public class ShipmentWorkflow {
                         .add(
                                 new DynamicFork(
                                         "process_order",
-                                        new SimpleTask("generateDynamicFork", "generateDynamicFork")
+                                        new CustomTask("generateDynamicFork", "generateDynamicFork")
                                                 .input(
                                                         "orderDetails",
                                                         getOrderDetails.taskOutput.get("result"))

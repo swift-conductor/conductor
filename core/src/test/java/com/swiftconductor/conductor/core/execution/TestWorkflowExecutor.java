@@ -180,7 +180,7 @@ public class TestWorkflowExecutor {
                         idGenerator, parametersUtils, objectMapper, metadataDAO));
         taskMappers.put(
                 USER_DEFINED.name(), new UserDefinedTaskMapper(parametersUtils, metadataDAO));
-        taskMappers.put(SIMPLE.name(), new SimpleTaskMapper(parametersUtils));
+        taskMappers.put(CUSTOM.name(), new CustomTaskMapper(parametersUtils));
         taskMappers.put(
                 SUB_WORKFLOW.name(), new SubWorkflowTaskMapper(parametersUtils, metadataDAO));
         taskMappers.put(EVENT.name(), new EventTaskMapper(parametersUtils));
@@ -331,7 +331,7 @@ public class TestWorkflowExecutor {
         List<TaskModel> tasks = new LinkedList<>();
 
         TaskModel task1 = new TaskModel();
-        task1.setTaskType(TaskType.TASK_TYPE_SIMPLE);
+        task1.setTaskType(TaskType.TASK_TYPE_CUSTOM);
         task1.setTaskDefName("task_1");
         task1.setReferenceTaskName("task_1");
         task1.setWorkflowInstanceId(workflow.getWorkflowId());
@@ -357,7 +357,7 @@ public class TestWorkflowExecutor {
         List<TaskModel> tasks = new LinkedList<>();
 
         TaskModel task1 = new TaskModel();
-        task1.setTaskType(TaskType.TASK_TYPE_SIMPLE);
+        task1.setTaskType(TaskType.TASK_TYPE_CUSTOM);
         task1.setTaskDefName("task_1");
         task1.setReferenceTaskName("task_1");
         task1.setWorkflowInstanceId(workflow.getWorkflowId());
@@ -720,7 +720,7 @@ public class TestWorkflowExecutor {
         task_1_1.setTaskId(UUID.randomUUID().toString());
         task_1_1.setSeq(1);
         task_1_1.setRetryCount(0);
-        task_1_1.setTaskType(TaskType.SIMPLE.toString());
+        task_1_1.setTaskType(TaskType.CUSTOM.toString());
         task_1_1.setStatus(TaskModel.Status.FAILED);
         task_1_1.setTaskDefName("task1");
         task_1_1.setReferenceTaskName("task1_ref1");
@@ -729,7 +729,7 @@ public class TestWorkflowExecutor {
         task_1_2.setTaskId(UUID.randomUUID().toString());
         task_1_2.setSeq(2);
         task_1_2.setRetryCount(1);
-        task_1_2.setTaskType(TaskType.SIMPLE.toString());
+        task_1_2.setTaskType(TaskType.CUSTOM.toString());
         task_1_2.setStatus(TaskModel.Status.COMPLETED);
         task_1_2.setTaskDefName("task1");
         task_1_2.setReferenceTaskName("task1_ref1");
@@ -793,7 +793,7 @@ public class TestWorkflowExecutor {
         task_1_1.setTaskId(UUID.randomUUID().toString());
         task_1_1.setSeq(20);
         task_1_1.setRetryCount(1);
-        task_1_1.setTaskType(TaskType.SIMPLE.toString());
+        task_1_1.setTaskType(TaskType.CUSTOM.toString());
         task_1_1.setStatus(TaskModel.Status.CANCELED);
         task_1_1.setRetried(true);
         task_1_1.setTaskDefName("task1");
@@ -804,7 +804,7 @@ public class TestWorkflowExecutor {
         task_1_2.setTaskId(UUID.randomUUID().toString());
         task_1_2.setSeq(21);
         task_1_2.setRetryCount(1);
-        task_1_2.setTaskType(TaskType.SIMPLE.toString());
+        task_1_2.setTaskType(TaskType.CUSTOM.toString());
         task_1_2.setStatus(TaskModel.Status.FAILED);
         task_1_2.setTaskDefName("task1");
         task_1_2.setWorkflowTask(new WorkflowTask());
@@ -815,7 +815,7 @@ public class TestWorkflowExecutor {
         task_2_1.setSeq(22);
         task_2_1.setRetryCount(1);
         task_2_1.setStatus(TaskModel.Status.FAILED);
-        task_2_1.setTaskType(TaskType.SIMPLE.toString());
+        task_2_1.setTaskType(TaskType.CUSTOM.toString());
         task_2_1.setTaskDefName("task2");
         task_2_1.setWorkflowTask(new WorkflowTask());
         task_2_1.setReferenceTaskName("task2_ref1");
@@ -825,7 +825,7 @@ public class TestWorkflowExecutor {
         task_3_1.setSeq(23);
         task_3_1.setRetryCount(1);
         task_3_1.setStatus(TaskModel.Status.CANCELED);
-        task_3_1.setTaskType(TaskType.SIMPLE.toString());
+        task_3_1.setTaskType(TaskType.CUSTOM.toString());
         task_3_1.setTaskDefName("task3");
         task_3_1.setWorkflowTask(new WorkflowTask());
         task_3_1.setReferenceTaskName("task3_ref1");
@@ -835,7 +835,7 @@ public class TestWorkflowExecutor {
         task_4_1.setSeq(122);
         task_4_1.setRetryCount(1);
         task_4_1.setStatus(TaskModel.Status.FAILED);
-        task_4_1.setTaskType(TaskType.SIMPLE.toString());
+        task_4_1.setTaskType(TaskType.CUSTOM.toString());
         task_4_1.setTaskDefName("task1");
         task_4_1.setWorkflowTask(new WorkflowTask());
         task_4_1.setReferenceTaskName("task4_refABC");
@@ -878,7 +878,7 @@ public class TestWorkflowExecutor {
         task_1_1.setTaskId(UUID.randomUUID().toString());
         task_1_1.setSeq(10);
         task_1_1.setRetryCount(0);
-        task_1_1.setTaskType(TaskType.SIMPLE.toString());
+        task_1_1.setTaskType(TaskType.CUSTOM.toString());
         task_1_1.setStatus(TaskModel.Status.FAILED);
         task_1_1.setTaskDefName("task1");
         task_1_1.setWorkflowTask(new WorkflowTask());
@@ -888,7 +888,7 @@ public class TestWorkflowExecutor {
         task_1_2.setTaskId(UUID.randomUUID().toString());
         task_1_2.setSeq(11);
         task_1_2.setRetryCount(1);
-        task_1_2.setTaskType(TaskType.SIMPLE.toString());
+        task_1_2.setTaskType(TaskType.CUSTOM.toString());
         task_1_2.setStatus(TaskModel.Status.COMPLETED);
         task_1_2.setTaskDefName("task1");
         task_1_2.setWorkflowTask(new WorkflowTask());
@@ -899,7 +899,7 @@ public class TestWorkflowExecutor {
         task_2_1.setSeq(21);
         task_2_1.setRetryCount(0);
         task_2_1.setStatus(TaskModel.Status.CANCELED);
-        task_2_1.setTaskType(TaskType.SIMPLE.toString());
+        task_2_1.setTaskType(TaskType.CUSTOM.toString());
         task_2_1.setTaskDefName("task2");
         task_2_1.setWorkflowTask(new WorkflowTask());
         task_2_1.setReferenceTaskName("task2_ref1");
@@ -909,7 +909,7 @@ public class TestWorkflowExecutor {
         task_3_1.setSeq(31);
         task_3_1.setRetryCount(1);
         task_3_1.setStatus(TaskModel.Status.FAILED_WITH_TERMINAL_ERROR);
-        task_3_1.setTaskType(TaskType.SIMPLE.toString());
+        task_3_1.setTaskType(TaskType.CUSTOM.toString());
         task_3_1.setTaskDefName("task1");
         task_3_1.setWorkflowTask(new WorkflowTask());
         task_3_1.setReferenceTaskName("task3_ref1");
@@ -919,7 +919,7 @@ public class TestWorkflowExecutor {
         task_4_1.setSeq(41);
         task_4_1.setRetryCount(0);
         task_4_1.setStatus(TaskModel.Status.TIMED_OUT);
-        task_4_1.setTaskType(TaskType.SIMPLE.toString());
+        task_4_1.setTaskType(TaskType.CUSTOM.toString());
         task_4_1.setTaskDefName("task1");
         task_4_1.setWorkflowTask(new WorkflowTask());
         task_4_1.setReferenceTaskName("task4_ref1");
@@ -957,7 +957,7 @@ public class TestWorkflowExecutor {
         task_1_1.setTaskId(UUID.randomUUID().toString());
         task_1_1.setSeq(10);
         task_1_1.setRetryCount(0);
-        task_1_1.setTaskType(TaskType.SIMPLE.toString());
+        task_1_1.setTaskType(TaskType.CUSTOM.toString());
         task_1_1.setStatus(TaskModel.Status.FAILED);
         task_1_1.setTaskDefName("task1");
         task_1_1.setWorkflowTask(new WorkflowTask());
@@ -967,7 +967,7 @@ public class TestWorkflowExecutor {
         task_2_1.setTaskId(UUID.randomUUID().toString());
         task_2_1.setSeq(20);
         task_2_1.setRetryCount(0);
-        task_2_1.setTaskType(TaskType.SIMPLE.toString());
+        task_2_1.setTaskType(TaskType.CUSTOM.toString());
         task_2_1.setStatus(TaskModel.Status.CANCELED);
         task_2_1.setTaskDefName("task1");
         task_2_1.setWorkflowTask(new WorkflowTask());
@@ -1055,7 +1055,7 @@ public class TestWorkflowExecutor {
         task_1_1.setTaskId(UUID.randomUUID().toString());
         task_1_1.setSeq(20);
         task_1_1.setRetryCount(1);
-        task_1_1.setTaskType(TaskType.SIMPLE.toString());
+        task_1_1.setTaskType(TaskType.CUSTOM.toString());
         task_1_1.setStatus(TaskModel.Status.FAILED);
         task_1_1.setTaskDefName("task1");
         task_1_1.setWorkflowTask(new WorkflowTask());
@@ -1066,7 +1066,7 @@ public class TestWorkflowExecutor {
         task_2_1.setSeq(22);
         task_2_1.setRetryCount(1);
         task_2_1.setStatus(TaskModel.Status.CANCELED);
-        task_2_1.setTaskType(TaskType.SIMPLE.toString());
+        task_2_1.setTaskType(TaskType.CUSTOM.toString());
         task_2_1.setTaskDefName("task2");
         task_2_1.setWorkflowTask(new WorkflowTask());
         task_2_1.setReferenceTaskName("task2_ref1");
@@ -1106,7 +1106,7 @@ public class TestWorkflowExecutor {
         String id = idGenerator.generate();
         String workflowInstanceId = idGenerator.generate();
         TaskModel task = new TaskModel();
-        task.setTaskType(TaskType.SIMPLE.name());
+        task.setTaskType(TaskType.CUSTOM.name());
         task.setTaskDefName("task");
         task.setReferenceTaskName("task_ref");
         task.setWorkflowInstanceId(workflowInstanceId);
@@ -1120,7 +1120,7 @@ public class TestWorkflowExecutor {
         task.setSeq(1);
 
         TaskModel task1 = new TaskModel();
-        task1.setTaskType(TaskType.SIMPLE.name());
+        task1.setTaskType(TaskType.CUSTOM.name());
         task1.setTaskDefName("task1");
         task1.setReferenceTaskName("task1_ref");
         task1.setWorkflowInstanceId(workflowInstanceId);
@@ -1204,7 +1204,7 @@ public class TestWorkflowExecutor {
         task_1_1.setTaskId(UUID.randomUUID().toString());
         task_1_1.setSeq(20);
         task_1_1.setRetryCount(1);
-        task_1_1.setTaskType(TaskType.SIMPLE.toString());
+        task_1_1.setTaskType(TaskType.CUSTOM.toString());
         task_1_1.setStatus(TaskModel.Status.COMPLETED);
         task_1_1.setRetried(true);
         task_1_1.setTaskDefName("task1");
@@ -1216,7 +1216,7 @@ public class TestWorkflowExecutor {
         task_2_1.setSeq(22);
         task_2_1.setRetryCount(1);
         task_2_1.setStatus(TaskModel.Status.COMPLETED);
-        task_2_1.setTaskType(TaskType.SIMPLE.toString());
+        task_2_1.setTaskType(TaskType.CUSTOM.toString());
         task_2_1.setTaskDefName("task2");
         task_2_1.setWorkflowTask(new WorkflowTask());
         task_2_1.setReferenceTaskName("task2_ref1");
@@ -1302,7 +1302,7 @@ public class TestWorkflowExecutor {
         task_1_1.setTaskId(UUID.randomUUID().toString());
         task_1_1.setSeq(20);
         task_1_1.setRetryCount(1);
-        task_1_1.setTaskType(TaskType.SIMPLE.toString());
+        task_1_1.setTaskType(TaskType.CUSTOM.toString());
         task_1_1.setStatus(TaskModel.Status.FAILED);
         task_1_1.setRetried(true);
         task_1_1.setTaskDefName("task1");
@@ -1314,7 +1314,7 @@ public class TestWorkflowExecutor {
         task_2_1.setSeq(22);
         task_2_1.setRetryCount(1);
         task_2_1.setStatus(TaskModel.Status.CANCELED);
-        task_2_1.setTaskType(TaskType.SIMPLE.toString());
+        task_2_1.setTaskType(TaskType.CUSTOM.toString());
         task_2_1.setTaskDefName("task2");
         task_2_1.setWorkflowTask(new WorkflowTask());
         task_2_1.setReferenceTaskName("task2_ref1");
@@ -1349,7 +1349,7 @@ public class TestWorkflowExecutor {
 
         // sub workflow setup
         TaskModel task1 = new TaskModel();
-        task1.setTaskType(TaskType.SIMPLE.name());
+        task1.setTaskType(TaskType.CUSTOM.name());
         task1.setTaskDefName("task1");
         task1.setReferenceTaskName("task1_ref");
         task1.setWorkflowInstanceId(subWorkflowId);
@@ -1360,7 +1360,7 @@ public class TestWorkflowExecutor {
         task1.setOutputData(new HashMap<>());
 
         TaskModel task2 = new TaskModel();
-        task2.setTaskType(TaskType.SIMPLE.name());
+        task2.setTaskType(TaskType.CUSTOM.name());
         task2.setTaskDefName("task2");
         task2.setReferenceTaskName("task2_ref");
         task2.setWorkflowInstanceId(subWorkflowId);
@@ -1457,7 +1457,7 @@ public class TestWorkflowExecutor {
         task_1_1.setTaskId(UUID.randomUUID().toString());
         task_1_1.setSeq(20);
         task_1_1.setRetryCount(1);
-        task_1_1.setTaskType(TaskType.SIMPLE.toString());
+        task_1_1.setTaskType(TaskType.CUSTOM.toString());
         task_1_1.setStatus(TaskModel.Status.FAILED);
         task_1_1.setRetried(true);
         task_1_1.setTaskDefName("task1");
@@ -1469,7 +1469,7 @@ public class TestWorkflowExecutor {
         task_2_1.setSeq(22);
         task_2_1.setRetryCount(1);
         task_2_1.setStatus(TaskModel.Status.CANCELED);
-        task_2_1.setTaskType(TaskType.SIMPLE.toString());
+        task_2_1.setTaskType(TaskType.CUSTOM.toString());
         task_2_1.setTaskDefName("task2");
         task_2_1.setWorkflowTask(new WorkflowTask());
         task_2_1.setReferenceTaskName("task2_ref1");
@@ -1503,7 +1503,7 @@ public class TestWorkflowExecutor {
         String workflowId = idGenerator.generate();
 
         TaskModel task1 = new TaskModel();
-        task1.setTaskType(TaskType.SIMPLE.name());
+        task1.setTaskType(TaskType.CUSTOM.name());
         task1.setTaskDefName("task1");
         task1.setReferenceTaskName("task1_ref");
         task1.setWorkflowInstanceId(workflowId);
@@ -1572,7 +1572,7 @@ public class TestWorkflowExecutor {
 
         // sub workflow setup
         TaskModel task1 = new TaskModel();
-        task1.setTaskType(TaskType.SIMPLE.name());
+        task1.setTaskType(TaskType.CUSTOM.name());
         task1.setTaskDefName("task1");
         task1.setReferenceTaskName("task1_ref");
         task1.setWorkflowInstanceId(subWorkflowId);
@@ -1583,7 +1583,7 @@ public class TestWorkflowExecutor {
         task1.setOutputData(new HashMap<>());
 
         TaskModel task2 = new TaskModel();
-        task2.setTaskType(TaskType.SIMPLE.name());
+        task2.setTaskType(TaskType.CUSTOM.name());
         task2.setTaskDefName("task2");
         task2.setReferenceTaskName("task2_ref");
         task2.setWorkflowInstanceId(subWorkflowId);
@@ -1858,12 +1858,12 @@ public class TestWorkflowExecutor {
         workflow.setStatus(WorkflowModel.Status.RUNNING);
 
         TaskModel completedTask = new TaskModel();
-        completedTask.setTaskType(TaskType.SIMPLE.name());
+        completedTask.setTaskType(TaskType.CUSTOM.name());
         completedTask.setReferenceTaskName("completedTask");
         completedTask.setWorkflowInstanceId(workflowId);
         completedTask.setScheduledTime(System.currentTimeMillis());
         completedTask.setCallbackAfterSeconds(300);
-        completedTask.setTaskId("simple-task-id");
+        completedTask.setTaskId("custom-task-id");
         completedTask.setStatus(TaskModel.Status.COMPLETED);
 
         TaskModel systemTask = new TaskModel();
@@ -1874,17 +1874,17 @@ public class TestWorkflowExecutor {
         systemTask.setTaskId("system-task-id");
         systemTask.setStatus(TaskModel.Status.SCHEDULED);
 
-        TaskModel simpleTask = new TaskModel();
-        simpleTask.setTaskType(TaskType.SIMPLE.name());
-        simpleTask.setReferenceTaskName("simpleTask");
-        simpleTask.setWorkflowInstanceId(workflowId);
-        simpleTask.setScheduledTime(System.currentTimeMillis());
-        simpleTask.setCallbackAfterSeconds(300);
-        simpleTask.setTaskId("simple-task-id");
-        simpleTask.setStatus(TaskModel.Status.SCHEDULED);
+        TaskModel customTask = new TaskModel();
+        customTask.setTaskType(TaskType.CUSTOM.name());
+        customTask.setReferenceTaskName("customTask");
+        customTask.setWorkflowInstanceId(workflowId);
+        customTask.setScheduledTime(System.currentTimeMillis());
+        customTask.setCallbackAfterSeconds(300);
+        customTask.setTaskId("custom-task-id");
+        customTask.setStatus(TaskModel.Status.SCHEDULED);
 
         TaskModel noCallbackTask = new TaskModel();
-        noCallbackTask.setTaskType(TaskType.SIMPLE.name());
+        noCallbackTask.setTaskType(TaskType.CUSTOM.name());
         noCallbackTask.setReferenceTaskName("noCallbackTask");
         noCallbackTask.setWorkflowInstanceId(workflowId);
         noCallbackTask.setScheduledTime(System.currentTimeMillis());
@@ -1893,7 +1893,7 @@ public class TestWorkflowExecutor {
         noCallbackTask.setStatus(TaskModel.Status.SCHEDULED);
 
         workflow.getTasks()
-                .addAll(Arrays.asList(completedTask, systemTask, simpleTask, noCallbackTask));
+                .addAll(Arrays.asList(completedTask, systemTask, customTask, noCallbackTask));
         when(executionDAOFacade.getWorkflowModel(workflowId, true)).thenReturn(workflow);
 
         workflowExecutor.resetCallbacksForWorkflow(workflowId);
@@ -1941,7 +1941,7 @@ public class TestWorkflowExecutor {
                 new ArrayList<>() {
                     {
                         WorkflowTask workflowTask = new WorkflowTask();
-                        workflowTask.setType(TaskType.TASK_TYPE_SIMPLE);
+                        workflowTask.setType(TaskType.TASK_TYPE_CUSTOM);
                         workflowTask.setName("TEST");
                         workflowTask.setTaskDefinition(new TaskDef());
                         add(workflowTask);
@@ -1971,12 +1971,12 @@ public class TestWorkflowExecutor {
         lambdaTask.setTaskType(TaskType.LAMBDA.name());
         lambdaTask.setStatus(TaskModel.Status.SCHEDULED);
 
-        TaskModel simpleTask = new TaskModel();
-        simpleTask.setTaskId(UUID.randomUUID().toString());
-        simpleTask.setTaskType(TaskType.SIMPLE.name());
-        simpleTask.setStatus(TaskModel.Status.COMPLETED);
+        TaskModel customTask = new TaskModel();
+        customTask.setTaskId(UUID.randomUUID().toString());
+        customTask.setTaskType(TaskType.CUSTOM.name());
+        customTask.setStatus(TaskModel.Status.COMPLETED);
 
-        workflow.getTasks().addAll(Arrays.asList(subWorkflowTask, lambdaTask, simpleTask));
+        workflow.getTasks().addAll(Arrays.asList(subWorkflowTask, lambdaTask, customTask));
 
         List<String> erroredTasks = workflowExecutor.cancelNonTerminalTasks(workflow);
         assertTrue(erroredTasks.isEmpty());
@@ -2119,7 +2119,7 @@ public class TestWorkflowExecutor {
 
         // sub workflow setup
         TaskModel task1 = new TaskModel();
-        task1.setTaskType(TaskType.SIMPLE.name());
+        task1.setTaskType(TaskType.CUSTOM.name());
         task1.setTaskDefName("task1");
         task1.setReferenceTaskName("task1_ref");
         task1.setWorkflowInstanceId(subWorkflowId);
@@ -2130,7 +2130,7 @@ public class TestWorkflowExecutor {
         task1.setOutputData(new HashMap<>());
 
         TaskModel task2 = new TaskModel();
-        task2.setTaskType(TaskType.SIMPLE.name());
+        task2.setTaskType(TaskType.CUSTOM.name());
         task2.setTaskDefName("task2");
         task2.setReferenceTaskName("task2_ref");
         task2.setWorkflowInstanceId(subWorkflowId);
@@ -2205,7 +2205,7 @@ public class TestWorkflowExecutor {
 
         // sub workflow setup
         TaskModel task1 = new TaskModel();
-        task1.setTaskType(TaskType.SIMPLE.name());
+        task1.setTaskType(TaskType.CUSTOM.name());
         task1.setTaskDefName("task1");
         task1.setReferenceTaskName("task1_ref");
         task1.setWorkflowInstanceId(subWorkflowId);
@@ -2216,7 +2216,7 @@ public class TestWorkflowExecutor {
         task1.setOutputData(new HashMap<>());
 
         TaskModel task2 = new TaskModel();
-        task2.setTaskType(TaskType.SIMPLE.name());
+        task2.setTaskType(TaskType.CUSTOM.name());
         task2.setTaskDefName("task2");
         task2.setReferenceTaskName("task2_ref");
         task2.setWorkflowInstanceId(subWorkflowId);
@@ -2289,7 +2289,7 @@ public class TestWorkflowExecutor {
 
         // sub workflow setup
         TaskModel task1 = new TaskModel();
-        task1.setTaskType(TaskType.SIMPLE.name());
+        task1.setTaskType(TaskType.CUSTOM.name());
         task1.setTaskDefName("task1");
         task1.setReferenceTaskName("task1_ref");
         task1.setWorkflowInstanceId(subWorkflowId);
@@ -2300,7 +2300,7 @@ public class TestWorkflowExecutor {
         task1.setOutputData(new HashMap<>());
 
         TaskModel task2 = new TaskModel();
-        task2.setTaskType(TaskType.SIMPLE.name());
+        task2.setTaskType(TaskType.CUSTOM.name());
         task2.setTaskDefName("task2");
         task2.setReferenceTaskName("task2_ref");
         task2.setWorkflowInstanceId(subWorkflowId);
@@ -2372,22 +2372,22 @@ public class TestWorkflowExecutor {
         workflow.setStatus(WorkflowModel.Status.RUNNING);
         workflow.setWorkflowDefinition(new WorkflowDef());
 
-        TaskModel simpleTask = new TaskModel();
-        simpleTask.setTaskType(TaskType.SIMPLE.name());
-        simpleTask.setReferenceTaskName("simpleTask");
-        simpleTask.setWorkflowInstanceId(workflowId);
-        simpleTask.setScheduledTime(System.currentTimeMillis());
-        simpleTask.setCallbackAfterSeconds(0);
-        simpleTask.setTaskId("simple-task-id");
-        simpleTask.setStatus(TaskModel.Status.IN_PROGRESS);
+        TaskModel customTask = new TaskModel();
+        customTask.setTaskType(TaskType.CUSTOM.name());
+        customTask.setReferenceTaskName("customTask");
+        customTask.setWorkflowInstanceId(workflowId);
+        customTask.setScheduledTime(System.currentTimeMillis());
+        customTask.setCallbackAfterSeconds(0);
+        customTask.setTaskId("custom-task-id");
+        customTask.setStatus(TaskModel.Status.IN_PROGRESS);
 
-        workflow.getTasks().add(simpleTask);
+        workflow.getTasks().add(customTask);
         when(executionDAOFacade.getWorkflowModel(workflowId, false)).thenReturn(workflow);
-        when(executionDAOFacade.getTaskModel(simpleTask.getTaskId())).thenReturn(simpleTask);
+        when(executionDAOFacade.getTaskModel(customTask.getTaskId())).thenReturn(customTask);
 
         TaskResult taskResult = new TaskResult();
         taskResult.setWorkflowInstanceId(workflowId);
-        taskResult.setTaskId(simpleTask.getTaskId());
+        taskResult.setTaskId(customTask.getTaskId());
         taskResult.setWorkerId("test-worker-id");
         taskResult.log("not ready yet");
         taskResult.setCallbackAfterSeconds(300);
@@ -2412,22 +2412,22 @@ public class TestWorkflowExecutor {
         workflow.setStatus(WorkflowModel.Status.RUNNING);
         workflow.setWorkflowDefinition(new WorkflowDef());
 
-        TaskModel simpleTask = new TaskModel();
-        simpleTask.setTaskType(TaskType.SIMPLE.name());
-        simpleTask.setReferenceTaskName("simpleTask");
-        simpleTask.setWorkflowInstanceId(workflowId);
-        simpleTask.setScheduledTime(System.currentTimeMillis());
-        simpleTask.setCallbackAfterSeconds(0);
-        simpleTask.setTaskId("simple-task-id");
-        simpleTask.setStatus(TaskModel.Status.IN_PROGRESS);
+        TaskModel customTask = new TaskModel();
+        customTask.setTaskType(TaskType.CUSTOM.name());
+        customTask.setReferenceTaskName("customTask");
+        customTask.setWorkflowInstanceId(workflowId);
+        customTask.setScheduledTime(System.currentTimeMillis());
+        customTask.setCallbackAfterSeconds(0);
+        customTask.setTaskId("custom-task-id");
+        customTask.setStatus(TaskModel.Status.IN_PROGRESS);
 
-        workflow.getTasks().add(simpleTask);
+        workflow.getTasks().add(customTask);
         when(executionDAOFacade.getWorkflowModel(workflowId, false)).thenReturn(workflow);
-        when(executionDAOFacade.getTaskModel(simpleTask.getTaskId())).thenReturn(simpleTask);
+        when(executionDAOFacade.getTaskModel(customTask.getTaskId())).thenReturn(customTask);
 
         TaskResult taskResult = new TaskResult();
         taskResult.setWorkflowInstanceId(workflowId);
-        taskResult.setTaskId(simpleTask.getTaskId());
+        taskResult.setTaskId(customTask.getTaskId());
         taskResult.setWorkerId("test-worker-id");
         taskResult.log("not ready yet");
         taskResult.setStatus(TaskResult.Status.IN_PROGRESS);
@@ -2448,10 +2448,10 @@ public class TestWorkflowExecutor {
         workflowDef.setName("lazyEvaluate");
         workflowDef.setVersion(1);
 
-        WorkflowTask simpleTask = new WorkflowTask();
-        simpleTask.setType(SIMPLE.name());
-        simpleTask.setName("simple");
-        simpleTask.setTaskReferenceName("simple");
+        WorkflowTask customTask = new WorkflowTask();
+        customTask.setType(CUSTOM.name());
+        customTask.setName("custom");
+        customTask.setTaskReferenceName("custom");
 
         WorkflowTask forkTask = new WorkflowTask();
         forkTask.setType(FORK_JOIN.name());
@@ -2459,12 +2459,12 @@ public class TestWorkflowExecutor {
         forkTask.setTaskReferenceName("fork");
 
         WorkflowTask branchTask1 = new WorkflowTask();
-        branchTask1.setType(SIMPLE.name());
+        branchTask1.setType(CUSTOM.name());
         branchTask1.setName("branchTask1");
         branchTask1.setTaskReferenceName("branchTask1");
 
         WorkflowTask branchTask2 = new WorkflowTask();
-        branchTask2.setType(SIMPLE.name());
+        branchTask2.setType(CUSTOM.name());
         branchTask2.setName("branchTask2");
         branchTask2.setTaskReferenceName("branchTask2");
 
@@ -2482,13 +2482,13 @@ public class TestWorkflowExecutor {
         doWhile.setTaskReferenceName("doWhile");
 
         WorkflowTask loopTask = new WorkflowTask();
-        loopTask.setType(SIMPLE.name());
+        loopTask.setType(CUSTOM.name());
         loopTask.setName("loopTask");
         loopTask.setTaskReferenceName("loopTask");
 
         doWhile.setLoopOver(List.of(loopTask));
 
-        workflowDef.getTasks().addAll(List.of(simpleTask, forkTask, joinTask, doWhile));
+        workflowDef.getTasks().addAll(List.of(customTask, forkTask, joinTask, doWhile));
 
         TaskModel task = new TaskModel();
         task.setStatus(TaskModel.Status.COMPLETED);
@@ -2503,7 +2503,7 @@ public class TestWorkflowExecutor {
         task.setReferenceTaskName("branchTask2");
         assertTrue(workflowExecutor.isLazyEvaluateWorkflow(workflowDef, task));
 
-        task.setReferenceTaskName("simple");
+        task.setReferenceTaskName("custom");
         assertFalse(workflowExecutor.isLazyEvaluateWorkflow(workflowDef, task));
 
         task.setReferenceTaskName("loopTask__1");
@@ -2517,24 +2517,24 @@ public class TestWorkflowExecutor {
 
     @Test
     public void testTaskExtendLease() {
-        TaskModel simpleTask = new TaskModel();
-        simpleTask.setTaskType(TaskType.SIMPLE.name());
-        simpleTask.setReferenceTaskName("simpleTask");
-        simpleTask.setWorkflowInstanceId("test-workflow-id");
-        simpleTask.setScheduledTime(System.currentTimeMillis());
-        simpleTask.setCallbackAfterSeconds(0);
-        simpleTask.setTaskId("simple-task-id");
-        simpleTask.setStatus(TaskModel.Status.IN_PROGRESS);
-        when(executionDAOFacade.getTaskModel(simpleTask.getTaskId())).thenReturn(simpleTask);
+        TaskModel customTask = new TaskModel();
+        customTask.setTaskType(TaskType.CUSTOM.name());
+        customTask.setReferenceTaskName("customTask");
+        customTask.setWorkflowInstanceId("test-workflow-id");
+        customTask.setScheduledTime(System.currentTimeMillis());
+        customTask.setCallbackAfterSeconds(0);
+        customTask.setTaskId("custom-task-id");
+        customTask.setStatus(TaskModel.Status.IN_PROGRESS);
+        when(executionDAOFacade.getTaskModel(customTask.getTaskId())).thenReturn(customTask);
 
         TaskResult taskResult = new TaskResult();
-        taskResult.setWorkflowInstanceId(simpleTask.getWorkflowInstanceId());
-        taskResult.setTaskId(simpleTask.getTaskId());
+        taskResult.setWorkflowInstanceId(customTask.getWorkflowInstanceId());
+        taskResult.setTaskId(customTask.getTaskId());
         taskResult.log("extend lease");
         taskResult.setExtendLease(true);
 
         workflowExecutor.updateTask(taskResult);
-        verify(executionDAOFacade, times(1)).extendLease(simpleTask);
+        verify(executionDAOFacade, times(1)).extendLease(customTask);
         verify(queueDAO, times(0)).postpone(anyString(), anyString(), anyInt(), anyLong());
         verify(executionDAOFacade, times(0)).updateTask(any());
     }

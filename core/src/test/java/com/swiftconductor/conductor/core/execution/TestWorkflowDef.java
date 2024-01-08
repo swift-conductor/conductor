@@ -41,8 +41,8 @@ public class TestWorkflowDef {
         def.setName("test_workflow");
         def.setVersion(1);
         def.setSchemaVersion(2);
-        def.getTasks().add(createWorkflowTask("simple_task_1"));
-        def.getTasks().add(createWorkflowTask("simple_task_2"));
+        def.getTasks().add(createWorkflowTask("custom_task_1"));
+        def.getTasks().add(createWorkflowTask("custom_task_2"));
 
         WorkflowTask task3 = createWorkflowTask("decision_task_1");
         def.getTasks().add(task3);
@@ -67,9 +67,9 @@ public class TestWorkflowDef {
                                         "decision_task_2",
                                         toMap("Case31", "case31_task_1", "case_31_task_2"),
                                         Collections.singletonList("case3_def_task"))));
-        def.getTasks().add(createWorkflowTask("simple_task_3"));
+        def.getTasks().add(createWorkflowTask("custom_task_3"));
 
-        assertTrue(def.containsType(TaskType.SIMPLE.name()));
+        assertTrue(def.containsType(TaskType.CUSTOM.name()));
         assertTrue(def.containsType(TaskType.DECISION.name()));
         assertFalse(def.containsType(TaskType.DO_WHILE.name()));
     }
@@ -80,8 +80,8 @@ public class TestWorkflowDef {
         def.setName("test_workflow");
         def.setVersion(1);
         def.setSchemaVersion(2);
-        def.getTasks().add(createWorkflowTask("simple_task_1"));
-        def.getTasks().add(createWorkflowTask("simple_task_2"));
+        def.getTasks().add(createWorkflowTask("custom_task_1"));
+        def.getTasks().add(createWorkflowTask("custom_task_2"));
 
         WorkflowTask task3 = createWorkflowTask("decision_task_1");
         def.getTasks().add(task3);
@@ -106,20 +106,20 @@ public class TestWorkflowDef {
                                         "decision_task_2",
                                         toMap("Case31", "case31_task_1", "case_31_task_2"),
                                         Collections.singletonList("case3_def_task"))));
-        def.getTasks().add(createWorkflowTask("simple_task_3"));
+        def.getTasks().add(createWorkflowTask("custom_task_3"));
 
         // Assertions
-        WorkflowTask next = def.getNextTask("simple_task_1");
+        WorkflowTask next = def.getNextTask("custom_task_1");
         assertNotNull(next);
-        assertEquals("simple_task_2", next.getTaskReferenceName());
+        assertEquals("custom_task_2", next.getTaskReferenceName());
 
-        next = def.getNextTask("simple_task_2");
+        next = def.getNextTask("custom_task_2");
         assertNotNull(next);
         assertEquals(task3.getTaskReferenceName(), next.getTaskReferenceName());
 
         next = def.getNextTask("decision_task_1");
         assertNotNull(next);
-        assertEquals("simple_task_3", next.getTaskReferenceName());
+        assertEquals("custom_task_3", next.getTaskReferenceName());
 
         next = def.getNextTask("case_1_task_1");
         assertNotNull(next);
@@ -127,11 +127,11 @@ public class TestWorkflowDef {
 
         next = def.getNextTask("case_1_task_2");
         assertNotNull(next);
-        assertEquals("simple_task_3", next.getTaskReferenceName());
+        assertEquals("custom_task_3", next.getTaskReferenceName());
 
         next = def.getNextTask("case3_def_task");
         assertNotNull(next);
-        assertEquals("simple_task_3", next.getTaskReferenceName());
+        assertEquals("custom_task_3", next.getTaskReferenceName());
 
         next = def.getNextTask("case31_task_1");
         assertNotNull(next);

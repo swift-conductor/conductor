@@ -9,7 +9,7 @@
       "inputParameters": {
         "payload": "${workflow.input.payload}"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "optional": false
     },
@@ -29,7 +29,7 @@
             "inputParameters": {
               "payload": "${task1.output.payload}"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "optional": false
           },
@@ -49,7 +49,7 @@
                   "inputParameters": {
                     "payload": "${task2.output.payload}"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "optional": false
                 }
@@ -64,7 +64,7 @@
             "inputParameters": {
               "payload": "${task1.output.payload}"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "optional": false
           },
@@ -84,7 +84,7 @@
                   "inputParameters": {
                     "payload": "${task4.output.payload}"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "optional": false
                 }

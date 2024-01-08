@@ -216,7 +216,7 @@ public abstract class AbstractEndToEndTest {
     protected WorkflowTask createWorkflowTask(String name) {
         WorkflowTask workflowTask = new WorkflowTask();
         workflowTask.setName(name);
-        workflowTask.setWorkflowTaskType(TaskType.SIMPLE);
+        workflowTask.setWorkflowTaskType(TaskType.CUSTOM);
         workflowTask.setTaskReferenceName(name);
         workflowTask.setDescription(getDefaultDescription(name));
         workflowTask.setDynamicTaskNameParam(DEFAULT_NULL_VALUE);

@@ -12,7 +12,7 @@
         "p3": "${CPEWF_TASK_ID}",
         "someNullKey": null
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],

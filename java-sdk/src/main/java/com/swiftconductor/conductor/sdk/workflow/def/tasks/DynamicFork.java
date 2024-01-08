@@ -31,7 +31,7 @@ public class DynamicFork extends Task<DynamicFork> {
 
     private Join join;
 
-    private SimpleTask forkPrepareTask;
+    private CustomTask forkPrepareTask;
 
     /**
      * Dynamic fork task that executes a set of tasks in parallel which are determined at run time.
@@ -61,7 +61,7 @@ public class DynamicFork extends Task<DynamicFork> {
      * @param forkPrepareTask A Task that produces the output as {@link DynamicForkInput} to specify
      *     which tasks to fork.
      */
-    public DynamicFork(String taskReferenceName, SimpleTask forkPrepareTask) {
+    public DynamicFork(String taskReferenceName, CustomTask forkPrepareTask) {
         super(taskReferenceName, TaskType.FORK_JOIN_DYNAMIC);
         this.forkPrepareTask = forkPrepareTask;
         this.join = new Join(taskReferenceName + "_join");

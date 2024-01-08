@@ -44,6 +44,7 @@ import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
 import com.swiftconductor.conductor.core.config.ConductorProperties;
 import com.swiftconductor.conductor.core.execution.DeciderService.DeciderOutcome;
 import com.swiftconductor.conductor.core.execution.evaluators.Evaluator;
+import com.swiftconductor.conductor.core.execution.mapper.CustomTaskMapper;
 import com.swiftconductor.conductor.core.execution.mapper.DecisionTaskMapper;
 import com.swiftconductor.conductor.core.execution.mapper.DynamicTaskMapper;
 import com.swiftconductor.conductor.core.execution.mapper.EventTaskMapper;
@@ -51,7 +52,6 @@ import com.swiftconductor.conductor.core.execution.mapper.ForkJoinDynamicTaskMap
 import com.swiftconductor.conductor.core.execution.mapper.ForkJoinTaskMapper;
 import com.swiftconductor.conductor.core.execution.mapper.HTTPTaskMapper;
 import com.swiftconductor.conductor.core.execution.mapper.JoinTaskMapper;
-import com.swiftconductor.conductor.core.execution.mapper.SimpleTaskMapper;
 import com.swiftconductor.conductor.core.execution.mapper.SubWorkflowTaskMapper;
 import com.swiftconductor.conductor.core.execution.mapper.SwitchTaskMapper;
 import com.swiftconductor.conductor.core.execution.mapper.TaskMapper;
@@ -69,6 +69,7 @@ import com.swiftconductor.conductor.dao.MetadataDAO;
 import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
 
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.CUSTOM;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.DECISION;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.DYNAMIC;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.EVENT;
@@ -76,7 +77,6 @@ import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.FORK_J
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.FORK_JOIN_DYNAMIC;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.HTTP;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.JOIN;
-import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.SIMPLE;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.SUB_WORKFLOW;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.SWITCH;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_DECISION;
@@ -164,7 +164,7 @@ public class TestDeciderOutcomes {
                         new IDGenerator(), parametersUtils, objectMapper, metadataDAO));
         taskMappers.put(
                 USER_DEFINED.name(), new UserDefinedTaskMapper(parametersUtils, metadataDAO));
-        taskMappers.put(SIMPLE.name(), new SimpleTaskMapper(parametersUtils));
+        taskMappers.put(CUSTOM.name(), new CustomTaskMapper(parametersUtils));
         taskMappers.put(
                 SUB_WORKFLOW.name(), new SubWorkflowTaskMapper(parametersUtils, metadataDAO));
         taskMappers.put(EVENT.name(), new EventTaskMapper(parametersUtils));
@@ -310,7 +310,7 @@ public class TestDeciderOutcomes {
             WorkflowTask wft = new WorkflowTask();
             wft.setName("f" + i);
             wft.setTaskReferenceName("f" + i);
-            wft.setWorkflowTaskType(TaskType.SIMPLE);
+            wft.setWorkflowTaskType(TaskType.CUSTOM);
             wft.getInputParameters().put("requestId", "${workflow.input.requestId}");
             wft.getInputParameters().put("taskId", "${CPEWF_TASK_ID}");
             wft.setTaskDefinition(new TaskDef("f" + i));
@@ -371,7 +371,7 @@ public class TestDeciderOutcomes {
 
         WorkflowTask task1 = new WorkflowTask();
         task1.setName("task0");
-        task1.setType("SIMPLE");
+        task1.setType("CUSTOM");
         task1.setTaskReferenceName("t0");
         task1.getInputParameters().put("taskId", "${CPEWF_TASK_ID}");
         task1.setOptional(true);
@@ -379,7 +379,7 @@ public class TestDeciderOutcomes {
 
         WorkflowTask task2 = new WorkflowTask();
         task2.setName("task1");
-        task2.setType("SIMPLE");
+        task2.setType("CUSTOM");
         task2.setTaskReferenceName("t1");
         task2.setTaskDefinition(new TaskDef("task1"));
 
@@ -471,7 +471,7 @@ public class TestDeciderOutcomes {
             WorkflowTask workflowTask = new WorkflowTask();
             workflowTask.setName("f" + i);
             workflowTask.setTaskReferenceName("f" + i);
-            workflowTask.setWorkflowTaskType(TaskType.SIMPLE);
+            workflowTask.setWorkflowTaskType(TaskType.CUSTOM);
             workflowTask.setOptional(true);
             workflowTask.setTaskDefinition(new TaskDef("f" + i));
             forks.add(workflowTask);
@@ -528,19 +528,19 @@ public class TestDeciderOutcomes {
 
         WorkflowTask even = new WorkflowTask();
         even.setName("even");
-        even.setType("SIMPLE");
+        even.setType("CUSTOM");
         even.setTaskReferenceName("even");
         even.setTaskDefinition(new TaskDef("even"));
 
         WorkflowTask odd = new WorkflowTask();
         odd.setName("odd");
-        odd.setType("SIMPLE");
+        odd.setType("CUSTOM");
         odd.setTaskReferenceName("odd");
         odd.setTaskDefinition(new TaskDef("odd"));
 
         WorkflowTask defaultt = new WorkflowTask();
         defaultt.setName("defaultt");
-        defaultt.setType("SIMPLE");
+        defaultt.setType("CUSTOM");
         defaultt.setTaskReferenceName("defaultt");
         defaultt.setTaskDefinition(new TaskDef("defaultt"));
 

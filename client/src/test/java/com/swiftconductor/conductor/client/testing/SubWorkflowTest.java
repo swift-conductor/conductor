@@ -49,10 +49,10 @@ public class SubWorkflowTest extends AbstractWorkflowTests {
                 .put("_x_test_worker_0_2", List.of(new WorkflowTestRequest.TaskMock()));
         testRequest
                 .getTaskRefToMockOutput()
-                .put("simple_task_1__1", List.of(new WorkflowTestRequest.TaskMock()));
+                .put("custom_task_1__1", List.of(new WorkflowTestRequest.TaskMock()));
         testRequest
                 .getTaskRefToMockOutput()
-                .put("simple_task_5", List.of(new WorkflowTestRequest.TaskMock()));
+                .put("custom_task_5", List.of(new WorkflowTestRequest.TaskMock()));
 
         Workflow execution = workflowClient.testWorkflow(testRequest);
         assertNotNull(execution);

@@ -44,26 +44,26 @@ class WaitTaskSpec extends AbstractSpecification {
         def workflowInstanceId = startWorkflow(SET_VARIABLE_WORKFLOW, 1,
                 '', workflowInput, null)
 
-        then: "verify that the simple task is scheduled"
+        then: "verify that the custom tasks is scheduled"
         with(workflowExecutionService.getExecutionStatus(workflowInstanceId, true)) {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
-            tasks[0].taskType == 'simple'
+            tasks[0].taskType == 'custom'
             tasks[0].status == Task.Status.SCHEDULED
         }
 
-        when: "poll and complete the 'simple' with external payload storage"
-        def pollAndCompleteLargePayloadTask = workflowTestUtil.pollAndCompleteTask('simple', 'simple.worker',
+        when: "poll and complete the 'custom' with external payload storage"
+        def pollAndCompleteLargePayloadTask = workflowTestUtil.pollAndCompleteTask('custom', 'simple.worker',
                 ['ok1': 'ov1'])
 
-        then: "verify that the 'simple' was polled and acknowledged"
+        then: "verify that the 'custom' was polled and acknowledged"
         verifyPolledAndAcknowledgedLargePayloadTask(pollAndCompleteLargePayloadTask)
 
         then: "ensure that the wait task is completed and the next task is scheduled"
         with(workflowExecutionService.getExecutionStatus(workflowInstanceId, true)) {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 3
-            tasks[0].taskType == 'simple'
+            tasks[0].taskType == 'custom'
             tasks[0].status == Task.Status.COMPLETED
             tasks[1].taskType == 'SET_VARIABLE'
             tasks[1].status == Task.Status.COMPLETED
@@ -81,7 +81,7 @@ class WaitTaskSpec extends AbstractSpecification {
         with(workflowExecutionService.getExecutionStatus(workflowInstanceId, true)) {
             status == Workflow.WorkflowStatus.COMPLETED
             tasks.size() == 3
-            tasks[0].taskType == 'simple'
+            tasks[0].taskType == 'custom'
             tasks[0].status == Task.Status.COMPLETED
             tasks[1].taskType == 'SET_VARIABLE'
             tasks[1].status == Task.Status.COMPLETED

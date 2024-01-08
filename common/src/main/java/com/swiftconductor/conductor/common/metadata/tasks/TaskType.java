@@ -20,7 +20,7 @@ import com.swiftconductor.conductor.annotations.protogen.ProtoEnum;
 
 @ProtoEnum
 public enum TaskType {
-    SIMPLE,
+    CUSTOM,
     DYNAMIC,
     FORK_JOIN,
     FORK_JOIN_DYNAMIC,
@@ -61,7 +61,7 @@ public enum TaskType {
     public static final String TASK_TYPE_SUB_WORKFLOW = "SUB_WORKFLOW";
     public static final String TASK_TYPE_START_WORKFLOW = "START_WORKFLOW";
     public static final String TASK_TYPE_FORK_JOIN = "FORK_JOIN";
-    public static final String TASK_TYPE_SIMPLE = "SIMPLE";
+    public static final String TASK_TYPE_CUSTOM = "CUSTOM";
     public static final String TASK_TYPE_HTTP = "HTTP";
     public static final String TASK_TYPE_LAMBDA = "LAMBDA";
     public static final String TASK_TYPE_INLINE = "INLINE";

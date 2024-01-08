@@ -37,31 +37,31 @@ public class TaskConversionsTests {
     }
 
     @Test
-    public void testSimpleTaskConversion() {
-        SimpleTask simpleTask = new SimpleTask("task_name", "task_ref_name");
+    public void testCustomTaskConversion() {
+        CustomTask customTask = new CustomTask("task_name", "task_ref_name");
 
         Map<String, Object> map = new HashMap<>();
         map.put("key11", "value11");
         map.put("key12", 100);
 
-        simpleTask.input("key1", "value");
-        simpleTask.input("key2", 42);
-        simpleTask.input("key3", true);
-        simpleTask.input("key4", map);
+        customTask.input("key1", "value");
+        customTask.input("key2", 42);
+        customTask.input("key3", true);
+        customTask.input("key4", map);
 
-        WorkflowTask workflowTask = simpleTask.getWorkflowDefTasks().get(0);
+        WorkflowTask workflowTask = customTask.getWorkflowDefTasks().get(0);
 
         Task fromWorkflowTask = TaskRegistry.getTask(workflowTask);
-        assertTrue(fromWorkflowTask instanceof SimpleTask);
-        SimpleTask simpleTaskFromWorkflowTask = (SimpleTask) fromWorkflowTask;
+        assertTrue(fromWorkflowTask instanceof CustomTask);
+        CustomTask customTaskFromWorkflowTask = (CustomTask) fromWorkflowTask;
 
         assertNotNull(fromWorkflowTask);
-        assertEquals(simpleTask.getName(), fromWorkflowTask.getName());
-        assertEquals(simpleTask.getTaskReferenceName(), fromWorkflowTask.getTaskReferenceName());
-        assertEquals(simpleTask.getTaskDef(), simpleTaskFromWorkflowTask.getTaskDef());
-        assertEquals(simpleTask.getType(), simpleTaskFromWorkflowTask.getType());
-        assertEquals(simpleTask.getStartDelay(), simpleTaskFromWorkflowTask.getStartDelay());
-        assertEquals(simpleTask.getInput(), simpleTaskFromWorkflowTask.getInput());
+        assertEquals(customTask.getName(), fromWorkflowTask.getName());
+        assertEquals(customTask.getTaskReferenceName(), fromWorkflowTask.getTaskReferenceName());
+        assertEquals(customTask.getTaskDef(), customTaskFromWorkflowTask.getTaskDef());
+        assertEquals(customTask.getType(), customTaskFromWorkflowTask.getType());
+        assertEquals(customTask.getStartDelay(), customTaskFromWorkflowTask.getStartDelay());
+        assertEquals(customTask.getInput(), customTaskFromWorkflowTask.getInput());
     }
 
     @Test
@@ -85,9 +85,9 @@ public class TaskConversionsTests {
 
     @Test
     public void testForkTaskConversion() {
-        SimpleTask task1 = new SimpleTask("task1", "task1");
-        SimpleTask task2 = new SimpleTask("task2", "task2");
-        SimpleTask task3 = new SimpleTask("task3", "task3");
+        CustomTask task1 = new CustomTask("task1", "task1");
+        CustomTask task2 = new CustomTask("task2", "task2");
+        CustomTask task3 = new CustomTask("task3", "task3");
 
         ForkJoin forkTask =
                 new ForkJoin("task_ref_name", new Task[] {task1}, new Task[] {task2, task3});
@@ -154,8 +154,8 @@ public class TaskConversionsTests {
 
     @Test
     public void testDoWhileConversion() {
-        SimpleTask task1 = new SimpleTask("task_name", "task_ref_name");
-        SimpleTask task2 = new SimpleTask("task_name", "task_ref_name");
+        CustomTask task1 = new CustomTask("task_name", "task_ref_name");
+        CustomTask task2 = new CustomTask("task_name", "task_ref_name");
 
         DoWhile doWhileTask = new DoWhile("task_ref_name", 2, task1, task2);
 
@@ -293,9 +293,9 @@ public class TaskConversionsTests {
     @Test
     public void testSwitchConversion() {
 
-        SimpleTask task1 = new SimpleTask("task_name", "task_ref_name1");
-        SimpleTask task2 = new SimpleTask("task_name", "task_ref_name2");
-        SimpleTask task3 = new SimpleTask("task_name", "task_ref_name3");
+        CustomTask task1 = new CustomTask("task_name", "task_ref_name1");
+        CustomTask task2 = new CustomTask("task_name", "task_ref_name2");
+        CustomTask task3 = new CustomTask("task_name", "task_ref_name3");
 
         Switch decision = new Switch("switch", "${workflow.input.zip");
         decision.switchCase("caseA", task1);

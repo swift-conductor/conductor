@@ -111,7 +111,7 @@ class WorkflowTestUtil {
         optionalTask.setOwnerEmail(DEFAULT_EMAIL_ADDRESS)
 
         TaskDef simpleSubWorkflowTask = new TaskDef()
-        simpleSubWorkflowTask.setName('simple_task_in_sub_wf')
+        simpleSubWorkflowTask.setName('custom_task_in_sub_wf')
         simpleSubWorkflowTask.setRetryCount(0)
         simpleSubWorkflowTask.setOwnerEmail(DEFAULT_EMAIL_ADDRESS)
 
@@ -151,11 +151,11 @@ class WorkflowTestUtil {
         rateLimitedTask.rateLimitPerFrequency = 1
         rateLimitedTask.ownerEmail = DEFAULT_EMAIL_ADDRESS
 
-        TaskDef rateLimitedSimpleTask = new TaskDef()
-        rateLimitedSimpleTask.name = 'test_simple_task_with_rateLimits'
-        rateLimitedSimpleTask.rateLimitFrequencyInSeconds = 10
-        rateLimitedSimpleTask.rateLimitPerFrequency = 1
-        rateLimitedSimpleTask.ownerEmail = DEFAULT_EMAIL_ADDRESS
+        TaskDef rateLimitedCustomTask = new TaskDef()
+        rateLimitedCustomTask.name = 'test_custom_task_with_rateLimits'
+        rateLimitedCustomTask.rateLimitFrequencyInSeconds = 10
+        rateLimitedCustomTask.rateLimitPerFrequency = 1
+        rateLimitedCustomTask.ownerEmail = DEFAULT_EMAIL_ADDRESS
 
         TaskDef eventTaskX = new TaskDef()
         eventTaskX.name = 'eventX'
@@ -166,7 +166,7 @@ class WorkflowTestUtil {
         metadataService.registerTaskDef(
                 [taskWithResponseTimeOut, optionalTask, simpleSubWorkflowTask,
                  subWorkflowTask, waitTimeOutTask, userTask, eventTaskX,
-                 rateLimitedTask, rateLimitedSimpleTask, concurrentExecutionLimitedTask]
+                 rateLimitedTask, rateLimitedCustomTask, concurrentExecutionLimitedTask]
         )
     }
 

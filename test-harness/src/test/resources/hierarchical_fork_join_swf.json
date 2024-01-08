@@ -40,7 +40,7 @@
               "p1": "${workflow.input.param1}",
               "p2": "${workflow.input.param2}"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "retryCount": 0
           }
         ]

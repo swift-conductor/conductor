@@ -58,7 +58,7 @@ public class WorkflowRepairService {
     /*
     For system task -> Verify the task isAsync() and not isAsyncComplete() or isAsyncComplete() in SCHEDULED state,
     and in SCHEDULED or IN_PROGRESS state. (Example: SUB_WORKFLOW tasks in SCHEDULED state)
-    For simple task -> Verify the task is in SCHEDULED state.
+    For custom tasks -> Verify the task is in SCHEDULED state.
     */
     private final Predicate<TaskModel> isTaskRepairable =
             task -> {
@@ -71,7 +71,7 @@ public class WorkflowRepairService {
                                             && task.getStatus() == TaskModel.Status.SCHEDULED))
                             && (task.getStatus() == TaskModel.Status.IN_PROGRESS
                                     || task.getStatus() == TaskModel.Status.SCHEDULED);
-                } else { // Else if simple task
+                } else { // Else if custom tasks
                     return task.getStatus() == TaskModel.Status.SCHEDULED;
                 }
             };

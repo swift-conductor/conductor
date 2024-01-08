@@ -22,7 +22,7 @@
       "name": "integration_task_1",
       "taskReferenceName": "t1",
       "inputParameters": {},
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],

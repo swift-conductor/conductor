@@ -481,7 +481,7 @@ class SimpleWorkflowSpec extends AbstractSpecification {
         WorkflowTask workflowTask = new WorkflowTask()
         workflowTask.name = 'integration_task_20'
         workflowTask.taskReferenceName = 'task_added'
-        workflowTask.workflowTaskType = TaskType.SIMPLE
+        workflowTask.workflowTaskType = TaskType.CUSTOM
 
         workflowDefinition.tasks.add(workflowTask)
         workflowDefinition.version = 2

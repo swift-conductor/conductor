@@ -458,12 +458,12 @@ class DoWhileSpec extends AbstractSpecification {
         with(workflowExecutionService.getExecutionStatus(subWorkflowInstanceId, true)) {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
             tasks[0].status == Task.Status.SCHEDULED
         }
 
-        when: "the 'simple_task_in_sub_wf' belonging to the sub workflow is polled and completed"
-        def polledAndCompletedSubWorkflowTask = workflowTestUtil.pollAndCompleteTask('simple_task_in_sub_wf', 'subworkflow.task.worker')
+        when: "the 'custom_task_in_sub_wf' belonging to the sub workflow is polled and completed"
+        def polledAndCompletedSubWorkflowTask = workflowTestUtil.pollAndCompleteTask('custom_task_in_sub_wf', 'subworkflow.task.worker')
 
         then: "verify that the task was polled and acknowledged"
         workflowTestUtil.verifyPolledAndAcknowledgedTask(polledAndCompletedSubWorkflowTask)
@@ -473,7 +473,7 @@ class DoWhileSpec extends AbstractSpecification {
             status == Workflow.WorkflowStatus.COMPLETED
             tasks.size() == 1
             tasks[0].status == Task.Status.COMPLETED
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
         }
 
         and: "the parent workflow is swept"

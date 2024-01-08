@@ -1,12 +1,12 @@
 {
   "name": "workflow_with_synchronous_system_task",
-  "description": "A workflow with a simple task followed a synchronous task",
+  "description": "A workflow with a custom tasks followed a synchronous task",
   "version": 1,
   "tasks": [
     {
       "name": "integration_task_1",
       "taskReferenceName": "t1",
-      "type": "SIMPLE"
+      "type": "CUSTOM"
     },
     {
       "name": "jsonjq",

@@ -54,7 +54,7 @@ public class WorkflowTask {
     private Map<String, Object> inputParameters = new HashMap<>();
 
     @ProtoField(id = 5)
-    private String type = TaskType.SIMPLE.name();
+    private String type = TaskType.CUSTOM.name();
 
     @ProtoField(id = 6)
     private String dynamicTaskNameParam;
@@ -647,7 +647,7 @@ public class WorkflowTask {
                 break;
             case DYNAMIC:
             case TERMINATE:
-            case SIMPLE:
+            case CUSTOM:
                 return null;
             default:
                 break;

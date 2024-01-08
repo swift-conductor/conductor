@@ -87,7 +87,7 @@ public class LocalServerRunner {
 
         try {
             String downloadURL =
-                    "https://repo1.maven.org/maven2/com/netflix/conductor/conductor-server/"
+                    "https://repo1.maven.org/maven2/com/swiftconductor/conductor/conductor-server/"
                             + conductorVersion
                             + "/conductor-server-"
                             + conductorVersion

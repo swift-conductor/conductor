@@ -165,7 +165,7 @@ public class TestWorkflowSweeper {
         workflowModel.setWorkflowId("1");
         TaskModel taskModel = new TaskModel();
         taskModel.setTaskId("task1");
-        taskModel.setTaskType(TaskType.TASK_TYPE_SIMPLE);
+        taskModel.setTaskType(TaskType.TASK_TYPE_CUSTOM);
         taskModel.setStatus(Status.IN_PROGRESS);
         workflowModel.setTasks(List.of(taskModel));
         when(properties.getWorkflowOffsetTimeout())
@@ -185,7 +185,7 @@ public class TestWorkflowSweeper {
         workflowModel.setWorkflowId("1");
         TaskModel taskModel = new TaskModel();
         taskModel.setTaskId("task1");
-        taskModel.setTaskType(TaskType.TASK_TYPE_SIMPLE);
+        taskModel.setTaskType(TaskType.TASK_TYPE_CUSTOM);
         taskModel.setStatus(Status.IN_PROGRESS);
         taskModel.setResponseTimeoutSeconds(responseTimeout);
         workflowModel.setTasks(List.of(taskModel));
@@ -205,7 +205,7 @@ public class TestWorkflowSweeper {
         workflowModel.setWorkflowDefinition(workflowDef);
         TaskModel taskModel = new TaskModel();
         taskModel.setTaskId("task1");
-        taskModel.setTaskType(TaskType.TASK_TYPE_SIMPLE);
+        taskModel.setTaskType(TaskType.TASK_TYPE_CUSTOM);
         taskModel.setStatus(Status.SCHEDULED);
         taskModel.setReferenceTaskName("task1");
         workflowModel.setTasks(List.of(taskModel));
@@ -229,7 +229,7 @@ public class TestWorkflowSweeper {
         workflowModel.setWorkflowDefinition(workflowDef);
         TaskModel taskModel = new TaskModel();
         taskModel.setTaskId("task1");
-        taskModel.setTaskType(TaskType.TASK_TYPE_SIMPLE);
+        taskModel.setTaskType(TaskType.TASK_TYPE_CUSTOM);
         taskModel.setStatus(Status.SCHEDULED);
         workflowModel.setTasks(List.of(taskModel));
         when(properties.getWorkflowOffsetTimeout())

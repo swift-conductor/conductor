@@ -32,38 +32,38 @@ import com.swiftconductor.conductor.model.WorkflowModel;
 
 /**
  * An implementation of {@link TaskMapper} to map a {@link WorkflowTask} of type {@link
- * TaskType#SIMPLE} to a {@link TaskModel} with status {@link TaskModel.Status#SCHEDULED}.
- * <b>NOTE:</b> There is not type defined for simples task.
+ * TaskType#CUSTOM} to a {@link TaskModel} with status {@link TaskModel.Status#SCHEDULED}.
+ * <b>NOTE:</b> There is not type defined for custom tasks.
  */
 @Component
-public class SimpleTaskMapper implements TaskMapper {
+public class CustomTaskMapper implements TaskMapper {
 
-    public static final Logger LOGGER = LoggerFactory.getLogger(SimpleTaskMapper.class);
+    public static final Logger LOGGER = LoggerFactory.getLogger(CustomTaskMapper.class);
     private final ParametersUtils parametersUtils;
 
-    public SimpleTaskMapper(ParametersUtils parametersUtils) {
+    public CustomTaskMapper(ParametersUtils parametersUtils) {
         this.parametersUtils = parametersUtils;
     }
 
     @Override
     public String getTaskType() {
-        return TaskType.SIMPLE.name();
+        return TaskType.CUSTOM.name();
     }
 
     /**
-     * This method maps a {@link WorkflowTask} of type {@link TaskType#SIMPLE} to a {@link
+     * This method maps a {@link WorkflowTask} of type {@link TaskType#CUSTOM} to a {@link
      * TaskModel}
      *
      * @param taskMapperContext: A wrapper class containing the {@link WorkflowTask}, {@link
      *     WorkflowDef}, {@link WorkflowModel} and a string representation of the TaskId
      * @throws TerminateWorkflowException In case if the task definition does not exist
-     * @return a List with just one simple task
+     * @return a List with just one custom tasks
      */
     @Override
     public List<TaskModel> getMappedTasks(TaskMapperContext taskMapperContext)
             throws TerminateWorkflowException {
 
-        LOGGER.debug("TaskMapperContext {} in SimpleTaskMapper", taskMapperContext);
+        LOGGER.debug("TaskMapperContext {} in CustomTaskMapper", taskMapperContext);
 
         WorkflowTask workflowTask = taskMapperContext.getWorkflowTask();
         WorkflowModel workflowModel = taskMapperContext.getWorkflowModel();
@@ -87,17 +87,17 @@ public class SimpleTaskMapper implements TaskMapper {
                         workflowModel,
                         taskDefinition,
                         taskMapperContext.getTaskId());
-        TaskModel simpleTask = taskMapperContext.createTaskModel();
-        simpleTask.setTaskType(workflowTask.getName());
-        simpleTask.setStartDelayInSeconds(workflowTask.getStartDelay());
-        simpleTask.setInputData(input);
-        simpleTask.setStatus(TaskModel.Status.SCHEDULED);
-        simpleTask.setRetryCount(retryCount);
-        simpleTask.setCallbackAfterSeconds(workflowTask.getStartDelay());
-        simpleTask.setResponseTimeoutSeconds(taskDefinition.getResponseTimeoutSeconds());
-        simpleTask.setRetriedTaskId(retriedTaskId);
-        simpleTask.setRateLimitPerFrequency(taskDefinition.getRateLimitPerFrequency());
-        simpleTask.setRateLimitFrequencyInSeconds(taskDefinition.getRateLimitFrequencyInSeconds());
-        return List.of(simpleTask);
+        TaskModel customTask = taskMapperContext.createTaskModel();
+        customTask.setTaskType(workflowTask.getName());
+        customTask.setStartDelayInSeconds(workflowTask.getStartDelay());
+        customTask.setInputData(input);
+        customTask.setStatus(TaskModel.Status.SCHEDULED);
+        customTask.setRetryCount(retryCount);
+        customTask.setCallbackAfterSeconds(workflowTask.getStartDelay());
+        customTask.setResponseTimeoutSeconds(taskDefinition.getResponseTimeoutSeconds());
+        customTask.setRetriedTaskId(retriedTaskId);
+        customTask.setRateLimitPerFrequency(taskDefinition.getRateLimitPerFrequency());
+        customTask.setRateLimitFrequencyInSeconds(taskDefinition.getRateLimitFrequencyInSeconds());
+        return List.of(customTask);
     }
 }

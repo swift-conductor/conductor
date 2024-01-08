@@ -190,7 +190,7 @@ public class WorkflowResource {
     }
 
     @PostMapping("/{workflowId}/resetcallbacks")
-    @Operation(summary = "Resets callback times of all non-terminal SIMPLE tasks to 0")
+    @Operation(summary = "Resets callback times of all non-terminal CUSTOM tasks to 0")
     @ResponseStatus(
             value = HttpStatus.NO_CONTENT) // for backwards compatibility with 2.x client which
     // expects a 204 for this request

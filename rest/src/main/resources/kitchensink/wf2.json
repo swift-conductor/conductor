@@ -12,14 +12,14 @@
         "mod": "${workflow.input.mod}",
         "oddEven": "${workflow.input.oddEven}"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "callbackFromWorker": true
     },
     {
       "name": "task_28",
       "taskReferenceName": "task_28",
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "callbackFromWorker": true
     },
@@ -32,14 +32,14 @@
           {
             "name": "task_10",
             "taskReferenceName": "task_10",
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "callbackFromWorker": true
           },
           {
             "name": "task_11",
             "taskReferenceName": "task_11",
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "callbackFromWorker": true
           }
@@ -48,14 +48,14 @@
           {
             "name": "task_20",
             "taskReferenceName": "task_20",
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "callbackFromWorker": true
           },
           {
             "name": "task_21",
             "taskReferenceName": "task_21",
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "callbackFromWorker": true
           }
@@ -78,7 +78,7 @@
     {
       "name": "task_30",
       "taskReferenceName": "task_30",
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "callbackFromWorker": true
     }

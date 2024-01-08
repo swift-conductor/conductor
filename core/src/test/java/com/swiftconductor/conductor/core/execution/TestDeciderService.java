@@ -964,7 +964,7 @@ public class TestDeciderService {
         WorkflowTask workflowTask1 = new WorkflowTask();
         workflowTask1.setName("s1");
         workflowTask1.setTaskReferenceName("s1");
-        workflowTask1.setType(SIMPLE.name());
+        workflowTask1.setType(CUSTOM.name());
         workflowTask1.setTaskDefinition(new TaskDef("s1"));
 
         List<TaskModel> tasksToBeScheduled =
@@ -976,7 +976,7 @@ public class TestDeciderService {
         WorkflowTask workflowTask2 = new WorkflowTask();
         workflowTask2.setName("s2");
         workflowTask2.setTaskReferenceName("s2");
-        workflowTask2.setType(SIMPLE.name());
+        workflowTask2.setType(CUSTOM.name());
         workflowTask2.setTaskDefinition(new TaskDef("s2"));
         tasksToBeScheduled = deciderService.getTasksToBeScheduled(workflow, workflowTask2, 0, null);
         assertNotNull(tasksToBeScheduled);
@@ -994,7 +994,7 @@ public class TestDeciderService {
         task.setTaskDefName("test_rt");
         task.setStatus(TaskModel.Status.IN_PROGRESS);
         task.setTaskId("aa");
-        task.setTaskType(TaskType.TASK_TYPE_SIMPLE);
+        task.setTaskType(TaskType.TASK_TYPE_CUSTOM);
         task.setUpdateTime(System.currentTimeMillis() - TimeUnit.SECONDS.toMillis(11));
 
         assertTrue(deciderService.isResponseTimedOut(taskDef, task));
@@ -1216,7 +1216,7 @@ public class TestDeciderService {
         decTask.setStatus(TaskModel.Status.COMPLETED);
 
         TaskModel task1 = new TaskModel();
-        decTask.setTaskType(SIMPLE.name());
+        decTask.setTaskType(CUSTOM.name());
         task1.setReferenceTaskName("t1");
         task1.setStatus(TaskModel.Status.COMPLETED);
 
@@ -1227,7 +1227,7 @@ public class TestDeciderService {
 
         // when the terminate task is COMPLETED
         TaskModel task2 = new TaskModel();
-        decTask.setTaskType(SIMPLE.name());
+        decTask.setTaskType(CUSTOM.name());
         task2.setReferenceTaskName("t2");
         task2.setStatus(TaskModel.Status.SCHEDULED);
 

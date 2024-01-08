@@ -138,7 +138,7 @@ class ExternalPayloadStorageSpec extends AbstractSpecification {
     }
 
     def "Test workflow with synchronous system task using external payload storage"() {
-        given: "An existing workflow definition with sync system task followed by a simple task"
+        given: "An existing workflow definition with sync system task followed by a custom tasks"
         metadataService.getWorkflowDef(WORKFLOW_WITH_SYNCHRONOUS_SYSTEM_TASK, 1)
 
         and: "input required to start large payload workflow"

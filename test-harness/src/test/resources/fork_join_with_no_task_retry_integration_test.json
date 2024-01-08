@@ -19,7 +19,7 @@
               "p1": "workflow.input.param1",
               "p2": "workflow.input.param2"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "decisionCases": {},
             "defaultCase": [],
             "forkTasks": [],
@@ -37,7 +37,7 @@
               "p1": "workflow.input.param1",
               "p2": "workflow.input.param2"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "decisionCases": {},
             "defaultCase": [],
             "forkTasks": [],
@@ -56,7 +56,7 @@
             "inputParameters": {
               "tp1": "workflow.input.param1"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "decisionCases": {},
             "defaultCase": [],
             "forkTasks": [],
@@ -100,7 +100,7 @@
       "inputParameters": {
         "tp1": "workflow.input.param1"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],

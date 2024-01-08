@@ -126,16 +126,16 @@ public class ForkJoinDynamicTaskMapperTest {
         when(objectMapper.convertValue(any(), any(TypeReference.class)))
                 .thenReturn(Arrays.asList(wt2, wt3));
 
-        TaskModel simpleTask1 = new TaskModel();
-        simpleTask1.setReferenceTaskName("xdt1");
+        TaskModel customTask1 = new TaskModel();
+        customTask1.setReferenceTaskName("xdt1");
 
-        TaskModel simpleTask2 = new TaskModel();
-        simpleTask2.setReferenceTaskName("xdt2");
+        TaskModel customTask2 = new TaskModel();
+        customTask2.setReferenceTaskName("xdt2");
 
         when(deciderService.getTasksToBeScheduled(workflowModel, wt2, 0))
-                .thenReturn(Collections.singletonList(simpleTask1));
+                .thenReturn(Collections.singletonList(customTask1));
         when(deciderService.getTasksToBeScheduled(workflowModel, wt3, 0))
-                .thenReturn(Collections.singletonList(simpleTask2));
+                .thenReturn(Collections.singletonList(customTask2));
 
         String taskId = idGenerator.generate();
 
@@ -209,16 +209,16 @@ public class ForkJoinDynamicTaskMapperTest {
         when(objectMapper.convertValue(any(), any(TypeReference.class)))
                 .thenReturn(Arrays.asList(wt2, wt3));
 
-        TaskModel simpleTask1 = new TaskModel();
-        simpleTask1.setReferenceTaskName("xdt1");
+        TaskModel customTask1 = new TaskModel();
+        customTask1.setReferenceTaskName("xdt1");
 
-        TaskModel simpleTask2 = new TaskModel();
-        simpleTask2.setReferenceTaskName("xdt2");
+        TaskModel customTask2 = new TaskModel();
+        customTask2.setReferenceTaskName("xdt2");
 
         when(deciderService.getTasksToBeScheduled(workflowModel, wt2, 0))
-                .thenReturn(Collections.singletonList(simpleTask1));
+                .thenReturn(Collections.singletonList(customTask1));
         when(deciderService.getTasksToBeScheduled(workflowModel, wt3, 0))
-                .thenReturn(Collections.singletonList(simpleTask2));
+                .thenReturn(Collections.singletonList(customTask2));
 
         String taskId = idGenerator.generate();
         TaskMapperContext taskMapperContext =
@@ -476,8 +476,8 @@ public class ForkJoinDynamicTaskMapperTest {
         when(objectMapper.convertValue(any(), any(TypeReference.class)))
                 .thenReturn(Arrays.asList(wt2, wt3));
 
-        TaskModel simpleTask1 = new TaskModel();
-        simpleTask1.setReferenceTaskName("xdt1");
+        TaskModel customTask1 = new TaskModel();
+        customTask1.setReferenceTaskName("xdt1");
 
         // Empty list, this is a bad state, workflow should terminate
         when(deciderService.getTasksToBeScheduled(workflowModel, wt2, 0))

@@ -38,7 +38,7 @@ class TestWorkflowSpec extends AbstractSpecification {
     @Autowired
     WorkflowTestService workflowTestService
 
-    def "Run Workflow Test with simple tasks"() {
+    def "Run Workflow Test with custom taskss"() {
         given: "workflow input"
         def workflowInput = new HashMap()
         workflowInput['var'] = "var_test_value"
@@ -50,12 +50,12 @@ class TestWorkflowSpec extends AbstractSpecification {
         workflowDef.setOwnerEmail("owner@example.com");
 
         WorkflowTask task1 = new WorkflowTask();
-        task1.setType(TaskType.TASK_TYPE_SIMPLE);
+        task1.setType(TaskType.TASK_TYPE_CUSTOM);
         task1.setName("task1");
         task1.setTaskReferenceName("task1");
 
         WorkflowTask task2 = new WorkflowTask();
-        task2.setType(TaskType.TASK_TYPE_SIMPLE);
+        task2.setType(TaskType.TASK_TYPE_CUSTOM);
         task2.setName("task2");
         task2.setTaskReferenceName("task2");
 
@@ -75,7 +75,7 @@ class TestWorkflowSpec extends AbstractSpecification {
         when: "Start the workflow which has the set variable task"
         def workflow = workflowTestService.testWorkflow(request)
 
-        then: "verify that the simple task is scheduled"
+        then: "verify that the custom tasks is scheduled"
         with(workflowExecutionService.getExecutionStatus(workflow.getWorkflowId(), true)) {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 2
@@ -102,7 +102,7 @@ class TestWorkflowSpec extends AbstractSpecification {
         workflowDef.setOwnerEmail("owner@example.com");
 
         WorkflowTask task1 = new WorkflowTask();
-        task1.setType(TaskType.TASK_TYPE_SIMPLE);
+        task1.setType(TaskType.TASK_TYPE_CUSTOM);
         task1.setName("task1");
         task1.setTaskReferenceName("task1");
 
@@ -115,12 +115,12 @@ class TestWorkflowSpec extends AbstractSpecification {
         decision.getInputParameters().put("switchCaseValue", "\${workflow.input.case}")
 
         WorkflowTask d1 = new WorkflowTask();
-        d1.setType(TaskType.TASK_TYPE_SIMPLE);
+        d1.setType(TaskType.TASK_TYPE_CUSTOM);
         d1.setName("task1");
         d1.setTaskReferenceName("d1");
 
         WorkflowTask d2 = new WorkflowTask();
-        d2.setType(TaskType.TASK_TYPE_SIMPLE);
+        d2.setType(TaskType.TASK_TYPE_CUSTOM);
         d2.setName("task2");
         d2.setTaskReferenceName("d2");
 
@@ -145,7 +145,7 @@ class TestWorkflowSpec extends AbstractSpecification {
         when: "Start the workflow which has the set variable task"
         def workflow = workflowTestService.testWorkflow(request)
 
-        then: "verify that the simple task is scheduled"
+        then: "verify that the custom tasks is scheduled"
         with(workflowExecutionService.getExecutionStatus(workflow.getWorkflowId(), true)) {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 3

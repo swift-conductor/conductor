@@ -10,7 +10,7 @@
         "mod": "${workflow.input.mod}",
         "oddEven": "${workflow.input.oddEven}"
       },
-      "type": "SIMPLE"
+      "type": "CUSTOM"
     },
     {
       "name": "event_task",
@@ -48,7 +48,7 @@
               "mod": "${task_2.output.mod}",
               "oddEven": "${task_2.output.oddEven}"
             },
-            "type": "SIMPLE"
+            "type": "CUSTOM"
           },
           {
             "name": "dynamic_fanout",
@@ -77,7 +77,7 @@
                 {
                   "name": "task_10",
                   "taskReferenceName": "task_10",
-                  "type": "SIMPLE"
+                  "type": "CUSTOM"
                 },
                 {
                   "name": "sub_workflow_x",
@@ -97,7 +97,7 @@
                 {
                   "name": "task_11",
                   "taskReferenceName": "task_11",
-                  "type": "SIMPLE"
+                  "type": "CUSTOM"
                 },
                 {
                   "name": "sub_workflow_x",
@@ -145,7 +145,7 @@
         "statuses": "${get_es_1.output..status}",
         "workflowIds": "${get_es_1.output..workflowId}"
       },
-      "type": "SIMPLE"
+      "type": "CUSTOM"
     }
   ],
   "outputParameters": {

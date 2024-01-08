@@ -89,7 +89,7 @@ public class WorkflowDefConstraintTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("fileLocation", "${workflow.input.fileLocation}");
@@ -118,7 +118,7 @@ public class WorkflowDefConstraintTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("fileLocation", "${work.input.fileLocation}");
@@ -152,7 +152,7 @@ public class WorkflowDefConstraintTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("fileLocation", "${task_2.input.fileLocation}");
@@ -162,7 +162,7 @@ public class WorkflowDefConstraintTest {
         WorkflowTask workflowTask_2 = new WorkflowTask();
         workflowTask_2.setName("task_2");
         workflowTask_2.setTaskReferenceName("task_1");
-        workflowTask_2.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_2.setType(TaskType.TASK_TYPE_CUSTOM);
 
         workflowTask_2.setInputParameters(inputParam);
 

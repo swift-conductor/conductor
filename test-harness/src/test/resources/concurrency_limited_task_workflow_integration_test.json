@@ -6,7 +6,7 @@
       "name": "test_task_with_concurrency_limit",
       "taskReferenceName": "test_task_with_concurrency_limit",
       "inputParameters": {},
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],

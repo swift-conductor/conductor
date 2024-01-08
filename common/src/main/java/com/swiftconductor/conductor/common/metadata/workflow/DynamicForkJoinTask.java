@@ -36,7 +36,7 @@ public class DynamicForkJoinTask {
     private Map<String, Object> input = new HashMap<>();
 
     @ProtoField(id = 5)
-    private String type = TaskType.SIMPLE.name();
+    private String type = TaskType.CUSTOM.name();
 
     public DynamicForkJoinTask() {}
 

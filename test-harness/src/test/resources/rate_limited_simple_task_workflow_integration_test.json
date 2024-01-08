@@ -1,12 +1,12 @@
 {
-  "name": "test_rate_limit_simple_task_workflow",
+  "name": "test_rate_limit_custom_task_workflow",
   "version": 1,
   "tasks": [
     {
-      "name": "test_simple_task_with_rateLimits",
-      "taskReferenceName": "test_simple_task_with_rateLimits",
+      "name": "test_custom_task_with_rateLimits",
+      "taskReferenceName": "test_custom_task_with_rateLimits",
       "inputParameters": {},
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],

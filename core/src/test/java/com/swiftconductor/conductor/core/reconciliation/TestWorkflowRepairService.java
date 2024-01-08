@@ -63,9 +63,9 @@ public class TestWorkflowRepairService {
     }
 
     @Test
-    public void verifyAndRepairSimpleTaskInScheduledState() {
+    public void verifyAndRepairCustomTaskInScheduledState() {
         TaskModel task = new TaskModel();
-        task.setTaskType("SIMPLE");
+        task.setTaskType("CUSTOM");
         task.setStatus(TaskModel.Status.SCHEDULED);
         task.setTaskId("abcd");
         task.setCallbackAfterSeconds(60);
@@ -79,9 +79,9 @@ public class TestWorkflowRepairService {
     }
 
     @Test
-    public void verifySimpleTaskInProgressState() {
+    public void verifyCustomTaskInProgressState() {
         TaskModel task = new TaskModel();
-        task.setTaskType("SIMPLE");
+        task.setTaskType("CUSTOM");
         task.setStatus(TaskModel.Status.IN_PROGRESS);
         task.setTaskId("abcd");
         task.setCallbackAfterSeconds(60);
@@ -89,7 +89,7 @@ public class TestWorkflowRepairService {
         when(queueDAO.containsMessage(anyString(), anyString())).thenReturn(false);
 
         assertFalse(workflowRepairService.verifyAndRepairTask(task));
-        // Verify that queue message is never pushed for simple task in IN_PROGRESS state
+        // Verify that queue message is never pushed for custom tasks in IN_PROGRESS state
         verify(queueDAO, never()).containsMessage(anyString(), anyString());
         verify(queueDAO, never()).push(anyString(), anyString(), anyLong());
     }

@@ -12,7 +12,7 @@
           "mod": "${workflow.input.mod}",
           "oddEven": "${workflow.input.oddEven}"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "taskDefinition": {
           "ownerApp": null,
           "createTime": null,
@@ -69,7 +69,7 @@
                 "mod": "${task_2.output.mod}",
                 "oddEven": "${task_2.output.oddEven}"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "taskDefinition": {
                 "ownerApp": null,
                 "createTime": null,
@@ -117,7 +117,7 @@
                   {
                     "name": "task_100010",
                     "taskReferenceName": "task_100010",
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "taskDefinition": {
                       "ownerApp": null,
                       "createTime": null,
@@ -156,7 +156,7 @@
                   {
                     "name": "task_100011",
                     "taskReferenceName": "task_100011",
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "taskDefinition": {
                       "ownerApp": null,
                       "createTime": null,
@@ -223,7 +223,7 @@
           "statuses": "${get_es_1.output..status}",
           "workflowIds": "${get_es_1.output..workflowId}"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "taskDefinition": {
           "ownerApp": null,
           "createTime": null,

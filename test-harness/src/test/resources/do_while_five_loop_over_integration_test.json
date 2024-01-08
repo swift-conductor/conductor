@@ -59,7 +59,7 @@
           "name": "integration_task_1",
           "taskReferenceName": "integration_task_1",
           "inputParameters": {},
-          "type": "SIMPLE",
+          "type": "CUSTOM",
           "decisionCases": {},
           "defaultCase": [],
           "forkTasks": [],
@@ -92,7 +92,7 @@
           "name": "integration_task_2",
           "taskReferenceName": "integration_task_2",
           "inputParameters": {},
-          "type": "SIMPLE",
+          "type": "CUSTOM",
           "decisionCases": {},
           "defaultCase": [],
           "forkTasks": [],
@@ -109,7 +109,7 @@
       "name": "integration_task_3",
       "taskReferenceName": "integration_task_3",
       "inputParameters": {},
-      "type": "SIMPLE"
+      "type": "CUSTOM"
     }
   ],
   "inputParameters": [],

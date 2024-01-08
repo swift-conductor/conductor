@@ -139,7 +139,7 @@
           "mod": "workflow.input.mod",
           "oddEven": "workflow.input.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -472,7 +472,7 @@
           "mod": "perf_task_2.output.mod",
           "oddEven": "perf_task_2.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -630,7 +630,7 @@
                 "mod": "perf_task_3.output.mod",
                 "oddEven": "perf_task_3.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -678,7 +678,7 @@
                 "mod": "perf_task_4.output.mod",
                 "oddEven": "perf_task_4.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -704,7 +704,7 @@
                 "mod": "perf_task_5.output.mod",
                 "oddEven": "perf_task_5.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -732,7 +732,7 @@
                 "mod": "perf_task_3.output.mod",
                 "oddEven": "perf_task_3.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -758,7 +758,7 @@
                 "mod": "perf_task_7.output.mod",
                 "oddEven": "perf_task_7.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -784,7 +784,7 @@
                 "mod": "perf_task_8.output.mod",
                 "oddEven": "perf_task_8.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -820,7 +820,7 @@
                       "mod": "perf_task_9.output.mod",
                       "oddEven": "perf_task_9.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -846,7 +846,7 @@
                       "mod": "perf_task_12.output.mod",
                       "oddEven": "perf_task_12.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -890,7 +890,7 @@
                       "mod": "perf_task_9.output.mod",
                       "oddEven": "perf_task_9.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -916,7 +916,7 @@
                       "mod": "perf_task_15.output.mod",
                       "oddEven": "perf_task_15.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -960,7 +960,7 @@
                       "mod": "perf_task_9.output.mod",
                       "oddEven": "perf_task_9.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -986,7 +986,7 @@
                       "mod": "perf_task_18.output.mod",
                       "oddEven": "perf_task_18.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -1014,7 +1014,7 @@
                       "mod": "perf_task_9.output.mod",
                       "oddEven": "perf_task_9.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -1056,7 +1056,7 @@
                       "mod": "perf_task_21.output.mod",
                       "oddEven": "perf_task_21.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -1085,7 +1085,7 @@
                     "mod": "perf_task_9.output.mod",
                     "oddEven": "perf_task_9.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "optional": false,
                   "taskDefinition": {
@@ -1127,7 +1127,7 @@
                     "mod": "perf_task_24.output.mod",
                     "oddEven": "perf_task_24.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "optional": false,
                   "taskDefinition": {
@@ -1300,7 +1300,7 @@
           "mod": "perf_task_3.output.mod",
           "oddEven": "perf_task_3.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -1467,7 +1467,7 @@
           "mod": "perf_task_7.output.mod",
           "oddEven": "perf_task_7.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -1634,7 +1634,7 @@
           "mod": "perf_task_8.output.mod",
           "oddEven": "perf_task_8.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -1716,7 +1716,7 @@
                 "mod": "perf_task_9.output.mod",
                 "oddEven": "perf_task_9.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -1742,7 +1742,7 @@
                 "mod": "perf_task_12.output.mod",
                 "oddEven": "perf_task_12.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -1786,7 +1786,7 @@
                 "mod": "perf_task_9.output.mod",
                 "oddEven": "perf_task_9.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -1812,7 +1812,7 @@
                 "mod": "perf_task_15.output.mod",
                 "oddEven": "perf_task_15.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -1856,7 +1856,7 @@
                 "mod": "perf_task_9.output.mod",
                 "oddEven": "perf_task_9.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -1882,7 +1882,7 @@
                 "mod": "perf_task_18.output.mod",
                 "oddEven": "perf_task_18.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -1910,7 +1910,7 @@
                 "mod": "perf_task_9.output.mod",
                 "oddEven": "perf_task_9.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -1952,7 +1952,7 @@
                 "mod": "perf_task_21.output.mod",
                 "oddEven": "perf_task_21.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -1981,7 +1981,7 @@
               "mod": "perf_task_9.output.mod",
               "oddEven": "perf_task_9.output.oddEven"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "optional": false,
             "taskDefinition": {
@@ -2023,7 +2023,7 @@
               "mod": "perf_task_24.output.mod",
               "oddEven": "perf_task_24.output.oddEven"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "optional": false,
             "taskDefinition": {
@@ -2190,7 +2190,7 @@
           "mod": "perf_task_9.output.mod",
           "oddEven": "perf_task_9.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -2417,7 +2417,7 @@
           "mod": "perf_task_21.output.mod",
           "oddEven": "perf_task_21.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -2584,7 +2584,7 @@
           "mod": "perf_task_3.output.mod",
           "oddEven": "perf_task_3.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -2751,7 +2751,7 @@
           "mod": "perf_task_28.output.mod",
           "oddEven": "perf_task_28.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -2918,7 +2918,7 @@
           "mod": "perf_task_29.output.mod",
           "oddEven": "perf_task_29.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -3075,7 +3075,7 @@
           "mod": "workflow.input.mod",
           "oddEven": "workflow.input.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -3127,7 +3127,7 @@
           "mod": "perf_task_2.output.mod",
           "oddEven": "perf_task_2.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -3171,7 +3171,7 @@
                 "mod": "perf_task_3.output.mod",
                 "oddEven": "perf_task_3.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -3219,7 +3219,7 @@
                 "mod": "perf_task_4.output.mod",
                 "oddEven": "perf_task_4.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -3245,7 +3245,7 @@
                 "mod": "perf_task_5.output.mod",
                 "oddEven": "perf_task_5.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -3273,7 +3273,7 @@
                 "mod": "perf_task_3.output.mod",
                 "oddEven": "perf_task_3.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -3299,7 +3299,7 @@
                 "mod": "perf_task_7.output.mod",
                 "oddEven": "perf_task_7.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -3325,7 +3325,7 @@
                 "mod": "perf_task_8.output.mod",
                 "oddEven": "perf_task_8.output.oddEven"
               },
-              "type": "SIMPLE",
+              "type": "CUSTOM",
               "startDelay": 0,
               "optional": false,
               "taskDefinition": {
@@ -3361,7 +3361,7 @@
                       "mod": "perf_task_9.output.mod",
                       "oddEven": "perf_task_9.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -3387,7 +3387,7 @@
                       "mod": "perf_task_12.output.mod",
                       "oddEven": "perf_task_12.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -3431,7 +3431,7 @@
                       "mod": "perf_task_9.output.mod",
                       "oddEven": "perf_task_9.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -3457,7 +3457,7 @@
                       "mod": "perf_task_15.output.mod",
                       "oddEven": "perf_task_15.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -3501,7 +3501,7 @@
                       "mod": "perf_task_9.output.mod",
                       "oddEven": "perf_task_9.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -3527,7 +3527,7 @@
                       "mod": "perf_task_18.output.mod",
                       "oddEven": "perf_task_18.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -3555,7 +3555,7 @@
                       "mod": "perf_task_9.output.mod",
                       "oddEven": "perf_task_9.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -3597,7 +3597,7 @@
                       "mod": "perf_task_21.output.mod",
                       "oddEven": "perf_task_21.output.oddEven"
                     },
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "optional": false,
                     "taskDefinition": {
@@ -3626,7 +3626,7 @@
                     "mod": "perf_task_9.output.mod",
                     "oddEven": "perf_task_9.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "optional": false,
                   "taskDefinition": {
@@ -3668,7 +3668,7 @@
                     "mod": "perf_task_24.output.mod",
                     "oddEven": "perf_task_24.output.oddEven"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "startDelay": 0,
                   "optional": false,
                   "taskDefinition": {
@@ -3705,7 +3705,7 @@
           "mod": "perf_task_3.output.mod",
           "oddEven": "perf_task_3.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -3731,7 +3731,7 @@
           "mod": "perf_task_28.output.mod",
           "oddEven": "perf_task_28.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {
@@ -3757,7 +3757,7 @@
           "mod": "perf_task_29.output.mod",
           "oddEven": "perf_task_29.output.oddEven"
         },
-        "type": "SIMPLE",
+        "type": "CUSTOM",
         "startDelay": 0,
         "optional": false,
         "taskDefinition": {

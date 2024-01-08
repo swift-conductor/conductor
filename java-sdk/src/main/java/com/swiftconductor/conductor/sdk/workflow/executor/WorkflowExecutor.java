@@ -77,7 +77,7 @@ public class WorkflowExecutor {
         TaskRegistry.register(TaskType.JOIN.name(), Join.class);
         TaskRegistry.register(TaskType.JSON_JQ_TRANSFORM.name(), JQ.class);
         TaskRegistry.register(TaskType.SET_VARIABLE.name(), SetVariable.class);
-        TaskRegistry.register(TaskType.SIMPLE.name(), SimpleTask.class);
+        TaskRegistry.register(TaskType.CUSTOM.name(), CustomTask.class);
         TaskRegistry.register(TaskType.SUB_WORKFLOW.name(), SubWorkflow.class);
         TaskRegistry.register(TaskType.SWITCH.name(), Switch.class);
         TaskRegistry.register(TaskType.TERMINATE.name(), Terminate.class);

@@ -846,7 +846,7 @@ class ForkJoinSpec extends AbstractSpecification {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
             tasks[0].status == Task.Status.SCHEDULED
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
         }
 
         def subWorkflowInstanceId2 = workflowWithRunningSubWorkflows.getTaskByRefName('st2').subWorkflowId
@@ -854,13 +854,13 @@ class ForkJoinSpec extends AbstractSpecification {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
             tasks[0].status == Task.Status.SCHEDULED
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
         }
 
-        when: "The 'simple_task_in_sub_wf' belonging to both the sub workflows is polled and failed"
-        def polledAndAckSubWorkflowTask1 = workflowTestUtil.pollAndFailTask('simple_task_in_sub_wf',
+        when: "The 'custom_task_in_sub_wf' belonging to both the sub workflows is polled and failed"
+        def polledAndAckSubWorkflowTask1 = workflowTestUtil.pollAndFailTask('custom_task_in_sub_wf',
                 'task1.worker', 'Failed....')
-        def polledAndAckSubWorkflowTask2 = workflowTestUtil.pollAndFailTask('simple_task_in_sub_wf',
+        def polledAndAckSubWorkflowTask2 = workflowTestUtil.pollAndFailTask('custom_task_in_sub_wf',
                 'task1.worker', 'Failed....')
 
         then: "verify that both the tasks were polled and failed"
@@ -872,14 +872,14 @@ class ForkJoinSpec extends AbstractSpecification {
             status == Workflow.WorkflowStatus.FAILED
             tasks.size() == 1
             tasks[0].status == Task.Status.FAILED
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
         }
 
         with(workflowExecutionService.getExecutionStatus(subWorkflowInstanceId2, true)) {
             status == Workflow.WorkflowStatus.FAILED
             tasks.size() == 1
             tasks[0].status == Task.Status.FAILED
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
         }
         sweep(workflowInstanceId)
 
@@ -910,7 +910,7 @@ class ForkJoinSpec extends AbstractSpecification {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
             tasks[0].status == Task.Status.SCHEDULED
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
         }
 
         and: "parent workflow remains the same"
@@ -982,11 +982,11 @@ class ForkJoinSpec extends AbstractSpecification {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
             tasks[0].status == Task.Status.SCHEDULED
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
         }
 
-        when: "the 'simple_task_in_sub_wf' belonging to the sub workflow is polled and failed"
-        def polledAndFailSubWorkflowTask = workflowTestUtil.pollAndFailTask('simple_task_in_sub_wf',
+        when: "the 'custom_task_in_sub_wf' belonging to the sub workflow is polled and failed"
+        def polledAndFailSubWorkflowTask = workflowTestUtil.pollAndFailTask('custom_task_in_sub_wf',
                 'task1.worker', 'Failed....')
 
         then: "verify that the task was polled and failed"
@@ -997,7 +997,7 @@ class ForkJoinSpec extends AbstractSpecification {
             status == Workflow.WorkflowStatus.FAILED
             tasks.size() == 1
             tasks[0].status == Task.Status.FAILED
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
         }
 
         and: "verify that the workflow is in a RUNNING state and sub workflow task is retried"
@@ -1049,11 +1049,11 @@ class ForkJoinSpec extends AbstractSpecification {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
             tasks[0].status == Task.Status.SCHEDULED
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
         }
 
-        when: "the 'simple_task_in_sub_wf' belonging to the sub workflow is polled and completed"
-        def polledAndCompletedSubWorkflowTask = workflowTestUtil.pollAndCompleteTask('simple_task_in_sub_wf', 'subworkflow.task.worker')
+        when: "the 'custom_task_in_sub_wf' belonging to the sub workflow is polled and completed"
+        def polledAndCompletedSubWorkflowTask = workflowTestUtil.pollAndCompleteTask('custom_task_in_sub_wf', 'subworkflow.task.worker')
 
         then: "verify that the task was polled and acknowledged"
         workflowTestUtil.verifyPolledAndAcknowledgedTask(polledAndCompletedSubWorkflowTask)
@@ -1063,7 +1063,7 @@ class ForkJoinSpec extends AbstractSpecification {
             status == Workflow.WorkflowStatus.COMPLETED
             tasks.size() == 1
             tasks[0].status == Task.Status.COMPLETED
-            tasks[0].taskType == 'simple_task_in_sub_wf'
+            tasks[0].taskType == 'custom_task_in_sub_wf'
         }
 
         and: "verify that the workflow is in a RUNNING state and sub workflow task is completed"
@@ -1083,14 +1083,14 @@ class ForkJoinSpec extends AbstractSpecification {
             tasks[4].status == Task.Status.COMPLETED
         }
 
-        when: "the simple task is polled and completed"
-        def polledAndCompletedSimpleTask = workflowTestUtil.pollAndCompleteTask('integration_task_2', 'task2.worker')
+        when: "the custom tasks is polled and completed"
+        def polledAndCompletedCustomTask = workflowTestUtil.pollAndCompleteTask('integration_task_2', 'task2.worker')
 
         and: "workflow is evaluated"
         sweep(workflowInstanceId)
 
         then: "verify that the task was polled and acknowledged"
-        workflowTestUtil.verifyPolledAndAcknowledgedTask(polledAndCompletedSimpleTask)
+        workflowTestUtil.verifyPolledAndAcknowledgedTask(polledAndCompletedCustomTask)
 
         when: "JOIN task is executed"
         asyncSystemTaskExecutor.execute(joinTask, jointaskId)

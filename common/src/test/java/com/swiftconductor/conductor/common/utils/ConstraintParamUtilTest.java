@@ -50,7 +50,7 @@ public class ConstraintParamUtilTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("taskId", "${CPEWF_TASK_ID}");
@@ -74,7 +74,7 @@ public class ConstraintParamUtilTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("taskId", "${CPEWF_TASK_ID} ${NETFLIX_STACK}");
@@ -98,7 +98,7 @@ public class ConstraintParamUtilTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("taskId", "${CPEWF_TASK_ID}  ${workflow.input.status}");
@@ -122,7 +122,7 @@ public class ConstraintParamUtilTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("taskId", "${CPEWF_TASK_ID}  ${workflow.input.status}");
@@ -153,7 +153,7 @@ public class ConstraintParamUtilTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("taskId", "${CPEWF_TASK_ID}  ${workflow.input.status}");
@@ -182,7 +182,7 @@ public class ConstraintParamUtilTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("taskId", "");
@@ -205,7 +205,7 @@ public class ConstraintParamUtilTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("taskId", new String[] {""});
@@ -228,7 +228,7 @@ public class ConstraintParamUtilTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("taskId", "${CPEWF_TASK_ID}  ${workflow.input.status sta}");
@@ -251,7 +251,7 @@ public class ConstraintParamUtilTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("NETFLIX_ENV", "${CPEWF_TASK_ID}");
@@ -276,7 +276,7 @@ public class ConstraintParamUtilTest {
         WorkflowTask workflowTask_1 = new WorkflowTask();
         workflowTask_1.setName("task_1");
         workflowTask_1.setTaskReferenceName("task_1");
-        workflowTask_1.setType(TaskType.TASK_TYPE_SIMPLE);
+        workflowTask_1.setType(TaskType.TASK_TYPE_CUSTOM);
 
         Map<String, Object> inputParam = new HashMap<>();
         inputParam.put("taskId", "$${expression with spaces}");

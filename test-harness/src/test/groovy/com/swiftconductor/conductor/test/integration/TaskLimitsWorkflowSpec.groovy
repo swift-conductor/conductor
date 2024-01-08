@@ -33,13 +33,13 @@ class TaskLimitsWorkflowSpec extends AbstractSpecification {
     UserTask userTask
 
     def RATE_LIMITED_SYSTEM_TASK_WORKFLOW = 'test_rate_limit_system_task_workflow'
-    def RATE_LIMITED_SIMPLE_TASK_WORKFLOW = 'test_rate_limit_simple_task_workflow'
+    def RATE_LIMITED_SIMPLE_TASK_WORKFLOW = 'test_rate_limit_custom_task_workflow'
     def CONCURRENCY_EXECUTION_LIMITED_WORKFLOW = 'test_concurrency_limits_workflow'
 
     def setup() {
         workflowTestUtil.registerWorkflows(
                 'rate_limited_system_task_workflow_integration_test.json',
-                'rate_limited_simple_task_workflow_integration_test.json',
+                'rate_limited_custom_task_workflow_integration_test.json',
                 'concurrency_limited_task_workflow_integration_test.json'
         )
     }
@@ -94,20 +94,20 @@ class TaskLimitsWorkflowSpec extends AbstractSpecification {
         }
     }
 
-    def "Verify that the rate limiting for simple tasks is honored"() {
-        when: "Start a workflow that has a rate limited simple task in it"
+    def "Verify that the rate limiting for custom taskss is honored"() {
+        when: "Start a workflow that has a rate limited custom tasks in it"
         def workflowInstanceId = startWorkflow(RATE_LIMITED_SIMPLE_TASK_WORKFLOW, 1, '', [:], null)
 
         then: "verify that the workflow is in a running state"
         with(workflowExecutionService.getExecutionStatus(workflowInstanceId, true)) {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
-            tasks[0].taskType == 'test_simple_task_with_rateLimits'
+            tasks[0].taskType == 'test_custom_task_with_rateLimits'
             tasks[0].status == Task.Status.SCHEDULED
         }
 
         when: "polling and completing the task"
-        Tuple polledAndCompletedTask = workflowTestUtil.pollAndCompleteTask('test_simple_task_with_rateLimits', 'rate.limit.test.worker')
+        Tuple polledAndCompletedTask = workflowTestUtil.pollAndCompleteTask('test_custom_task_with_rateLimits', 'rate.limit.test.worker')
 
         then: "verify that the task was polled and acknowledged"
         verifyPolledAndAcknowledgedTask(polledAndCompletedTask)
@@ -116,7 +116,7 @@ class TaskLimitsWorkflowSpec extends AbstractSpecification {
         with(workflowExecutionService.getExecutionStatus(workflowInstanceId, true)) {
             status == Workflow.WorkflowStatus.COMPLETED
             tasks.size() == 1
-            tasks[0].taskType == 'test_simple_task_with_rateLimits'
+            tasks[0].taskType == 'test_custom_task_with_rateLimits'
             tasks[0].status == Task.Status.COMPLETED
         }
 
@@ -128,12 +128,12 @@ class TaskLimitsWorkflowSpec extends AbstractSpecification {
         with(workflowExecutionService.getExecutionStatus(workflowTwoInstanceId, true)) {
             status == Workflow.WorkflowStatus.RUNNING
             tasks.size() == 1
-            tasks[0].taskType == 'test_simple_task_with_rateLimits'
+            tasks[0].taskType == 'test_custom_task_with_rateLimits'
             tasks[0].status == Task.Status.SCHEDULED
         }
 
         when: "polling for the task"
-        def polledTask = workflowExecutionService.poll('test_simple_task_with_rateLimits', 'rate.limit.test.worker')
+        def polledTask = workflowExecutionService.poll('test_custom_task_with_rateLimits', 'rate.limit.test.worker')
 
         then: "verify that no task is returned"
         !polledTask
@@ -142,11 +142,11 @@ class TaskLimitsWorkflowSpec extends AbstractSpecification {
         Thread.sleep(10000L)
 
         and: "the task offset time is reset to ensure that a task is returned on the next poll"
-        queueDAO.resetOffsetTime('test_simple_task_with_rateLimits',
+        queueDAO.resetOffsetTime('test_custom_task_with_rateLimits',
                 workflowExecutionService.getExecutionStatus(workflowTwoInstanceId, true).tasks[0].taskId)
 
         and: "polling and completing the task"
-        polledAndCompletedTask = workflowTestUtil.pollAndCompleteTask('test_simple_task_with_rateLimits', 'rate.limit.test.worker')
+        polledAndCompletedTask = workflowTestUtil.pollAndCompleteTask('test_custom_task_with_rateLimits', 'rate.limit.test.worker')
 
         then: "verify that the task was polled and acknowledged"
         verifyPolledAndAcknowledgedTask(polledAndCompletedTask)
@@ -155,7 +155,7 @@ class TaskLimitsWorkflowSpec extends AbstractSpecification {
         with(workflowExecutionService.getExecutionStatus(workflowTwoInstanceId, true)) {
             status == Workflow.WorkflowStatus.COMPLETED
             tasks.size() == 1
-            tasks[0].taskType == 'test_simple_task_with_rateLimits'
+            tasks[0].taskType == 'test_custom_task_with_rateLimits'
             tasks[0].status == Task.Status.COMPLETED
         }
     }

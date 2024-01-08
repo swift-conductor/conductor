@@ -118,12 +118,12 @@ public abstract class AbstractHttpEndToEndTest extends AbstractEndToEndTest {
         def.setOwnerEmail(DEFAULT_EMAIL_ADDRESS);
         WorkflowTask t0 = new WorkflowTask();
         t0.setName("t0");
-        t0.setWorkflowTaskType(TaskType.SIMPLE);
+        t0.setWorkflowTaskType(TaskType.CUSTOM);
         t0.setTaskReferenceName("t0");
 
         WorkflowTask t1 = new WorkflowTask();
         t1.setName("t1");
-        t1.setWorkflowTaskType(TaskType.SIMPLE);
+        t1.setWorkflowTaskType(TaskType.CUSTOM);
         t1.setTaskReferenceName("t1");
 
         def.getTasks().add(t0);
@@ -278,11 +278,11 @@ public abstract class AbstractHttpEndToEndTest extends AbstractEndToEndTest {
         def.setVersion(1);
         WorkflowTask t0 = new WorkflowTask();
         t0.setName("t0");
-        t0.setWorkflowTaskType(TaskType.SIMPLE);
+        t0.setWorkflowTaskType(TaskType.CUSTOM);
         t0.setTaskReferenceName("t0");
         WorkflowTask t1 = new WorkflowTask();
         t1.setName("t1");
-        t1.setWorkflowTaskType(TaskType.SIMPLE);
+        t1.setWorkflowTaskType(TaskType.CUSTOM);
         t1.setTaskReferenceName("t1");
         def.getTasks().add(t0);
         def.getTasks().add(t1);

@@ -35,7 +35,7 @@ import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
 import com.swiftconductor.conductor.common.run.ExternalStorageLocation;
 import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
 
-import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_SIMPLE;
+import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_CUSTOM;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_SUB_WORKFLOW;
 
 /** A {@link ExternalPayloadStorage} implementation that stores payload in file. */
@@ -122,17 +122,17 @@ public class MockExternalPayloadStorage implements ExternalPayloadStorage {
             InputStream inputStream = readOutputDotJson();
             Map<String, Object> largePayload = objectMapper.readValue(inputStream, Map.class);
 
-            WorkflowTask simpleWorkflowTask = new WorkflowTask();
-            simpleWorkflowTask.setName("integration_task_10");
-            simpleWorkflowTask.setTaskReferenceName("t10");
-            simpleWorkflowTask.setType(TASK_TYPE_SIMPLE);
-            simpleWorkflowTask.setInputParameters(
+            WorkflowTask customWorkflowTask = new WorkflowTask();
+            customWorkflowTask.setName("integration_task_10");
+            customWorkflowTask.setTaskReferenceName("t10");
+            customWorkflowTask.setType(TASK_TYPE_CUSTOM);
+            customWorkflowTask.setInputParameters(
                     Collections.singletonMap("p1", "${workflow.input.imageType}"));
 
             WorkflowDef subWorkflowDef = new WorkflowDef();
             subWorkflowDef.setName("one_task_workflow");
             subWorkflowDef.setVersion(1);
-            subWorkflowDef.setTasks(Collections.singletonList(simpleWorkflowTask));
+            subWorkflowDef.setTasks(Collections.singletonList(customWorkflowTask));
 
             SubWorkflowParams subWorkflowParams = new SubWorkflowParams();
             subWorkflowParams.setName("one_task_workflow");

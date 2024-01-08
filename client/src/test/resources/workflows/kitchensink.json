@@ -6,9 +6,9 @@
   "tasks": [
     {
       "name": "x_test_worker_2",
-      "taskReferenceName": "simple_task_0",
+      "taskReferenceName": "custom_task_0",
       "inputParameters": {},
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],
@@ -68,7 +68,7 @@
       "taskReferenceName": "set_state",
       "inputParameters": {
         "call_made": true,
-        "number": "${simple_task_0.output.number}"
+        "number": "${custom_task_0.output.number}"
       },
       "type": "SET_VARIABLE",
       "decisionCases": {},
@@ -176,9 +176,9 @@
                   "LONG": [
                     {
                       "name": "x_test_worker_1",
-                      "taskReferenceName": "simple_task_1",
+                      "taskReferenceName": "custom_task_1",
                       "inputParameters": {},
-                      "type": "SIMPLE",
+                      "type": "CUSTOM",
                       "decisionCases": {},
                       "defaultCase": [],
                       "forkTasks": [],
@@ -242,9 +242,9 @@
                 "tasks": [
                   {
                     "name": "x_test_worker_2",
-                    "taskReferenceName": "simple_task_0",
+                    "taskReferenceName": "custom_task_0",
                     "inputParameters": {},
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "decisionCases": {},
                     "defaultCase": [],
                     "forkTasks": [],
@@ -267,9 +267,9 @@
                       "LONG": [
                         {
                           "name": "x_test_worker_1",
-                          "taskReferenceName": "simple_task_1",
+                          "taskReferenceName": "custom_task_1",
                           "inputParameters": {},
-                          "type": "SIMPLE",
+                          "type": "CUSTOM",
                           "decisionCases": {},
                           "defaultCase": [],
                           "forkTasks": [],
@@ -331,9 +331,9 @@
                         "tasks": [
                           {
                             "name": "x_test_worker_2",
-                            "taskReferenceName": "simple_task_0",
+                            "taskReferenceName": "custom_task_0",
                             "inputParameters": {},
-                            "type": "SIMPLE",
+                            "type": "CUSTOM",
                             "decisionCases": {},
                             "defaultCase": [],
                             "forkTasks": [],
@@ -414,9 +414,9 @@
         [
           {
             "name": "x_test_worker_1",
-            "taskReferenceName": "simple_task_5",
+            "taskReferenceName": "custom_task_5",
             "inputParameters": {},
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "decisionCases": {},
             "defaultCase": [],
             "forkTasks": [],
@@ -430,7 +430,7 @@
         ]
       ],
       "startDelay": 0,
-      "joinOn": ["sub_flow_inline","simple_task_5"],
+      "joinOn": ["sub_flow_inline","custom_task_5"],
       "optional": false,
       "defaultExclusiveJoinTask": [],
       "asyncComplete": false,
@@ -445,7 +445,7 @@
       "defaultCase": [],
       "forkTasks": [],
       "startDelay": 0,
-      "joinOn": ["simple_task_5","sub_flow_inline"],
+      "joinOn": ["custom_task_5","sub_flow_inline"],
       "optional": false,
       "defaultExclusiveJoinTask": [],
       "asyncComplete": false,

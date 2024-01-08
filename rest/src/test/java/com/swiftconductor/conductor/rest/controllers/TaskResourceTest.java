@@ -58,18 +58,18 @@ public class TaskResourceTest {
     @Test
     public void testPoll() {
         Task task = new Task();
-        task.setTaskType("SIMPLE");
+        task.setTaskType("CUSTOM");
         task.setWorkerId("123");
         task.setDomain("test");
 
         when(mockTaskService.poll(anyString(), anyString(), anyString())).thenReturn(task);
-        assertEquals(ResponseEntity.ok(task), taskResource.poll("SIMPLE", "123", "test"));
+        assertEquals(ResponseEntity.ok(task), taskResource.poll("CUSTOM", "123", "test"));
     }
 
     @Test
     public void testBatchPoll() {
         Task task = new Task();
-        task.setTaskType("SIMPLE");
+        task.setTaskType("CUSTOM");
         task.setWorkerId("123");
         task.setDomain("test");
         List<Task> listOfTasks = new ArrayList<>();
@@ -79,7 +79,7 @@ public class TaskResourceTest {
                 .thenReturn(listOfTasks);
         assertEquals(
                 ResponseEntity.ok(listOfTasks),
-                taskResource.batchPoll("SIMPLE", "123", "test", 1, 100));
+                taskResource.batchPoll("CUSTOM", "123", "test", 1, 100));
     }
 
     @Test
@@ -108,7 +108,7 @@ public class TaskResourceTest {
     @Test
     public void testGetTask() {
         Task task = new Task();
-        task.setTaskType("SIMPLE");
+        task.setTaskType("CUSTOM");
         task.setWorkerId("123");
         task.setDomain("test");
         task.setStatus(Task.Status.IN_PROGRESS);
@@ -181,13 +181,13 @@ public class TaskResourceTest {
     @Test
     public void testRequeueTaskType() {
         when(mockTaskService.requeuePendingTask(anyString())).thenReturn("1");
-        assertEquals("1", taskResource.requeuePendingTask("SIMPLE"));
+        assertEquals("1", taskResource.requeuePendingTask("CUSTOM"));
     }
 
     @Test
     public void testSearch() {
         Task task = new Task();
-        task.setTaskType("SIMPLE");
+        task.setTaskType("CUSTOM");
         task.setWorkerId("123");
         task.setDomain("test");
         task.setStatus(Task.Status.IN_PROGRESS);
@@ -202,7 +202,7 @@ public class TaskResourceTest {
     @Test
     public void testSearchV2() {
         Task task = new Task();
-        task.setTaskType("SIMPLE");
+        task.setTaskType("CUSTOM");
         task.setWorkerId("123");
         task.setDomain("test");
         task.setStatus(Task.Status.IN_PROGRESS);

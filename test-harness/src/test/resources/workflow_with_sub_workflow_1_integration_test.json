@@ -11,7 +11,7 @@
         "p2": "${workflow.input.param2}",
         "someNullKey": null
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],

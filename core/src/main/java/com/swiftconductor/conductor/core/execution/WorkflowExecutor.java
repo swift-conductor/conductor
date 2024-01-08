@@ -135,7 +135,7 @@ public class WorkflowExecutor {
                     "Workflow is in terminal state. Status = %s", workflow.getStatus());
         }
 
-        // Get SIMPLE tasks in SCHEDULED state that have callbackAfterSeconds > 0 and set the
+        // Get CUSTOM tasks in SCHEDULED state that have callbackAfterSeconds > 0 and set the
         // callbackAfterSeconds to 0
         workflow.getTasks().stream()
                 .filter(

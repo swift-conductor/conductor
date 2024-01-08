@@ -27,7 +27,7 @@
                             "p1": "${workflow.input.param1}",
                             "p2": "${workflow.input.param2}"
                         },
-                        "type": "SIMPLE",
+                        "type": "CUSTOM",
                         "startDelay": 0,
                         "taskDefinition": {
                             "ownerApp": null,
@@ -52,7 +52,7 @@
                         {
                             "name": "junit_task_3",
                             "taskReferenceName": "t3",
-                            "type": "SIMPLE",
+                            "type": "CUSTOM",
                             "startDelay": 0,
                             "taskDefinition": {
                                 "ownerApp": null,
@@ -82,7 +82,7 @@
                             "tp1": "${workflow.input.param1}",
                             "tp3": "${workflow.input.param2}"
                         },
-                        "type": "SIMPLE",
+                        "type": "CUSTOM",
                         "startDelay": 0,
                         "taskDefinition": {
                             "ownerApp": null,
@@ -110,7 +110,7 @@
             "three": [{
                 "name": "junit_task_3",
                 "taskReferenceName": "t31",
-                "type": "SIMPLE",
+                "type": "CUSTOM",
                 "startDelay": 0,
                 "taskDefinition": {
                     "ownerApp": null,
@@ -140,7 +140,7 @@
                 "tp1": "${workflow.input.param1}",
                 "tp3": "${workflow.input.param2}"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "startDelay": 0,
             "taskDefinition": {
                 "ownerApp": null,
@@ -176,7 +176,7 @@
                 "notify": [{
                     "name": "junit_task_4",
                     "taskReferenceName": "junit_task_4",
-                    "type": "SIMPLE",
+                    "type": "CUSTOM",
                     "startDelay": 0,
                     "taskDefinition": {
                         "ownerApp": null,

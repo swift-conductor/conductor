@@ -20,7 +20,7 @@
               "p2": "${workflow.input.param2}",
               "case": "${workflow.input.case}"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "decisionCases": {},
             "defaultCase": [],
             "forkTasks": [],
@@ -50,7 +50,7 @@
                     "p2": "${workflow.input.param2}",
                     "case": "${workflow.input.case}"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "decisionCases": {},
                   "defaultCase": [],
                   "forkTasks": [],
@@ -69,7 +69,7 @@
                     "p2": "${workflow.input.param2}",
                     "case": "${workflow.input.case}"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "decisionCases": {},
                   "defaultCase": [],
                   "forkTasks": [],
@@ -90,7 +90,7 @@
                     "p2": "${workflow.input.param2}",
                     "case": "${workflow.input.case}"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "decisionCases": {},
                   "defaultCase": [],
                   "forkTasks": [],
@@ -121,7 +121,7 @@
                           "p2": "${workflow.input.param2}",
                           "case": "${workflow.input.case}"
                         },
-                        "type": "SIMPLE",
+                        "type": "CUSTOM",
                         "decisionCases": {},
                         "defaultCase": [],
                         "forkTasks": [],
@@ -140,7 +140,7 @@
                           "p2": "${workflow.input.param2}",
                           "case": "${workflow.input.case}"
                         },
-                        "type": "SIMPLE",
+                        "type": "CUSTOM",
                         "decisionCases": {},
                         "defaultCase": [],
                         "forkTasks": [],
@@ -159,7 +159,7 @@
                           "p2": "${workflow.input.param2}",
                           "case": "${workflow.input.case}"
                         },
-                        "type": "SIMPLE",
+                        "type": "CUSTOM",
                         "decisionCases": {},
                         "defaultCase": [],
                         "forkTasks": [],
@@ -180,7 +180,7 @@
                           "p2": "${workflow.input.param2}",
                           "case": "${workflow.input.case}"
                         },
-                        "type": "SIMPLE",
+                        "type": "CUSTOM",
                         "decisionCases": {},
                         "defaultCase": [],
                         "forkTasks": [],
@@ -199,7 +199,7 @@
                           "p2": "${workflow.input.param2}",
                           "case": "${workflow.input.case}"
                         },
-                        "type": "SIMPLE",
+                        "type": "CUSTOM",
                         "decisionCases": {},
                         "defaultCase": [],
                         "forkTasks": [],
@@ -221,7 +221,7 @@
                         "p2": "${workflow.input.param2}",
                         "case": "${workflow.input.case}"
                       },
-                      "type": "SIMPLE",
+                      "type": "CUSTOM",
                       "decisionCases": {},
                       "defaultCase": [],
                       "forkTasks": [],
@@ -240,7 +240,7 @@
                         "p2": "${workflow.input.param2}",
                         "case": "${workflow.input.case}"
                       },
-                      "type": "SIMPLE",
+                      "type": "CUSTOM",
                       "decisionCases": {},
                       "defaultCase": [],
                       "forkTasks": [],
@@ -322,7 +322,7 @@
         "p2": "${workflow.input.param2}",
         "case": "${workflow.input.case}"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "decisionCases": {},
       "defaultCase": [],
       "forkTasks": [],

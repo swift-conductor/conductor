@@ -29,28 +29,28 @@ public class WorkflowDefTaskTests {
 
     @Test
     public void testWorkflowDefTaskWithStartDelay() {
-        SimpleTask simpleTask = new SimpleTask("task_name", "task_ref_name");
+        CustomTask customTask = new CustomTask("task_name", "task_ref_name");
         int startDelay = 5;
 
-        simpleTask.setStartDelay(startDelay);
+        customTask.setStartDelay(startDelay);
 
-        WorkflowTask workflowTask = simpleTask.getWorkflowDefTasks().get(0);
+        WorkflowTask workflowTask = customTask.getWorkflowDefTasks().get(0);
 
-        assertEquals(simpleTask.getStartDelay(), workflowTask.getStartDelay());
-        assertEquals(startDelay, simpleTask.getStartDelay());
+        assertEquals(customTask.getStartDelay(), workflowTask.getStartDelay());
+        assertEquals(startDelay, customTask.getStartDelay());
         assertEquals(startDelay, workflowTask.getStartDelay());
     }
 
     @Test
     public void testWorkflowDefTaskWithOptionalEnabled() {
-        SimpleTask simpleTask = new SimpleTask("task_name", "task_ref_name");
+        CustomTask customTask = new CustomTask("task_name", "task_ref_name");
 
-        simpleTask.setOptional(true);
+        customTask.setOptional(true);
 
-        WorkflowTask workflowTask = simpleTask.getWorkflowDefTasks().get(0);
+        WorkflowTask workflowTask = customTask.getWorkflowDefTasks().get(0);
 
-        assertEquals(simpleTask.getStartDelay(), workflowTask.getStartDelay());
-        assertEquals(true, simpleTask.isOptional());
+        assertEquals(customTask.getStartDelay(), workflowTask.getStartDelay());
+        assertEquals(true, customTask.isOptional());
         assertEquals(true, workflowTask.isOptional());
     }
 }

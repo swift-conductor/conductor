@@ -30,7 +30,7 @@
                     "p1": "${workflow.input.param1}",
                     "p2": "${workflow.input.param2}"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "decisionCases": {},
                   "defaultCase": [],
                   "forkTasks": [],
@@ -49,7 +49,7 @@
                   "inputParameters": {
                     "tp1": "${workflow.input.param1}"
                   },
-                  "type": "SIMPLE",
+                  "type": "CUSTOM",
                   "decisionCases": {},
                   "defaultCase": [],
                   "forkTasks": [],
@@ -79,7 +79,7 @@
             "inputParameters": {
               "tp3": "workflow.input.param2"
             },
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "decisionCases": {},
             "defaultCase": [],
             "forkTasks": [],
@@ -99,7 +99,7 @@
           "inputParameters": {
             "tp10": "workflow.input.param2"
           },
-          "type": "SIMPLE",
+          "type": "CUSTOM",
           "decisionCases": {},
           "defaultCase": [],
           "forkTasks": [],
@@ -133,7 +133,7 @@
             "name": "integration_task_4",
             "taskReferenceName": "integration_task_4",
             "inputParameters": {},
-            "type": "SIMPLE",
+            "type": "CUSTOM",
             "decisionCases": {},
             "defaultCase": [],
             "forkTasks": [],

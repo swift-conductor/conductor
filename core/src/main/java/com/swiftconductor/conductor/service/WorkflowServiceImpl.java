@@ -296,7 +296,7 @@ public class WorkflowServiceImpl implements WorkflowService {
     }
 
     /**
-     * Resets callback times of all non-terminal SIMPLE tasks to 0.
+     * Resets callback times of all non-terminal CUSTOM tasks to 0.
      *
      * @param workflowId WorkflowId of the workflow.
      */

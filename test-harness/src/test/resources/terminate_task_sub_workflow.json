@@ -5,7 +5,7 @@
     {
       "name": "integration_task_3",
       "taskReferenceName": "t3",
-      "type": "SIMPLE"
+      "type": "CUSTOM"
     }
   ],
   "schemaVersion": 2,

@@ -1,6 +1,6 @@
 {
   "name": "do_while_system_tasks",
-  "description": "do_while with a mix of 5, simple and system tasks",
+  "description": "do_while with a mix of 5, custom and system tasks",
   "version": 1,
   "tasks": [
     {
@@ -79,7 +79,7 @@
       "name": "integration_task_1",
       "taskReferenceName": "integration_task_1",
       "inputParameters": {},
-      "type": "SIMPLE"
+      "type": "CUSTOM"
     }
   ],
   "inputParameters": [],

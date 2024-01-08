@@ -7,12 +7,12 @@
       "name": "task_5",
       "taskReferenceName": "task_5",
       "inputParameters": {},
-      "type": "SIMPLE"
+      "type": "CUSTOM"
     },
     {
       "name": "task_6",
       "taskReferenceName": "task_6",
-      "type": "SIMPLE"
+      "type": "CUSTOM"
     }
   ],
   "outputParameters": {},

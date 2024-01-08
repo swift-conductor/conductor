@@ -304,7 +304,7 @@ public class ConductorWorkflow<T> {
     private List<String> getMissingTasks(WorkflowDef workflowDef) {
         List<String> missing = new ArrayList<>();
         workflowDef.collectTasks().stream()
-                .filter(workflowTask -> workflowTask.getType().equals(TaskType.TASK_TYPE_SIMPLE))
+                .filter(workflowTask -> workflowTask.getType().equals(TaskType.TASK_TYPE_CUSTOM))
                 .map(WorkflowTask::getName)
                 .distinct()
                 .parallel()

@@ -18,16 +18,16 @@ import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
 import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
 
 /** Workflow task executed by a worker */
-public class SimpleTask extends Task<SimpleTask> {
+public class CustomTask extends Task<CustomTask> {
 
     private TaskDef taskDef;
 
-    public SimpleTask(String taskDefName, String taskReferenceName) {
-        super(taskReferenceName, TaskType.SIMPLE);
+    public CustomTask(String taskDefName, String taskReferenceName) {
+        super(taskReferenceName, TaskType.CUSTOM);
         super.name(taskDefName);
     }
 
-    SimpleTask(WorkflowTask workflowTask) {
+    CustomTask(WorkflowTask workflowTask) {
         super(workflowTask);
         this.taskDef = workflowTask.getTaskDefinition();
     }
@@ -36,7 +36,7 @@ public class SimpleTask extends Task<SimpleTask> {
         return taskDef;
     }
 
-    public SimpleTask setTaskDef(TaskDef taskDef) {
+    public CustomTask setTaskDef(TaskDef taskDef) {
         this.taskDef = taskDef;
         return this;
     }

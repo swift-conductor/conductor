@@ -914,7 +914,7 @@ class WorkflowAndTaskConfigurationSpec extends AbstractSpecification {
         and: "a workflow definition using this task is created"
         WorkflowTask workflowTask = new WorkflowTask()
         workflowTask.setName(templatedTask.getName())
-        workflowTask.setWorkflowTaskType(TaskType.SIMPLE)
+        workflowTask.setWorkflowTaskType(TaskType.CUSTOM)
         workflowTask.setTaskReferenceName("t0")
 
         WorkflowDef templateWorkflowDef = new WorkflowDef()
@@ -963,7 +963,7 @@ class WorkflowAndTaskConfigurationSpec extends AbstractSpecification {
         def taskDefName = "task_not_registered"
         WorkflowTask workflowTask = new WorkflowTask()
         workflowTask.setName(taskDefName)
-        workflowTask.setWorkflowTaskType(TaskType.SIMPLE)
+        workflowTask.setWorkflowTaskType(TaskType.CUSTOM)
         workflowTask.setTaskReferenceName("t0")
 
         WorkflowDef testWorkflowDef = new WorkflowDef()

@@ -88,7 +88,7 @@ public class WorkflowCreationTests {
         forks.setTasks(tasks);
 
         for (int i = 0; i < 3; i++) {
-            SimpleTask task = new SimpleTask("task2", "fork_task_" + i);
+            CustomTask task = new CustomTask("task2", "fork_task_" + i);
             tasks.add(task);
             HashMap<String, Object> taskInput = new HashMap<>();
             taskInput.put("key", "value");
@@ -101,16 +101,16 @@ public class WorkflowCreationTests {
     private ConductorWorkflow<TestWorkflowInput> registerTestWorkflow()
             throws InterruptedException {
         InputStream script = getClass().getResourceAsStream("/script.js");
-        SimpleTask getUserInfo = new SimpleTask("get_user_info", "get_user_info");
+        CustomTask getUserInfo = new CustomTask("get_user_info", "get_user_info");
         getUserInfo.input("name", ConductorWorkflow.input.get("name"));
 
-        SimpleTask sendToCupertino = new SimpleTask("task2", "cupertino");
-        SimpleTask sendToNYC = new SimpleTask("task2", "nyc");
+        CustomTask sendToCupertino = new CustomTask("task2", "cupertino");
+        CustomTask sendToNYC = new CustomTask("task2", "nyc");
 
         int len = 4;
         Task<?>[][] parallelTasks = new Task[len][1];
         for (int i = 0; i < len; i++) {
-            parallelTasks[i][0] = new SimpleTask("task2", "task_parallel_" + i);
+            parallelTasks[i][0] = new CustomTask("task2", "task_parallel_" + i);
         }
 
         WorkflowBuilder<TestWorkflowInput> builder = new WorkflowBuilder<>(executor);
@@ -133,8 +133,8 @@ public class WorkflowCreationTests {
                                 .switchCase("95014", sendToCupertino)
                                 .switchCase("10121", sendToNYC))
                 // .add(new SubWorkflow("subflow", "sub_workflow_example", 5))
-                .add(new SimpleTask("task2", "task222"))
-                .add(new DynamicFork("dynamic_fork", new SimpleTask("fork_gen", "fork_gen")));
+                .add(new CustomTask("task2", "task222"))
+                .add(new DynamicFork("dynamic_fork", new CustomTask("fork_gen", "fork_gen")));
 
         ConductorWorkflow<TestWorkflowInput> workflow = builder.build();
         boolean registered = workflow.registerWorkflow(true, true);

@@ -32,7 +32,7 @@
         "mod": "${workflow.input.mod}",
         "oddEven": "${workflow.input.oddEven}"
       },
-      "type": "SIMPLE",
+      "type": "CUSTOM",
       "startDelay": 0,
       "optional": false,
       "taskDefinition": {
