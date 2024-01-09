@@ -500,26 +500,26 @@
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc-server"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-protobuf": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc",
                 "com.swiftconductor.conductor:conductor-grpc-server"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-services": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc-server"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-stub": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -1159,26 +1159,26 @@
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc-server"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-protobuf": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc",
                 "com.swiftconductor.conductor:conductor-grpc-server"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-services": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc-server"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-stub": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -1509,13 +1509,13 @@
             "project": true
         },
         "io.grpc:grpc-protobuf": {
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-stub": {
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-testing": {
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "junit:junit": {
             "locked": "4.13.2"
@@ -1955,29 +1955,29 @@
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc-server"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-protobuf": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc",
                 "com.swiftconductor.conductor:conductor-grpc-server"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-services": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc-server"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-stub": {
             "firstLevelTransitive": [
                 "com.swiftconductor.conductor:conductor-grpc"
             ],
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.grpc:grpc-testing": {
-            "locked": "1.57.2"
+            "locked": "1.60.1"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
