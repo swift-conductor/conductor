@@ -15,7 +15,6 @@ buildscan.log
 # OS & IDE
 .DS_Store
 .settings
-.vscode
 .idea
 .project
 *.iml

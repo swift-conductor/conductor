@@ -183,7 +183,7 @@ public class TaskResource {
     }
 
     @Operation(summary = "Get the external uri where the task payload is to be stored")
-    @GetMapping({"/externalstoragelocation", "external-storage-location"})
+    @GetMapping({"/external-storage-location"})
     public ExternalStorageLocation getExternalStorageLocation(
             @RequestParam("path") String path,
             @RequestParam("operation") String operation,
