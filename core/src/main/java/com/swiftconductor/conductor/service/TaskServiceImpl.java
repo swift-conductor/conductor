@@ -192,7 +192,7 @@ public class TaskServiceImpl implements TaskService {
                     task.getWorkflowInstanceId(),
                     e);
             executionService.terminateWorkflow(
-                    task.getWorkflowInstanceId(), "Failed to ack task: " + task.getTaskId());
+                    task.getWorkflowInstanceId(), "Failed to ack task: " + task.getTaskId(), false);
         }
     }
 

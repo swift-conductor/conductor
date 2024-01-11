@@ -243,7 +243,7 @@ public class WorkflowExecutor {
             Monitors.recordWorkflowStartError(
                     workflowDef.getName(), WorkflowContext.get().getClientApp());
             LOGGER.error("Unable to restart workflow: {}", workflowDef.getName(), e);
-            terminateWorkflow(workflowId, "Error when restarting the workflow");
+            terminateWorkflow(workflowId, "Error when restarting the workflow", false);
             throw e;
         }
 
@@ -560,13 +560,19 @@ public class WorkflowExecutor {
         return workflow;
     }
 
-    public void terminateWorkflow(String workflowId, String reason) {
+    public void terminateWorkflow(String workflowId, String reason, boolean triggerFailureWorkflow) {
         WorkflowModel workflow = executionDAOFacade.getWorkflowModel(workflowId, true);
         if (WorkflowModel.Status.COMPLETED.equals(workflow.getStatus())) {
             throw new ConflictException("Cannot terminate a COMPLETED workflow.");
         }
+
+        String failureWorkflow = null;
+        if (triggerFailureWorkflow) {
+            failureWorkflow = workflow.getWorkflowDefinition().getFailureWorkflow();
+        }
+
         workflow.setStatus(WorkflowModel.Status.TERMINATED);
-        terminateWorkflow(workflow, reason, null);
+        terminateWorkflow(workflow, reason, failureWorkflow);
     }
 
     /**

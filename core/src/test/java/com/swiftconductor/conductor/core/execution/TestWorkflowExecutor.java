@@ -481,7 +481,7 @@ public class TestWorkflowExecutor {
                 .when(queueDAO)
                 .remove(anyString(), anyString());
 
-        workflowExecutor.terminateWorkflow("workflowId", "reason");
+        workflowExecutor.terminateWorkflow("workflowId", "reason", false);
         assertEquals(WorkflowModel.Status.TERMINATED, workflow.getStatus());
         assertEquals(1, updateWorkflowCalledCounter.get());
         assertEquals(1, removeQueueEntryCalledCounter.get());
@@ -544,7 +544,7 @@ public class TestWorkflowExecutor {
                 .when(externalPayloadStorageUtils)
                 .verifyAndUpload(workflow, ExternalPayloadStorage.PayloadType.WORKFLOW_OUTPUT);
 
-        workflowExecutor.terminateWorkflow(workflow.getWorkflowId(), "reason");
+        workflowExecutor.terminateWorkflow(workflow.getWorkflowId(), "reason", false);
         assertEquals(WorkflowModel.Status.TERMINATED, workflow.getStatus());
         assertEquals(1, updateWorkflowCalledCounter.get());
         verify(workflowStatusListener, times(1))
@@ -589,7 +589,7 @@ public class TestWorkflowExecutor {
 
         doThrow(new RuntimeException()).when(queueDAO).remove(anyString(), anyString());
 
-        workflowExecutor.terminateWorkflow("workflowId", "reason");
+        workflowExecutor.terminateWorkflow("workflowId", "reason", false);
         assertEquals(WorkflowModel.Status.TERMINATED, workflow.getStatus());
         assertEquals(1, updateWorkflowCalledCounter.get());
         verify(workflowStatusListener, times(1))
@@ -1847,7 +1847,7 @@ public class TestWorkflowExecutor {
         when(executionDAOFacade.getWorkflowModel(anyString(), anyBoolean())).thenReturn(workflow);
 
         workflowExecutor.terminateWorkflow(
-                workflow.getWorkflowId(), "test terminating terminal workflow");
+                workflow.getWorkflowId(), "test terminating terminal workflow", false);
     }
 
     @Test

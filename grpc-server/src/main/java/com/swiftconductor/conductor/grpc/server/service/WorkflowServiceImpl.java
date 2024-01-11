@@ -276,7 +276,7 @@ public class WorkflowServiceImpl extends WorkflowServiceGrpc.WorkflowServiceImpl
             WorkflowServicePb.TerminateWorkflowRequest req,
             StreamObserver<WorkflowServicePb.TerminateWorkflowResponse> response) {
         try {
-            workflowService.terminateWorkflow(req.getWorkflowId(), req.getReason());
+            workflowService.terminateWorkflow(req.getWorkflowId(), req.getReason(), false);
             response.onNext(WorkflowServicePb.TerminateWorkflowResponse.getDefaultInstance());
             response.onCompleted();
         } catch (Exception e) {

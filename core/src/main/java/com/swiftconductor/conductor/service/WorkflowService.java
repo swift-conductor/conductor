@@ -238,10 +238,13 @@ public interface WorkflowService {
      *
      * @param workflowId WorkflowId of the workflow.
      * @param reason Reason for terminating the workflow.
+     * @param triggerFailureWorkflow whether to trigger the failure workflow (if any) as a result of this
+     *     termination     
      */
     void terminateWorkflow(
             @NotEmpty(message = "WorkflowId cannot be null or empty.") String workflowId,
-            String reason);
+            String reason, 
+            boolean triggerFailureWorkflow);
 
     /**
      * Search for workflows based on payload and given parameters. Use sort options as sort ASCor

@@ -186,7 +186,7 @@ class WorkflowTestUtil {
             for (String workflowId : running) {
                 WorkflowModel workflow = workflowExecutor.getWorkflow(workflowId, false)
                 if (!workflow.getStatus().isTerminal()) {
-                    workflowExecutor.terminateWorkflow(workflowId, "cleanup")
+                    workflowExecutor.terminateWorkflow(workflowId, "cleanup", false)
                 }
             }
         }

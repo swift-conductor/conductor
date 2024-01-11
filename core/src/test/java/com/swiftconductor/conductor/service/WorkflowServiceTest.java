@@ -359,7 +359,7 @@ public class WorkflowServiceTest {
     @Test(expected = ConstraintViolationException.class)
     public void testTerminateWorkflowNull() {
         try {
-            workflowService.terminateWorkflow(null, null);
+            workflowService.terminateWorkflow(null, null, false);
         } catch (ConstraintViolationException ex) {
             assertEquals(1, ex.getConstraintViolations().size());
             Set<String> messages = getConstraintViolationMessages(ex.getConstraintViolations());
@@ -396,8 +396,8 @@ public class WorkflowServiceTest {
 
     @Test
     public void testTerminateWorkflow() {
-        workflowService.terminateWorkflow("w123", "test");
-        verify(workflowExecutor, times(1)).terminateWorkflow(anyString(), anyString());
+        workflowService.terminateWorkflow("w123", "test", false);
+        verify(workflowExecutor, times(1)).terminateWorkflow(anyString(), anyString(), anyBoolean());
     }
 
     @Test

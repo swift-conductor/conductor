@@ -281,7 +281,7 @@ class SubWorkflowSpec extends AbstractSpecification {
 
         when: "subworkflow is terminated"
         def terminateReason = "terminating from a test case"
-        workflowExecutor.terminateWorkflow(subWorkflowId, terminateReason)
+        workflowExecutor.terminateWorkflow(subWorkflowId, terminateReason, null)
 
         then: "verify that sub workflow is in terminated state"
         with(workflowExecutionService.getExecutionStatus(subWorkflowId, true)) {

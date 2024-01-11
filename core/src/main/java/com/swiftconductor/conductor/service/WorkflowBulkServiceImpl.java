@@ -152,7 +152,7 @@ public class WorkflowBulkServiceImpl implements WorkflowBulkService {
         BulkResponse bulkResponse = new BulkResponse();
         for (String workflowId : workflowIds) {
             try {
-                workflowExecutor.terminateWorkflow(workflowId, reason);
+                workflowExecutor.terminateWorkflow(workflowId, reason, false);
                 bulkResponse.appendSuccessResponse(workflowId);
             } catch (Exception e) {
                 LOGGER.error(
