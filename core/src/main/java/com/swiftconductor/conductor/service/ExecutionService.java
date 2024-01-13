@@ -236,7 +236,8 @@ public class ExecutionService {
         }
     }
 
-    public void terminateWorkflow(String workflowId, String reason, boolean triggerFailureWorkflow) {
+    public void terminateWorkflow(
+            String workflowId, String reason, boolean triggerFailureWorkflow) {
         workflowExecutor.terminateWorkflow(workflowId, reason, triggerFailureWorkflow);
     }
 

@@ -208,7 +208,8 @@ public class WorkflowResourceTest {
     @Test
     public void testTerminate() {
         workflowResource.terminate("w123", "test", false);
-        verify(mockWorkflowService, times(1)).terminateWorkflow(anyString(), anyString(), anyBoolean());
+        verify(mockWorkflowService, times(1))
+                .terminateWorkflow(anyString(), anyString(), anyBoolean());
     }
 
     @Test

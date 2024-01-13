@@ -203,7 +203,8 @@ public class WorkflowResource {
     public void terminate(
             @PathVariable("workflowId") String workflowId,
             @RequestParam(value = "reason", required = false) String reason,
-            @RequestParam(value = "triggerFailureWorkflow", required = false) boolean triggerFailureWorkflow) {
+            @RequestParam(value = "triggerFailureWorkflow", required = false)
+                    boolean triggerFailureWorkflow) {
         workflowService.terminateWorkflow(workflowId, reason, triggerFailureWorkflow);
     }
 

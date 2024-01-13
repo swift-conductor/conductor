@@ -397,7 +397,8 @@ public class WorkflowServiceTest {
     @Test
     public void testTerminateWorkflow() {
         workflowService.terminateWorkflow("w123", "test", false);
-        verify(workflowExecutor, times(1)).terminateWorkflow(anyString(), anyString(), anyBoolean());
+        verify(workflowExecutor, times(1))
+                .terminateWorkflow(anyString(), anyString(), anyBoolean());
     }
 
     @Test

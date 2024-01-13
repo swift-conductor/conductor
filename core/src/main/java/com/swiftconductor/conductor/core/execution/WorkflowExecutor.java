@@ -560,7 +560,8 @@ public class WorkflowExecutor {
         return workflow;
     }
 
-    public void terminateWorkflow(String workflowId, String reason, boolean triggerFailureWorkflow) {
+    public void terminateWorkflow(
+            String workflowId, String reason, boolean triggerFailureWorkflow) {
         WorkflowModel workflow = executionDAOFacade.getWorkflowModel(workflowId, true);
         if (WorkflowModel.Status.COMPLETED.equals(workflow.getStatus())) {
             throw new ConflictException("Cannot terminate a COMPLETED workflow.");

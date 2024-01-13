@@ -309,10 +309,11 @@ public class WorkflowServiceImpl implements WorkflowService {
      *
      * @param workflowId WorkflowId of the workflow.
      * @param reason Reason for terminating the workflow.
-     * @param triggerFailureWorkflow whether to trigger the failure workflow (if any) as a result of this
-     *     termination     
+     * @param triggerFailureWorkflow whether to trigger the failure workflow (if any) as a result of
+     *     this termination
      */
-    public void terminateWorkflow(String workflowId, String reason, boolean triggerFailureWorkflow) {
+    public void terminateWorkflow(
+            String workflowId, String reason, boolean triggerFailureWorkflow) {
         workflowExecutor.terminateWorkflow(workflowId, reason, triggerFailureWorkflow);
     }
 
