@@ -106,7 +106,7 @@ public class MetadataResource {
 
     @PutMapping("/taskdefs")
     @Operation(summary = "Update an existing task")
-    public void registerTaskDef(@RequestBody TaskDef taskDef) {
+    public void updateTaskDef(@RequestBody TaskDef taskDef) {
         metadataService.updateTaskDef(taskDef);
     }
 

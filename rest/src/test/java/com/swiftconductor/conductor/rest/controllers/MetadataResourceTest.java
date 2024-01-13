@@ -129,7 +129,7 @@ public class MetadataResourceTest {
         TaskDef taskDef = new TaskDef();
         taskDef.setName("test");
         taskDef.setDescription("desc");
-        metadataResource.registerTaskDef(taskDef);
+        metadataResource.updateTaskDef(taskDef);
         verify(mockMetadataService, times(1)).updateTaskDef(taskDef);
     }
 
