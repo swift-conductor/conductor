@@ -28,18 +28,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jayway.jsonpath.Configuration;
-import com.jayway.jsonpath.DocumentContext;
-import com.jayway.jsonpath.JsonPath;
-import com.jayway.jsonpath.Option;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
 import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
 import com.swiftconductor.conductor.common.utils.EnvUtils;
 import com.swiftconductor.conductor.common.utils.TaskUtils;
 import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.jayway.jsonpath.Configuration;
+import com.jayway.jsonpath.DocumentContext;
+import com.jayway.jsonpath.JsonPath;
+import com.jayway.jsonpath.Option;
 
 /** Used to parse and resolve the JSONPath bindings in the workflow and task definitions. */
 @Component

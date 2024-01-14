@@ -32,8 +32,6 @@ import org.springframework.retry.support.RetryTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.spotify.futures.CompletableFutures;
 import com.swiftconductor.conductor.common.metadata.events.EventExecution;
 import com.swiftconductor.conductor.common.metadata.events.EventExecution.Status;
 import com.swiftconductor.conductor.common.metadata.events.EventHandler;
@@ -47,6 +45,9 @@ import com.swiftconductor.conductor.core.utils.JsonUtils;
 import com.swiftconductor.conductor.metrics.Monitors;
 import com.swiftconductor.conductor.service.ExecutionService;
 import com.swiftconductor.conductor.service.MetadataService;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.spotify.futures.CompletableFutures;
 
 import static com.swiftconductor.conductor.core.utils.Utils.isTransientException;
 

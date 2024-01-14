@@ -25,6 +25,7 @@ import org.springframework.stereotype.Component;
 import com.swiftconductor.conductor.core.config.ConductorProperties;
 import com.swiftconductor.conductor.core.events.EventQueueProvider;
 import com.swiftconductor.conductor.dao.QueueDAO;
+
 import rx.Scheduler;
 
 /**

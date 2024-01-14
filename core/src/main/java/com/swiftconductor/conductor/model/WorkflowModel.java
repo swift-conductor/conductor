@@ -19,12 +19,13 @@ import java.util.stream.Collectors;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
 import com.swiftconductor.conductor.common.run.Workflow;
 import com.swiftconductor.conductor.core.utils.Utils;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class WorkflowModel {
 

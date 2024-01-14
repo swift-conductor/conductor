@@ -25,6 +25,7 @@ import com.swiftconductor.conductor.model.WorkflowModel;
 
 import static com.swiftconductor.conductor.core.execution.tasks.Terminate.getTerminationStatusParameter;
 import static com.swiftconductor.conductor.core.execution.tasks.Terminate.getTerminationWorkflowOutputParameter;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;

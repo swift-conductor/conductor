@@ -24,6 +24,8 @@ import java.util.*;
 import javax.annotation.Generated;
 import javax.lang.model.element.Modifier;
 
+import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
+
 import com.github.jknack.handlebars.EscapingStrategy;
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Template;
@@ -34,7 +36,6 @@ import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
-import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
 
 public class ProtoGen {
     private static final String GENERATOR_NAME =

@@ -17,10 +17,10 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.netflix.dyno.connectionpool.HostSupplier;
-
 import com.swiftconductor.conductor.redis.dynoqueue.LocalhostHostSupplier;
 import com.swiftconductor.conductor.redis.jedis.JedisMock;
+
+import com.netflix.dyno.connectionpool.HostSupplier;
 
 import static com.swiftconductor.conductor.redis.config.RedisCommonConfiguration.DEFAULT_CLIENT_INJECTION_NAME;
 import static com.swiftconductor.conductor.redis.config.RedisCommonConfiguration.READ_CLIENT_INJECTION_NAME;

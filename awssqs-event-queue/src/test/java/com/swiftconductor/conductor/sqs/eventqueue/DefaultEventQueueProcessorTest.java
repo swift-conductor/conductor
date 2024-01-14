@@ -28,8 +28,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.util.concurrent.Uninterruptibles;
 import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
 import com.swiftconductor.conductor.common.metadata.tasks.Task;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
@@ -41,7 +39,11 @@ import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.TaskModel.Status;
 import com.swiftconductor.conductor.model.WorkflowModel;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.util.concurrent.Uninterruptibles;
+
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_WAIT;
+
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.*;

@@ -26,16 +26,17 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.amazonaws.auth.AWSCredentialsProvider;
-import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
-import com.amazonaws.client.builder.AwsClientBuilder;
-import com.amazonaws.services.sqs.AmazonSQS;
-import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
 import com.swiftconductor.conductor.core.config.ConductorProperties;
 import com.swiftconductor.conductor.core.events.EventQueueProvider;
 import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
 import com.swiftconductor.conductor.model.TaskModel.Status;
 import com.swiftconductor.conductor.sqs.eventqueue.SQSObservableQueue.Builder;
+
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
+import com.amazonaws.client.builder.AwsClientBuilder;
+import com.amazonaws.services.sqs.AmazonSQS;
+import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
 import rx.Scheduler;
 
 @Configuration

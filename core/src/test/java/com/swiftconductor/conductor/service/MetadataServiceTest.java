@@ -37,6 +37,7 @@ import com.swiftconductor.conductor.dao.EventHandlerDAO;
 import com.swiftconductor.conductor.dao.MetadataDAO;
 
 import static com.swiftconductor.conductor.TestUtils.getConstraintViolationMessages;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;

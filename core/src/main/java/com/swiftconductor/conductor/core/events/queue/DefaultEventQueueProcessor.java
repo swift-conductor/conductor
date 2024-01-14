@@ -21,10 +21,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.metadata.tasks.Task;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
 import com.swiftconductor.conductor.common.utils.TaskUtils;
@@ -33,6 +29,11 @@ import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
 import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.TaskModel.Status;
 import com.swiftconductor.conductor.model.WorkflowModel;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_WAIT;
 

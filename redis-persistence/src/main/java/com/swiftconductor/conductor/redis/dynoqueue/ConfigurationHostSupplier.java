@@ -20,11 +20,11 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.swiftconductor.conductor.redis.config.RedisProperties;
+
 import com.netflix.dyno.connectionpool.Host;
 import com.netflix.dyno.connectionpool.HostBuilder;
 import com.netflix.dyno.connectionpool.HostSupplier;
-
-import com.swiftconductor.conductor.redis.config.RedisProperties;
 
 public class ConfigurationHostSupplier implements HostSupplier {
 

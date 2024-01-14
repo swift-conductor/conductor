@@ -26,6 +26,7 @@ import org.redisson.config.Config;
 import com.swiftconductor.conductor.redislock.config.RedisLockProperties;
 import com.swiftconductor.conductor.redislock.config.RedisLockProperties.REDIS_SERVER_TYPE;
 import com.swiftconductor.conductor.redislock.lock.RedisLock;
+
 import redis.embedded.RedisServer;
 
 import static org.junit.Assert.assertFalse;

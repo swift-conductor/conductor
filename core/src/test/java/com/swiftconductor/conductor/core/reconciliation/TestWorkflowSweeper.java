@@ -32,6 +32,7 @@ import com.swiftconductor.conductor.model.TaskModel.Status;
 import com.swiftconductor.conductor.model.WorkflowModel;
 
 import static com.swiftconductor.conductor.core.utils.Utils.DECIDER_QUEUE;
+
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;

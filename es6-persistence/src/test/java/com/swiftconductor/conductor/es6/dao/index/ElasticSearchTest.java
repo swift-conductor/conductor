@@ -27,9 +27,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.testcontainers.elasticsearch.ElasticsearchContainer;
 import org.testcontainers.utility.DockerImageName;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
 import com.swiftconductor.conductor.es6.config.ElasticSearchProperties;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @ContextConfiguration(
         classes = {TestObjectMapperConfiguration.class, ElasticSearchTest.TestConfiguration.class})

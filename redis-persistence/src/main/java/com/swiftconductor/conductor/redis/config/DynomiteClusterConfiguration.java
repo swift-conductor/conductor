@@ -16,12 +16,12 @@ package com.swiftconductor.conductor.redis.config;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Configuration;
 
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+
 import com.netflix.dyno.connectionpool.HostSupplier;
 import com.netflix.dyno.connectionpool.TokenMapSupplier;
 import com.netflix.dyno.connectionpool.impl.ConnectionPoolConfigurationImpl;
 import com.netflix.dyno.jedis.DynoJedisClient;
-
-import com.swiftconductor.conductor.core.config.ConductorProperties;
 import redis.clients.jedis.commands.JedisCommands;
 
 @Configuration(proxyBeanMethods = false)

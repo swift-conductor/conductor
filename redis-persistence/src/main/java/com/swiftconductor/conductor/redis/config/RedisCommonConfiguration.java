@@ -25,6 +25,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 
+import com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
+
+import com.google.inject.ProvisionException;
 import com.netflix.dyno.connectionpool.Host;
 import com.netflix.dyno.connectionpool.HostSupplier;
 import com.netflix.dyno.connectionpool.TokenMapSupplier;
@@ -34,9 +37,6 @@ import com.netflix.dyno.queues.ShardSupplier;
 import com.netflix.dyno.queues.redis.RedisQueues;
 import com.netflix.dyno.queues.redis.sharding.ShardingStrategy;
 import com.netflix.dyno.queues.shard.DynoShardSupplier;
-
-import com.google.inject.ProvisionException;
-import com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
 import redis.clients.jedis.commands.JedisCommands;
 
 @Configuration(proxyBeanMethods = false)

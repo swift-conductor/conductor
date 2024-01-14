@@ -31,6 +31,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
 
 import static com.swiftconductor.conductor.TestUtils.getConstraintViolationMessages;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;

@@ -1,0 +1,1 @@
+As of v3.16.0 the `test-end-2-end` project has been moved to the [swift-conductor/conductor-client-java][https://github.com/swift-conductor/conductor-client-java] repository.

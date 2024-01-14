@@ -19,10 +19,11 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 import org.springframework.test.context.TestPropertySource;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.swiftconductor.conductor.common.metadata.tasks.Task.Status;
 import com.swiftconductor.conductor.common.run.SearchResult;
 import com.swiftconductor.conductor.common.run.TaskSummary;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import static org.awaitility.Awaitility.await;
 import static org.junit.Assert.assertEquals;

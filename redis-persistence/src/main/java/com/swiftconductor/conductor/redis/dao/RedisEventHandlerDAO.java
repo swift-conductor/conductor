@@ -23,8 +23,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.base.Preconditions;
 import com.swiftconductor.conductor.common.metadata.events.EventHandler;
 import com.swiftconductor.conductor.core.config.ConductorProperties;
 import com.swiftconductor.conductor.core.exception.ConflictException;
@@ -34,6 +32,9 @@ import com.swiftconductor.conductor.dao.EventHandlerDAO;
 import com.swiftconductor.conductor.redis.config.AnyRedisCondition;
 import com.swiftconductor.conductor.redis.config.RedisProperties;
 import com.swiftconductor.conductor.redis.jedis.JedisProxy;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.base.Preconditions;
 
 @Component
 @Conditional(AnyRedisCondition.class)

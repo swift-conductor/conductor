@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.swiftconductor.conductor.common.model.BulkResponse;
 import com.swiftconductor.conductor.service.WorkflowBulkService;
+
 import io.swagger.v3.oas.annotations.Operation;
 
 import static com.swiftconductor.conductor.rest.config.RequestMappingConstants.WORKFLOW_BULK;

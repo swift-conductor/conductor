@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 
 import com.swiftconductor.conductor.core.events.queue.Message;
 import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
+
 import rx.Observable;
 
 public class MockObservableQueue implements ObservableQueue {

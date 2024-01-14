@@ -24,7 +24,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
 import com.swiftconductor.conductor.common.metadata.events.EventHandler.Action;
 import com.swiftconductor.conductor.common.metadata.events.EventHandler.Action.Type;
@@ -41,6 +40,8 @@ import com.swiftconductor.conductor.core.utils.JsonUtils;
 import com.swiftconductor.conductor.core.utils.ParametersUtils;
 import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;

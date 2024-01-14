@@ -17,12 +17,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import com.squareup.javapoet.MethodSpec;
-import com.squareup.javapoet.TypeSpec;
 import com.swiftconductor.conductor.annotations.protogen.ProtoEnum;
 import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
 import com.swiftconductor.conductor.annotationsprocessor.protogen.types.MessageType;
 import com.swiftconductor.conductor.annotationsprocessor.protogen.types.TypeMapper;
+
+import com.squareup.javapoet.MethodSpec;
+import com.squareup.javapoet.TypeSpec;
 
 public abstract class AbstractMessage {
     protected Class<?> clazz;

@@ -29,7 +29,6 @@ import org.springframework.retry.support.RetryTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
 import com.swiftconductor.conductor.common.metadata.events.EventExecution;
 import com.swiftconductor.conductor.common.metadata.events.EventHandler;
@@ -54,6 +53,8 @@ import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
 import com.swiftconductor.conductor.service.ExecutionService;
 import com.swiftconductor.conductor.service.MetadataService;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;

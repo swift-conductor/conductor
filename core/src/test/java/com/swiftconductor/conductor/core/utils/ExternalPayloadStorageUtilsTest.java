@@ -31,7 +31,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.unit.DataSize;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
 import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
 import com.swiftconductor.conductor.common.run.ExternalStorageLocation;
@@ -41,7 +40,10 @@ import com.swiftconductor.conductor.core.exception.TerminateWorkflowException;
 import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import static com.swiftconductor.conductor.model.TaskModel.Status.FAILED_WITH_TERMINAL_ERROR;
+
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;

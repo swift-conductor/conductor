@@ -18,11 +18,12 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
 import com.swiftconductor.conductor.core.utils.IDGenerator;
 import com.swiftconductor.conductor.s3.storage.S3PayloadStorage;
+
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 
 @Configuration
 @EnableConfigurationProperties(S3Properties.class)

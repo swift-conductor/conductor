@@ -35,7 +35,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.unit.DataSize;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
@@ -69,6 +68,8 @@ import com.swiftconductor.conductor.dao.MetadataDAO;
 import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.CUSTOM;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.DECISION;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.DYNAMIC;
@@ -85,6 +86,7 @@ import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_T
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_SWITCH;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.USER_DEFINED;
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.WAIT;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;

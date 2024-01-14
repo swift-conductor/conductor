@@ -31,9 +31,6 @@ import org.mockserver.model.MediaType;
 import org.testcontainers.containers.MockServerContainer;
 import org.testcontainers.utility.DockerImageName;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
 import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
 import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
@@ -47,6 +44,10 @@ import com.swiftconductor.conductor.dao.MetadataDAO;
 import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
 import com.swiftconductor.conductor.tasks.http.providers.DefaultRestTemplateProvider;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;

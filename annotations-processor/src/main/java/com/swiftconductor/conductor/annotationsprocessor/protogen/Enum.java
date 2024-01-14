@@ -15,10 +15,11 @@ package com.swiftconductor.conductor.annotationsprocessor.protogen;
 
 import javax.lang.model.element.Modifier;
 
+import com.swiftconductor.conductor.annotationsprocessor.protogen.types.MessageType;
+
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
-import com.swiftconductor.conductor.annotationsprocessor.protogen.types.MessageType;
 
 public class Enum extends AbstractMessage {
     public enum MapType {

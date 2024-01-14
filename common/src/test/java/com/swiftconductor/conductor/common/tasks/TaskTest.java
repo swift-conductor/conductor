@@ -20,12 +20,13 @@ import java.util.stream.Collectors;
 
 import org.junit.Test;
 
-import com.google.protobuf.Any;
 import com.swiftconductor.conductor.common.metadata.tasks.Task;
 import com.swiftconductor.conductor.common.metadata.tasks.Task.Status;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskResult;
 import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+
+import com.google.protobuf.Any;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

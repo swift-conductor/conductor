@@ -20,12 +20,6 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.datastax.driver.core.PreparedStatement;
-import com.datastax.driver.core.ResultSet;
-import com.datastax.driver.core.Row;
-import com.datastax.driver.core.Session;
-import com.datastax.driver.core.exceptions.DriverException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.annotations.Trace;
 import com.swiftconductor.conductor.cassandra.config.CassandraProperties;
 import com.swiftconductor.conductor.cassandra.util.Statements;
@@ -33,6 +27,13 @@ import com.swiftconductor.conductor.common.metadata.events.EventHandler;
 import com.swiftconductor.conductor.core.exception.TransientException;
 import com.swiftconductor.conductor.dao.EventHandlerDAO;
 import com.swiftconductor.conductor.metrics.Monitors;
+
+import com.datastax.driver.core.PreparedStatement;
+import com.datastax.driver.core.ResultSet;
+import com.datastax.driver.core.Row;
+import com.datastax.driver.core.Session;
+import com.datastax.driver.core.exceptions.DriverException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static com.swiftconductor.conductor.cassandra.util.Constants.EVENT_HANDLER_KEY;
 import static com.swiftconductor.conductor.cassandra.util.Constants.HANDLERS_KEY;

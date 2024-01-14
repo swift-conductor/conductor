@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.swiftconductor.conductor.common.metadata.events.EventHandler;
 import com.swiftconductor.conductor.service.EventService;
+
 import io.swagger.v3.oas.annotations.Operation;
 
 import static com.swiftconductor.conductor.rest.config.RequestMappingConstants.EVENT;

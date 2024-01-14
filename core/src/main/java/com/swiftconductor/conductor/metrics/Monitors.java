@@ -20,6 +20,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
+
 import com.netflix.spectator.api.Counter;
 import com.netflix.spectator.api.DistributionSummary;
 import com.netflix.spectator.api.Gauge;
@@ -28,9 +31,6 @@ import com.netflix.spectator.api.Registry;
 import com.netflix.spectator.api.Spectator;
 import com.netflix.spectator.api.Timer;
 import com.netflix.spectator.api.histogram.PercentileTimer;
-
-import com.swiftconductor.conductor.model.TaskModel;
-import com.swiftconductor.conductor.model.WorkflowModel;
 
 public class Monitors {
 

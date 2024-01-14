@@ -19,15 +19,16 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.swiftconductor.conductor.cassandra.config.CassandraProperties;
+import com.swiftconductor.conductor.core.exception.NonTransientException;
+import com.swiftconductor.conductor.metrics.Monitors;
+
 import com.datastax.driver.core.DataType;
 import com.datastax.driver.core.Session;
 import com.datastax.driver.core.schemabuilder.SchemaBuilder;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
-import com.swiftconductor.conductor.cassandra.config.CassandraProperties;
-import com.swiftconductor.conductor.core.exception.NonTransientException;
-import com.swiftconductor.conductor.metrics.Monitors;
 
 import static com.swiftconductor.conductor.cassandra.util.Constants.DAO_NAME;
 import static com.swiftconductor.conductor.cassandra.util.Constants.ENTITY_KEY;

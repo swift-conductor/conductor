@@ -38,12 +38,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.netflix.spectator.api.Counter;
-import com.netflix.spectator.api.DefaultRegistry;
-import com.netflix.spectator.api.Registry;
-import com.netflix.spectator.api.Spectator;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskDef.TimeoutPolicy;
@@ -66,7 +60,14 @@ import com.swiftconductor.conductor.dao.MetadataDAO;
 import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.netflix.spectator.api.Counter;
+import com.netflix.spectator.api.DefaultRegistry;
+import com.netflix.spectator.api.Registry;
+import com.netflix.spectator.api.Spectator;
+
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.*;
+
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;

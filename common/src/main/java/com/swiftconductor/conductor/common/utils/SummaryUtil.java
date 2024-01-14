@@ -22,9 +22,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import com.swiftconductor.conductor.common.config.ObjectMapperProvider;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swiftconductor.conductor.common.config.ObjectMapperProvider;
 
 @Component
 public class SummaryUtil {

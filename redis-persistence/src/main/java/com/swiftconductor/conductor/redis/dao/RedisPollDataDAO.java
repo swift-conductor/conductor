@@ -21,14 +21,15 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.base.Preconditions;
 import com.swiftconductor.conductor.common.metadata.tasks.PollData;
 import com.swiftconductor.conductor.core.config.ConductorProperties;
 import com.swiftconductor.conductor.dao.PollDataDAO;
 import com.swiftconductor.conductor.redis.config.AnyRedisCondition;
 import com.swiftconductor.conductor.redis.config.RedisProperties;
 import com.swiftconductor.conductor.redis.jedis.JedisProxy;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.base.Preconditions;
 
 @Component
 @Conditional(AnyRedisCondition.class)

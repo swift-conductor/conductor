@@ -13,11 +13,12 @@
  */
 package com.swiftconductor.conductor.common.config;
 
+import com.swiftconductor.conductor.common.jackson.JsonProtoModule;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.afterburner.AfterburnerModule;
-import com.swiftconductor.conductor.common.jackson.JsonProtoModule;
 
 /**
  * A Factory class for creating a customized {@link ObjectMapper}. This is only used by the

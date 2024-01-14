@@ -57,10 +57,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.retry.support.RetryTemplate;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.type.MapType;
-import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.swiftconductor.conductor.annotations.Trace;
 import com.swiftconductor.conductor.common.metadata.events.EventExecution;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskExecLog;
@@ -73,6 +69,11 @@ import com.swiftconductor.conductor.dao.IndexDAO;
 import com.swiftconductor.conductor.es6.config.ElasticSearchProperties;
 import com.swiftconductor.conductor.es6.dao.query.parser.internal.ParserException;
 import com.swiftconductor.conductor.metrics.Monitors;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.MapType;
+import com.fasterxml.jackson.databind.type.TypeFactory;
 
 @Trace
 public class ElasticSearchDAOV6 extends ElasticSearchBaseDAO implements IndexDAO {

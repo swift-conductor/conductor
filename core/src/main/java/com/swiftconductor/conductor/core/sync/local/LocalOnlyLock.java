@@ -24,11 +24,12 @@ import java.util.concurrent.locks.ReentrantLock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.swiftconductor.conductor.annotations.VisibleForTesting;
+import com.swiftconductor.conductor.core.sync.Lock;
+
 import com.github.benmanes.caffeine.cache.CacheLoader;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.LoadingCache;
-import com.swiftconductor.conductor.annotations.VisibleForTesting;
-import com.swiftconductor.conductor.core.sync.Lock;
 
 public class LocalOnlyLock implements Lock {
 

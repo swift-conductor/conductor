@@ -25,6 +25,10 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.swiftconductor.conductor.core.events.queue.Message;
+import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
+import com.swiftconductor.conductor.metrics.Monitors;
+
 import com.amazonaws.auth.policy.Action;
 import com.amazonaws.auth.policy.Policy;
 import com.amazonaws.auth.policy.Principal;
@@ -49,9 +53,6 @@ import com.amazonaws.services.sqs.model.SendMessageBatchRequest;
 import com.amazonaws.services.sqs.model.SendMessageBatchRequestEntry;
 import com.amazonaws.services.sqs.model.SendMessageBatchResult;
 import com.amazonaws.services.sqs.model.SetQueueAttributesResult;
-import com.swiftconductor.conductor.core.events.queue.Message;
-import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
-import com.swiftconductor.conductor.metrics.Monitors;
 import rx.Observable;
 import rx.Observable.OnSubscribe;
 import rx.Scheduler;

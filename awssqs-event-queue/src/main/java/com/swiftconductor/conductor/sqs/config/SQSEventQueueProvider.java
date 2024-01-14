@@ -18,10 +18,11 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.lang.NonNull;
 
-import com.amazonaws.services.sqs.AmazonSQS;
 import com.swiftconductor.conductor.core.events.EventQueueProvider;
 import com.swiftconductor.conductor.core.events.queue.ObservableQueue;
 import com.swiftconductor.conductor.sqs.eventqueue.SQSObservableQueue;
+
+import com.amazonaws.services.sqs.AmazonSQS;
 import rx.Scheduler;
 
 public class SQSEventQueueProvider implements EventQueueProvider {

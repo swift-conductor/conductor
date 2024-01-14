@@ -23,12 +23,12 @@ import java.util.stream.Collectors;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
+import com.swiftconductor.conductor.dao.QueueDAO;
+import com.swiftconductor.conductor.redis.config.AnyRedisCondition;
+
 import com.netflix.dyno.queues.DynoQueue;
 import com.netflix.dyno.queues.Message;
 import com.netflix.dyno.queues.redis.RedisQueues;
-
-import com.swiftconductor.conductor.dao.QueueDAO;
-import com.swiftconductor.conductor.redis.config.AnyRedisCondition;
 
 @Component
 @Conditional(AnyRedisCondition.class)

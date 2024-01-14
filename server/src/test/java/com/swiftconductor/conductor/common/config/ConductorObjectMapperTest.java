@@ -25,13 +25,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
+import com.swiftconductor.conductor.common.run.Workflow;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.protobuf.Any;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
-import com.swiftconductor.conductor.common.metadata.workflow.WorkflowDef;
-import com.swiftconductor.conductor.common.run.Workflow;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

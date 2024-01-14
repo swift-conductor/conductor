@@ -20,11 +20,12 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.google.protobuf.Any;
 import com.swiftconductor.conductor.annotations.protogen.ProtoEnum;
 import com.swiftconductor.conductor.annotations.protogen.ProtoField;
 import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
 import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+
+import com.google.protobuf.Any;
 import io.swagger.v3.oas.annotations.Hidden;
 
 @ProtoMessage

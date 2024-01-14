@@ -17,10 +17,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.core.config.ConductorProperties;
 import com.swiftconductor.conductor.redis.config.RedisProperties;
 import com.swiftconductor.conductor.redis.jedis.JedisProxy;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;

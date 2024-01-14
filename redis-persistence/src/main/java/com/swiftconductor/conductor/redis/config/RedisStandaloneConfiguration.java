@@ -18,12 +18,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Configuration;
 
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.redis.jedis.JedisStandalone;
+
 import com.netflix.dyno.connectionpool.Host;
 import com.netflix.dyno.connectionpool.HostSupplier;
 import com.netflix.dyno.connectionpool.TokenMapSupplier;
-
-import com.swiftconductor.conductor.core.config.ConductorProperties;
-import com.swiftconductor.conductor.redis.jedis.JedisStandalone;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.Protocol;

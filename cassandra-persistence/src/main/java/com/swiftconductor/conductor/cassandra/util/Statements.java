@@ -15,9 +15,6 @@ package com.swiftconductor.conductor.cassandra.util;
 
 import com.datastax.driver.core.querybuilder.QueryBuilder;
 
-import static com.datastax.driver.core.querybuilder.QueryBuilder.bindMarker;
-import static com.datastax.driver.core.querybuilder.QueryBuilder.eq;
-import static com.datastax.driver.core.querybuilder.QueryBuilder.set;
 import static com.swiftconductor.conductor.cassandra.util.Constants.ENTITY_KEY;
 import static com.swiftconductor.conductor.cassandra.util.Constants.ENTITY_TYPE_TASK;
 import static com.swiftconductor.conductor.cassandra.util.Constants.ENTITY_TYPE_WORKFLOW;
@@ -49,6 +46,10 @@ import static com.swiftconductor.conductor.cassandra.util.Constants.WORKFLOW_DEF
 import static com.swiftconductor.conductor.cassandra.util.Constants.WORKFLOW_DEF_NAME_VERSION_KEY;
 import static com.swiftconductor.conductor.cassandra.util.Constants.WORKFLOW_ID_KEY;
 import static com.swiftconductor.conductor.cassandra.util.Constants.WORKFLOW_VERSION_KEY;
+
+import static com.datastax.driver.core.querybuilder.QueryBuilder.bindMarker;
+import static com.datastax.driver.core.querybuilder.QueryBuilder.eq;
+import static com.datastax.driver.core.querybuilder.QueryBuilder.set;
 
 /**
  * DML statements

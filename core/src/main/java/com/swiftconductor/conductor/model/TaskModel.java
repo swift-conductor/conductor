@@ -21,12 +21,13 @@ import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.protobuf.Any;
 import com.swiftconductor.conductor.common.metadata.tasks.Task;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
 import com.swiftconductor.conductor.common.metadata.workflow.WorkflowTask;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.protobuf.Any;
 
 public class TaskModel {
 

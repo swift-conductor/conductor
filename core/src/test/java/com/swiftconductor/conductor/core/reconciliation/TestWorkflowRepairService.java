@@ -21,7 +21,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.core.config.ConductorProperties;
 import com.swiftconductor.conductor.core.events.EventQueues;
 import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
@@ -33,7 +32,10 @@ import com.swiftconductor.conductor.dao.QueueDAO;
 import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.*;
+
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.ArgumentMatchers.anyString;

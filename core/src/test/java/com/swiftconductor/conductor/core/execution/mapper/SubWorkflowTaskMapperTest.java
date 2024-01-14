@@ -34,6 +34,7 @@ import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
 
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_SUB_WORKFLOW;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.mockito.ArgumentMatchers.any;

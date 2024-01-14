@@ -1,11 +1,1 @@
-# SDK for Conductor
-Conductor SDK allows developers to create, test and execute workflows using code.
-
-There are three main features of the SDK: 
-
-1. [Create and run workflows using code](workflow_sdk.md)
-2. [Create and run strongly typed workers](worker_sdk.md)
-3. [Unit Testing framework for workflows and workers](testing_framework.md)
-
-
-
+As of v3.16.0 the `java-sdk` project has been moved to the [swift-conductor/conductor-client-java][https://github.com/swift-conductor/conductor-client-java] repository.

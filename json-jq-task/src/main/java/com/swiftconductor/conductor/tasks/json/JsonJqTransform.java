@@ -23,16 +23,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
+import com.swiftconductor.conductor.core.execution.tasks.WorkflowSystemTask;
+import com.swiftconductor.conductor.model.TaskModel;
+import com.swiftconductor.conductor.model.WorkflowModel;
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.benmanes.caffeine.cache.CacheLoader;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.LoadingCache;
-import com.swiftconductor.conductor.core.execution.WorkflowExecutor;
-import com.swiftconductor.conductor.core.execution.tasks.WorkflowSystemTask;
-import com.swiftconductor.conductor.model.TaskModel;
-import com.swiftconductor.conductor.model.WorkflowModel;
 import net.thisptr.jackson.jq.JsonQuery;
 import net.thisptr.jackson.jq.Scope;
 

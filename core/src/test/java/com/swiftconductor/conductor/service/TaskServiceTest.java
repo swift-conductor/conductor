@@ -33,6 +33,7 @@ import com.swiftconductor.conductor.common.run.TaskSummary;
 import com.swiftconductor.conductor.dao.QueueDAO;
 
 import static com.swiftconductor.conductor.TestUtils.getConstraintViolationMessages;
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;

@@ -19,14 +19,15 @@ import java.util.regex.Pattern;
 
 import javax.lang.model.element.Modifier;
 
-import com.squareup.javapoet.ClassName;
-import com.squareup.javapoet.MethodSpec;
-import com.squareup.javapoet.TypeSpec;
 import com.swiftconductor.conductor.annotations.protogen.ProtoField;
 import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
 import com.swiftconductor.conductor.annotationsprocessor.protogen.types.AbstractType;
 import com.swiftconductor.conductor.annotationsprocessor.protogen.types.MessageType;
 import com.swiftconductor.conductor.annotationsprocessor.protogen.types.TypeMapper;
+
+import com.squareup.javapoet.ClassName;
+import com.squareup.javapoet.MethodSpec;
+import com.squareup.javapoet.TypeSpec;
 
 public class Message extends AbstractMessage {
     public Message(Class<?> cls, MessageType parent) {

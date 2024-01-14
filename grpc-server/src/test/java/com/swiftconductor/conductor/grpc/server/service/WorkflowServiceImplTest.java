@@ -30,6 +30,7 @@ import com.swiftconductor.conductor.grpc.WorkflowServicePb;
 import com.swiftconductor.conductor.proto.WorkflowPb;
 import com.swiftconductor.conductor.proto.WorkflowSummaryPb;
 import com.swiftconductor.conductor.service.WorkflowService;
+
 import io.grpc.stub.StreamObserver;
 
 import static org.junit.Assert.assertEquals;

@@ -15,9 +15,10 @@ package com.swiftconductor.conductor.common.metadata.workflow;
 
 import java.util.Map;
 
-import com.google.protobuf.Any;
 import com.swiftconductor.conductor.annotations.protogen.ProtoField;
 import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
+
+import com.google.protobuf.Any;
 import io.swagger.v3.oas.annotations.Hidden;
 
 @ProtoMessage(toProto = false)

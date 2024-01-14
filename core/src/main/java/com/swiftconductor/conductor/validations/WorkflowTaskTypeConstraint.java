@@ -40,6 +40,7 @@ import static com.swiftconductor.conductor.core.execution.tasks.Terminate.getTer
 import static com.swiftconductor.conductor.core.execution.tasks.Terminate.validateInputStatus;
 import static com.swiftconductor.conductor.core.execution.tasks.Wait.DURATION_INPUT;
 import static com.swiftconductor.conductor.core.execution.tasks.Wait.UNTIL_INPUT;
+
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.TYPE;
 

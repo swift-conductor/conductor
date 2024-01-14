@@ -24,11 +24,13 @@ import org.apache.commons.io.IOUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.run.ExternalStorageLocation;
 import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import static com.swiftconductor.conductor.common.utils.ExternalPayloadStorage.PayloadType;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;

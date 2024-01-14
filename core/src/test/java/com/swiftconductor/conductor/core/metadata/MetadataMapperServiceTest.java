@@ -39,6 +39,7 @@ import com.swiftconductor.conductor.core.exception.TerminateWorkflowException;
 import com.swiftconductor.conductor.dao.MetadataDAO;
 
 import static com.swiftconductor.conductor.TestUtils.getConstraintViolationMessages;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;

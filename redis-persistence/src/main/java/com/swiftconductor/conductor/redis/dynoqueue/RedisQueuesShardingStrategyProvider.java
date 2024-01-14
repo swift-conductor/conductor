@@ -18,12 +18,12 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.swiftconductor.conductor.redis.config.RedisProperties;
+
 import com.netflix.dyno.queues.Message;
 import com.netflix.dyno.queues.ShardSupplier;
 import com.netflix.dyno.queues.redis.sharding.RoundRobinStrategy;
 import com.netflix.dyno.queues.redis.sharding.ShardingStrategy;
-
-import com.swiftconductor.conductor.redis.config.RedisProperties;
 
 public class RedisQueuesShardingStrategyProvider {
 

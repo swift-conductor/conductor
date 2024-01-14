@@ -32,6 +32,7 @@ import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
 
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_WAIT;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;

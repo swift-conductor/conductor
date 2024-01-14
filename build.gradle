@@ -263,7 +263,7 @@ allprojects {
 }
 
 // all client and their related modules are published with Java 17 compatibility
-["annotations", "common", "client", "client-spring", "grpc", "grpc-client"].each {
+["annotations", "common", "grpc"].each {
     project(":conductor-$it") {
         compileJava {
             options.release = 17
@@ -298,17 +298,17 @@ configure(allprojects - project(':conductor-grpc')) {
         java {
             googleJavaFormat().aosp()
             removeUnusedImports()
-            importOrder('java', 'javax', 'org', 'com.netflix', '', '\\#com.netflix', '\\#')
+            importOrder('java', 'javax', 'org', 'com.swiftconductor.conductor', '', '\\#com.swiftconductor', '\\#')
             licenseHeaderFile("$rootDir/licenseheader.txt")
         }
     }
 }
 
-['cassandra-persistence', 'core', 'redis-concurrency-limit', 'test-harness', 'client'].each {
+['cassandra-persistence', 'core', 'redis-concurrency-limit'].each {
     configure(project(":conductor-$it")) {
         spotless {
             groovy {
-                importOrder('java', 'javax', 'org', 'com.swiftconductor.conductor', '', '\\#com.conductor', '\\#')
+                importOrder('java', 'javax', 'org', 'com.swiftconductor.conductor', '', '\\#com.swiftconductor', '\\#')
                 licenseHeaderFile("$rootDir/licenseheader.txt")
             }
         }

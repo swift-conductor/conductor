@@ -17,11 +17,11 @@ import java.util.Collections;
 
 import org.junit.Test;
 
-import com.netflix.dyno.queues.Message;
-import com.netflix.dyno.queues.ShardSupplier;
-
 import com.swiftconductor.conductor.redis.config.RedisProperties;
 import com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
+
+import com.netflix.dyno.queues.Message;
+import com.netflix.dyno.queues.ShardSupplier;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

@@ -21,10 +21,6 @@ import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.datastax.driver.core.Cluster;
-import com.datastax.driver.core.Metadata;
-import com.datastax.driver.core.Session;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.cassandra.config.cache.CacheableEventHandlerDAO;
 import com.swiftconductor.conductor.cassandra.config.cache.CacheableMetadataDAO;
 import com.swiftconductor.conductor.cassandra.dao.CassandraEventHandlerDAO;
@@ -35,6 +31,11 @@ import com.swiftconductor.conductor.cassandra.util.Statements;
 import com.swiftconductor.conductor.dao.EventHandlerDAO;
 import com.swiftconductor.conductor.dao.ExecutionDAO;
 import com.swiftconductor.conductor.dao.MetadataDAO;
+
+import com.datastax.driver.core.Cluster;
+import com.datastax.driver.core.Metadata;
+import com.datastax.driver.core.Session;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration(proxyBeanMethods = false)
 @EnableConfigurationProperties(CassandraProperties.class)

@@ -15,11 +15,11 @@ package com.swiftconductor.conductor.redis.config;
 
 import org.springframework.context.annotation.Bean;
 
-import com.netflix.dyno.connectionpool.HostSupplier;
-import com.netflix.dyno.connectionpool.TokenMapSupplier;
-
 import com.swiftconductor.conductor.core.config.ConductorProperties;
 import com.swiftconductor.conductor.redis.dynoqueue.ConfigurationHostSupplier;
+
+import com.netflix.dyno.connectionpool.HostSupplier;
+import com.netflix.dyno.connectionpool.TokenMapSupplier;
 import redis.clients.jedis.commands.JedisCommands;
 
 import static com.swiftconductor.conductor.redis.config.RedisCommonConfiguration.DEFAULT_CLIENT_INJECTION_NAME;

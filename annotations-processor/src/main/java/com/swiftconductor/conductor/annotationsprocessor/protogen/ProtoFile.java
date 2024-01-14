@@ -16,8 +16,9 @@ package com.swiftconductor.conductor.annotationsprocessor.protogen;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.squareup.javapoet.ClassName;
 import com.swiftconductor.conductor.annotationsprocessor.protogen.types.TypeMapper;
+
+import com.squareup.javapoet.ClassName;
 
 public class ProtoFile {
     public static String PROTO_SUFFIX = "Pb";

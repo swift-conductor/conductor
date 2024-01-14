@@ -19,10 +19,11 @@ import java.util.Objects;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonSetter;
 import com.swiftconductor.conductor.annotations.protogen.ProtoField;
 import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
+
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonSetter;
 
 @ProtoMessage
 public class SubWorkflowParams {

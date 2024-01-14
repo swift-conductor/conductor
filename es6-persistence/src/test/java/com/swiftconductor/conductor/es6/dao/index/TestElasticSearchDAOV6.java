@@ -23,8 +23,6 @@ import org.elasticsearch.action.admin.indices.mapping.get.GetMappingsRequest;
 import org.elasticsearch.action.admin.indices.mapping.get.GetMappingsResponse;
 import org.junit.Test;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.google.common.collect.ImmutableMap;
 import com.swiftconductor.conductor.common.metadata.events.EventExecution;
 import com.swiftconductor.conductor.common.metadata.events.EventHandler;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskExecLog;
@@ -33,6 +31,9 @@ import com.swiftconductor.conductor.common.run.Workflow.WorkflowStatus;
 import com.swiftconductor.conductor.common.run.WorkflowSummary;
 import com.swiftconductor.conductor.core.events.queue.Message;
 import com.swiftconductor.conductor.es6.utils.TestUtils;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.google.common.collect.ImmutableMap;
 
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertFalse;

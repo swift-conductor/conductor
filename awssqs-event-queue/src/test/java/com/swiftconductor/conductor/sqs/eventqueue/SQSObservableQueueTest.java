@@ -21,13 +21,14 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 import org.mockito.stubbing.Answer;
 
+import com.swiftconductor.conductor.core.events.queue.Message;
+
 import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.model.ListQueuesRequest;
 import com.amazonaws.services.sqs.model.ListQueuesResult;
 import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.ReceiveMessageResult;
 import com.google.common.util.concurrent.Uninterruptibles;
-import com.swiftconductor.conductor.core.events.queue.Message;
 import rx.Observable;
 
 import static org.junit.Assert.assertEquals;

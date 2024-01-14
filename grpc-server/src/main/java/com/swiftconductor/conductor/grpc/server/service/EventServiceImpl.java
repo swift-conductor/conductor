@@ -22,6 +22,7 @@ import com.swiftconductor.conductor.grpc.EventServicePb;
 import com.swiftconductor.conductor.grpc.ProtoMapper;
 import com.swiftconductor.conductor.proto.EventHandlerPb;
 import com.swiftconductor.conductor.service.MetadataService;
+
 import io.grpc.stub.StreamObserver;
 
 @Service("grpcEventService")

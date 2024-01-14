@@ -15,12 +15,12 @@ package com.swiftconductor.conductor.redis.dynoqueue;
 
 import java.util.List;
 
+import com.swiftconductor.conductor.redis.config.RedisProperties;
+
+import com.google.common.collect.Lists;
 import com.netflix.dyno.connectionpool.Host;
 import com.netflix.dyno.connectionpool.HostBuilder;
 import com.netflix.dyno.connectionpool.HostSupplier;
-
-import com.google.common.collect.Lists;
-import com.swiftconductor.conductor.redis.config.RedisProperties;
 
 public class LocalhostHostSupplier implements HostSupplier {
 

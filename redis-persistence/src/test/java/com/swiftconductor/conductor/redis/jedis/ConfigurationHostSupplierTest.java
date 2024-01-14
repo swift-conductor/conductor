@@ -18,10 +18,10 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.netflix.dyno.connectionpool.Host;
-
 import com.swiftconductor.conductor.redis.config.RedisProperties;
 import com.swiftconductor.conductor.redis.dynoqueue.ConfigurationHostSupplier;
+
+import com.netflix.dyno.connectionpool.Host;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

@@ -26,11 +26,12 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.PositiveOrZero;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.swiftconductor.conductor.annotations.protogen.ProtoField;
 import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskType;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
  * This is the task definition definied as part of the {@link WorkflowDef}. The tasks definied in

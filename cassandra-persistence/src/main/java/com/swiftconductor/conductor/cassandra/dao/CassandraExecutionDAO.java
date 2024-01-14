@@ -19,11 +19,6 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.datastax.driver.core.*;
-import com.datastax.driver.core.exceptions.DriverException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.annotations.VisibleForTesting;
-import com.google.common.base.Preconditions;
 import com.swiftconductor.conductor.annotations.Trace;
 import com.swiftconductor.conductor.cassandra.config.CassandraProperties;
 import com.swiftconductor.conductor.cassandra.util.Statements;
@@ -37,6 +32,12 @@ import com.swiftconductor.conductor.dao.ExecutionDAO;
 import com.swiftconductor.conductor.metrics.Monitors;
 import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
+
+import com.datastax.driver.core.*;
+import com.datastax.driver.core.exceptions.DriverException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.annotations.VisibleForTesting;
+import com.google.common.base.Preconditions;
 
 import static com.swiftconductor.conductor.cassandra.util.Constants.*;
 

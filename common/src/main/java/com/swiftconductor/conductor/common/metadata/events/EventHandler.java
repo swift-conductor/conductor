@@ -22,10 +22,11 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-import com.google.protobuf.Any;
 import com.swiftconductor.conductor.annotations.protogen.ProtoEnum;
 import com.swiftconductor.conductor.annotations.protogen.ProtoField;
 import com.swiftconductor.conductor.annotations.protogen.ProtoMessage;
+
+import com.google.protobuf.Any;
 import io.swagger.v3.oas.annotations.Hidden;
 
 /** Defines an event handler */

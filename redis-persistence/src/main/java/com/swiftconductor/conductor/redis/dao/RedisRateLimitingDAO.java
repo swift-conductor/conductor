@@ -21,7 +21,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.metadata.tasks.TaskDef;
 import com.swiftconductor.conductor.core.config.ConductorProperties;
 import com.swiftconductor.conductor.dao.RateLimitingDAO;
@@ -30,6 +29,8 @@ import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.redis.config.AnyRedisCondition;
 import com.swiftconductor.conductor.redis.config.RedisProperties;
 import com.swiftconductor.conductor.redis.jedis.JedisProxy;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Component
 @Conditional(AnyRedisCondition.class)

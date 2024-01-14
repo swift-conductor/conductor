@@ -27,12 +27,6 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.datastax.driver.core.PreparedStatement;
-import com.datastax.driver.core.ResultSet;
-import com.datastax.driver.core.Row;
-import com.datastax.driver.core.Session;
-import com.datastax.driver.core.exceptions.DriverException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.annotations.Trace;
 import com.swiftconductor.conductor.annotations.VisibleForTesting;
 import com.swiftconductor.conductor.cassandra.config.CassandraProperties;
@@ -43,6 +37,13 @@ import com.swiftconductor.conductor.core.exception.ConflictException;
 import com.swiftconductor.conductor.core.exception.TransientException;
 import com.swiftconductor.conductor.dao.MetadataDAO;
 import com.swiftconductor.conductor.metrics.Monitors;
+
+import com.datastax.driver.core.PreparedStatement;
+import com.datastax.driver.core.ResultSet;
+import com.datastax.driver.core.Row;
+import com.datastax.driver.core.Session;
+import com.datastax.driver.core.exceptions.DriverException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static com.swiftconductor.conductor.cassandra.util.Constants.TASK_DEFINITION_KEY;
 import static com.swiftconductor.conductor.cassandra.util.Constants.TASK_DEFS_KEY;

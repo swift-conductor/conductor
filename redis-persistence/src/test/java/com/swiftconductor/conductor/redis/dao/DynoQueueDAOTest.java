@@ -24,18 +24,19 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import com.netflix.dyno.connectionpool.Host;
-import com.netflix.dyno.queues.ShardSupplier;
-import com.netflix.dyno.queues.redis.RedisQueues;
-import com.netflix.dyno.queues.redis.sharding.ShardingStrategy;
-
 import com.swiftconductor.conductor.dao.QueueDAO;
 import com.swiftconductor.conductor.redis.config.RedisProperties;
 import com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
 import com.swiftconductor.conductor.redis.jedis.JedisMock;
+
+import com.netflix.dyno.connectionpool.Host;
+import com.netflix.dyno.queues.ShardSupplier;
+import com.netflix.dyno.queues.redis.RedisQueues;
+import com.netflix.dyno.queues.redis.sharding.ShardingStrategy;
 import redis.clients.jedis.commands.JedisCommands;
 
 import static com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider.LOCAL_ONLY_STRATEGY;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;

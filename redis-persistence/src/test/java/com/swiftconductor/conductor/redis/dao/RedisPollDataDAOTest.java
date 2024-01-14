@@ -19,7 +19,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.config.TestObjectMapperConfiguration;
 import com.swiftconductor.conductor.core.config.ConductorProperties;
 import com.swiftconductor.conductor.dao.PollDataDAO;
@@ -27,6 +26,8 @@ import com.swiftconductor.conductor.dao.PollDataDAOTest;
 import com.swiftconductor.conductor.redis.config.RedisProperties;
 import com.swiftconductor.conductor.redis.jedis.JedisMock;
 import com.swiftconductor.conductor.redis.jedis.JedisProxy;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 import redis.clients.jedis.commands.JedisCommands;
 
 import static org.mockito.Mockito.mock;

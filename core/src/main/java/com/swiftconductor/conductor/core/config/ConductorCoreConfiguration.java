@@ -46,6 +46,7 @@ import com.swiftconductor.conductor.core.sync.noop.NoopLock;
 
 import static com.swiftconductor.conductor.core.events.EventQueues.EVENT_QUEUE_PROVIDERS_QUALIFIER;
 import static com.swiftconductor.conductor.core.execution.tasks.SystemTaskRegistry.ASYNC_SYSTEM_TASKS_QUALIFIER;
+
 import static java.util.function.Function.identity;
 
 @Configuration(proxyBeanMethods = false)

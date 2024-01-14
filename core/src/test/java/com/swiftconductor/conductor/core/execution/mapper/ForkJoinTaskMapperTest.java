@@ -35,6 +35,7 @@ import com.swiftconductor.conductor.model.TaskModel;
 import com.swiftconductor.conductor.model.WorkflowModel;
 
 import static com.swiftconductor.conductor.common.metadata.tasks.TaskType.TASK_TYPE_FORK;
+
 import static org.junit.Assert.assertEquals;
 
 public class ForkJoinTaskMapperTest {

@@ -43,10 +43,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.retry.backoff.FixedBackOffPolicy;
 import org.springframework.retry.support.RetryTemplate;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.dao.IndexDAO;
 import com.swiftconductor.conductor.es6.dao.index.ElasticSearchDAOV6;
 import com.swiftconductor.conductor.es6.dao.index.ElasticSearchRestDAOV6;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration(proxyBeanMethods = false)
 @EnableConfigurationProperties(ElasticSearchProperties.class)

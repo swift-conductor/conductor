@@ -25,9 +25,10 @@ import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swiftconductor.conductor.common.run.ExternalStorageLocation;
 import com.swiftconductor.conductor.common.utils.ExternalPayloadStorage;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * A dummy implementation of {@link ExternalPayloadStorage} used when no external payload is

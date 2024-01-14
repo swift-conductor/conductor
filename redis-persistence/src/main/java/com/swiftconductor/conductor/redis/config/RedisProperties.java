@@ -20,12 +20,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.convert.DurationUnit;
 
+import com.swiftconductor.conductor.core.config.ConductorProperties;
+import com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
+
 import com.netflix.dyno.connectionpool.RetryPolicy.RetryPolicyFactory;
 import com.netflix.dyno.connectionpool.impl.RetryNTimes;
 import com.netflix.dyno.connectionpool.impl.RunOnce;
-
-import com.swiftconductor.conductor.core.config.ConductorProperties;
-import com.swiftconductor.conductor.redis.dynoqueue.RedisQueuesShardingStrategyProvider;
 
 @ConfigurationProperties("conductor.redis")
 public class RedisProperties {
