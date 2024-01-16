@@ -93,7 +93,7 @@ public class KitchenSinkInitializer {
         taskDef.setOwnerEmail("example@email.com");
         taskDefs.add(taskDef);
 
-        restTemplate.postForEntity(url("/api/metadata/taskdefs"), taskDefs, Object.class);
+        restTemplate.postForEntity(url("/api/metadata/taskdef"), taskDefs, Object.class);
 
         /*
          * Kitchensink example (stored workflow with stored tasks)
@@ -101,10 +101,10 @@ public class KitchenSinkInitializer {
         MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
         headers.add(CONTENT_TYPE, APPLICATION_JSON_VALUE);
         HttpEntity<String> request = new HttpEntity<>(readToString(kitchenSink), headers);
-        restTemplate.postForEntity(url("/api/metadata/workflow/"), request, Map.class);
+        restTemplate.postForEntity(url("/api/metadata/workflowdef/"), request, Map.class);
 
         request = new HttpEntity<>(readToString(subFlow), headers);
-        restTemplate.postForEntity(url("/api/metadata/workflow/"), request, Map.class);
+        restTemplate.postForEntity(url("/api/metadata/workflowdef/"), request, Map.class);
 
         restTemplate.postForEntity(
                 url("/api/workflow/kitchensink"),
