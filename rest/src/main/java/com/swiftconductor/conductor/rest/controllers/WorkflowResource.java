@@ -147,7 +147,7 @@ public class WorkflowResource {
         workflowService.resumeWorkflow(workflowId);
     }
 
-    @PutMapping("/{workflowId}/skiptask/{taskReferenceName}")
+    @PutMapping("/{workflowId}/skip-task/{taskReferenceName}")
     @Operation(summary = "Skips a given task from a current running workflow")
     public void skipTaskFromWorkflow(
             @PathVariable("workflowId") String workflowId,
@@ -191,7 +191,7 @@ public class WorkflowResource {
         workflowService.retryWorkflow(workflowId, resumeSubworkflowTasks);
     }
 
-    @PostMapping("/{workflowId}/resetcallbacks")
+    @PostMapping("/{workflowId}/reset-callbacks")
     @Operation(summary = "Resets callback times of all non-terminal CUSTOM tasks to 0")
     @ResponseStatus(
             value = HttpStatus.NO_CONTENT) // for backwards compatibility with 2.x client which
@@ -273,7 +273,7 @@ public class WorkflowResource {
     @Operation(
             summary =
                     "Get the uri and path of the external storage where the workflow payload is to be stored")
-    @GetMapping({"/externalstoragelocation", "external-storage-location"})
+    @GetMapping({"/external-storage-location"})
     public ExternalStorageLocation getExternalStorageLocation(
             @RequestParam("path") String path,
             @RequestParam("operation") String operation,

@@ -63,7 +63,7 @@ public class AdminResource {
         return adminService.requeueSweep(workflowId);
     }
 
-    @PostMapping(value = "/consistency/verifyAndRepair/{workflowId}", produces = TEXT_PLAIN_VALUE)
+    @PostMapping(value = "/consistency/verify-and-repair/{workflowId}", produces = TEXT_PLAIN_VALUE)
     @Operation(summary = "Verify and repair workflow consistency")
     public String verifyAndRepairWorkflowConsistency(
             @PathVariable("workflowId") String workflowId) {

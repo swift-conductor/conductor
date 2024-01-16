@@ -136,13 +136,13 @@ public class TaskResource {
         return taskService.getAllQueueDetails();
     }
 
-    @GetMapping("/queue/polldata")
+    @GetMapping("/queue/poll-data")
     @Operation(summary = "Get the last poll data for a given task type")
     public List<PollData> getPollData(@RequestParam("taskType") String taskType) {
         return taskService.getPollData(taskType);
     }
 
-    @GetMapping("/queue/polldata/all")
+    @GetMapping("/queue/poll-data/all")
     @Operation(summary = "Get the last poll data for all task types")
     public List<PollData> getAllPollData() {
         return taskService.getAllPollData();

@@ -21,7 +21,7 @@ public interface RequestMappingConstants {
     String EVENT = API_PREFIX + "event";
     String METADATA = API_PREFIX + "metadata";
     String QUEUE = API_PREFIX + "queue";
-    String TASKS = API_PREFIX + "tasks";
+    String TASKS = API_PREFIX + "task";
     String WORKFLOW_BULK = API_PREFIX + "workflow/bulk";
     String WORKFLOW = API_PREFIX + "workflow";
 }

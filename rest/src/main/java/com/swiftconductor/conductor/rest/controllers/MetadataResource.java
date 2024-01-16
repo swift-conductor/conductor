@@ -46,26 +46,26 @@ public class MetadataResource {
         this.metadataService = metadataService;
     }
 
-    @PostMapping("/workflow")
+    @PostMapping("/workflowdef")
     @Operation(summary = "Create a new workflow definition")
     public void create(@RequestBody WorkflowDef workflowDef) {
         metadataService.registerWorkflowDef(workflowDef);
     }
 
-    @PostMapping("/workflow/validate")
+    @PostMapping("/workflowdef/validate")
     @Operation(summary = "Validates a new workflow definition")
     public void validate(@RequestBody WorkflowDef workflowDef) {
         metadataService.validateWorkflowDef(workflowDef);
     }
 
-    @PutMapping("/workflow")
+    @PutMapping("/workflowdef")
     @Operation(summary = "Create or update workflow definition")
     public BulkResponse update(@RequestBody List<WorkflowDef> workflowDefs) {
         return metadataService.updateWorkflowDef(workflowDefs);
     }
 
     @Operation(summary = "Retrieves workflow definition along with blueprint")
-    @GetMapping("/workflow/{name}")
+    @GetMapping("/workflowdef/{name}")
     public WorkflowDef get(
             @PathVariable("name") String name,
             @RequestParam(value = "version", required = false) Integer version) {
@@ -73,24 +73,24 @@ public class MetadataResource {
     }
 
     @Operation(summary = "Retrieves all workflow definition along with blueprint")
-    @GetMapping("/workflow")
+    @GetMapping("/workflowdef")
     public List<WorkflowDef> getAll() {
         return metadataService.getWorkflowDefs();
     }
 
     @Operation(summary = "Returns workflow names and versions only (no definition bodies)")
-    @GetMapping("/workflow/names-and-versions")
+    @GetMapping("/workflowdef/names-and-versions")
     public Map<String, ? extends Iterable<WorkflowDefSummary>> getWorkflowNamesAndVersions() {
         return metadataService.getWorkflowNamesAndVersions();
     }
 
     @Operation(summary = "Returns only the latest version of all workflow definitions")
-    @GetMapping("/workflow/latest-versions")
+    @GetMapping("/workflowdef/latest-versions")
     public List<WorkflowDef> getAllWorkflowsWithLatestVersions() {
         return metadataService.getWorkflowDefsLatestVersions();
     }
 
-    @DeleteMapping("/workflow/{name}/{version}")
+    @DeleteMapping("/workflowdef/{name}/{version}")
     @Operation(
             summary =
                     "Removes workflow definition. It does not remove workflows associated with the definition.")
@@ -99,31 +99,31 @@ public class MetadataResource {
         metadataService.unregisterWorkflowDef(name, version);
     }
 
-    @PostMapping("/taskdefs")
+    @PostMapping("/taskdef")
     @Operation(summary = "Create new task definition(s)")
     public void registerTaskDef(@RequestBody List<TaskDef> taskDefs) {
         metadataService.registerTaskDef(taskDefs);
     }
 
-    @PutMapping("/taskdefs")
+    @PutMapping("/taskdef")
     @Operation(summary = "Update an existing task")
     public void updateTaskDef(@RequestBody TaskDef taskDef) {
         metadataService.updateTaskDef(taskDef);
     }
 
-    @GetMapping(value = "/taskdefs")
+    @GetMapping(value = "/taskdef")
     @Operation(summary = "Gets all task definition")
     public List<TaskDef> getTaskDefs() {
         return metadataService.getTaskDefs();
     }
 
-    @GetMapping("/taskdefs/{tasktype}")
+    @GetMapping("/taskdef/{tasktype}")
     @Operation(summary = "Gets the task definition")
     public TaskDef getTaskDef(@PathVariable("tasktype") String taskType) {
         return metadataService.getTaskDef(taskType);
     }
 
-    @DeleteMapping("/taskdefs/{tasktype}")
+    @DeleteMapping("/taskdef/{tasktype}")
     @Operation(summary = "Remove a task definition")
     public void unregisterTaskDef(@PathVariable("tasktype") String taskType) {
         metadataService.unregisterTaskDef(taskType);
