@@ -32,7 +32,6 @@ plugins {
     id 'java'
     id 'application'
     id 'jacoco'
-    id 'signing'
 
     id 'org.sonarqube' version '3.4.0.2513'
 
@@ -332,9 +331,9 @@ configure(allprojects) {
 
 nexusPublishing {
     repositories {
-        sonatype {
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
-        }
+        // sonatype {
+        //     nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+        //     snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+        // }
     }
 }
